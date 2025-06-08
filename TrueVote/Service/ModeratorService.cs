@@ -44,10 +44,12 @@ namespace TrueVote.Service
                 HashKey = encryptedData.HashKey,
                 Role = "Moderator",
             };
-            user = await _userRepository.Add(user);
 
             newModerator.IsDeleted = false;
-            return await _moderatorRepository.Add(newModerator);
+            var moderator = await _moderatorRepository.Add(newModerator);
+            user.UserId = moderator.Id;
+            var addedUser = await _userRepository.Add(user);
+            return moderator;
         }
         public async Task<IEnumerable<Moderator>> GetAllModeratorsAsync()
         {

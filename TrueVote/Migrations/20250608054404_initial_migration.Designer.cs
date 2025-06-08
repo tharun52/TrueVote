@@ -12,7 +12,7 @@ using TrueVote.Contexts;
 namespace TrueVote.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250607074456_initial_migration")]
+    [Migration("20250608054404_initial_migration")]
     partial class initial_migration
     {
         /// <inheritdoc />
@@ -203,6 +203,9 @@ namespace TrueVote.Migrations
                     b.Property<string>("Role")
                         .IsRequired()
                         .HasColumnType("text");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
 
                     b.HasKey("Username");
 

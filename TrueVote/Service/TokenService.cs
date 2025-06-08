@@ -18,6 +18,7 @@ namespace TrueVote.Service
         {
             List<Claim> claims = new List<Claim>
             {
+                new Claim("UserId", user.UserId.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Username),
                 new Claim(ClaimTypes.Role, user.Role ?? string.Empty),
             };

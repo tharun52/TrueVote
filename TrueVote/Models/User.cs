@@ -17,5 +17,8 @@ namespace TrueVote.Models
 
         [Required]
         public string Role { get; set; } = string.Empty;
+
+        [Required]
+        public Guid UserId { get; set; }
     }
 }

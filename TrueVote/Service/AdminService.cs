@@ -51,8 +51,11 @@ namespace TrueVote.Service
                 HashKey = encryptedData.HashKey,
                 Role = "Admin",
             };
-            user = await _userRepository.Add(user);
-            return await _adminRepository.Add(newAdmin);
+            var admin = await _adminRepository.Add(newAdmin);
+            
+            user.UserId = admin.Id;
+            await _userRepository.Add(user);
+            return admin;
         }
     }
 }

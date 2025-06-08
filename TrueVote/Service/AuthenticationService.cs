@@ -45,6 +45,7 @@ namespace TrueVote.Service
             var token = await _tokenService.GenerateToken(dbUser);
             return new UserLoginResponse
             {
+                UserId = dbUser.UserId,
                 Username = user.Username,
                 Token = token,
                 Role = dbUser.Role

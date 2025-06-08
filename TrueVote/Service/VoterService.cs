@@ -57,8 +57,10 @@ namespace TrueVote.Service
                 HashKey = encryptedData.HashKey,
                 Role = "Voter"
             };
+            var voter = await _voterRepository.Add(newVoter);
+            user.UserId = voter.Id;
             await _userRepository.Add(user);
-            return await _voterRepository.Add(newVoter);
+            return voter;
         }
     }
 }
