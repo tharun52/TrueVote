@@ -10,6 +10,8 @@ using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Serilog;
+using Serilog.Filters;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -78,11 +80,14 @@ builder.Services.AddDbContext<AppDbContext>(opts =>
     opts.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+builder.Services.AddHttpContextAccessor();
+
 #region Repositories
 builder.Services.AddTransient<IRepository<Guid, Moderator>, ModeratorRepository>();
 builder.Services.AddTransient<IRepository<string, User>, UserRepository>();
 builder.Services.AddTransient<IRepository<Guid, Voter>, VoterRepository>();
 builder.Services.AddTransient<IRepository<Guid, Admin>, AdminRepository>();
+builder.Services.AddTransient<IRepository<Guid, RefreshToken>, RefreshTokenRepository>();
 #endregion
 
 #region Services
@@ -107,6 +112,28 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Keys:JwtTokenKey"]))
                     };
                 });
+#endregion
+
+#region Logging
+
+builder.Host.UseSerilog((context, services, configuration) =>
+{
+    configuration
+        .ReadFrom.Configuration(context.Configuration)
+        .ReadFrom.Services(services)
+        .Enrich.FromLogContext()
+        .Enrich.WithMachineName()
+        .Enrich.WithEnvironmentName()
+        .WriteTo.Console()
+        .WriteTo.Logger(lc => lc
+            .Filter.ByExcluding(Matching.WithProperty<bool>("IsAudit", p => p))
+            .WriteTo.File("Logs/general-log-.txt", rollingInterval: RollingInterval.Day))
+        .WriteTo.Logger(lc => lc
+            .Filter.ByIncludingOnly(Matching.WithProperty<bool>("IsAudit", p => p))
+            .WriteTo.File("Logs/audit-log-.txt", rollingInterval: RollingInterval.Day));
+});
+
+builder.Services.AddTransient<IAuditLogger, AuditLogger>();
 #endregion
 
 

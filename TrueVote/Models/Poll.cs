@@ -26,7 +26,7 @@ namespace TrueVote.Models
 
         public bool IsDeleted { get; set; } = false;
 
-        public PoleFile? PoleFile { get; set; }
+        public PollFile? PoleFile { get; set; }
         
         public ICollection<PollOption>? PollOptions { get; set; }
     }

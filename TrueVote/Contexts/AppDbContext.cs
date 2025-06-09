@@ -18,7 +18,7 @@ namespace TrueVote.Contexts
         public DbSet<PollVote> PollVotes { get; set; }
         public DbSet<Voter> Voters { get; set; }
         public DbSet<VoterPoll> VoterPolls { get; set; }
-
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User
@@ -62,7 +62,7 @@ namespace TrueVote.Contexts
             // PollOption
             modelBuilder.Entity<PollOption>()
                 .HasIndex(po => new { po.PollId, po.OptionText })
-                .IsUnique(); 
+                .IsUnique();
 
             // PollVote
             modelBuilder.Entity<PollVote>()
@@ -100,6 +100,11 @@ namespace TrueVote.Contexts
 
             modelBuilder.Entity<PoleFile>()
                 .HasIndex(pf => new { pf.Filename, pf.UploadedByUsername })
+                .IsUnique();
+
+            // RefreshToken
+            modelBuilder.Entity<RefreshToken>()
+                .HasIndex(rt => rt.Token)
                 .IsUnique();
         }
     }

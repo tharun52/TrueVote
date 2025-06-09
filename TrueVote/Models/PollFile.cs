@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TrueVote.Models
 {
-    public class PoleFile
+    public class PollFile
     {
         [Key]
         public Guid Id { get; set; }

@@ -42,6 +42,7 @@ namespace TrueVote.Service
             {
                 throw new ArgumentException("Voter must be at least 18 years old.");
             }
+
             var encryptedData = await _encryptionService.EncryptData(new EncryptModel
             {
                 Data = voterDto.Password
@@ -50,6 +51,12 @@ namespace TrueVote.Service
             {
                 throw new InvalidOperationException("Encryption failed: Encrypted data is null.");
             }
+
+            if (await _userRepository.Get(voterDto.Email) != null)
+            {
+                throw new InvalidOperationException($"A user with this email{voterDto.Email} already exists.");
+            }
+
             var user = new User
             {
                 Username = voterDto.Email,

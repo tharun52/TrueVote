@@ -28,5 +28,18 @@ namespace TrueVote.Controllers
                 return Unauthorized(e.Message);
             }
         }
+        [HttpPost("refresh")]
+        public async Task<ActionResult<UserLoginResponse>> RefreshToken([FromBody] TokenRefreshRequest dto)
+        {
+            try
+            {
+                var result = await _authenticationService.RefreshLogin(dto.RefreshToken);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                return Unauthorized(ex.Message);
+            }
+        }
     }
 }

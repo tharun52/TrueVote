@@ -13,7 +13,7 @@ namespace TrueVote.Repositories
         {
             return await _appDbContext.Users
                 .SingleOrDefaultAsync(u => u.Username == key)
-                ?? throw new KeyNotFoundException($"User with email {key} not found.");
+                ?? new User();
         }
 
         public override async Task<IEnumerable<User>> GetAll()

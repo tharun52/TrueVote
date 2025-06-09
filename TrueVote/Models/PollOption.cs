@@ -1,5 +1,3 @@
-
-
 using System.ComponentModel.DataAnnotations;
 
 namespace TrueVote.Models
@@ -15,6 +13,8 @@ namespace TrueVote.Models
         [Required]
         public string OptionText { get; set; } = string.Empty;
 
+        public int VoteCount { get; set; } = 0;
+        
         public bool IsDeleted { get; set; } = false;
     }
 }
