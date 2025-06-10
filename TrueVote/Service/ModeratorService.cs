@@ -53,7 +53,7 @@ namespace TrueVote.Service
                 Role = "Moderator",
             };
 
-            if (_userRepository.Get(user.Username) != null)
+            if (await _userRepository.Get(user.Username) != null)
             {
                 throw new Exception("User with this email already exists");
             }

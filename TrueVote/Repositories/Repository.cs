@@ -33,7 +33,7 @@ namespace TrueVote.Repositories
             }
         }
 
-        public abstract Task<T> Get(K key);
+        public abstract Task<T?> Get(K key);
 
         public abstract Task<IEnumerable<T>> GetAll();
 

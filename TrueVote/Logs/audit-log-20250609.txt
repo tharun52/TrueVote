@@ -1,2 +1,9 @@
-2025-06-09 15:29:32.710 +05:30 [INF] User Action Logged
-2025-06-09 15:32:26.142 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: varun
+2025-06-09 19:25:42.557 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: m
+2025-06-09 19:37:40.111 +05:30 [INF] User: m@gmail.com, Action: Added a new poll with ID: 01975504-b024-7007-acee-15a73441e1ec
+2025-06-09 19:41:13.490 +05:30 [INF] User: m@gmail.com, Action: Added a new poll with ID: 01975507-f0f3-7c3d-bc5f-dac564cef119
+2025-06-09 21:53:14.911 +05:30 [INF] User: m@gmail.com, Action: Added a new poll with ID: 01975580-d092-7dc7-9505-0853824ba7b9
+2025-06-09 22:44:11.533 +05:30 [INF] User: m@gmail.com, Action: Added a new poll with ID: 019755af-73ee-7c43-86f8-2063c0456648
+2025-06-09 22:54:07.633 +05:30 [INF] User: tharun@gmail.com, Action: New Admin with Email : tharun@gmail.com was created
+2025-06-09 22:55:32.247 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: md
+2025-06-09 22:57:21.529 +05:30 [INF] User: md@gmail.com, Action: Added a new poll with ID: 019755bb-828c-75e9-b5ff-827c657d7a34
+2025-06-09 22:58:12.580 +05:30 [INF] User: md@gmail.com, Action: Added a new poll with ID: 019755bc-49dd-7e4a-9722-07da14c52491

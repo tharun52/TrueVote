@@ -10,7 +10,7 @@ namespace TrueVote.Models
         [Required]
         public string Title { get; set; } = string.Empty;
 
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
         [Required]
         [EmailAddress]
@@ -21,8 +21,6 @@ namespace TrueVote.Models
 
         [Required]
         public DateOnly EndDate { get; set; }
-
-        public bool IsActive { get; set; } = true;
 
         public bool IsDeleted { get; set; } = false;
 

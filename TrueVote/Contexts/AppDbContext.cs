@@ -11,13 +11,13 @@ namespace TrueVote.Contexts
 
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Moderator> Moderators { get; set; }
-        public DbSet<PoleFile> PoleFiles { get; set; }
+        public DbSet<PollFile> PollFiles { get; set; }
         public DbSet<Poll> Polls { get; set; }
         public DbSet<PollOption> PollOptions { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<PollVote> PollVotes { get; set; }
         public DbSet<Voter> Voters { get; set; }
-        public DbSet<VoterPoll> VoterPolls { get; set; }
+        public DbSet<VoterCheck> VoterChecks { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -52,13 +52,7 @@ namespace TrueVote.Contexts
                 .WithOne()
                 .HasForeignKey(po => po.PollId)
                 .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Poll>()
-                .HasOne(p => p.PoleFile)
-                .WithOne()
-                .HasForeignKey<Poll>(p => p.Id)
-                .OnDelete(DeleteBehavior.Restrict);
-
+                
             // PollOption
             modelBuilder.Entity<PollOption>()
                 .HasIndex(po => new { po.PollId, po.OptionText })
@@ -76,32 +70,41 @@ namespace TrueVote.Contexts
                 .HasIndex(v => v.Email)
                 .IsUnique();
 
-            // VoterPoll
-            modelBuilder.Entity<VoterPoll>()
+            // VoterCheck
+            modelBuilder.Entity<VoterCheck>()
                 .HasIndex(vp => new { vp.VoterId, vp.PollId })
                 .IsUnique(); // Prevents duplicate votes
 
-            modelBuilder.Entity<VoterPoll>()
+            modelBuilder.Entity<VoterCheck>()
                 .HasOne<Voter>()
                 .WithMany()
                 .HasForeignKey(vp => vp.VoterId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<VoterPoll>()
+            modelBuilder.Entity<VoterCheck>()
                 .HasOne<Poll>()
                 .WithMany()
                 .HasForeignKey(vp => vp.PollId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             // PoleFile
-            modelBuilder.Entity<PoleFile>()
+            modelBuilder.Entity<PollFile>()
                 .Property(pf => pf.Content)
                 .IsRequired();
-
-            modelBuilder.Entity<PoleFile>()
-                .HasIndex(pf => new { pf.Filename, pf.UploadedByUsername })
-                .IsUnique();
-
+            
+            modelBuilder.Entity<Poll>()
+                .HasOne(p => p.PoleFile)
+                .WithOne()
+                .HasForeignKey<Poll>(p => p.Id)
+                .OnDelete(DeleteBehavior.Restrict)
+                .IsRequired(false);;
+            
+            modelBuilder.Entity<PollFile>()
+                .HasOne(pf => pf.Poll)
+                .WithOne(p => p.PoleFile)
+                .HasForeignKey<PollFile>(pf => pf.PollId)
+                .OnDelete(DeleteBehavior.Restrict); 
+                            
             // RefreshToken
             modelBuilder.Entity<RefreshToken>()
                 .HasIndex(rt => rt.Token)

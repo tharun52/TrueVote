@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TrueVote.Migrations
 {
     /// <inheritdoc />
-    public partial class initial_migration : Migration
+    public partial class FirstMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -40,20 +40,18 @@ namespace TrueVote.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "PoleFiles",
+                name: "RefreshTokens",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
-                    Filename = table.Column<string>(type: "text", nullable: false),
-                    FileType = table.Column<string>(type: "text", nullable: false),
-                    Content = table.Column<byte[]>(type: "bytea", nullable: false),
-                    UploadedByUsername = table.Column<string>(type: "text", nullable: false),
-                    UploadedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
+                    Username = table.Column<string>(type: "text", nullable: false),
+                    Token = table.Column<string>(type: "text", nullable: false),
+                    ExpiresAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IsRevoked = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PoleFiles", x => x.Id);
+                    table.PrimaryKey("PK_RefreshTokens", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,11 +90,10 @@ namespace TrueVote.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Title = table.Column<string>(type: "text", nullable: false),
-                    Description = table.Column<string>(type: "text", nullable: false),
+                    Description = table.Column<string>(type: "text", nullable: true),
                     CreatedByEmail = table.Column<string>(type: "text", nullable: false),
                     StartDate = table.Column<DateOnly>(type: "date", nullable: false),
                     EndDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    IsActive = table.Column<bool>(type: "boolean", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -108,10 +105,28 @@ namespace TrueVote.Migrations
                         principalTable: "Moderators",
                         principalColumn: "Email",
                         onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "PollFiles",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uuid", nullable: false),
+                    Filename = table.Column<string>(type: "text", nullable: false),
+                    FileType = table.Column<string>(type: "text", nullable: false),
+                    Content = table.Column<byte[]>(type: "bytea", nullable: false),
+                    UploadedByUsername = table.Column<string>(type: "text", nullable: false),
+                    PollId = table.Column<Guid>(type: "uuid", nullable: false),
+                    UploadedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_PollFiles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Polls_PoleFiles_Id",
-                        column: x => x.Id,
-                        principalTable: "PoleFiles",
+                        name: "FK_PollFiles_Polls_PollId",
+                        column: x => x.PollId,
+                        principalTable: "Polls",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -123,6 +138,7 @@ namespace TrueVote.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     PollId = table.Column<Guid>(type: "uuid", nullable: false),
                     OptionText = table.Column<string>(type: "text", nullable: false),
+                    VoteCount = table.Column<int>(type: "integer", nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false)
                 },
                 constraints: table =>
@@ -137,7 +153,7 @@ namespace TrueVote.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "VoterPolls",
+                name: "VoterChecks",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
@@ -148,15 +164,15 @@ namespace TrueVote.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_VoterPolls", x => x.Id);
+                    table.PrimaryKey("PK_VoterChecks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_VoterPolls_Polls_PollId",
+                        name: "FK_VoterChecks_Polls_PollId",
                         column: x => x.PollId,
                         principalTable: "Polls",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_VoterPolls_Voters_VoterId",
+                        name: "FK_VoterChecks_Voters_VoterId",
                         column: x => x.VoterId,
                         principalTable: "Voters",
                         principalColumn: "Id",
@@ -195,9 +211,9 @@ namespace TrueVote.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_PoleFiles_Filename_UploadedByUsername",
-                table: "PoleFiles",
-                columns: new[] { "Filename", "UploadedByUsername" },
+                name: "IX_PollFiles_PollId",
+                table: "PollFiles",
+                column: "PollId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -217,13 +233,19 @@ namespace TrueVote.Migrations
                 column: "PollOptionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VoterPolls_PollId",
-                table: "VoterPolls",
+                name: "IX_RefreshTokens_Token",
+                table: "RefreshTokens",
+                column: "Token",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_VoterChecks_PollId",
+                table: "VoterChecks",
                 column: "PollId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_VoterPolls_VoterId_PollId",
-                table: "VoterPolls",
+                name: "IX_VoterChecks_VoterId_PollId",
+                table: "VoterChecks",
                 columns: new[] { "VoterId", "PollId" },
                 unique: true);
 
@@ -241,13 +263,19 @@ namespace TrueVote.Migrations
                 name: "Admins");
 
             migrationBuilder.DropTable(
+                name: "PollFiles");
+
+            migrationBuilder.DropTable(
                 name: "PollVotes");
+
+            migrationBuilder.DropTable(
+                name: "RefreshTokens");
 
             migrationBuilder.DropTable(
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "VoterPolls");
+                name: "VoterChecks");
 
             migrationBuilder.DropTable(
                 name: "PollOptions");
@@ -260,9 +288,6 @@ namespace TrueVote.Migrations
 
             migrationBuilder.DropTable(
                 name: "Moderators");
-
-            migrationBuilder.DropTable(
-                name: "PoleFiles");
         }
     }
 }

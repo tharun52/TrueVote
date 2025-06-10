@@ -9,11 +9,10 @@ namespace TrueVote.Repositories
         public VoterRepository(AppDbContext appDbContext) : base(appDbContext)
         {
         }
-        public override async Task<Voter> Get(Guid key)
+        public override async Task<Voter?> Get(Guid key)
         {
             return await _appDbContext.Voters
-                .SingleOrDefaultAsync(v => v.Id == key)
-                ?? throw new KeyNotFoundException($"Voter with ID {key} not found.");
+                .SingleOrDefaultAsync(v => v.Id == key);
         }
 
         public override async Task<IEnumerable<Voter>> GetAll()

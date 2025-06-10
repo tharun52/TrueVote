@@ -9,11 +9,10 @@ namespace TrueVote.Repositories
         public UserRepository(AppDbContext appDbContext) : base(appDbContext)
         {
         }
-        public override async Task<User> Get(string key)
+        public override async Task<User?> Get(string key)
         {
             return await _appDbContext.Users
-                .SingleOrDefaultAsync(u => u.Username == key)
-                ?? new User();
+                .SingleOrDefaultAsync(u => u.Username == key);
         }
 
         public override async Task<IEnumerable<User>> GetAll()

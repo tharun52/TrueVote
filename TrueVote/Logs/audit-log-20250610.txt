@@ -1,0 +1,1 @@
+2025-06-10 08:26:24.781 +05:30 [INF] User: md@gmail.com, Action: Added a new poll with ID: 019757c4-7dba-7e4f-b3ec-8880e30942e4

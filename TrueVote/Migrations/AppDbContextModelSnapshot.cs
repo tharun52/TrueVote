@@ -69,7 +69,40 @@ namespace TrueVote.Migrations
                     b.ToTable("Moderators");
                 });
 
-            modelBuilder.Entity("TrueVote.Models.PoleFile", b =>
+            modelBuilder.Entity("TrueVote.Models.Poll", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("CreatedByEmail")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<DateOnly>("EndDate")
+                        .HasColumnType("date");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
+
+                    b.Property<DateOnly>("StartDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreatedByEmail");
+
+                    b.ToTable("Polls");
+                });
+
+            modelBuilder.Entity("TrueVote.Models.PollFile", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -90,6 +123,9 @@ namespace TrueVote.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("boolean");
 
+                    b.Property<Guid>("PollId")
+                        .HasColumnType("uuid");
+
                     b.Property<DateTime>("UploadedAt")
                         .HasColumnType("timestamp with time zone");
 
@@ -99,46 +135,10 @@ namespace TrueVote.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Filename", "UploadedByUsername")
+                    b.HasIndex("PollId")
                         .IsUnique();
 
-                    b.ToTable("PoleFiles");
-                });
-
-            modelBuilder.Entity("TrueVote.Models.Poll", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("CreatedByEmail")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateOnly>("EndDate")
-                        .HasColumnType("date");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("boolean");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateOnly>("StartDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CreatedByEmail");
-
-                    b.ToTable("Polls");
+                    b.ToTable("PollFiles");
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollOption", b =>
@@ -156,6 +156,9 @@ namespace TrueVote.Migrations
 
                     b.Property<Guid>("PollId")
                         .HasColumnType("uuid");
+
+                    b.Property<int>("VoteCount")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
@@ -265,7 +268,7 @@ namespace TrueVote.Migrations
                     b.ToTable("Voters");
                 });
 
-            modelBuilder.Entity("TrueVote.Models.VoterPoll", b =>
+            modelBuilder.Entity("TrueVote.Models.VoterCheck", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -290,7 +293,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("VoterId", "PollId")
                         .IsUnique();
 
-                    b.ToTable("VoterPolls");
+                    b.ToTable("VoterChecks");
                 });
 
             modelBuilder.Entity("TrueVote.Models.Poll", b =>
@@ -301,14 +304,17 @@ namespace TrueVote.Migrations
                         .HasPrincipalKey("Email")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+                });
 
-                    b.HasOne("TrueVote.Models.PoleFile", "PoleFile")
-                        .WithOne()
-                        .HasForeignKey("TrueVote.Models.Poll", "Id")
+            modelBuilder.Entity("TrueVote.Models.PollFile", b =>
+                {
+                    b.HasOne("TrueVote.Models.Poll", "Poll")
+                        .WithOne("PoleFile")
+                        .HasForeignKey("TrueVote.Models.PollFile", "PollId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.Navigation("PoleFile");
+                    b.Navigation("Poll");
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollOption", b =>
@@ -329,7 +335,7 @@ namespace TrueVote.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TrueVote.Models.VoterPoll", b =>
+            modelBuilder.Entity("TrueVote.Models.VoterCheck", b =>
                 {
                     b.HasOne("TrueVote.Models.Poll", null)
                         .WithMany()
@@ -351,6 +357,8 @@ namespace TrueVote.Migrations
 
             modelBuilder.Entity("TrueVote.Models.Poll", b =>
                 {
+                    b.Navigation("PoleFile");
+
                     b.Navigation("PollOptions");
                 });
 #pragma warning restore 612, 618

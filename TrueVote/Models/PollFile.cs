@@ -19,8 +19,13 @@ namespace TrueVote.Models
         [Required]
         public string UploadedByUsername { get; set; } = string.Empty;
 
+        [Required]
+        public Guid PollId { get; set; }
+
         public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
 
         public bool IsDeleted { get; set; } = false;
+
+        public Poll? Poll { get; set; } 
     }
 }

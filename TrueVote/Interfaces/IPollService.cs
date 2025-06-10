@@ -5,6 +5,10 @@ namespace TrueVote.Interfaces
 {
     public interface IPollService
     {
-        public Task<Poll> AddPoll(AddPollOptionDto addPollOptionDto);
+        public Task<Poll> AddPoll(AddPollRequestDto addPollOptionDto);
+        public Task<List<PollResponseDto>> ViewAllPolls();
+        public Task<PollResponseDto?> ViewPollById(Guid pollId);
+        public Task<List<PollResponseDto>> ViewPollsByUploadedByUsername(string username);
+
     }
 }

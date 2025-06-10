@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TrueVote.Models
 {
-    public class VoterPoll
+    public class VoterCheck
     {
         [Key]
         public Guid Id { get; set; }
@@ -15,6 +15,6 @@ namespace TrueVote.Models
 
         public bool HasVoted { get; set; } = false;
 
-        public DateTime? VotedAt { get; set; }
+        public DateTime? VotedAt { get; set; } = DateTime.UtcNow;
     }
 }

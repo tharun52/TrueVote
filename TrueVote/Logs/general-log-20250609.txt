@@ -1,52 +1,99 @@
-2025-06-09 15:29:17.418 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2025-06-09 15:29:17.474 +05:30 [INF] Now listening on: http://localhost:5100
-2025-06-09 15:29:17.475 +05:30 [INF] Application started. Press Ctrl+C to shut down.
-2025-06-09 15:29:17.475 +05:30 [INF] Hosting environment: Development
-2025-06-09 15:29:17.475 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
-2025-06-09 15:29:31.842 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 77
-2025-06-09 15:29:31.920 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:29:31.928 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
-2025-06-09 15:29:32.689 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Boolean), @p3='?'], CommandType='"Text"', CommandTimeout='30']
-INSERT INTO "Moderators" ("Id", "Email", "IsDeleted", "Name")
-VALUES (@p0, @p1, @p2, @p3);
-2025-06-09 15:29:32.709 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:12:40.231 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:12:40.294 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:12:40.295 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:12:40.295 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:12:40.295 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:12:42.356 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-09 19:12:42.395 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 40.3155ms
+2025-06-09 19:12:42.414 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-09 19:12:45.580 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-09 19:12:45.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.8818ms
+2025-06-09 19:13:07.892 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - application/json 111
+2025-06-09 19:13:07.900 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:13:07.920 +05:30 [INF] Route matched with {action = "AddAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAdminAsync(TrueVote.Models.DTOs.AddAdminRequestDto) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-09 19:13:08.773 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:13:08.786 +05:30 [INF] Executing ObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:13:08.795 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote) in 871.4112ms
+2025-06-09 19:13:08.795 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:13:08.798 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - 500 null application/json; charset=utf-8 906.7407ms
+2025-06-09 19:13:53.003 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - application/json 111
+2025-06-09 19:13:53.010 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:13:53.011 +05:30 [INF] Route matched with {action = "AddAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAdminAsync(TrueVote.Models.DTOs.AddAdminRequestDto) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-09 19:13:53.278 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:13:53.279 +05:30 [INF] Executing ObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:13:53.279 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote) in 268.0439ms
+2025-06-09 19:13:53.279 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:13:53.279 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - 500 null application/json; charset=utf-8 276.946ms
+2025-06-09 19:19:42.318 +05:30 [INF] Application is shutting down...
+2025-06-09 19:19:45.691 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:19:45.757 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:19:45.758 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:19:45.758 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:19:45.758 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:19:50.931 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - application/json 111
+2025-06-09 19:19:50.976 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:19:50.984 +05:30 [INF] Route matched with {action = "AddAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAdminAsync(TrueVote.Models.DTOs.AddAdminRequestDto) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-09 19:19:51.826 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:19:51.892 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Admins" ("Id", "Email", "Name")
+VALUES (@p0, @p1, @p2);
+2025-06-09 19:19:51.906 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
 VALUES (@p0, @p1, @p2, @p3, @p4);
-2025-06-09 15:29:32.716 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2025-06-09 15:29:32.731 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 801.8924ms
-2025-06-09 15:29:32.733 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:29:32.737 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 201 null application/json; charset=utf-8 896.7655ms
-2025-06-09 15:31:55.079 +05:30 [INF] Application is shutting down...
-2025-06-09 15:32:00.133 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2025-06-09 15:32:00.238 +05:30 [INF] Now listening on: http://localhost:5100
-2025-06-09 15:32:00.239 +05:30 [INF] Application started. Press Ctrl+C to shut down.
-2025-06-09 15:32:00.239 +05:30 [INF] Hosting environment: Development
-2025-06-09 15:32:00.239 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
-2025-06-09 15:32:25.240 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 77
-2025-06-09 15:32:25.326 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:32:25.333 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
-2025-06-09 15:32:26.121 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Boolean), @p3='?'], CommandType='"Text"', CommandTimeout='30']
-INSERT INTO "Moderators" ("Id", "Email", "IsDeleted", "Name")
-VALUES (@p0, @p1, @p2, @p3);
-2025-06-09 15:32:26.141 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
-INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
+2025-06-09 19:19:51.910 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Admin, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 19:19:51.920 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote) in 933.7509ms
+2025-06-09 19:19:51.922 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 19:19:51.925 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - 201 null application/json; charset=utf-8 995.6562ms
+2025-06-09 19:22:19.419 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-09 19:22:19.425 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:22:19.438 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 19:22:19.476 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:22:19.859 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-09 19:22:19.860 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 421.7786ms
+2025-06-09 19:22:19.860 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:22:19.860 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 441.2433ms
+2025-06-09 19:22:33.585 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 64
+2025-06-09 19:22:33.589 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:22:33.590 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 19:22:33.639 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:22:33.962 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
 VALUES (@p0, @p1, @p2, @p3, @p4);
-2025-06-09 15:32:26.148 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
-2025-06-09 15:32:26.162 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 826.7067ms
-2025-06-09 15:32:26.164 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:32:26.168 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 201 null application/json; charset=utf-8 929.2941ms
-2025-06-09 15:32:43.430 +05:30 [INF] Application is shutting down...
-2025-06-09 15:39:44.617 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
-2025-06-09 15:39:44.681 +05:30 [INF] Now listening on: http://localhost:5100
-2025-06-09 15:39:44.682 +05:30 [INF] Application started. Press Ctrl+C to shut down.
-2025-06-09 15:39:44.682 +05:30 [INF] Hosting environment: Development
-2025-06-09 15:39:44.682 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
-2025-06-09 15:39:48.682 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 77
-2025-06-09 15:39:48.745 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:39:48.752 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
-2025-06-09 15:39:49.509 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 755.4174ms
-2025-06-09 15:39:49.515 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
-2025-06-09 15:39:49.517 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+2025-06-09 19:22:33.963 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 19:22:33.964 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 373.9934ms
+2025-06-09 19:22:33.964 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:22:33.964 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 378.766ms
+2025-06-09 19:23:23.521 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 65
+2025-06-09 19:23:23.566 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:23:23.570 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-09 19:23:23.729 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 158.7177ms
+2025-06-09 19:23:23.729 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:23:23.730 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:23:23.732 +05:30 [ERR] An unhandled exception has occurred while executing the request.
 System.Exception: User with this email already exists
    at TrueVote.Service.ModeratorService.AddModerator(AddModeratorRequestDto moderatorDto) in /Users/tharun52/Documents/programming/TrueVote/TrueVote/Service/ModeratorService.cs:line 58
    at TrueVote.Controllers.ModeratorController.AddModeratorAsync(AddModeratorRequestDto moderatorDto) in /Users/tharun52/Documents/programming/TrueVote/TrueVote/Controllers/ModeratorController.cs:line 57
@@ -65,63 +112,1307 @@ System.Exception: User with this email already exists
    at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
    at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
-2025-06-09 15:39:49.532 +05:30 [ERR] Connection id "0HND77N26MMQB", Request id "0HND77N26MMQB:00000001": An unhandled exception was thrown by the application.
-System.InvalidOperationException: Can't close, connection is in state Connecting
-   at Npgsql.NpgsqlConnection.Close(Boolean async)
-   at Npgsql.NpgsqlConnection.CloseAsync()
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.CloseDbConnectionAsync()
-   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.ResetStateAsync(Boolean disposeDbConnection)
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|26_0(Int32 i, ValueTask vt, List`1 toDispose)
-   at Microsoft.EntityFrameworkCore.DbContext.DisposeAsync()
-   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.<DisposeAsync>g__Await|26_0(Int32 i, ValueTask vt, List`1 toDispose)
-   at Microsoft.AspNetCore.Http.Features.RequestServicesFeature.<DisposeAsync>g__Awaited|9_0(RequestServicesFeature servicesFeature, ValueTask vt)
-   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.<FireOnCompleted>g__ProcessEvents|242_0(HttpProtocol protocol, Stack`1 events)
-2025-06-09 15:39:49.536 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 500 null text/plain; charset=utf-8 854.8448ms
-2025-06-09 15:39:49.607 +05:30 [INF] Executed DbCommand (35ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:23:23.743 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 500 null text/plain; charset=utf-8 223.8577ms
+2025-06-09 19:24:50.086 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 65
+2025-06-09 19:24:50.092 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:24:50.092 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-09 19:24:50.266 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 173.339ms
+2025-06-09 19:24:50.266 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:24:50.266 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: User with this email already exists
+   at TrueVote.Service.ModeratorService.AddModerator(AddModeratorRequestDto moderatorDto) in /Users/tharun52/Documents/programming/TrueVote/TrueVote/Service/ModeratorService.cs:line 58
+   at TrueVote.Controllers.ModeratorController.AddModeratorAsync(AddModeratorRequestDto moderatorDto) in /Users/tharun52/Documents/programming/TrueVote/TrueVote/Controllers/ModeratorController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-09 19:24:50.267 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
 SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
 FROM "Users" AS u
 WHERE u."Username" = @__key_0
 LIMIT 2
-2025-06-09 15:39:49.612 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'TrueVote.Contexts.AppDbContext'.
-System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
-Object name: 'AppDbContext'.
-   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
-   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
-   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
-   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
-   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+2025-06-09 19:24:50.268 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 500 null text/plain; charset=utf-8 184.5796ms
+2025-06-09 19:25:36.579 +05:30 [INF] Application is shutting down...
+2025-06-09 19:25:39.607 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:25:39.668 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:25:39.669 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:25:39.669 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:25:39.669 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:25:41.578 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 65
+2025-06-09 19:25:41.650 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:25:41.657 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-09 19:25:42.470 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:25:42.545 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Boolean), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Moderators" ("Id", "Email", "IsDeleted", "Name")
+VALUES (@p0, @p1, @p2, @p3);
+2025-06-09 19:25:42.556 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:25:42.564 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 19:25:42.577 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 919.1333ms
+2025-06-09 19:25:42.580 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 19:25:42.585 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 201 null application/json; charset=utf-8 1007.7999ms
+2025-06-09 19:26:08.971 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 54
+2025-06-09 19:26:08.982 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:26:08.985 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 19:26:09.002 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:26:09.398 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-09 19:26:09.398 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 412.3355ms
+2025-06-09 19:26:09.398 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:26:09.398 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 427.531ms
+2025-06-09 19:26:15.097 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 53
+2025-06-09 19:26:15.100 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:26:15.101 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 19:26:15.142 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:26:15.448 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:26:15.449 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 19:26:15.450 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 348.9602ms
+2025-06-09 19:26:15.450 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:26:15.450 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 352.6453ms
+2025-06-09 19:26:49.760 +05:30 [INF] Application is shutting down...
+2025-06-09 19:26:52.343 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:26:52.397 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:26:52.398 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:26:52.398 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:26:52.398 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:26:56.737 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-09 19:26:56.794 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 58.1126ms
+2025-06-09 19:26:56.897 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-09 19:26:56.967 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 70.758ms
+2025-06-09 19:28:41.842 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundary6ssth1rRP9IYygNo 3612342
+2025-06-09 19:28:41.901 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:28:41.920 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:28:41.923 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 0.9459ms
+2025-06-09 19:28:41.923 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:28:41.925 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'TrueVote.Interfaces.IPollService' while attempting to activate 'TrueVote.Controllers.PollController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method9(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-09 19:28:41.936 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 500 null text/plain; charset=utf-8 94.3672ms
+2025-06-09 19:28:41.938 +05:30 [INF] Connection id "0HND7BLVLTRDV", Request id "0HND7BLVLTRDV:00000001": the application completed without reading the entire request body.
+2025-06-09 19:29:31.689 +05:30 [INF] Application is shutting down...
+2025-06-09 19:29:34.339 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:29:34.395 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:29:34.395 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:29:34.395 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:29:34.396 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:29:37.976 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarybMFg7rEC8Mtsar8v 3612342
+2025-06-09 19:29:38.039 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:29:38.047 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:29:38.132 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:29:38.144 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 95.5202ms
+2025-06-09 19:29:38.150 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:29:38.154 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 178.7085ms
+2025-06-09 19:30:03.168 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarytXfvqdWMm0LlA0hc 3612342
+2025-06-09 19:30:03.174 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:30:03.175 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:30:03.198 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:30:03.199 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 22.9329ms
+2025-06-09 19:30:03.199 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:30:03.201 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 32.948ms
+2025-06-09 19:32:40.667 +05:30 [INF] Application is shutting down...
+2025-06-09 19:32:43.619 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:32:43.675 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:32:43.676 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:32:43.676 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:32:43.676 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:32:45.974 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryx5DBPgiBuS3hCa6M 3612342
+2025-06-09 19:32:46.047 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:32:46.056 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:32:46.156 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:32:46.169 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 111.4195ms
+2025-06-09 19:32:46.175 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:32:46.179 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 206.4531ms
+2025-06-09 19:33:02.519 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundary6WAFQbAiDB9J24qj 3612342
+2025-06-09 19:33:02.525 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:33:02.525 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:33:02.549 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:33:02.549 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 23.5811ms
+2025-06-09 19:33:02.549 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:33:02.551 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 32.2229ms
+2025-06-09 19:34:08.267 +05:30 [INF] Application is shutting down...
+2025-06-09 19:34:10.692 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:34:10.748 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:34:10.749 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:34:10.749 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:34:10.749 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:34:13.498 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryXT80KaAQ68FAMs0h 3612342
+2025-06-09 19:34:13.571 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:34:13.580 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:34:13.652 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:34:13.664 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 83.337ms
+2025-06-09 19:34:13.670 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:34:13.674 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 177.0889ms
+2025-06-09 19:35:01.422 +05:30 [INF] Application is shutting down...
+2025-06-09 19:35:03.987 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:35:04.044 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:35:04.045 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:35:04.045 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:35:04.045 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:35:07.283 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryBrt9OVB6a9MS15OI 3612342
+2025-06-09 19:35:07.357 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:35:07.368 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:35:07.979 +05:30 [ERR] Failed executing DbCommand (53ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Binary), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = Guid), @p8='?', @p9='?', @p10='?' (DbType = Date), @p11='?' (DbType = Boolean), @p12='?' (DbType = Date), @p13='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "UploadedAt", "UploadedByUsername")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-06-09 19:35:07.995 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Polls" violates foreign key constraint "FK_Polls_Moderators_CreatedByEmail"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Polls" violates foreign key constraint "FK_Polls_Moderators_CreatedByEmail"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Polls
+    ConstraintName: FK_Polls_Moderators_CreatedByEmail
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-System.ObjectDisposedException: Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application. This may occur if you are calling 'Dispose' on the context instance, or wrapping it in a using statement. If you are using dependency injection, you should let the dependency injection container take care of disposing context instances.
-Object name: 'AppDbContext'.
-   at Microsoft.EntityFrameworkCore.DbContext.CheckDisposed()
-   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
-   at Microsoft.EntityFrameworkCore.DbContext.Microsoft.EntityFrameworkCore.Internal.IDbContextDependencies.get_StateManager()
-   at Microsoft.EntityFrameworkCore.Query.QueryContextDependencies.get_StateManager()
-   at Microsoft.EntityFrameworkCore.Query.QueryContext.InitializeStateManager(Boolean standAlone)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "Polls" violates foreign key constraint "FK_Polls_Moderators_CreatedByEmail"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "Polls" violates foreign key constraint "FK_Polls_Moderators_CreatedByEmail"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: Polls
+    ConstraintName: FK_Polls_Moderators_CreatedByEmail
+    File: ri_triggers.c
+    Line: 2610
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
    at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
-   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
-2025-06-09 15:39:52.843 +05:30 [INF] Application is shutting down...
-2025-06-09 15:56:22.252 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 19:35:08.000 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:35:08.014 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 644.5687ms
+2025-06-09 19:35:08.016 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:35:08.022 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 739.7425ms
+2025-06-09 19:36:50.222 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 53
+2025-06-09 19:36:50.228 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:36:50.234 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 19:36:50.403 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 19:36:50.922 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:36:50.926 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 19:36:50.929 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 694.5209ms
+2025-06-09 19:36:50.929 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 19:36:50.929 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 709.9448ms
+2025-06-09 19:37:40.031 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryaJPnaGAjWHQW3qEk 3612342
+2025-06-09 19:37:40.036 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:37:40.036 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:37:40.078 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Binary), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = Guid), @p8='?', @p9='?', @p10='?' (DbType = Date), @p11='?' (DbType = Boolean), @p12='?' (DbType = Date), @p13='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "UploadedAt", "UploadedByUsername")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-06-09 19:37:40.108 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:37:40.109 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:37:40.110 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:37:40.117 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 19:37:40.126 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 89.5802ms
+2025-06-09 19:37:40.126 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:37:40.128 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No route matches the supplied values.
+   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-09 19:37:40.134 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 500 null text/plain; charset=utf-8 103.3369ms
+2025-06-09 19:39:39.494 +05:30 [INF] Application is shutting down...
+2025-06-09 19:39:42.409 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:39:42.465 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:39:42.466 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:39:42.466 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:39:42.467 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:39:45.963 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryi5O8E8rzYFFQW0AH 3612342
+2025-06-09 19:39:46.035 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:39:46.044 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:39:46.648 +05:30 [ERR] Failed executing DbCommand (48ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Binary), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = Guid), @p8='?', @p9='?', @p10='?' (DbType = Date), @p11='?' (DbType = Boolean), @p12='?' (DbType = Date), @p13='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "UploadedAt", "UploadedByUsername")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-06-09 19:39:46.664 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_PollFiles_Filename_UploadedByUsername"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_PollFiles_Filename_UploadedByUsername"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: PollFiles
+    ConstraintName: IX_PollFiles_Filename_UploadedByUsername
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_PollFiles_Filename_UploadedByUsername"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_PollFiles_Filename_UploadedByUsername"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: PollFiles
+    ConstraintName: IX_PollFiles_Filename_UploadedByUsername
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 19:39:46.670 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 19:39:46.684 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 637.618ms
+2025-06-09 19:39:46.686 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:39:46.691 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 729.1733ms
+2025-06-09 19:40:43.457 +05:30 [INF] Application is shutting down...
+2025-06-09 19:41:05.719 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 SELECT "MigrationId", "ProductVersion"
 FROM "__EFMigrationsHistory"
 ORDER BY "MigrationId";
-2025-06-09 15:56:22.410 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:41:05.864 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
     "MigrationId" character varying(150) NOT NULL,
     "ProductVersion" character varying(32) NOT NULL,
     CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
 );
-2025-06-09 15:56:22.414 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
-2025-06-09 15:56:22.416 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:41:05.867 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 19:41:05.868 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
-2025-06-09 15:56:22.416 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:41:05.869 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 SELECT "MigrationId", "ProductVersion"
 FROM "__EFMigrationsHistory"
 ORDER BY "MigrationId";
-2025-06-09 15:56:22.420 +05:30 [INF] Applying migration '20250609102612_rename_pollFile'.
-2025-06-09 15:56:22.425 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+2025-06-09 19:41:05.872 +05:30 [INF] Applying migration '20250609141056_PollFileChange'.
+2025-06-09 19:41:05.880 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_PollFiles_Filename_UploadedByUsername";
+2025-06-09 19:41:05.881 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
 INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
-VALUES ('20250609102612_rename_pollFile', '9.0.5');
+VALUES ('20250609141056_PollFileChange', '9.0.5');
+2025-06-09 19:41:08.910 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 19:41:08.972 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 19:41:08.972 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 19:41:08.973 +05:30 [INF] Hosting environment: Development
+2025-06-09 19:41:08.973 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 19:41:12.837 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryE7y2QgGRXiQxf2Tu 3612342
+2025-06-09 19:41:12.912 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:41:12.920 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 19:41:13.459 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Binary), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = Guid), @p8='?', @p9='?', @p10='?' (DbType = Date), @p11='?' (DbType = Boolean), @p12='?' (DbType = Date), @p13='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "UploadedAt", "UploadedByUsername")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-06-09 19:41:13.488 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:41:13.489 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:41:13.490 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 19:41:13.497 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 19:41:13.521 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 599.0274ms
+2025-06-09 19:41:13.523 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 19:41:13.528 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 692.5235ms
+2025-06-09 19:43:40.854 +05:30 [INF] Application is shutting down...
+2025-06-09 21:48:52.293 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 21:48:52.357 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 21:48:52.358 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 21:48:52.358 +05:30 [INF] Hosting environment: Development
+2025-06-09 21:48:52.358 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 21:48:54.108 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-09 21:48:54.165 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 57.5734ms
+2025-06-09 21:48:54.178 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-09 21:48:57.828 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-09 21:48:57.918 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.1232ms
+2025-06-09 21:49:06.975 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Moderator - null null
+2025-06-09 21:49:06.984 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.GetAllModeratorsAsync (TrueVote)'
+2025-06-09 21:49:06.995 +05:30 [INF] Route matched with {action = "GetAllModerators", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllModeratorsAsync() on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-09 21:49:07.563 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m
+    WHERE NOT (m."IsDeleted"))
+2025-06-09 21:49:07.656 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+WHERE NOT (m."IsDeleted")
+ORDER BY m."Id"
+2025-06-09 21:49:07.687 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.IEnumerable`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 21:49:07.705 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.GetAllModeratorsAsync (TrueVote) in 708.1914ms
+2025-06-09 21:49:07.705 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.GetAllModeratorsAsync (TrueVote)'
+2025-06-09 21:49:07.709 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Moderator - 200 null application/json; charset=utf-8 733.8842ms
+2025-06-09 21:49:27.517 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 53
+2025-06-09 21:49:27.521 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 21:49:27.528 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 21:49:27.583 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 21:49:28.042 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 21:49:28.046 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 21:49:28.047 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 518.7887ms
+2025-06-09 21:49:28.047 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 21:49:28.047 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 530.533ms
+2025-06-09 21:51:16.465 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryPOnsD8PvKLWU3wJt 3612315
+2025-06-09 21:51:16.512 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 21:51:16.520 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:51:16.552 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-09 21:51:16.562 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 42.3037ms
+2025-06-09 21:51:16.563 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 21:51:16.566 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/problem+json; charset=utf-8 100.451ms
+2025-06-09 21:53:14.742 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryA3KAsADvTiscQM0j 3612324
+2025-06-09 21:53:14.747 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 21:53:14.748 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:53:14.888 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Binary), @p2='?', @p3='?', @p4='?' (DbType = Boolean), @p5='?' (DbType = DateTime), @p6='?', @p7='?' (DbType = Guid), @p8='?', @p9='?', @p10='?' (DbType = Date), @p11='?' (DbType = Boolean), @p12='?' (DbType = Date), @p13='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "UploadedAt", "UploadedByUsername")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13);
+2025-06-09 21:53:14.909 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 21:53:14.910 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 21:53:14.911 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 21:53:14.916 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 21:53:14.923 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 175.3271ms
+2025-06-09 21:53:14.923 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 21:53:14.925 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 183.3382ms
+2025-06-09 21:53:25.952 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/all - null null
+2025-06-09 21:53:25.956 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetAllPollsAsync (TrueVote)'
+2025-06-09 21:53:25.960 +05:30 [INF] Route matched with {action = "GetAllPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllPollsAsync() on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:53:25.971 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-09 21:53:25.978 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-09 21:53:25.980 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 21:53:25.982 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetAllPollsAsync (TrueVote) in 21.9385ms
+2025-06-09 21:53:25.982 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetAllPollsAsync (TrueVote)'
+2025-06-09 21:53:25.982 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/all - 200 null application/json; charset=utf-8 29.8199ms
+2025-06-09 21:55:05.030 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975580-d092-7dc7-9505-0853824ba7b9 - null null
+2025-06-09 21:55:05.036 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-09 21:55:05.042 +05:30 [INF] Route matched with {action = "GetPollById", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollByIdAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:55:05.086 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-09 21:55:05.088 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-09 21:55:05.089 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 21:55:05.090 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote) in 47.7914ms
+2025-06-09 21:55:05.091 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-09 21:55:05.091 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975580-d092-7dc7-9505-0853824ba7b9 - 200 null application/json; charset=utf-8 61.2086ms
+2025-06-09 21:55:15.877 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/by-uploader/m@gmail.com - null null
+2025-06-09 21:55:15.878 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote)'
+2025-06-09 21:55:15.881 +05:30 [INF] Route matched with {action = "GetPollsByUsername", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollsByUsernameAsync(System.String) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:55:15.886 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-09 21:55:15.887 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-09 21:55:15.888 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 21:55:15.888 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote) in 6.3938ms
+2025-06-09 21:55:15.888 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote)'
+2025-06-09 21:55:15.888 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/by-uploader/m@gmail.com - 200 null application/json; charset=utf-8 10.9263ms
+2025-06-09 21:55:22.380 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/by-uploader/m@gmail.co - null null
+2025-06-09 21:55:22.381 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote)'
+2025-06-09 21:55:22.381 +05:30 [INF] Route matched with {action = "GetPollsByUsername", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollsByUsernameAsync(System.String) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 21:55:22.383 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-09 21:55:22.384 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-09 21:55:22.385 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 21:55:22.385 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote) in 4.3968ms
+2025-06-09 21:55:22.387 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetPollsByUsernameAsync (TrueVote)'
+2025-06-09 21:55:22.387 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/by-uploader/m@gmail.co - 200 null application/json; charset=utf-8 7.3118ms
+2025-06-09 22:08:08.133 +05:30 [INF] Application is shutting down...
+2025-06-09 22:08:46.991 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:08:47.142 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:08:47.145 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:08:47.146 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:08:47.146 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:08:47.150 +05:30 [INF] Applying migration '20250609163836_RenamedVoterCheck'.
+2025-06-09 22:08:47.168 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "VoterPolls";
+2025-06-09 22:08:47.193 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "VoterChecks" (
+    "Id" uuid NOT NULL,
+    "VoterId" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "HasVoted" boolean NOT NULL,
+    "VotedAt" timestamp with time zone,
+    CONSTRAINT "PK_VoterChecks" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_VoterChecks_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_VoterChecks_Voters_VoterId" FOREIGN KEY ("VoterId") REFERENCES "Voters" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:08:47.198 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_VoterChecks_PollId" ON "VoterChecks" ("PollId");
+2025-06-09 22:08:47.200 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_VoterChecks_VoterId_PollId" ON "VoterChecks" ("VoterId", "PollId");
+2025-06-09 22:08:47.201 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609163836_RenamedVoterCheck', '9.0.5');
+2025-06-09 22:25:12.365 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:25:12.431 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:25:12.432 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:25:12.432 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:25:12.432 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:25:15.884 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarytt4pBUrPfes3HHjH 784
+2025-06-09 22:25:15.960 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:15.969 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:25:16.050 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:25:16.064 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 92.8173ms
+2025-06-09 22:25:16.070 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:16.071 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 188.3372ms
+2025-06-09 22:25:37.209 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryZbKIn2vz2n3wnpBY 784
+2025-06-09 22:25:37.221 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:37.222 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:25:37.231 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:25:37.231 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 8.2228ms
+2025-06-09 22:25:37.231 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:37.231 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 22.7002ms
+2025-06-09 22:25:50.244 +05:30 [INF] Application is shutting down...
+2025-06-09 22:25:53.083 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:25:53.146 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:25:53.147 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:25:53.147 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:25:53.147 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:25:56.220 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryDbydIiB5ZgkpUpeP 784
+2025-06-09 22:25:56.278 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:56.289 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:25:56.703 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 22:25:56.706 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:25:56.724 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 433.3013ms
+2025-06-09 22:25:56.731 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:25:56.734 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 514.8058ms
+2025-06-09 22:26:36.740 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryZhHwymB5aND0BwBP 784
+2025-06-09 22:26:36.748 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:26:36.749 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:26:36.790 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 22:26:36.791 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:26:36.792 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 43.3216ms
+2025-06-09 22:26:36.792 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:26:36.792 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 52.7808ms
+2025-06-09 22:27:00.738 +05:30 [INF] Application is shutting down...
+2025-06-09 22:27:03.137 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:27:03.194 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:27:03.195 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:27:03.195 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:27:03.195 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:27:07.518 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryhuPqShv8GBIWgZFj 784
+2025-06-09 22:27:07.572 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:27:07.580 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:27:07.944 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 22:27:07.946 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:27:07.959 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 377.119ms
+2025-06-09 22:27:07.965 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:27:07.967 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 450.5318ms
+2025-06-09 22:27:43.342 +05:30 [INF] Application is shutting down...
+2025-06-09 22:38:43.189 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:38:43.338 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:38:43.342 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:38:43.343 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:38:43.343 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:38:43.347 +05:30 [INF] Applying migration '20250609170802_MakePoleFileOptional'.
+2025-06-09 22:38:43.358 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ALTER COLUMN "Description" DROP NOT NULL;
+2025-06-09 22:38:43.359 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609170802_MakePoleFileOptional', '9.0.5');
+2025-06-09 22:38:49.129 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:38:49.205 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:38:49.206 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:38:49.206 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:38:49.206 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:38:51.876 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-09 22:38:51.915 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 39.7839ms
+2025-06-09 22:38:51.928 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-09 22:39:35.190 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryb91GkBxYxnaLexjB 784
+2025-06-09 22:39:35.251 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:39:35.265 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:39:35.667 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+System.InvalidOperationException: The value of 'Poll.Id' is unknown when attempting to save changes. This is because the property is also part of a foreign key for which the principal entity in the relationship is not known.
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.InternalEntityEntry.PrepareToSave()
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.GetEntriesToSave(Boolean cascadeChanges)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-09 22:39:35.671 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-09 22:39:35.687 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 420.1243ms
+2025-06-09 22:39:35.687 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:39:35.689 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 500.8919ms
+2025-06-09 22:43:42.697 +05:30 [INF] Application is shutting down...
+2025-06-09 22:43:57.126 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:43:57.274 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:43:57.278 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:43:57.279 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:43:57.279 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:43:57.282 +05:30 [INF] Applying migration '20250609171351_MakePoleFileOptionalagain'.
+2025-06-09 22:43:57.293 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP CONSTRAINT "FK_Polls_PollFiles_Id";
+2025-06-09 22:43:57.294 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD "PoleFileId" uuid;
+2025-06-09 22:43:57.297 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Polls_PoleFileId" ON "Polls" ("PoleFileId");
+2025-06-09 22:43:57.300 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD CONSTRAINT "FK_Polls_PollFiles_PoleFileId" FOREIGN KEY ("PoleFileId") REFERENCES "PollFiles" ("Id");
+2025-06-09 22:43:57.300 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609171351_MakePoleFileOptionalagain', '9.0.5');
+2025-06-09 22:44:00.713 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:44:00.777 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:44:00.778 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:44:00.778 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:44:00.778 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:44:10.895 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarywi1nKFc80FLVO0lA 784
+2025-06-09 22:44:10.973 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:44:10.983 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:44:11.505 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Date), @p4='?' (DbType = Boolean), @p5='?' (DbType = Guid), @p6='?' (DbType = Date), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "PoleFileId", "StartDate", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+2025-06-09 22:44:11.531 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:44:11.533 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:44:11.541 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 22:44:11.562 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 577.315ms
+2025-06-09 22:44:11.564 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:44:11.569 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 675.4107ms
+2025-06-09 22:45:43.696 +05:30 [INF] Application is shutting down...
+2025-06-09 22:48:16.023 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:48:16.174 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:48:16.177 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:48:16.178 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:48:16.179 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:48:16.182 +05:30 [INF] Applying migration '20250609171804_AddPollIdasFK'.
+2025-06-09 22:48:16.192 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP CONSTRAINT "FK_Polls_PollFiles_PoleFileId";
+2025-06-09 22:48:16.193 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_Polls_PoleFileId";
+2025-06-09 22:48:16.193 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP COLUMN "PoleFileId";
+2025-06-09 22:48:16.198 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "PollFiles" ADD "PollId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+2025-06-09 22:48:16.204 +05:30 [ERR] Failed executing DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD CONSTRAINT "FK_Polls_PollFiles_Id" FOREIGN KEY ("Id") REFERENCES "PollFiles" ("Id") ON DELETE RESTRICT;
+2025-06-09 22:48:37.471 +05:30 [ERR] An error occurred using the connection to database 'TrueVote' on server 'tcp://localhost:5432'.
+2025-06-09 22:48:38.396 +05:30 [INF] Executed DbCommand (763ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "TrueVote";
+2025-06-09 22:48:38.477 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:48:38.481 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:48:38.482 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:48:38.484 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:48:38.489 +05:30 [INF] Applying migration '20250609134145_InitalMigrations'.
+2025-06-09 22:48:38.507 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Admins" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    CONSTRAINT "PK_Admins" PRIMARY KEY ("Id")
+);
+2025-06-09 22:48:38.512 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Moderators" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Moderators" PRIMARY KEY ("Id"),
+    CONSTRAINT "AK_Moderators_Email" UNIQUE ("Email")
+);
+2025-06-09 22:48:38.515 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollFiles" (
+    "Id" uuid NOT NULL,
+    "Filename" text NOT NULL,
+    "FileType" text NOT NULL,
+    "Content" bytea NOT NULL,
+    "UploadedByUsername" text NOT NULL,
+    "UploadedAt" timestamp with time zone NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_PollFiles" PRIMARY KEY ("Id")
+);
+2025-06-09 22:48:38.518 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "RefreshTokens" (
+    "Id" uuid NOT NULL,
+    "Username" text NOT NULL,
+    "Token" text NOT NULL,
+    "ExpiresAt" timestamp with time zone NOT NULL,
+    "IsRevoked" boolean NOT NULL,
+    CONSTRAINT "PK_RefreshTokens" PRIMARY KEY ("Id")
+);
+2025-06-09 22:48:38.522 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Username" text NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "HashKey" text NOT NULL,
+    "Role" text NOT NULL,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Username")
+);
+2025-06-09 22:48:38.527 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Voters" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    "Age" integer NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Voters" PRIMARY KEY ("Id")
+);
+2025-06-09 22:48:38.532 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Polls" (
+    "Id" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Description" text NOT NULL,
+    "CreatedByEmail" text NOT NULL,
+    "StartDate" date NOT NULL,
+    "EndDate" date NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Polls" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Polls_Moderators_CreatedByEmail" FOREIGN KEY ("CreatedByEmail") REFERENCES "Moderators" ("Email") ON DELETE RESTRICT,
+    CONSTRAINT "FK_Polls_PollFiles_Id" FOREIGN KEY ("Id") REFERENCES "PollFiles" ("Id") ON DELETE RESTRICT
+);
+2025-06-09 22:48:38.536 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollOptions" (
+    "Id" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "OptionText" text NOT NULL,
+    "VoteCount" integer NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_PollOptions" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_PollOptions_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:48:38.539 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "VoterPolls" (
+    "Id" uuid NOT NULL,
+    "VoterId" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "HasVoted" boolean NOT NULL,
+    "VotedAt" timestamp with time zone,
+    CONSTRAINT "PK_VoterPolls" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_VoterPolls_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_VoterPolls_Voters_VoterId" FOREIGN KEY ("VoterId") REFERENCES "Voters" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:48:38.542 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollVotes" (
+    "Id" uuid NOT NULL,
+    "PollOptionId" uuid NOT NULL,
+    "Timestamp" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_PollVotes" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_PollVotes_PollOptions_PollOptionId" FOREIGN KEY ("PollOptionId") REFERENCES "PollOptions" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:48:38.544 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Admins_Email" ON "Admins" ("Email");
+2025-06-09 22:48:38.546 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Moderators_Email" ON "Moderators" ("Email");
+2025-06-09 22:48:38.547 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_PollFiles_Filename_UploadedByUsername" ON "PollFiles" ("Filename", "UploadedByUsername");
+2025-06-09 22:48:38.549 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_PollOptions_PollId_OptionText" ON "PollOptions" ("PollId", "OptionText");
+2025-06-09 22:48:38.550 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Polls_CreatedByEmail" ON "Polls" ("CreatedByEmail");
+2025-06-09 22:48:38.552 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_PollVotes_PollOptionId" ON "PollVotes" ("PollOptionId");
+2025-06-09 22:48:38.554 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_RefreshTokens_Token" ON "RefreshTokens" ("Token");
+2025-06-09 22:48:38.555 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_VoterPolls_PollId" ON "VoterPolls" ("PollId");
+2025-06-09 22:48:38.557 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_VoterPolls_VoterId_PollId" ON "VoterPolls" ("VoterId", "PollId");
+2025-06-09 22:48:38.558 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Voters_Email" ON "Voters" ("Email");
+2025-06-09 22:48:38.559 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609134145_InitalMigrations', '9.0.5');
+2025-06-09 22:48:38.559 +05:30 [INF] Applying migration '20250609141056_PollFileChange'.
+2025-06-09 22:48:38.565 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_PollFiles_Filename_UploadedByUsername";
+2025-06-09 22:48:38.565 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609141056_PollFileChange', '9.0.5');
+2025-06-09 22:48:38.566 +05:30 [INF] Applying migration '20250609163836_RenamedVoterCheck'.
+2025-06-09 22:48:38.572 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "VoterPolls";
+2025-06-09 22:48:38.575 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "VoterChecks" (
+    "Id" uuid NOT NULL,
+    "VoterId" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "HasVoted" boolean NOT NULL,
+    "VotedAt" timestamp with time zone,
+    CONSTRAINT "PK_VoterChecks" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_VoterChecks_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_VoterChecks_Voters_VoterId" FOREIGN KEY ("VoterId") REFERENCES "Voters" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:48:38.576 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_VoterChecks_PollId" ON "VoterChecks" ("PollId");
+2025-06-09 22:48:38.578 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_VoterChecks_VoterId_PollId" ON "VoterChecks" ("VoterId", "PollId");
+2025-06-09 22:48:38.579 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609163836_RenamedVoterCheck', '9.0.5');
+2025-06-09 22:48:38.579 +05:30 [INF] Applying migration '20250609170802_MakePoleFileOptional'.
+2025-06-09 22:48:38.589 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ALTER COLUMN "Description" DROP NOT NULL;
+2025-06-09 22:48:38.589 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609170802_MakePoleFileOptional', '9.0.5');
+2025-06-09 22:48:38.589 +05:30 [INF] Applying migration '20250609171351_MakePoleFileOptionalagain'.
+2025-06-09 22:48:38.595 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP CONSTRAINT "FK_Polls_PollFiles_Id";
+2025-06-09 22:48:38.595 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD "PoleFileId" uuid;
+2025-06-09 22:48:38.597 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Polls_PoleFileId" ON "Polls" ("PoleFileId");
+2025-06-09 22:48:38.598 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD CONSTRAINT "FK_Polls_PollFiles_PoleFileId" FOREIGN KEY ("PoleFileId") REFERENCES "PollFiles" ("Id");
+2025-06-09 22:48:38.599 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609171351_MakePoleFileOptionalagain', '9.0.5');
+2025-06-09 22:48:38.599 +05:30 [INF] Applying migration '20250609171804_AddPollIdasFK'.
+2025-06-09 22:48:38.605 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP CONSTRAINT "FK_Polls_PollFiles_PoleFileId";
+2025-06-09 22:48:38.606 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP INDEX "IX_Polls_PoleFileId";
+2025-06-09 22:48:38.606 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" DROP COLUMN "PoleFileId";
+2025-06-09 22:48:38.607 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "PollFiles" ADD "PollId" uuid NOT NULL DEFAULT '00000000-0000-0000-0000-000000000000';
+2025-06-09 22:48:38.609 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "Polls" ADD CONSTRAINT "FK_Polls_PollFiles_Id" FOREIGN KEY ("Id") REFERENCES "PollFiles" ("Id") ON DELETE RESTRICT;
+2025-06-09 22:48:38.609 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609171804_AddPollIdasFK', '9.0.5');
+2025-06-09 22:51:32.503 +05:30 [ERR] An error occurred using the connection to database 'TrueVote' on server 'tcp://localhost:5432'.
+2025-06-09 22:51:33.020 +05:30 [INF] Executed DbCommand (370ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "TrueVote";
+2025-06-09 22:51:33.111 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-09 22:51:33.116 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-09 22:51:33.118 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-09 22:51:33.120 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-09 22:51:33.126 +05:30 [INF] Applying migration '20250609172128_FirstMigration'.
+2025-06-09 22:51:33.145 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Admins" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    CONSTRAINT "PK_Admins" PRIMARY KEY ("Id")
+);
+2025-06-09 22:51:33.149 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Moderators" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Moderators" PRIMARY KEY ("Id"),
+    CONSTRAINT "AK_Moderators_Email" UNIQUE ("Email")
+);
+2025-06-09 22:51:33.155 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "RefreshTokens" (
+    "Id" uuid NOT NULL,
+    "Username" text NOT NULL,
+    "Token" text NOT NULL,
+    "ExpiresAt" timestamp with time zone NOT NULL,
+    "IsRevoked" boolean NOT NULL,
+    CONSTRAINT "PK_RefreshTokens" PRIMARY KEY ("Id")
+);
+2025-06-09 22:51:33.158 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Username" text NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "HashKey" text NOT NULL,
+    "Role" text NOT NULL,
+    "UserId" uuid NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Username")
+);
+2025-06-09 22:51:33.162 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Voters" (
+    "Id" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Email" text NOT NULL,
+    "Age" integer NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Voters" PRIMARY KEY ("Id")
+);
+2025-06-09 22:51:33.167 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Polls" (
+    "Id" uuid NOT NULL,
+    "Title" text NOT NULL,
+    "Description" text,
+    "CreatedByEmail" text NOT NULL,
+    "StartDate" date NOT NULL,
+    "EndDate" date NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_Polls" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Polls_Moderators_CreatedByEmail" FOREIGN KEY ("CreatedByEmail") REFERENCES "Moderators" ("Email") ON DELETE RESTRICT
+);
+2025-06-09 22:51:33.170 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollFiles" (
+    "Id" uuid NOT NULL,
+    "Filename" text NOT NULL,
+    "FileType" text NOT NULL,
+    "Content" bytea NOT NULL,
+    "UploadedByUsername" text NOT NULL,
+    "PollId" uuid NOT NULL,
+    "UploadedAt" timestamp with time zone NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_PollFiles" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_PollFiles_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE RESTRICT
+);
+2025-06-09 22:51:33.175 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollOptions" (
+    "Id" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "OptionText" text NOT NULL,
+    "VoteCount" integer NOT NULL,
+    "IsDeleted" boolean NOT NULL,
+    CONSTRAINT "PK_PollOptions" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_PollOptions_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:51:33.178 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "VoterChecks" (
+    "Id" uuid NOT NULL,
+    "VoterId" uuid NOT NULL,
+    "PollId" uuid NOT NULL,
+    "HasVoted" boolean NOT NULL,
+    "VotedAt" timestamp with time zone,
+    CONSTRAINT "PK_VoterChecks" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_VoterChecks_Polls_PollId" FOREIGN KEY ("PollId") REFERENCES "Polls" ("Id") ON DELETE CASCADE,
+    CONSTRAINT "FK_VoterChecks_Voters_VoterId" FOREIGN KEY ("VoterId") REFERENCES "Voters" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:51:33.180 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "PollVotes" (
+    "Id" uuid NOT NULL,
+    "PollOptionId" uuid NOT NULL,
+    "Timestamp" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_PollVotes" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_PollVotes_PollOptions_PollOptionId" FOREIGN KEY ("PollOptionId") REFERENCES "PollOptions" ("Id") ON DELETE CASCADE
+);
+2025-06-09 22:51:33.182 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Admins_Email" ON "Admins" ("Email");
+2025-06-09 22:51:33.184 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Moderators_Email" ON "Moderators" ("Email");
+2025-06-09 22:51:33.186 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_PollFiles_PollId" ON "PollFiles" ("PollId");
+2025-06-09 22:51:33.188 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_PollOptions_PollId_OptionText" ON "PollOptions" ("PollId", "OptionText");
+2025-06-09 22:51:33.190 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Polls_CreatedByEmail" ON "Polls" ("CreatedByEmail");
+2025-06-09 22:51:33.191 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_PollVotes_PollOptionId" ON "PollVotes" ("PollOptionId");
+2025-06-09 22:51:33.192 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_RefreshTokens_Token" ON "RefreshTokens" ("Token");
+2025-06-09 22:51:33.194 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_VoterChecks_PollId" ON "VoterChecks" ("PollId");
+2025-06-09 22:51:33.195 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_VoterChecks_VoterId_PollId" ON "VoterChecks" ("VoterId", "PollId");
+2025-06-09 22:51:33.196 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Voters_Email" ON "Voters" ("Email");
+2025-06-09 22:51:33.197 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250609172128_FirstMigration', '9.0.5');
+2025-06-09 22:51:44.204 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-09 22:51:44.262 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-09 22:51:44.263 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-09 22:51:44.263 +05:30 [INF] Hosting environment: Development
+2025-06-09 22:51:44.263 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-09 22:53:30.964 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/swagger/api/v1/Poll - null 0
+2025-06-09 22:53:31.030 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/swagger/api/v1/Poll - 404 0 null 67.5031ms
+2025-06-09 22:53:31.039 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5100/swagger/api/v1/Poll, Response status code: 404
+2025-06-09 22:53:43.110 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-09 22:53:43.175 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 65.1077ms
+2025-06-09 22:53:43.316 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-09 22:53:43.406 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 90.3962ms
+2025-06-09 22:54:06.646 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - application/json 110
+2025-06-09 22:54:06.656 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 22:54:06.677 +05:30 [INF] Route matched with {action = "AddAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAdminAsync(TrueVote.Models.DTOs.AddAdminRequestDto) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-09 22:54:07.551 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 22:54:07.617 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Admins" ("Id", "Email", "Name")
+VALUES (@p0, @p1, @p2);
+2025-06-09 22:54:07.632 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:54:07.640 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Admin, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 22:54:07.649 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote) in 969.3694ms
+2025-06-09 22:54:07.649 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-09 22:54:07.654 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - 201 null application/json; charset=utf-8 1007.6991ms
+2025-06-09 22:54:46.459 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-09 22:54:46.464 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:54:46.470 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 22:54:46.495 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 22:54:46.904 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:54:46.905 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 22:54:46.906 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 435.3855ms
+2025-06-09 22:54:46.906 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:54:46.906 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 446.8467ms
+2025-06-09 22:55:32.005 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - application/json 68
+2025-06-09 22:55:32.047 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 22:55:32.052 +05:30 [INF] Route matched with {action = "AddModerator", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddModeratorAsync(TrueVote.Models.DTOs.AddModeratorRequestDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-09 22:55:32.230 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 22:55:32.246 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Boolean), @p3='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Moderators" ("Id", "Email", "IsDeleted", "Name")
+VALUES (@p0, @p1, @p2, @p3);
+2025-06-09 22:55:32.247 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:55:32.248 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 22:55:32.252 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote) in 199.3912ms
+2025-06-09 22:55:32.252 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.AddModeratorAsync (TrueVote)'
+2025-06-09 22:55:32.252 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Moderator - 201 null application/json; charset=utf-8 247.0872ms
+2025-06-09 22:55:56.181 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 53
+2025-06-09 22:55:56.183 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:55:56.184 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 22:55:56.189 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 22:55:56.193 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-09 22:55:56.194 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 10.13ms
+2025-06-09 22:55:56.194 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:55:56.194 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 13.2813ms
+2025-06-09 22:56:04.035 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 55
+2025-06-09 22:56:04.036 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:56:04.037 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-09 22:56:04.042 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-09 22:56:04.360 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:56:04.360 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-09 22:56:04.361 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 323.7492ms
+2025-06-09 22:56:04.361 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-09 22:56:04.361 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 325.2648ms
+2025-06-09 22:57:04.896 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryDXigAoAx4FU1kWbB 765
+2025-06-09 22:57:04.900 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:57:04.905 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:57:04.918 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-09 22:57:04.927 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 21.9277ms
+2025-06-09 22:57:04.928 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:57:04.928 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/problem+json; charset=utf-8 31.9087ms
+2025-06-09 22:57:21.466 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundary7pG5JzulB5MzAVvz 781
+2025-06-09 22:57:21.477 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:57:21.479 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:57:21.506 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Date), @p4='?' (DbType = Boolean), @p5='?' (DbType = Date), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-09 22:57:21.527 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:57:21.528 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:57:21.529 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 22:57:21.533 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 53.1687ms
+2025-06-09 22:57:21.533 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:57:21.533 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 67.2696ms
+2025-06-09 22:58:12.471 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarydzJ4XUFeeKO5xd5t 3612225
+2025-06-09 22:58:12.477 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:58:12.477 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-09 22:58:12.569 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Date), @p4='?' (DbType = Boolean), @p5='?' (DbType = Date), @p6='?', @p7='?' (DbType = Guid), @p8='?' (DbType = Binary), @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?' (DbType = Guid), @p13='?' (DbType = DateTime), @p14='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "PollId", "UploadedAt", "UploadedByUsername")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-06-09 22:58:12.578 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:58:12.580 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-09 22:58:12.580 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-09 22:58:12.589 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 111.511ms
+2025-06-09 22:58:12.589 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-09 22:58:12.591 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 120.2153ms

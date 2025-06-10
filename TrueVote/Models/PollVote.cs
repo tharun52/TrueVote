@@ -10,10 +10,10 @@ namespace TrueVote.Models
         public Guid Id { get; set; }
 
         [Required]
-        public Guid PollOptionId { get; set; } 
+        public Guid PollOptionId { get; set; }
 
         [Required]
-        public DateTime Timestamp { get; set; }
+        public DateTime Timestamp { get; set; } = DateTime.UtcNow;
 
     }
 }

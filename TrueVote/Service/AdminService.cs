@@ -10,15 +10,19 @@ namespace TrueVote.Service
         private readonly IRepository<string, User> _userRepository;
         private readonly IEncryptionService _encryptionService;
         private readonly IConfiguration _configuration;
+        private readonly IAuditLogger _auditLogger;
+
         public AdminService(IRepository<Guid, Admin> adminRepository,
                             IRepository<string, User> userRepository,
                             IEncryptionService encryptionService,
-                            IConfiguration configuration)
+                            IConfiguration configuration,
+                            IAuditLogger auditLogger)
         {
             _adminRepository = adminRepository;
             _userRepository = userRepository;
             _encryptionService = encryptionService;
             _configuration = configuration;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Admin> AddAdmin(AddAdminRequestDto adminDto)
@@ -62,7 +66,8 @@ namespace TrueVote.Service
             
             user.UserId = admin.Id;
             await _userRepository.Add(user);
-            
+
+            _auditLogger.LogAction(user.Username, $"New Admin with Email : {user.Username} was created", true);
             return admin;
         }
     }
