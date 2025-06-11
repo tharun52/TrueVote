@@ -56,7 +56,7 @@ namespace TrueVote.Service
                 Role = dbUser.Role
             };
         }
-        
+
         public async Task<UserLoginResponse> RefreshLogin(string refreshToken)
         {
             var existingToken = (await _refreshTokenRepository.GetAll())
@@ -85,5 +85,6 @@ namespace TrueVote.Service
                 Role = user.Role
             };
         }
+        
     }
 }

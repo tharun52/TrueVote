@@ -162,6 +162,28 @@ namespace TrueVote.Service
         }
 
 
+        public async Task<Moderator> GetModeratorByIdAsync(Guid moderatorId)
+        {
+            var moderator = await _moderatorRepository.Get(moderatorId);
+            if (moderator == null || moderator.IsDeleted)
+            {
+                throw new Exception("Moderator not found");
+            }
+            return moderator;
+        }
+
+        public async Task<Moderator> GetModeratorByEmailAsync(string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+                throw new ArgumentException("Email cannot be empty");
+
+            var allModerators = await _moderatorRepository.GetAll();
+            var moderator = allModerators.FirstOrDefault(m => m.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+            if (moderator == null || moderator.IsDeleted)
+                throw new Exception("Moderator not found");
+
+            return moderator;
+        }
 
         public async Task<PagedResponseDto<Moderator>> QueryModeratorsPaged(ModeratorQueryDto query)
         {

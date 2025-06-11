@@ -187,6 +187,7 @@ app.UseCors();
 app.MapControllers();
 app.MapHub<NotificationHub>("/notificationhub");
 app.MapHub<PollHub>("/pollhub");
+// app.MapHub<ModeratorHub>("/moderatorhub");
 
 app.Run();
 

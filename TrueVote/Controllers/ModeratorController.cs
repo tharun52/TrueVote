@@ -57,6 +57,33 @@ namespace TrueVote.Controllers
             }
         }
        
+        [HttpGet("{moderatorId}")]
+        public async Task<IActionResult> GetModeratorByIdAsync(Guid moderatorId)
+        {
+            try
+            {
+                var moderator = await _moderatorService.GetModeratorByIdAsync(moderatorId);
+                return Ok(ApiResponseHelper.Success(moderator, "Moderator fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ApiResponseHelper.Failure<object>(ex.Message));
+            }
+        }
+
+        [HttpGet("email/{email}")]
+        public async Task<IActionResult> GetModeratorByEmailAsync(string email)
+        {
+            try
+            {
+                var moderator = await _moderatorService.GetModeratorByEmailAsync(email);
+                return Ok(ApiResponseHelper.Success(moderator, "Moderator fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ApiResponseHelper.Failure<object>(ex.Message));
+            }
+        }
 
         [HttpPut("update/{username}")]
         [Authorize(Roles = "Admin, Moderator")]

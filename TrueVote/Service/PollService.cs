@@ -19,14 +19,12 @@ namespace TrueVote.Service
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
         private readonly IPollMapper _pollMapper;
-        private readonly IHubContext<PollHub> _pollHub;
 
         public PollService(IRepository<Guid, Poll> pollRepository,
                            IRepository<Guid, PollOption> pollOptionRepository,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
-                           AppDbContext appDbContext,
-                           IHubContext<PollHub> pollHub)
+                           AppDbContext appDbContext)
         {
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
@@ -34,8 +32,9 @@ namespace TrueVote.Service
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
             _pollMapper = new PollMapper();
-            _pollHub = pollHub;
         }
+
+
 
         public async Task<Poll> UpdatePoll(Guid pollId, UpdatePollRequestDto updateDto)
         {
@@ -169,9 +168,6 @@ namespace TrueVote.Service
                 Poll = newPoll,
                 PollOptions = pollOptions
             };
-
-            await _pollHub.Clients.All.SendAsync("ReceivePollUpdate", pollResponse);
-
             _auditLogger.LogAction(loggedInUser, $"Added a new poll with ID: {newPoll.Id}", true);
 
             return newPoll;
@@ -196,6 +192,8 @@ namespace TrueVote.Service
                 PollImageType = poll.PoleFile?.FileType
             };
         }
+        
+
         
         public async Task<PagedResponseDto<PollResponseDto>> QueryPollsPaged(PollQueryDto query)
         {

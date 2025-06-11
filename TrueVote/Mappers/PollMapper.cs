@@ -32,6 +32,7 @@ namespace TrueVote.Mappers
                 Content = memoryStream.ToArray()
             };
         }
+
         public PollOption MapPollOptionRequestDtoToPollOption(string Option)
         {
             return new PollOption
@@ -53,7 +54,7 @@ namespace TrueVote.Mappers
                 Filename = dto.PollFile.FileName,
                 FileType = dto.PollFile.ContentType,
                 Content = ms.ToArray(),
-                UploadedByUsername = "", // Set in service
+                UploadedByUsername = "",
                 PollId = pollId,
                 UploadedAt = DateTime.UtcNow,
                 IsDeleted = false
