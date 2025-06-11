@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>TrueVote Polls - Real-Time Updates</title>
@@ -29,128 +28,186 @@
         .updated {
             background: #e8f8f5;
         }
+
+        #moderator-list li {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+            margin-bottom: 5px;
+        }
+
+        .moderator-selected {
+            font-weight: bold;
+            color: darkgreen;
+        }
+
+        img.poll-image {
+            max-width: 300px;
+            display: block;
+            margin: 10px 0;
+        }
     </style>
 </head>
-
 <body>
     <h1>Live Polls</h1>
+
+    <div id="moderators">
+        <h3>Select Moderator</h3>
+        <ul id="moderator-list"></ul>
+    </div>
+
+    <hr>
+
     <div id="polls"></div>
 
     <script>
-    // Set your backend URL and port here
-    const backendUrl = "http://localhost:5100";
+        const backendUrl = "http://localhost:5100";
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl(backendUrl + "/pollhub")
+            .build();
 
-    // SignalR connection
-    const connection = new signalR.HubConnectionBuilder()
-        .withUrl(backendUrl + "/pollhub")
-        .build();
+        let pollsById = {};
+        let allModerators = [];
 
-    // Store polls by ID for easy update
-    const pollsById = {};
+        function renderPolls() {
+            const pollsDiv = document.getElementById('polls');
+            pollsDiv.innerHTML = '';
+            Object.values(pollsById).forEach(pollObj => {
+                const poll = pollObj.poll;
+                let options = pollObj.pollOptions || [];
+                if (options.$values) options = options.$values;
 
-    // Render all polls
-    function renderPolls() {
-    const pollsDiv = document.getElementById('polls');
-    pollsDiv.innerHTML = '';
-    Object.values(pollsById).forEach(pollObj => {
-        const poll = pollObj.poll;
-        let options = pollObj.pollOptions || [];
+                const base64Data = pollObj.pollImageBase64;
+                const fileExtension = pollObj.pollImageType;
+                const fileName = poll.title.replace(/\s+/g, "_") + (fileExtension || ".bin");
 
-        if (options.$values) {
-            options = options.$values;
-        }
+                const pollDiv = document.createElement('div');
+                pollDiv.className = 'poll';
+                pollDiv.id = 'poll-' + poll.id;
 
-        const base64Data = pollObj.pollImageBase64;
-        const fileExtension = pollObj.pollImageType; // this is actually .jpg, .png, etc.
-        const fileName = poll.title.replace(/\s+/g, "_") + (fileExtension || ".bin"); // Fallback to .bin
-
-        const pollDiv = document.createElement('div');
-        pollDiv.className = 'poll';
-        pollDiv.id = 'poll-' + poll.id;
-
-        let downloadButtonHtml = "";
-        if (base64Data && fileExtension) {
-            downloadButtonHtml = `<button onclick="downloadPollFile('${base64Data}', '${fileName}')">Download File</button>`;
-        }
-
-        pollDiv.innerHTML = `
-            <h2>${poll.title}</h2>
-            <p>${poll.description || ''}</p>
-            <p><strong>Start:</strong> ${poll.startDate || ''} <strong>End:</strong> ${poll.endDate || ''}</p>
-            <ul>
-                ${options.map(opt => `<li class="option">${opt.optionText} <strong>Votes:</strong> ${opt.voteCount}</li>`).join('')}
-            </ul>
-            ${downloadButtonHtml}
-        `;
-        pollsDiv.appendChild(pollDiv);
-    });
-}
-
-
-
-    // ✅ Define fetchAllPolls function here
-    function fetchAllPolls() {
-        fetch(backendUrl + '/api/v1/Poll/query?page=1&pageSize=100')
-            .then(res => res.json())
-            .then(data => {
-                const pollArray = data?.data?.data?.$values;
-                if (Array.isArray(pollArray)) {
-                    pollArray.forEach(pollResp => {
-                        const poll = pollResp.poll;
-                        const options = pollResp.pollOptions || [];
-                        pollsById[poll.id] = {
-                            poll,
-                            pollOptions: options,
-                            pollImageBase64: pollResp.pollImageBase64,
-                            pollImageType: pollResp.pollImageType
-                        };
-                        console.log("Rendering poll:", poll.title);
-                        // Optionally log base64 data, e.g.:
-                        console.log("Base64 Data:", pollResp.pollImageBase64?.substring(0, 30));
-
-                    });
-                    renderPolls();
-                } else {
-                    console.error("Poll array not found in API response", data);
+                let mediaHtml = '';
+                if (base64Data && fileExtension) {
+                    const imageTypes = ['.png', '.jpg', '.jpeg', '.gif', '.bmp', '.webp'];
+                    if (imageTypes.includes(fileExtension.toLowerCase())) {
+                        mediaHtml = `<img class="poll-image" src="data:image/${fileExtension.slice(1)};base64,${base64Data}" alt="Poll Image">`;
+                    } else {
+                        mediaHtml = `<button onclick="downloadPollFile('${base64Data}', '${fileName}')">Download File</button>`;
+                    }
                 }
-            })
-            .catch(error => console.error("Error fetching polls:", error));
-    }
 
-    // SignalR: Receive a poll update
-    connection.on("ReceivePollUpdate", function (pollResponse) {
-        pollsById[pollResponse.poll.id] = pollResponse;
-        renderPolls();
-        const el = document.getElementById('poll-' + pollResponse.poll.id);
-        if (el) {
-            el.classList.add('updated');
-            setTimeout(() => el.classList.remove('updated'), 1500);
+                pollDiv.innerHTML = `
+                    <h2>${poll.title}</h2>
+                    <p>${poll.description || ''}</p>
+                    <p><strong>Start:</strong> ${poll.startDate} <strong>End:</strong> ${poll.endDate}</p>
+                    <ul>${options.map(opt => `<li class="option">${opt.optionText} <strong>Votes:</strong> ${opt.voteCount}</li>`).join('')}</ul>
+                    ${mediaHtml}
+                `;
+
+                pollsDiv.appendChild(pollDiv);
+            });
         }
-    });
 
-    // Connect SignalR and load data
-    connection.start().then(function () {
-        fetchAllPolls();
-    }).catch(function (err) {
-        return console.error(err.toString());
-    });
+        function fetchAllPolls() {
+            fetch(backendUrl + '/api/v1/Poll/query?page=1&pageSize=100')
+                .then(res => res.json())
+                .then(data => {
+                    const pollArray = data?.data?.data?.$values;
+                    if (Array.isArray(pollArray)) {
+                        pollsById = {};
+                        pollArray.forEach(pollResp => {
+                            const poll = pollResp.poll;
+                            const options = pollResp.pollOptions || [];
+                            pollsById[poll.id] = {
+                                poll,
+                                pollOptions: options,
+                                pollImageBase64: pollResp.pollImageBase64,
+                                pollImageType: pollResp.pollImageType
+                            };
+                        });
+                        renderPolls();
+                    } else {
+                        console.error("Invalid poll response structure", data);
+                    }
+                })
+                .catch(error => console.error("Error fetching polls:", error));
+        }
 
-    function downloadPollFile(base64, filename) {
-    const byteCharacters = atob(base64);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let i = 0; i < byteCharacters.length; i++) {
-        byteNumbers[i] = byteCharacters.charCodeAt(i);
-    }
-    const byteArray = new Uint8Array(byteNumbers);
-    const blob = new Blob([byteArray]);
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = filename;
-    link.click();
-    URL.revokeObjectURL(link.href); // Clean up
-}
-</script>
+        function fetchModerators() {
+            fetch(`${backendUrl}/api/v1/Moderator/query?page=1&pageSize=100`)
+                .then(res => res.json())
+                .then(data => {
+                    allModerators = data?.data?.data?.$values || [];
+                    renderModerators();
+                })
+                .catch(err => console.error("Failed to load moderators:", err));
+        }
 
+        function renderModerators() {
+            const list = document.getElementById("moderator-list");
+            list.innerHTML = "";
+            allModerators.forEach(mod => {
+                const li = document.createElement("li");
+                li.textContent = mod.email;
+                li.onclick = () => fetchPollsByModerator(mod.email);
+                list.appendChild(li);
+            });
+        }
+
+        function fetchPollsByModerator(email) {
+            connection.invoke("GetPollsByModeratorEmail", email)
+                .catch(err => console.error("SignalR invoke error:", err));
+        }
+
+        function downloadPollFile(base64, filename) {
+            const byteCharacters = atob(base64);
+            const byteNumbers = new Array(byteCharacters.length);
+            for (let i = 0; i < byteCharacters.length; i++) {
+                byteNumbers[i] = byteCharacters.charCodeAt(i);
+            }
+            const byteArray = new Uint8Array(byteNumbers);
+            const blob = new Blob([byteArray]);
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            link.click();
+            URL.revokeObjectURL(link.href);
+        }
+
+        connection.on("ReceivePollUpdate", function (pollResponse) {
+            pollsById[pollResponse.poll.id] = {
+                poll: pollResponse.poll,
+                pollOptions: pollResponse.pollOptions || [],
+                pollImageBase64: pollResponse.pollImageBase64,
+                pollImageType: pollResponse.pollImageType
+            };
+            renderPolls();
+            const el = document.getElementById('poll-' + pollResponse.poll.id);
+            if (el) {
+                el.classList.add('updated');
+                setTimeout(() => el.classList.remove('updated'), 1500);
+            }
+        });
+
+        connection.on("ReceivePollsByModerator", function (pollList) {
+            pollsById = {};
+            const pollArray = pollList?.$values || pollList || [];
+            pollArray.forEach(pollResp => {
+                pollsById[pollResp.poll.id] = {
+                    poll: pollResp.poll,
+                    pollOptions: pollResp.pollOptions?.$values || pollResp.pollOptions || [],
+                    pollImageBase64: pollResp.pollImageBase64,
+                    pollImageType: pollResp.pollImageType
+                };
+            });
+            renderPolls();
+        });
+
+        connection.start().then(function () {
+            fetchAllPolls();      // Initial full load
+            fetchModerators();    // Fetch and display moderators
+        }).catch(function (err) {
+            console.error(err.toString());
+        });
+    </script>
 </body>
-
 </html>
