@@ -66,5 +66,42 @@ namespace TrueVote.Controllers
 
             return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator added successfully"));
         }
+
+        [HttpPut("update/{moderatorId}")]
+        [Consumes("multipart/form-data")]
+        public async Task<IActionResult> UpdateModeratorAsync(Guid moderatorId, [FromBody] AddModeratorRequestDto moderatorDto)
+        {
+            if (moderatorDto == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
+            }
+
+            var newModerator = await _moderatorService.UpdateModerator(moderatorId, moderatorDto);
+            if (newModerator == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "moderator", new List<string> { "Failed to update moderator" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
+            }
+            return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator updated successfully"));
+        }
+
+        [HttpDelete("{moderatorId}")]
+        public async Task<IActionResult> DeleteModeratorAsync(Guid moderatorId)
+        {
+            var deletedModerator = await _moderatorService.DeleteModerator(moderatorId);
+            if (deletedModerator == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "moderator", new List<string> { "Failed to delete moderator" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
+            }
+             return Created($"/api/moderator/{deletedModerator.Id}", ApiResponseHelper.Success(deletedModerator, "Moderator deleted successfully"));
+        }
     }
 }

@@ -52,9 +52,9 @@ namespace TrueVote.Service
             var voterChecks = await _voterCheckRepository.GetAll();
             var existingVoterCheck = voterChecks.FirstOrDefault(vc => vc.VoterId == voterId && vc.PollId == currentPollOption.PollId);
 
-             if (existingVoterCheck != null)
+            if (existingVoterCheck != null)
             {
-                // Code here
+                throw new Exception($"This Voter {loggedInUser} has already voted in this poll");    
             }
 
             var voterCheck = new VoterCheck

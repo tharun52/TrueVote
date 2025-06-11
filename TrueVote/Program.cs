@@ -12,6 +12,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Serilog;
 using Serilog.Filters;
+using TrueVote.Misc;
+using AspNetCoreRateLimit;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -52,6 +54,8 @@ builder.Services.AddSwaggerGen(opt =>
 
 
 
+
+
 builder.Services.AddControllers()
                 .AddJsonOptions(opts =>
                 {
@@ -62,7 +66,7 @@ builder.Services.AddControllers()
 builder.Services.AddApiVersioning(options =>
 {
     options.AssumeDefaultVersionWhenUnspecified = true;
-    options.DefaultApiVersion = new ApiVersion(2, 0);
+    options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ReportApiVersions = true;
 
     options.ApiVersionReader = new UrlSegmentApiVersionReader();
@@ -121,7 +125,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 #endregion
 
 #region Logging
-
 builder.Host.UseSerilog((context, services, configuration) =>
 {
     configuration
@@ -142,6 +145,28 @@ builder.Host.UseSerilog((context, services, configuration) =>
 builder.Services.AddTransient<IAuditLogger, AuditLogger>();
 #endregion
 
+#region RateLimiting
+builder.Services.AddMemoryCache();
+builder.Services.Configure<IpRateLimitOptions>(builder.Configuration.GetSection("IpRateLimiting"));
+builder.Services.AddInMemoryRateLimiting();
+
+builder.Services.AddTransient<IClientResolveContributor, CustomClientResolveContributor>();
+builder.Services.AddTransient<IRateLimitConfiguration, RateLimitConfiguration>();
+#endregion
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.WithOrigins("http://127.0.0.1:5500")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
+builder.Services.AddSignalR();
+
 
 var app = builder.Build();
 
@@ -152,6 +177,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+
+app.UseAuthentication();
+app.UseAuthorization();
+app.UseClientRateLimiting();
+
+app.UseCors();
 app.MapControllers();
+app.MapHub<NotificationHub>("/notificationhub");
+
 app.Run();
 

@@ -29,6 +29,75 @@ namespace TrueVote.Service
             _auditLogger = auditLogger;
             _httpContextAccessor = httpContextAccessor;
         }
+
+        public async Task<Moderator> DeleteModerator(Guid moderatorId)
+        {
+            var moderator = await _moderatorRepository.Get(moderatorId);
+            if (moderator == null)
+            {
+                throw new Exception("Moderator not found for deletion");
+            }
+            moderator.IsDeleted = true;
+
+            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (loggedInUser == null)
+            {
+                throw new Exception("No User Logged in");
+            }
+            _auditLogger.LogAction(loggedInUser, $"Soft Deleted moderator: {moderator.Name} : {moderator.Id}", true);
+
+            return await _moderatorRepository.Update(moderator.Id, moderator);
+        }
+
+        public async Task<Moderator> UpdateModerator(Guid moderatorId, AddModeratorRequestDto moderatorDto)
+        {
+            var moderator = await _moderatorRepository.Get(moderatorId);
+            if (moderator == null)
+            {
+                throw new Exception("Moderator not found for update");
+            }
+
+            var user = await _userRepository.Get(moderator.Email);
+            if (user == null)
+            {
+                throw new Exception("Associated user not found");
+            }
+
+            moderator.Name = moderatorDto.Name;
+            moderator.Email = moderatorDto.Email;
+
+            if (!string.Equals(user.Username, moderatorDto.Email, StringComparison.OrdinalIgnoreCase))
+            {
+                user.Username = moderatorDto.Email;
+            }
+
+            if (!string.IsNullOrWhiteSpace(moderatorDto.Password))
+            {
+                var encryptedData = await _encryptionService.EncryptData(new EncryptModel
+                {
+                    Data = moderatorDto.Password
+                });
+                if (encryptedData == null || encryptedData.EncryptedText == null || encryptedData.HashKey == null)
+                {
+                    throw new InvalidOperationException("Encryption failed: Encrypted data is null.");
+                }
+                user.PasswordHash = encryptedData.EncryptedText;
+                user.HashKey = encryptedData.HashKey;
+            }
+
+            await _userRepository.Update(user.Username, user);
+            var updatedModerator = await _moderatorRepository.Update(moderatorId, moderator);
+
+            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (loggedInUser == null)
+            {
+                throw new Exception("No User Logged in");
+            }
+            _auditLogger.LogAction(loggedInUser, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
+
+            return updatedModerator;
+        }
+        
         public async Task<Moderator> AddModerator(AddModeratorRequestDto moderatorDto)
         {
             var newModerator = _moderatorMapper.MapAddModeratorRequestDtoToModerator(moderatorDto);
@@ -69,14 +138,15 @@ namespace TrueVote.Service
             {
                 throw new Exception("No User Logged in");
             }
-            _auditLogger.LogAction(loggedInUser, $"Added new moderator: {newModerator.Name}", true);
-            // Log.Information("AUDIT | User: {User} | Action: {Action} | Date: {Date}",
-            //         loggedInUser, $"Added new moderator: {newModerator.Name}", DateTime.Now);
+            _auditLogger.LogAction(loggedInUser, $"Added new moderator: {newModerator.Name} : {moderator.Id}", true);
             return moderator;
         }
+
+
         public async Task<IEnumerable<Moderator>> GetAllModeratorsAsync()
         {
             var moderators = await _moderatorRepository.GetAll();
+            moderators = moderators.Where(m => !m.IsDeleted);
             if (moderators == null || !moderators.Any())
             {
                 throw new Exception("No Moderators found");

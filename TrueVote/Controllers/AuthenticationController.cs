@@ -14,6 +14,7 @@ namespace TrueVote.Controllers
         public AuthenticationController(IAuthenticationService authenticationService)
         {
             _authenticationService = authenticationService;
+
         }
         [HttpPost]
         public async Task<ActionResult<UserLoginResponse>> UserLogin(UserLoginRequest loginRequest)
