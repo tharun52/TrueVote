@@ -23,7 +23,7 @@ The API must support the following high-level features:
 * JWT Bearer Authentication with Access + Refresh Tokens
 * Password hashing using BCrypt
 * Authorization based on user roles (e.g., Admin, Editor, Viewer)
-* Input validation & sanitization
+* Input validation & sanitization //\\
 * HTTPS enforced across environments(Optional)
 * CORS configuration for frontend clients
 * Role-based policy enforcement in controllers(Based on requirement)
@@ -59,7 +59,7 @@ DELETE	/api/v1/items/{id}	Delete item
 Method	Endpoint	Description
 POST	/api/v1/files/upload	Upload a file (multipart/form-data)
 GET	/api/v1/files/{filename}	Download a file
- 
+
 5. Request & Response Standards
 * Request Headers:
     * Authorization: Bearer <access_token>
@@ -84,7 +84,7 @@ CopyEdit
     "field": ["Error message"]
   }
 }
- 
+
 6. Pagination Standard
 * Supported via query parameters:
     * page (default: 1)
@@ -122,4 +122,14 @@ CopyEdit
 * Postman Collection for all endpoints
 * Contract testing if third-party services are integrated
  
- 
+
+
+audit table
+get by id
+logout 
+get Authentication
+profile picture
+unit testing 
+Integration testing
+APM
+structured logging

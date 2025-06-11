@@ -48,6 +48,9 @@ namespace TrueVote.Service
 
             return await _moderatorRepository.Update(moderator.Id, moderator);
         }
+
+
+        
         public async Task<Moderator> UpdateModerator(string username, UpdateModeratorDto dto)
         {
             var user = await _userRepository.Get(username);
@@ -113,6 +116,7 @@ namespace TrueVote.Service
         }
 
 
+
         public async Task<Moderator> AddModerator(AddModeratorRequestDto moderatorDto)
         {
             var newModerator = _moderatorMapper.MapAddModeratorRequestDtoToModerator(moderatorDto);
@@ -156,6 +160,8 @@ namespace TrueVote.Service
             _auditLogger.LogAction(loggedInUser, $"Added new moderator: {newModerator.Name} : {moderator.Id}", true);
             return moderator;
         }
+
+
 
         public async Task<PagedResponseDto<Moderator>> QueryModeratorsPaged(ModeratorQueryDto query)
         {

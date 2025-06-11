@@ -7,3 +7,5 @@
 2025-06-11 16:37:57.114 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: mano S : 01975cff-9819-754d-8efd-cc0505af90ef
 2025-06-11 16:40:52.671 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef
 2025-06-11 17:30:38.907 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975edd-1dce-7b4d-aa9c-516570b07037
+2025-06-11 20:43:26.798 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975f8d-a02b-73c8-8ccf-0ef03af828ec
+2025-06-11 20:53:05.972 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975f96-76ed-7745-a866-645ca197237b

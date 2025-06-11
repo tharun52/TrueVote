@@ -56,6 +56,7 @@ namespace TrueVote.Controllers
                 return StatusCode(500, ApiResponseHelper.Failure<object>("An unexpected error occurred: " + ex.Message));
             }
         }
+       
 
         [HttpPut("update/{username}")]
         [Authorize(Roles = "Admin, Moderator")]

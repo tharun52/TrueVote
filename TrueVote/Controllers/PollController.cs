@@ -40,7 +40,7 @@ namespace TrueVote.Controllers
                 return BadRequest(ApiResponseHelper.Failure<object>(ex.Message));
             }
         }
-        
+
         [HttpPut("update/{pollId}")]
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> UpdatePollAsync(Guid pollId, [FromForm] UpdatePollRequestDto updateDto)
@@ -75,6 +75,19 @@ namespace TrueVote.Controllers
             catch (Exception ex)
             {
                 return StatusCode(500, ApiResponseHelper.Failure<object>("An unexpected error occurred: " + ex.Message));
+            }
+        }
+        [HttpGet("{pollId}")]
+        public async Task<IActionResult> GetPollByIdAsync(Guid pollId)
+        {
+            try
+            {
+                var poll = await _pollService.GetPollByIdAsync(pollId);
+                return Ok(ApiResponseHelper.Success(poll, "Poll fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return NotFound(ApiResponseHelper.Failure<object>(ex.Message));
             }
         }
     }

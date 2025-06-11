@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TrueVote.Interfaces;
 using TrueVote.Misc;
@@ -18,6 +19,7 @@ namespace TrueVote.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Voter")]
         public async Task<IActionResult> AddVoteAsync([FromForm] Guid? pollOptionId)
         {
             if (pollOptionId == null)

@@ -1921,3 +1921,1296 @@ LIMIT 2
 2025-06-11 17:37:40.004 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
 2025-06-11 17:37:40.008 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d01-d79a-7e3c-822c-f5f168e9149a - 200 null application/json; charset=utf-8 957.2168ms
 2025-06-11 17:37:55.251 +05:30 [INF] Application is shutting down...
+2025-06-11 20:11:02.661 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:11:02.745 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:11:02.746 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:11:02.746 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:11:02.746 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:12:17.983 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:12:18.039 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:12:18.044 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 62.3582ms
+2025-06-11 20:12:18.047 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:12:18.052 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:12:18.053 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 404 0 null 6.5169ms
+2025-06-11 20:12:18.054 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5100/pollhub/negotiate, Response status code: 404
+2025-06-11 20:12:25.025 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:12:25.029 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:12:25.030 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 4.8317ms
+2025-06-11 20:12:25.032 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:12:25.032 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:12:25.033 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 404 0 null 0.5717ms
+2025-06-11 20:12:25.033 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5100/pollhub/negotiate, Response status code: 404
+2025-06-11 20:12:51.768 +05:30 [INF] Application is shutting down...
+2025-06-11 20:12:57.408 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:12:57.475 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:12:57.476 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:12:57.476 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:12:57.476 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:13:01.996 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:13:02.051 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:13:02.056 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 60.8057ms
+2025-06-11 20:13:02.058 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:13:02.066 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:13:02.067 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:13:02.071 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:13:02.071 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 13.4746ms
+2025-06-11 20:13:02.075 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=gA398NVXe-wzFtISw7z5cw - null null
+2025-06-11 20:13:02.077 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:13:02.077 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:13:02.105 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:13:02.113 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:13:02.114 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:13:02.173 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:13:02.732 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:13:02.840 +05:30 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:13:02.859 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:13:02.879 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 704.2032ms
+2025-06-11 20:13:02.879 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:13:02.883 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 778.3366ms
+2025-06-11 20:13:47.828 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-11 20:13:47.941 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 112.7187ms
+2025-06-11 20:13:52.892 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarySviBM7Pbao82LwyP 655
+2025-06-11 20:13:52.901 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Moderator)
+2025-06-11 20:13:52.904 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-11 20:13:52.904 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 401 0 null 12.292ms
+2025-06-11 20:14:04.036 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-11 20:14:04.038 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:14:04.038 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:14:04.060 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:14:04.063 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:14:04.065 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:14:04.066 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 27.5021ms
+2025-06-11 20:14:04.066 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:14:04.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 31.2458ms
+2025-06-11 20:14:19.260 +05:30 [INF] Application is shutting down...
+2025-06-11 20:14:19.266 +05:30 [INF] Connection id "0HND8UP26NB03", Request id "0HND8UP26NB03:00000001": the application aborted the connection.
+2025-06-11 20:14:19.279 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:14:19.280 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=gA398NVXe-wzFtISw7z5cw - 101 null null 77204.3932ms
+2025-06-11 20:24:58.530 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:24:58.597 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:24:58.598 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:24:58.599 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:24:58.599 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:25:03.650 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryKhHpw0z8ySrBpgmT 655
+2025-06-11 20:25:03.696 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Moderator)
+2025-06-11 20:25:03.697 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-11 20:25:03.699 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 401 0 null 50.4137ms
+2025-06-11 20:25:21.603 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 59
+2025-06-11 20:25:21.628 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:25:21.629 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:25:21.630 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:25:21.641 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-11 20:25:22.256 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-11 20:25:22.770 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-11 20:25:22.773 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 1130.6912ms
+2025-06-11 20:25:22.774 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:25:22.777 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 1175.1101ms
+2025-06-11 20:25:28.734 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 60
+2025-06-11 20:25:28.745 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:25:28.746 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:25:28.747 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:25:28.747 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-11 20:25:28.759 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-11 20:25:29.217 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:25:29.221 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-11 20:25:29.225 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 478.3458ms
+2025-06-11 20:25:29.226 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:25:29.226 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 491.7157ms
+2025-06-11 20:25:47.880 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundarySIqvbm9RVfSk5aha 655
+2025-06-11 20:25:47.910 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:25:47.910 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:25:47.910 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:25:47.914 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:25:47.929 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-11 20:25:47.933 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 19.533ms
+2025-06-11 20:25:47.933 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:25:47.934 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/json; charset=utf-8 54.0432ms
+2025-06-11 20:26:05.349 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryqIJeKrmMsBUBEuTp 747
+2025-06-11 20:26:05.353 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:26:05.353 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:26:05.353 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:26:05.354 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:26:05.359 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-11 20:26:05.371 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 17.2211ms
+2025-06-11 20:26:05.371 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:26:05.371 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 400 null application/problem+json; charset=utf-8 22.4032ms
+2025-06-11 20:26:12.864 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-11 20:26:12.873 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:26:12.878 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:26:12.928 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:26:12.949 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:26:12.962 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:26:12.971 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 92.2907ms
+2025-06-11 20:26:12.971 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:26:12.971 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 106.806ms
+2025-06-11 20:26:58.355 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=frank - null null
+2025-06-11 20:26:58.361 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:26:58.362 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:26:58.374 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:26:58.376 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:26:58.378 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:26:58.379 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 16.5546ms
+2025-06-11 20:26:58.379 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:26:58.380 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=frank - 200 null application/json; charset=utf-8 24.674ms
+2025-06-11 20:27:05.995 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=fav - null null
+2025-06-11 20:27:05.996 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:05.996 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:27:06.000 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:27:06.002 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:27:06.003 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:27:06.004 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 6.3733ms
+2025-06-11 20:27:06.004 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:06.004 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=fav - 200 null application/json; charset=utf-8 9.112ms
+2025-06-11 20:27:18.733 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=Fav%20Artist - null null
+2025-06-11 20:27:18.734 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:18.735 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:27:18.738 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:27:18.739 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:27:18.741 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:27:18.741 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 6.1017ms
+2025-06-11 20:27:18.741 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:18.741 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=Fav%20Artist - 200 null application/json; charset=utf-8 7.7823ms
+2025-06-11 20:27:21.400 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=Fav%20Artist - null null
+2025-06-11 20:27:21.401 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:21.401 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:27:21.404 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:27:21.406 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:27:21.407 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:27:21.408 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 6.0216ms
+2025-06-11 20:27:21.409 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:27:21.409 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SearchTerm=Fav%20Artist - 200 null application/json; charset=utf-8 9.1312ms
+2025-06-11 20:28:25.271 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:28:25.271 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:28:25.277 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:25.277 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:25.277 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:28:25.281 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:28:25.282 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 11.9243ms
+2025-06-11 20:28:25.285 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:28:25.286 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:25.286 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:28:25.288 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:28:25.288 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 3.3022ms
+2025-06-11 20:28:25.289 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:28:25.292 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:28:25.293 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:28:25.294 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 13.257ms
+2025-06-11 20:28:25.295 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:28:25.295 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 24.2171ms
+2025-06-11 20:28:25.325 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=P6fraOqlpEFLZbTl5aIvHg - null null
+2025-06-11 20:28:25.325 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:25.325 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:28:29.808 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:28:29.808 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:28:29.809 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:29.809 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:29.809 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:28:29.809 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.4224ms
+2025-06-11 20:28:29.809 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:28:29.810 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:28:29.811 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:29.811 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:28:29.811 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:28:29.811 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.8982ms
+2025-06-11 20:28:29.812 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:28:29.813 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:28:29.813 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:28:29.814 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 3.6288ms
+2025-06-11 20:28:29.814 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:28:29.814 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 6.1365ms
+2025-06-11 20:28:29.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=fcmRBbEs-8vO0YTV9kC6rg - null null
+2025-06-11 20:28:29.843 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:28:29.843 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:33:02.604 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:33:02.610 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=fcmRBbEs-8vO0YTV9kC6rg - 101 null null 272768.2942ms
+2025-06-11 20:33:02.616 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:33:02.616 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:33:02.618 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:02.618 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:02.618 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:02.618 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.9305ms
+2025-06-11 20:33:02.618 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:33:02.620 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:33:02.620 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:02.620 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:33:02.621 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:33:02.621 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.4737ms
+2025-06-11 20:33:02.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=fsHLhY5L1COE0t_EgDmOqQ - null null
+2025-06-11 20:33:02.626 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:02.626 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:33:03.052 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:33:03.055 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:33:03.056 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:33:03.057 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 438.882ms
+2025-06-11 20:33:03.058 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:03.058 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 442.2972ms
+2025-06-11 20:33:08.201 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:33:08.201 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:33:08.202 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:08.203 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:08.203 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:08.203 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:33:08.203 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.3807ms
+2025-06-11 20:33:08.204 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:33:08.204 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:08.204 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:33:08.204 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:33:08.204 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.3362ms
+2025-06-11 20:33:08.205 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:33:08.205 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:33:08.206 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:33:08.206 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 2.8237ms
+2025-06-11 20:33:08.206 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:08.206 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 4.5882ms
+2025-06-11 20:33:08.236 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=tGpgyAyOoxB626bk8QR6sQ - null null
+2025-06-11 20:33:08.236 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:08.236 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:33:11.519 +05:30 [INF] Application is shutting down...
+2025-06-11 20:33:11.523 +05:30 [INF] Connection id "0HND8UVP8UFPU", Request id "0HND8UVP8UFPU:00000001": the application aborted the connection.
+2025-06-11 20:33:11.524 +05:30 [INF] Connection id "0HND8UVP8UFQA", Request id "0HND8UVP8UFQA:00000001": the application aborted the connection.
+2025-06-11 20:33:11.526 +05:30 [INF] Connection id "0HND8UVP8UFQ6", Request id "0HND8UVP8UFQ6:00000001": the application aborted the connection.
+2025-06-11 20:33:11.526 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:33:11.526 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=P6fraOqlpEFLZbTl5aIvHg - 101 null null 286202.3633ms
+2025-06-11 20:33:11.528 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:33:11.528 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=fsHLhY5L1COE0t_EgDmOqQ - 101 null null 8902.3239ms
+2025-06-11 20:33:11.529 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:33:11.529 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=tGpgyAyOoxB626bk8QR6sQ - 101 null null 3293.4272ms
+2025-06-11 20:33:16.488 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:33:16.554 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:33:16.555 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:33:16.555 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:33:16.555 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:33:18.516 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:33:18.515 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:33:18.572 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:18.572 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:18.574 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:18.576 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 62.3197ms
+2025-06-11 20:33:18.579 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:33:18.588 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:33:18.589 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:18.589 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:33:18.595 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:33:18.595 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 16.4652ms
+2025-06-11 20:33:18.597 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=JORKp_mevbG_A5ue_8wKaQ - null null
+2025-06-11 20:33:18.598 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:33:18.598 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:33:19.551 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:33:19.608 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:33:19.623 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:33:19.648 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 1058.9627ms
+2025-06-11 20:33:19.649 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:33:19.653 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 1139.1141ms
+2025-06-11 20:34:51.834 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:34:51.839 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=JORKp_mevbG_A5ue_8wKaQ - 101 null null 93239.2327ms
+2025-06-11 20:35:05.103 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:35:05.103 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:35:05.108 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:35:05.109 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 6.3872ms
+2025-06-11 20:35:05.110 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:35:05.110 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:35:05.110 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:35:05.110 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:35:05.110 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:35:05.111 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:35:05.111 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.8099ms
+2025-06-11 20:35:05.113 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=grd-ZJdzA2fYpp3jsb56xg - null null
+2025-06-11 20:35:05.113 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:35:05.113 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:35:05.113 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:35:05.139 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:35:05.141 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:35:05.143 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:35:05.144 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 31.1837ms
+2025-06-11 20:35:05.144 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:35:05.145 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 42.2347ms
+2025-06-11 20:37:13.048 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:37:13.049 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=grd-ZJdzA2fYpp3jsb56xg - 101 null null 127935.6351ms
+2025-06-11 20:37:13.126 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:37:13.126 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:37:13.129 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:13.129 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:13.130 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:37:13.130 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 3.4501ms
+2025-06-11 20:37:13.131 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:37:13.132 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:37:13.134 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:13.134 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:37:13.136 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:37:13.136 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 4.6697ms
+2025-06-11 20:37:13.140 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=PwT9MjJdUWyB4_mTG_SnOQ - null null
+2025-06-11 20:37:13.141 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:13.141 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:37:13.180 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:37:13.181 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:37:13.182 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:37:13.182 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 51.5679ms
+2025-06-11 20:37:13.183 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:37:13.183 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 56.5085ms
+2025-06-11 20:37:45.237 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:37:45.245 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=PwT9MjJdUWyB4_mTG_SnOQ - 101 null null 32099.1958ms
+2025-06-11 20:37:45.320 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:37:45.320 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:37:45.321 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:45.321 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:45.321 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:37:45.321 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.1362ms
+2025-06-11 20:37:45.322 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:37:45.322 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:37:45.323 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:45.323 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:37:45.323 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:37:45.323 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.587ms
+2025-06-11 20:37:45.329 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=wBhtZGLN6C-X73PhmdJkkQ - null null
+2025-06-11 20:37:45.330 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:37:45.330 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:37:45.331 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:37:45.333 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:37:45.334 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:37:45.335 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 13.1063ms
+2025-06-11 20:37:45.335 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:37:45.336 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 16.1804ms
+2025-06-11 20:38:38.649 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:38:38.663 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=wBhtZGLN6C-X73PhmdJkkQ - 101 null null 53331.7734ms
+2025-06-11 20:38:38.722 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:38:38.723 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:38.724 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.2249ms
+2025-06-11 20:38:38.725 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:38:38.726 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:38.726 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:38:38.726 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:38:38.727 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.5316ms
+2025-06-11 20:38:38.731 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=O_1ZjT6vGSqtjLp1hG0_qA - null null
+2025-06-11 20:38:38.732 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:38.732 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:38:38.737 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:38:38.738 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:38.738 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:38.739 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:38:38.769 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:38:38.782 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:38:38.782 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:38:38.783 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 44.4698ms
+2025-06-11 20:38:38.783 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:38.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 46.7214ms
+2025-06-11 20:38:42.597 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:38:42.598 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.599 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.3561ms
+2025-06-11 20:38:42.600 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:38:42.600 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.600 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:38:42.601 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:38:42.601 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.0676ms
+2025-06-11 20:38:42.605 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=kdAKgFCrKjEcV-vnD6nyQQ - null null
+2025-06-11 20:38:42.606 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.607 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:38:42.610 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:38:42.611 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.611 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:42.611 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:38:42.615 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:38:42.616 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:38:42.616 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:38:42.616 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 5.2613ms
+2025-06-11 20:38:42.616 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:42.616 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 6.517ms
+2025-06-11 20:38:42.799 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:38:42.800 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=kdAKgFCrKjEcV-vnD6nyQQ - 101 null null 194.185ms
+2025-06-11 20:38:42.819 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:38:42.820 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.820 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 0.9096ms
+2025-06-11 20:38:42.822 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:38:42.822 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.822 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:38:42.822 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:38:42.823 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.8173ms
+2025-06-11 20:38:42.826 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=VybxVQAG2XwSrwAZZsM4sg - null null
+2025-06-11 20:38:42.826 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.827 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:38:42.829 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:38:42.829 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:42.829 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:42.829 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:38:42.830 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:38:42.831 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:38:42.831 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:38:42.832 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 2.4072ms
+2025-06-11 20:38:42.832 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:42.832 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 3.1469ms
+2025-06-11 20:38:43.521 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:38:43.521 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=VybxVQAG2XwSrwAZZsM4sg - 101 null null 694.6472ms
+2025-06-11 20:38:43.543 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:38:43.544 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:43.545 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.8876ms
+2025-06-11 20:38:43.546 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:38:43.546 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:43.546 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:38:43.546 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:38:43.546 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.7547ms
+2025-06-11 20:38:43.550 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=QNajuPmU0Yt0kG8Cb8_m_A - null null
+2025-06-11 20:38:43.550 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:43.550 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:38:43.553 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:38:43.553 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:38:43.553 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:43.553 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:38:43.555 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:38:43.556 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:38:43.556 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:38:43.556 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 2.9184ms
+2025-06-11 20:38:43.556 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:38:43.556 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 3.6552ms
+2025-06-11 20:39:30.794 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:39:30.794 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:39:30.799 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=O_1ZjT6vGSqtjLp1hG0_qA - 101 null null 52067.846ms
+2025-06-11 20:39:30.801 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=QNajuPmU0Yt0kG8Cb8_m_A - 101 null null 47248.8061ms
+2025-06-11 20:39:30.885 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:39:30.885 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:39:30.887 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.887 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.887 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 2.3007ms
+2025-06-11 20:39:30.887 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 2.4828ms
+2025-06-11 20:39:30.891 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:39:30.891 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:39:30.892 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.892 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.892 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:39:30.892 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:39:30.894 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:39:30.894 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:39:30.894 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 3.0671ms
+2025-06-11 20:39:30.894 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 3.172ms
+2025-06-11 20:39:30.897 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=mcVOmC7c9yW9fsXDVUh93g - null null
+2025-06-11 20:39:30.897 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.897 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:39:30.900 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:39:30.900 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.900 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:30.900 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:39:30.903 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:39:30.905 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:39:30.906 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:39:30.907 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 6.2922ms
+2025-06-11 20:39:30.907 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:30.907 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 7.219ms
+2025-06-11 20:39:30.909 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=zOAyldCYlpxbxAg8ESSdiw - null null
+2025-06-11 20:39:30.909 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.909 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:39:30.911 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:39:30.911 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:30.911 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:30.912 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:39:30.913 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:39:30.913 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:39:30.913 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:39:30.913 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 1.878ms
+2025-06-11 20:39:30.914 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:30.914 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 2.4283ms
+2025-06-11 20:39:33.792 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:39:33.793 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=mcVOmC7c9yW9fsXDVUh93g - 101 null null 2895.4486ms
+2025-06-11 20:39:33.878 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:39:33.880 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:33.880 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.7632ms
+2025-06-11 20:39:33.881 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:39:33.881 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:33.882 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:39:33.882 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:39:33.882 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 0.7588ms
+2025-06-11 20:39:33.888 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=kQ5MO6WVHlvcc_LHysbFDg - null null
+2025-06-11 20:39:33.888 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:33.888 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:39:33.892 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:39:33.892 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:39:33.892 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:33.893 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:39:33.896 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:39:33.896 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:39:33.897 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:39:33.897 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 3.7392ms
+2025-06-11 20:39:33.897 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:39:33.897 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 5.107ms
+2025-06-11 20:41:19.701 +05:30 [INF] Application is shutting down...
+2025-06-11 20:41:19.710 +05:30 [INF] Connection id "0HND8V4COB4EF", Request id "0HND8V4COB4EF:00000001": the application aborted the connection.
+2025-06-11 20:41:19.715 +05:30 [INF] Connection id "0HND8V4COB4EE", Request id "0HND8V4COB4EE:00000001": the application aborted the connection.
+2025-06-11 20:41:19.718 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:41:19.718 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:41:19.719 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=zOAyldCYlpxbxAg8ESSdiw - 101 null null 108808.9484ms
+2025-06-11 20:41:19.720 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=kQ5MO6WVHlvcc_LHysbFDg - 101 null null 105831.1433ms
+2025-06-11 20:41:24.438 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:41:24.502 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:41:24.503 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:41:24.503 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:41:24.503 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:41:27.376 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-11 20:41:27.438 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 63.4552ms
+2025-06-11 20:41:27.581 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-11 20:41:27.683 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 102.2562ms
+2025-06-11 20:41:46.381 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 59
+2025-06-11 20:41:46.431 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:41:46.432 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:41:46.434 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:41:46.444 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-11 20:41:47.026 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-11 20:41:47.637 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-11 20:41:47.639 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 1193.5422ms
+2025-06-11 20:41:47.639 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:41:47.643 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 1261.417ms
+2025-06-11 20:41:56.107 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 60
+2025-06-11 20:41:56.116 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:41:56.116 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:41:56.116 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:41:56.117 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-11 20:41:56.133 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-11 20:41:56.589 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:41:56.593 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-11 20:41:56.597 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 480.1746ms
+2025-06-11 20:41:56.597 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-11 20:41:56.597 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 490.4658ms
+2025-06-11 20:43:26.465 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryN047eyF9uQcyNAqI 23664
+2025-06-11 20:43:26.510 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:43:26.510 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:43:26.510 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:43:26.515 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:43:26.750 +05:30 [INF] Executed DbCommand (139ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Date), @p4='?' (DbType = Boolean), @p5='?' (DbType = Date), @p6='?', @p7='?' (DbType = Guid), @p8='?' (DbType = Binary), @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?' (DbType = Guid), @p13='?' (DbType = DateTime), @p14='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "PollId", "UploadedAt", "UploadedByUsername")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-06-11 20:43:26.783 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:43:26.784 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:43:26.785 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:43:26.794 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:43:26.805 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:43:26.819 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 303.4893ms
+2025-06-11 20:43:26.819 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:43:26.819 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 354.5062ms
+2025-06-11 20:43:31.988 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:43:31.992 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:43:31.994 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 6.2621ms
+2025-06-11 20:43:31.998 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:43:32.000 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:43:32.003 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:43:32.024 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:43:32.024 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 26.2896ms
+2025-06-11 20:43:32.029 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=ncOUKhSegfAXbC6FhUqfXg - null null
+2025-06-11 20:43:32.031 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:43:32.031 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:43:32.049 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:43:32.050 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:43:32.051 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:43:32.054 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:43:32.071 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:43:32.073 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:43:32.076 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:43:32.079 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 24.6247ms
+2025-06-11 20:43:32.079 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:43:32.079 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 30.0194ms
+2025-06-11 20:50:20.630 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:50:20.631 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=ncOUKhSegfAXbC6FhUqfXg - 101 null null 408603.2572ms
+2025-06-11 20:50:20.687 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:50:20.689 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.691 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 3.4407ms
+2025-06-11 20:50:20.693 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:50:20.693 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:50:20.694 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.694 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.694 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 0.9039ms
+2025-06-11 20:50:20.695 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:50:20.696 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:50:20.697 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:50:20.697 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 3.4759ms
+2025-06-11 20:50:20.697 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.697 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:50:20.698 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:50:20.698 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.4656ms
+2025-06-11 20:50:20.710 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=lP9AK-dprxURSxfLmlqeaA - null null
+2025-06-11 20:50:20.713 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.715 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:50:20.721 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:50:20.722 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.722 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:20.723 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:50:20.730 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=j8aIj0maKLdoG8nLkIfMtA - null null
+2025-06-11 20:50:20.730 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.731 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:50:20.949 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:50:20.952 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:50:20.954 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:50:20.954 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 230.781ms
+2025-06-11 20:50:20.954 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:20.955 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 233.4792ms
+2025-06-11 20:50:20.955 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:50:20.956 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:20.956 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:20.956 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:50:20.958 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:50:20.959 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:50:20.961 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:50:20.961 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 4.879ms
+2025-06-11 20:50:20.961 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:20.963 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 6.5137ms
+2025-06-11 20:50:35.764 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:50:35.764 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:50:35.765 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=lP9AK-dprxURSxfLmlqeaA - 101 null null 15054.4426ms
+2025-06-11 20:50:35.765 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=j8aIj0maKLdoG8nLkIfMtA - 101 null null 15034.4282ms
+2025-06-11 20:50:35.827 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:50:35.827 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:50:35.828 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.828 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.828 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.6443ms
+2025-06-11 20:50:35.828 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.4745ms
+2025-06-11 20:50:35.831 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:50:35.831 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:50:35.832 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.832 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:50:35.832 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.833 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:50:35.833 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:50:35.833 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:50:35.833 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 2.157ms
+2025-06-11 20:50:35.833 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 2.2103ms
+2025-06-11 20:50:35.837 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=7FhRCu9JbL3KCVyS62zGsQ - null null
+2025-06-11 20:50:35.838 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.838 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:50:35.842 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:50:35.843 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.843 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:35.844 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:50:35.849 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:50:35.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=QRa17h7ZqU2AHJqwbuJUCg - null null
+2025-06-11 20:50:35.850 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.850 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:50:35.854 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:50:35.855 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:50:35.856 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 11.6942ms
+2025-06-11 20:50:35.856 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:35.856 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 13.9956ms
+2025-06-11 20:50:35.856 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:50:35.857 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:35.857 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:35.857 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:50:35.858 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:50:35.859 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:50:35.859 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:50:35.860 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 2.4542ms
+2025-06-11 20:50:35.860 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:35.860 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 3.9364ms
+2025-06-11 20:50:38.320 +05:30 [INF] Application is shutting down...
+2025-06-11 20:50:38.322 +05:30 [INF] Connection id "0HND8V8UEE53Q", Request id "0HND8V8UEE53Q:00000001": the application aborted the connection.
+2025-06-11 20:50:38.324 +05:30 [INF] Connection id "0HND8V8UEE53P", Request id "0HND8V8UEE53P:00000001": the application aborted the connection.
+2025-06-11 20:50:38.329 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:50:38.329 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=7FhRCu9JbL3KCVyS62zGsQ - 101 null null 2492.2433ms
+2025-06-11 20:50:38.330 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:50:38.331 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=QRa17h7ZqU2AHJqwbuJUCg - 101 null null 2480.9622ms
+2025-06-11 20:50:43.405 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:50:43.477 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:50:43.478 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:50:43.478 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:50:43.478 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:50:43.696 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:50:43.735 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:43.739 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 43.5762ms
+2025-06-11 20:50:43.741 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:50:43.747 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:43.748 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:50:43.752 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:50:43.752 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 11.7126ms
+2025-06-11 20:50:43.754 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=ci26mCPMkJPExO_Z3sjYKw - null null
+2025-06-11 20:50:43.756 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:43.756 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:50:43.770 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:50:43.772 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:50:43.772 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:43.780 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:50:44.295 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:50:44.344 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:50:44.358 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:50:44.377 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 595.1844ms
+2025-06-11 20:50:44.377 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:50:44.380 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 609.4719ms
+2025-06-11 20:51:43.107 +05:30 [INF] Application is shutting down...
+2025-06-11 20:51:43.113 +05:30 [INF] Connection id "0HND8VE47VMNP", Request id "0HND8VE47VMNP:00000001": the application aborted the connection.
+2025-06-11 20:51:43.129 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:51:43.130 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=ci26mCPMkJPExO_Z3sjYKw - 101 null null 59375.2755ms
+2025-06-11 20:51:47.645 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:51:47.711 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:51:47.712 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:51:47.713 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:51:47.713 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:51:50.844 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 20:51:50.903 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:51:50.907 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 63.1595ms
+2025-06-11 20:51:50.909 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 20:51:50.915 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:51:50.917 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 20:51:50.922 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 20:51:50.922 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 13.2419ms
+2025-06-11 20:51:50.925 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=8BiwkK4gtjXXJtC0qY9wQw - null null
+2025-06-11 20:51:50.927 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:51:50.927 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 20:51:50.942 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 20:51:50.944 +05:30 [INF] CORS policy execution successful.
+2025-06-11 20:51:50.944 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:51:50.952 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:51:51.464 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:51:51.514 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:51:51.529 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:51:51.548 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 594.0503ms
+2025-06-11 20:51:51.548 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:51:51.551 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 609.1163ms
+2025-06-11 20:53:05.740 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Poll - multipart/form-data; boundary=----WebKitFormBoundaryfz7kKLhnUBBT69bt 23664
+2025-06-11 20:53:05.794 +05:30 [INF] CORS policy execution failed.
+2025-06-11 20:53:05.795 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-11 20:53:05.795 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:53:05.801 +05:30 [INF] Route matched with {action = "AddPoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddPollAsync(TrueVote.Models.DTOs.AddPollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:53:05.932 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?' (DbType = Date), @p4='?' (DbType = Boolean), @p5='?' (DbType = Date), @p6='?', @p7='?' (DbType = Guid), @p8='?' (DbType = Binary), @p9='?', @p10='?', @p11='?' (DbType = Boolean), @p12='?' (DbType = Guid), @p13='?' (DbType = DateTime), @p14='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Polls" ("Id", "CreatedByEmail", "Description", "EndDate", "IsDeleted", "StartDate", "Title")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+INSERT INTO "PollFiles" ("Id", "Content", "FileType", "Filename", "IsDeleted", "PollId", "UploadedAt", "UploadedByUsername")
+VALUES (@p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14);
+2025-06-11 20:53:05.950 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:53:05.951 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:53:05.953 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-11 20:53:05.954 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:53:05.962 +05:30 [ERR] Failed writing message. Aborting connection.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 64. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles. Path: $.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.PoleFile.Poll.Id.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsObject(Utf8JsonWriter writer, Object rootValue)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.Serialize(Utf8JsonWriter writer, T& rootValue, Object rootValueBoxed)
+   at System.Text.Json.JsonSerializer.Serialize[TValue](Utf8JsonWriter writer, TValue value, JsonSerializerOptions options)
+   at Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.WriteArguments(Object[] arguments, Utf8JsonWriter writer)
+   at Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.WriteInvocationMessage(InvocationMessage message, Utf8JsonWriter writer)
+   at Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.WriteMessageCore(HubMessage message, IBufferWriter`1 stream)
+   at Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.WriteMessage(HubMessage message, IBufferWriter`1 output)
+   at Microsoft.AspNetCore.SignalR.Protocol.HubProtocolExtensions.GetMessageBytes(IHubProtocol hubProtocol, HubMessage message)
+   at Microsoft.AspNetCore.SignalR.Protocol.JsonHubProtocol.GetMessageBytes(HubMessage message)
+   at Microsoft.AspNetCore.SignalR.SerializedHubMessage.GetSerializedMessage(IHubProtocol protocol)
+   at Microsoft.AspNetCore.SignalR.HubConnectionContext.WriteCore(SerializedHubMessage message, CancellationToken cancellationToken)
+2025-06-11 20:53:05.981 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 20:53:05.981 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=8BiwkK4gtjXXJtC0qY9wQw - 101 null null 75056.1812ms
+2025-06-11 20:53:05.988 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:53:06.000 +05:30 [INF] Executed action TrueVote.Controllers.PollController.AddPollAsync (TrueVote) in 198.2402ms
+2025-06-11 20:53:06.006 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.AddPollAsync (TrueVote)'
+2025-06-11 20:53:06.008 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Poll - 201 null application/json; charset=utf-8 268.6575ms
+2025-06-11 20:53:15.381 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-11 20:53:15.384 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:53:15.384 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:53:15.418 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:53:15.419 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:53:15.420 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:53:15.420 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 36.2912ms
+2025-06-11 20:53:15.420 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:53:15.421 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 40.083ms
+2025-06-11 20:54:24.142 +05:30 [INF] Application is shutting down...
+2025-06-11 20:54:28.562 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 20:54:28.692 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 20:54:28.693 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 20:54:28.693 +05:30 [INF] Hosting environment: Development
+2025-06-11 20:54:28.693 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 20:54:29.500 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-11 20:54:29.582 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:54:29.589 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 20:54:30.128 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 20:54:30.186 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 20:54:30.204 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 20:54:30.231 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 639.7731ms
+2025-06-11 20:54:30.233 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 20:54:30.237 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 738.5995ms
+2025-06-11 21:49:54.369 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 21:49:54.442 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 21:49:54.443 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 21:49:54.444 +05:30 [INF] Hosting environment: Development
+2025-06-11 21:49:54.444 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 21:49:56.096 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-11 21:49:56.157 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 61.796ms
+2025-06-11 21:49:56.169 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-11 21:50:00.670 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-11 21:50:00.768 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 98.8143ms
+2025-06-11 21:50:08.031 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-11 21:50:08.040 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:50:08.052 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:50:08.666 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-06-11 21:50:08.723 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:50:08.738 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:50:08.760 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 705.3519ms
+2025-06-11 21:50:08.760 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:50:08.763 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 732.4695ms
+2025-06-11 21:50:31.377 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975f8d-a02b-73c8-8ccf-0ef03af828ec - null null
+2025-06-11 21:50:31.384 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-11 21:50:31.388 +05:30 [INF] Route matched with {action = "GetPollById", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollByIdAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:50:31.446 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Polls" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-11 21:50:31.448 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:50:31.449 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:50:31.451 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote) in 62.5478ms
+2025-06-11 21:50:31.452 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-11 21:50:31.452 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975f8d-a02b-73c8-8ccf-0ef03af828ec - 200 null application/json; charset=utf-8 74.8123ms
+2025-06-11 21:54:10.835 +05:30 [INF] Application is shutting down...
+2025-06-11 21:54:15.475 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-11 21:54:15.540 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-11 21:54:15.541 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-11 21:54:15.541 +05:30 [INF] Hosting environment: Development
+2025-06-11 21:54:15.541 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-11 21:54:16.581 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975f8d-a02b-73c8-8ccf-0ef03af828ec - null null
+2025-06-11 21:54:16.639 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-11 21:54:16.646 +05:30 [INF] Route matched with {action = "GetPollById", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollByIdAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:54:17.271 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-11 21:54:17.327 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:54:17.339 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:54:17.360 +05:30 [INF] Executed action TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote) in 713.0722ms
+2025-06-11 21:54:17.363 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.GetPollByIdAsync (TrueVote)'
+2025-06-11 21:54:17.366 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/01975f8d-a02b-73c8-8ccf-0ef03af828ec - 200 null application/json; charset=utf-8 786.6822ms
+2025-06-11 21:54:48.939 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 21:54:48.948 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:48.949 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 10.3188ms
+2025-06-11 21:54:48.952 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 21:54:48.955 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:48.955 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 21:54:48.959 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 21:54:48.959 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 7.565ms
+2025-06-11 21:54:48.976 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=cgP0vpG8hgrhzOk9Im98Ag - null null
+2025-06-11 21:54:48.977 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:48.977 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 21:54:48.994 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 21:54:48.996 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:48.996 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:49.003 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:54:49.034 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-11 21:54:49.038 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:54:49.041 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:54:49.053 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 49.9468ms
+2025-06-11 21:54:49.054 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:49.054 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 60.1329ms
+2025-06-11 21:54:53.862 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 21:54:53.862 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=cgP0vpG8hgrhzOk9Im98Ag - 101 null null 4886.1977ms
+2025-06-11 21:54:53.880 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 21:54:53.881 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:53.881 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 0.9267ms
+2025-06-11 21:54:53.882 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 21:54:53.883 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:53.883 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 21:54:53.884 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 21:54:53.884 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.5484ms
+2025-06-11 21:54:53.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=xDZhNmD-jKRxSs6XBAs-hw - null null
+2025-06-11 21:54:53.888 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:53.888 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 21:54:53.891 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 21:54:53.891 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:53.892 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:53.892 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:54:53.939 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-11 21:54:53.940 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:54:53.942 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:54:53.950 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 57.8925ms
+2025-06-11 21:54:53.951 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:53.951 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 59.6825ms
+2025-06-11 21:54:58.850 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-11 21:54:58.851 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:58.851 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 1.5165ms
+2025-06-11 21:54:58.852 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-11 21:54:58.853 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:58.853 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-11 21:54:58.853 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-11 21:54:58.854 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 1.285ms
+2025-06-11 21:54:58.862 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=D-0oKS2dGlqKuiJ1lv1iEQ - null null
+2025-06-11 21:54:58.863 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:58.863 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-11 21:54:58.866 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-11 21:54:58.866 +05:30 [INF] CORS policy execution successful.
+2025-06-11 21:54:58.866 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:58.866 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-11 21:54:58.869 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-11 21:54:58.873 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-11 21:54:58.874 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-11 21:54:58.882 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 15.5388ms
+2025-06-11 21:54:58.882 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-11 21:54:58.882 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 16.544ms
+2025-06-11 21:55:11.551 +05:30 [INF] Application is shutting down...
+2025-06-11 21:55:11.554 +05:30 [INF] Connection id "0HND90HKIFKMJ", Request id "0HND90HKIFKMJ:00000001": the application aborted the connection.
+2025-06-11 21:55:11.556 +05:30 [INF] Connection id "0HND90HKIFKMM", Request id "0HND90HKIFKMM:00000001": the application aborted the connection.
+2025-06-11 21:55:11.560 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 21:55:11.560 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-11 21:55:11.561 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=xDZhNmD-jKRxSs6XBAs-hw - 101 null null 17672.8847ms
+2025-06-11 21:55:11.561 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=D-0oKS2dGlqKuiJ1lv1iEQ - 101 null null 12697.8937ms
