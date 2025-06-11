@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TrueVote Polls - Real-Time Updates</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        .poll {
+            border: 1px solid #ccc;
+            padding: 1em;
+            margin-bottom: 1em;
+            border-radius: 6px;
+        }
+
+        .option {
+            margin-left: 1em;
+        }
+
+        .updated {
+            background: #e8f8f5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Live Polls</h1>
+    <div id="polls"></div>
+
+    <script>
+    // Set your backend URL and port here
+    const backendUrl = "http://localhost:5100";
+
+    // SignalR connection
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl(backendUrl + "/pollhub")
+        .build();
+
+    // Store polls by ID for easy update
+    const pollsById = {};
+
+    // Render all polls
+    function renderPolls() {
+    const pollsDiv = document.getElementById('polls');
+    pollsDiv.innerHTML = '';
+    Object.values(pollsById).forEach(pollObj => {
+        const poll = pollObj.poll;
+        let options = pollObj.pollOptions || [];
+
+        if (options.$values) {
+            options = options.$values;
+        }
+
+        const base64Data = pollObj.pollImageBase64;
+        const fileExtension = pollObj.pollImageType; // this is actually .jpg, .png, etc.
+        const fileName = poll.title.replace(/\s+/g, "_") + (fileExtension || ".bin"); // Fallback to .bin
+
+        const pollDiv = document.createElement('div');
+        pollDiv.className = 'poll';
+        pollDiv.id = 'poll-' + poll.id;
+
+        let downloadButtonHtml = "";
+        if (base64Data && fileExtension) {
+            downloadButtonHtml = `<button onclick="downloadPollFile('${base64Data}', '${fileName}')">Download File</button>`;
+        }
+
+        pollDiv.innerHTML = `
+            <h2>${poll.title}</h2>
+            <p>${poll.description || ''}</p>
+            <p><strong>Start:</strong> ${poll.startDate || ''} <strong>End:</strong> ${poll.endDate || ''}</p>
+            <ul>
+                ${options.map(opt => `<li class="option">${opt.optionText} <strong>Votes:</strong> ${opt.voteCount}</li>`).join('')}
+            </ul>
+            ${downloadButtonHtml}
+        `;
+        pollsDiv.appendChild(pollDiv);
+    });
+}
+
+
+
+    // ✅ Define fetchAllPolls function here
+    function fetchAllPolls() {
+        fetch(backendUrl + '/api/v1/Poll/query?page=1&pageSize=100')
+            .then(res => res.json())
+            .then(data => {
+                const pollArray = data?.data?.data?.$values;
+                if (Array.isArray(pollArray)) {
+                    pollArray.forEach(pollResp => {
+                        const poll = pollResp.poll;
+                        const options = pollResp.pollOptions || [];
+                        pollsById[poll.id] = {
+                            poll,
+                            pollOptions: options,
+                            pollImageBase64: pollResp.pollImageBase64,
+                            pollImageType: pollResp.pollImageType
+                        };
+                        console.log("Rendering poll:", poll.title);
+                        // Optionally log base64 data, e.g.:
+                        console.log("Base64 Data:", pollResp.pollImageBase64?.substring(0, 30));
+
+                    });
+                    renderPolls();
+                } else {
+                    console.error("Poll array not found in API response", data);
+                }
+            })
+            .catch(error => console.error("Error fetching polls:", error));
+    }
+
+    // SignalR: Receive a poll update
+    connection.on("ReceivePollUpdate", function (pollResponse) {
+        pollsById[pollResponse.poll.id] = pollResponse;
+        renderPolls();
+        const el = document.getElementById('poll-' + pollResponse.poll.id);
+        if (el) {
+            el.classList.add('updated');
+            setTimeout(() => el.classList.remove('updated'), 1500);
+        }
+    });
+
+    // Connect SignalR and load data
+    connection.start().then(function () {
+        fetchAllPolls();
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
+    function downloadPollFile(base64, filename) {
+    const byteCharacters = atob(base64);
+    const byteNumbers = new Array(byteCharacters.length);
+    for (let i = 0; i < byteCharacters.length; i++) {
+        byteNumbers[i] = byteCharacters.charCodeAt(i);
+    }
+    const byteArray = new Uint8Array(byteNumbers);
+    const blob = new Blob([byteArray]);
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+    URL.revokeObjectURL(link.href); // Clean up
+}
+</script>
+
+</body>
+
+</html>
