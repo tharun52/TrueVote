@@ -1,0 +1,9 @@
+2025-06-11 08:50:51.549 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-11 08:51:31.321 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975d01-d79a-7e3c-822c-f5f168e9149a
+2025-06-11 08:52:03.964 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975d02-571c-7f5e-b340-977d63f24a18
+2025-06-11 15:21:53.670 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-11 15:31:01.185 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: maano : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-06-11 15:31:36.519 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: maano : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-06-11 16:37:57.114 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: mano S : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-06-11 16:40:52.671 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-06-11 17:30:38.907 +05:30 [INF] User: mano@gmail.com, Action: Added a new poll with ID: 01975edd-1dce-7b4d-aa9c-516570b07037

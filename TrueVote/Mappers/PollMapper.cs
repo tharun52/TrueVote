@@ -41,5 +41,23 @@ namespace TrueVote.Mappers
                 IsDeleted = false
             };
         }
+        public PollFile MapPollUpdateDtoToPollFile(UpdatePollRequestDto dto, Guid pollId)
+        {
+            if (dto.PollFile == null) return null!;
+
+            using var ms = new MemoryStream();
+            dto.PollFile.CopyTo(ms);
+            return new PollFile
+            {
+                Id = Guid.NewGuid(),
+                Filename = dto.PollFile.FileName,
+                FileType = dto.PollFile.ContentType,
+                Content = ms.ToArray(),
+                UploadedByUsername = "", // Set in service
+                PollId = pollId,
+                UploadedAt = DateTime.UtcNow,
+                IsDeleted = false
+            };
+        }
     }
 }

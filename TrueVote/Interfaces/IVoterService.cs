@@ -8,6 +8,7 @@ namespace TrueVote.Interfaces
     {
         public Task<IEnumerable<Voter>> GetAllVotersAsync();
         public Task<Voter> AddVoterAsync(AddVoterRequestDto voterDto);
-        
+        public Task<Voter> UpdateVoterAsync(string email, UpdateVoterDto dto);
+        public Task<Voter> DeleteVoterAsync(Guid voterId);
     }
 }

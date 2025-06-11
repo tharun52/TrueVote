@@ -26,8 +26,8 @@ namespace TrueVote.Service
             _userRepository = userRepository;
             _encryptionService = encryptionService;
             _moderatorMapper = new ModeratorMapper();
-            _auditLogger = auditLogger;
             _httpContextAccessor = httpContextAccessor;
+            _auditLogger = auditLogger;
         }
 
         public async Task<Moderator> DeleteModerator(Guid moderatorId)
@@ -48,56 +48,71 @@ namespace TrueVote.Service
 
             return await _moderatorRepository.Update(moderator.Id, moderator);
         }
-
-        public async Task<Moderator> UpdateModerator(Guid moderatorId, AddModeratorRequestDto moderatorDto)
+        public async Task<Moderator> UpdateModerator(string username, UpdateModeratorDto dto)
         {
-            var moderator = await _moderatorRepository.Get(moderatorId);
-            if (moderator == null)
-            {
-                throw new Exception("Moderator not found for update");
-            }
-
-            var user = await _userRepository.Get(moderator.Email);
+            var user = await _userRepository.Get(username);
             if (user == null)
             {
-                throw new Exception("Associated user not found");
+                throw new Exception("User not found");
             }
 
-            moderator.Name = moderatorDto.Name;
-            moderator.Email = moderatorDto.Email;
+            var allModerators = await _moderatorRepository.GetAll();
+            var moderator = allModerators.FirstOrDefault(m => m.Email.Equals(user.Username, StringComparison.OrdinalIgnoreCase));
 
-            if (!string.Equals(user.Username, moderatorDto.Email, StringComparison.OrdinalIgnoreCase))
+            if (moderator == null)
             {
-                user.Username = moderatorDto.Email;
+                throw new Exception("Moderator not found");
             }
 
-            if (!string.IsNullOrWhiteSpace(moderatorDto.Password))
+            var encryptedPrev = await _encryptionService.EncryptData(new EncryptModel
             {
-                var encryptedData = await _encryptionService.EncryptData(new EncryptModel
-                {
-                    Data = moderatorDto.Password
-                });
-                if (encryptedData == null || encryptedData.EncryptedText == null || encryptedData.HashKey == null)
-                {
-                    throw new InvalidOperationException("Encryption failed: Encrypted data is null.");
-                }
-                user.PasswordHash = encryptedData.EncryptedText;
-                user.HashKey = encryptedData.HashKey;
+                Data = dto.PrevPassword
+            });
+
+            if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
+            {
+                throw new UnauthorizedAccessException("Previous password does not match");
             }
 
-            await _userRepository.Update(user.Username, user);
-            var updatedModerator = await _moderatorRepository.Update(moderatorId, moderator);
+            var updatedModerator = await _moderatorRepository.Update(moderator.Id, moderator);
 
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (loggedInUser == null)
             {
                 throw new Exception("No User Logged in");
             }
+
+            moderator.Name = dto.Name;
+            moderator.IsDeleted = dto.IsDeleted;
+
+            if (!string.IsNullOrWhiteSpace(dto.NewPassword))
+            {
+                var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
+                {
+                    Data = dto.NewPassword
+                });
+
+                if (encryptedNew == null || encryptedNew.EncryptedText == null || encryptedNew.HashKey == null)
+                {
+                    throw new InvalidOperationException("Encryption failed for new password");
+                }
+
+                if (encryptedNew.EncryptedText != user.PasswordHash)
+                {
+                    user.PasswordHash = encryptedNew.EncryptedText;
+                    user.HashKey = encryptedNew.HashKey;
+
+                    await _userRepository.Update(user.Username, user);
+                }
+            }
+
+
             _auditLogger.LogAction(loggedInUser, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
 
             return updatedModerator;
         }
-        
+
+
         public async Task<Moderator> AddModerator(AddModeratorRequestDto moderatorDto)
         {
             var newModerator = _moderatorMapper.MapAddModeratorRequestDtoToModerator(moderatorDto);
@@ -142,30 +157,76 @@ namespace TrueVote.Service
             return moderator;
         }
 
-
-        public async Task<IEnumerable<Moderator>> GetAllModeratorsAsync()
+        public async Task<PagedResponseDto<Moderator>> QueryModeratorsPaged(ModeratorQueryDto query)
         {
-            var moderators = await _moderatorRepository.GetAll();
-            moderators = moderators.Where(m => !m.IsDeleted);
-            if (moderators == null || !moderators.Any())
+            var moderators = (await _moderatorRepository.GetAll()).ToList();
+
+            // Filter
+            moderators = FilterModerators(moderators, query);
+
+            // Search
+            moderators = SearchModerators(moderators, query);
+
+            // Sort
+            moderators = SortModerators(moderators, query);
+
+            int totalRecords = moderators.Count;
+            int page = query.Page;
+            int pageSize = query.PageSize;
+            int totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+
+            // Pagination
+            int skip = (page - 1) * pageSize;
+            moderators = moderators.Skip(skip).Take(pageSize).ToList();
+
+            return new PagedResponseDto<Moderator>
             {
-                throw new Exception("No Moderators found");
+                Data = moderators,
+                Pagination = new PaginationDto
+                {
+                    TotalRecords = totalRecords,
+                    Page = page,
+                    PageSize = pageSize,
+                    TotalPages = totalPages
+                }
+            };
+        }
+
+        private static List<Moderator> FilterModerators(List<Moderator> moderators, ModeratorQueryDto query)
+        {
+            if (!string.IsNullOrEmpty(query.Email))
+                moderators = moderators.Where(m => m.Email.Equals(query.Email, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (query.IsDeleted.HasValue)
+                moderators = moderators.Where(m => m.IsDeleted == query.IsDeleted.Value).ToList();
+
+            return moderators;
+        }
+
+        private static List<Moderator> SearchModerators(List<Moderator> moderators, ModeratorQueryDto query)
+        {
+            if (!string.IsNullOrEmpty(query.SearchTerm))
+            {
+                var term = query.SearchTerm.ToLower();
+                moderators = moderators.Where(m =>
+                    (!string.IsNullOrEmpty(m.Name) && m.Name.ToLower().Contains(term)) ||
+                    (!string.IsNullOrEmpty(m.Email) && m.Email.ToLower().Contains(term))
+                ).ToList();
             }
             return moderators;
         }
-        public async Task<Moderator> GetModeratorByNameAsync(string name)
+
+        private static List<Moderator> SortModerators(List<Moderator> moderators, ModeratorQueryDto query)
         {
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(query.SortBy))
+                return moderators.OrderBy(m => m.Name).ToList(); // Default sort
+
+            return query.SortBy.ToLower() switch
             {
-                throw new ArgumentException("Moderator name cannot be null or empty.", nameof(name));
-            }
-            var moderators = await _moderatorRepository.GetAll();
-            var moderator = moderators.FirstOrDefault(m => m.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
-            if (moderator == null)
-            {
-                throw new KeyNotFoundException($"Moderator with name {name} not found.");
-            }
-            return moderator;
+                "name" => query.SortDesc ? moderators.OrderByDescending(m => m.Name).ToList() : moderators.OrderBy(m => m.Name).ToList(),
+                "email" => query.SortDesc ? moderators.OrderByDescending(m => m.Email).ToList() : moderators.OrderBy(m => m.Email).ToList(),
+                _ => moderators
+            };
         }
     }
 }

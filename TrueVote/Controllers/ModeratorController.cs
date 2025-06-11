@@ -18,32 +18,8 @@ namespace TrueVote.Controllers
             _moderatorService = moderatorService;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAllModeratorsAsync()
-        {
-            var moderators = await _moderatorService.GetAllModeratorsAsync();
-            return Ok(ApiResponseHelper.Success(moderators, "Moderators fetched successfully"));
-        }
-
-        [Authorize(Roles = "Admin")]
-        [HttpGet("{name}")]
-        public async Task<IActionResult> GetModeratorByNameAsync(string name)
-        {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                return BadRequest(ApiResponseHelper.Failure<object>("Invalid moderator name"));
-            }
-
-            var moderator = await _moderatorService.GetModeratorByNameAsync(name);
-            if (moderator == null)
-            {
-                return NotFound(ApiResponseHelper.Failure<object>("Moderator not found"));
-            }
-
-            return Ok(ApiResponseHelper.Success(moderator, "Moderator fetched successfully"));
-        }
-
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddModeratorAsync([FromBody] AddModeratorRequestDto moderatorDto)
         {
             if (moderatorDto == null)
@@ -67,30 +43,56 @@ namespace TrueVote.Controllers
             return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator added successfully"));
         }
 
-        [HttpPut("update/{moderatorId}")]
-        [Consumes("multipart/form-data")]
-        public async Task<IActionResult> UpdateModeratorAsync(Guid moderatorId, [FromBody] AddModeratorRequestDto moderatorDto)
+        [HttpGet("query")]
+        public async Task<IActionResult> QueryModeratorsAsync([FromQuery] ModeratorQueryDto query)
+        {
+            try
+            {
+                var pagedResult = await _moderatorService.QueryModeratorsPaged(query);
+                return Ok(ApiResponseHelper.Success(pagedResult, "Moderators fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>("An unexpected error occurred: " + ex.Message));
+            }
+        }
+
+        [HttpPut("update/{username}")]
+        [Authorize(Roles = "Admin, Moderator")]
+        public async Task<IActionResult> UpdateModeratorAsync(string username, [FromBody] UpdateModeratorDto moderatorDto)
         {
             if (moderatorDto == null)
             {
                 var error = new Dictionary<string, List<string>> {
-                    { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
-                };
+                        { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
+                    };
                 return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
             }
 
-            var newModerator = await _moderatorService.UpdateModerator(moderatorId, moderatorDto);
-            if (newModerator == null)
+            try
+            {
+                var updatedModerator = await _moderatorService.UpdateModerator(username, moderatorDto);
+                return Ok(ApiResponseHelper.Success(updatedModerator, "Moderator updated successfully"));
+            }
+            catch (UnauthorizedAccessException ex)
             {
                 var error = new Dictionary<string, List<string>> {
-                    { "moderator", new List<string> { "Failed to update moderator" } }
-                };
-                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
+                        { "password", new List<string> { ex.Message } }
+                    };
+                return Unauthorized(ApiResponseHelper.Failure<object>("Password verification failed", error));
             }
-            return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator updated successfully"));
+            catch (Exception ex)
+            {
+                var error = new Dictionary<string, List<string>> {
+                        { "exception", new List<string> { ex.Message } }
+                    };
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator updation failed", error));
+            }
         }
 
-        [HttpDelete("{moderatorId}")]
+
+        [HttpDelete("delete/{moderatorId}")]
+        [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> DeleteModeratorAsync(Guid moderatorId)
         {
             var deletedModerator = await _moderatorService.DeleteModerator(moderatorId);
@@ -99,9 +101,9 @@ namespace TrueVote.Controllers
                 var error = new Dictionary<string, List<string>> {
                     { "moderator", new List<string> { "Failed to delete moderator" } }
                 };
-                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator deletion failed", error));
             }
-             return Created($"/api/moderator/{deletedModerator.Id}", ApiResponseHelper.Success(deletedModerator, "Moderator deleted successfully"));
+            return Created($"/api/moderator/{deletedModerator.Id}", ApiResponseHelper.Success(deletedModerator, "Moderator deleted successfully"));
         }
     }
 }

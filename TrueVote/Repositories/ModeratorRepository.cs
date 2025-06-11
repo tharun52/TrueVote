@@ -25,7 +25,6 @@ namespace TrueVote.Repositories
         public override async Task<IEnumerable<Moderator>> GetAll()
         {
             var moderators = _appDbContext.Moderators
-                .Where(c => !c.IsDeleted)
                 .Include(c => c.Polls);
             if (!moderators.Any())
             {
