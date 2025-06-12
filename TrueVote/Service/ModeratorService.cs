@@ -13,6 +13,7 @@ namespace TrueVote.Service
         private readonly IRepository<string, User> _userRepository;
         private readonly ModeratorMapper _moderatorMapper;
         private readonly IAuditLogger _auditLogger;
+        private readonly IAuditService _auditService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IEncryptionService _encryptionService;
 
@@ -20,7 +21,8 @@ namespace TrueVote.Service
                                 IRepository<string, User> userRepository,
                                 IEncryptionService encryptionService,
                                 IHttpContextAccessor httpContextAccessor,
-                                IAuditLogger auditLogger)
+                                IAuditLogger auditLogger,
+                                IAuditService auditService)
         {
             _moderatorRepository = moderatorRepository;
             _userRepository = userRepository;
@@ -28,6 +30,7 @@ namespace TrueVote.Service
             _moderatorMapper = new ModeratorMapper();
             _httpContextAccessor = httpContextAccessor;
             _auditLogger = auditLogger;
+            _auditService = auditService;
         }
 
         public async Task<Moderator> DeleteModerator(Guid moderatorId)
@@ -44,7 +47,14 @@ namespace TrueVote.Service
             {
                 throw new Exception("No User Logged in");
             }
+
+            await _auditService.LogAsync(
+                description: $"Moderator soft deleted: {moderator.Email}",
+                entityId: moderator.Id,
+                updatedBy: loggedInUser
+            );
             _auditLogger.LogAction(loggedInUser, $"Soft Deleted moderator: {moderator.Name} : {moderator.Id}", true);
+
 
             return await _moderatorRepository.Update(moderator.Id, moderator);
         }
@@ -110,7 +120,13 @@ namespace TrueVote.Service
             }
 
 
+            await _auditService.LogAsync(
+                description: $"Moderator updated: {updatedModerator.Email}",
+                entityId: updatedModerator.Id,
+                updatedBy: loggedInUser
+            );
             _auditLogger.LogAction(loggedInUser, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
+
 
             return updatedModerator;
         }
@@ -157,7 +173,15 @@ namespace TrueVote.Service
             {
                 throw new Exception("No User Logged in");
             }
+
+            await _auditService.LogAsync(
+                description: $"Moderator added: {newModerator.Email}",
+                entityId: newModerator.Id,
+                createdBy: loggedInUser
+            );
+
             _auditLogger.LogAction(loggedInUser, $"Added new moderator: {newModerator.Name} : {moderator.Id}", true);
+
             return moderator;
         }
 

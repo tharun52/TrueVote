@@ -1,0 +1,799 @@
+2025-06-12 08:13:31.855 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-12 08:13:32.004 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2025-06-12 08:13:32.008 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-06-12 08:13:32.009 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+LOCK TABLE "__EFMigrationsHistory" IN ACCESS EXCLUSIVE MODE
+2025-06-12 08:13:32.010 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-06-12 08:13:32.013 +05:30 [INF] Applying migration '20250612024317_auditTable'.
+2025-06-12 08:13:32.040 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "AuditLogs" (
+    "AuditId" uuid NOT NULL,
+    "Description" text,
+    "EntityId" uuid NOT NULL,
+    "CreatedBy" text,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedBy" text,
+    "UpdatedAt" timestamp with time zone,
+    CONSTRAINT "PK_AuditLogs" PRIMARY KEY ("AuditId")
+);
+2025-06-12 08:13:32.041 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20250612024317_auditTable', '9.0.5');
+2025-06-12 08:37:35.729 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 08:37:35.799 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 08:37:35.800 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 08:37:35.800 +05:30 [INF] Hosting environment: Development
+2025-06-12 08:37:35.800 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 08:37:37.297 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-12 08:37:37.372 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 76.9515ms
+2025-06-12 08:37:37.392 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-12 08:37:40.570 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-12 08:37:40.665 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 95.1487ms
+2025-06-12 08:38:09.358 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - application/json 101
+2025-06-12 08:38:09.370 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:38:09.370 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:38:09.371 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-12 08:38:09.386 +05:30 [INF] Route matched with {action = "AddAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddAdminAsync(TrueVote.Models.DTOs.AddAdminRequestDto) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-12 08:38:10.235 +05:30 [INF] Executed DbCommand (27ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 08:38:10.298 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Admins" ("Id", "Email", "Name")
+VALUES (@p0, @p1, @p2);
+2025-06-12 08:38:10.312 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Username", "HashKey", "PasswordHash", "Role", "UserId")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 08:38:10.328 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 08:38:10.336 +05:30 [INF] Executing CreatedResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Admin, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-12 08:38:10.346 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote) in 957.8311ms
+2025-06-12 08:38:10.346 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.AddAdminAsync (TrueVote)'
+2025-06-12 08:38:10.352 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Admin/add - 201 null application/json; charset=utf-8 994.6931ms
+2025-06-12 08:39:26.087 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Admin/update/ned@gmail.com - application/json 80
+2025-06-12 08:39:26.103 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:39:26.103 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:39:26.103 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AdminController.UpdateAdminAsync (TrueVote)'
+2025-06-12 08:39:26.118 +05:30 [INF] Route matched with {action = "UpdateAdmin", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateAdminAsync(System.String, TrueVote.Models.DTOs.UpdateAdminRequest) on controller TrueVote.Controllers.AdminController (TrueVote).
+2025-06-12 08:39:26.211 +05:30 [INF] Executed DbCommand (59ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 08:39:26.233 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Email", a."Name"
+FROM "Admins" AS a
+2025-06-12 08:39:26.666 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 08:39:26.677 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p2='?', @p0='?', @p1='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "HashKey" = @p0, "PasswordHash" = @p1
+WHERE "Username" = @p2;
+2025-06-12 08:39:26.682 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."Email", a."Name"
+FROM "Admins" AS a
+WHERE a."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:39:26.684 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Admins" SET "Name" = @p0
+WHERE "Id" = @p1;
+2025-06-12 08:39:26.685 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 08:39:26.685 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Admin, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-12 08:39:26.686 +05:30 [INF] Executed action TrueVote.Controllers.AdminController.UpdateAdminAsync (TrueVote) in 567.6752ms
+2025-06-12 08:39:26.686 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AdminController.UpdateAdminAsync (TrueVote)'
+2025-06-12 08:39:26.686 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Admin/update/ned@gmail.com - 200 null application/json; charset=utf-8 598.8685ms
+2025-06-12 08:39:44.090 +05:30 [INF] Application is shutting down...
+2025-06-12 08:49:38.104 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 08:49:38.173 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 08:49:38.174 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 08:49:38.174 +05:30 [INF] Hosting environment: Development
+2025-06-12 08:49:38.175 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 08:49:41.019 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2025-06-12 08:49:41.071 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 404 0 null 52.6727ms
+2025-06-12 08:49:41.085 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5100/, Response status code: 404
+2025-06-12 08:49:51.196 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - null null
+2025-06-12 08:49:51.205 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-12 08:49:51.217 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 08:49:51.833 +05:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-12 08:49:51.901 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-12 08:49:51.916 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-12 08:49:51.942 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 723.0545ms
+2025-06-12 08:49:51.942 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-12 08:49:51.946 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query - 200 null application/json; charset=utf-8 750.74ms
+2025-06-12 08:51:29.855 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-12 08:51:29.899 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 44.3327ms
+2025-06-12 08:51:30.004 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-12 08:51:30.084 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 79.7509ms
+2025-06-12 08:51:48.293 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - null null
+2025-06-12 08:51:48.307 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Admin)
+2025-06-12 08:51:48.311 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 08:51:48.311 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - 401 0 null 18.1753ms
+2025-06-12 08:51:59.712 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - null null
+2025-06-12 08:51:59.751 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenSignatureKeyNotFoundException: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'gulMHeEzcqAHFc_5Cvp0GRUND1ymWAD4opUv94iUPhM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignature(JsonWebToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateSignatureAndIssuerSecurityKey(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 08:51:59.762 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10517: Signature validation failed. The token's kid is missing. Keys tried: 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey, KeyId: '', InternalId: 'gulMHeEzcqAHFc_5Cvp0GRUND1ymWAD4opUv94iUPhM'. , KeyId: 
+'. Number of keys in TokenValidationParameters: '1'. 
+Number of keys in Configuration: '0'. 
+Exceptions caught:
+ '[PII of type 'System.String' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'.
+token: '[PII of type 'Microsoft.IdentityModel.JsonWebTokens.JsonWebToken' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]'. See https://aka.ms/IDX10503 for details.
+2025-06-12 08:51:59.763 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Admin)
+2025-06-12 08:51:59.764 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 08:51:59.765 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - 401 0 null 53.049ms
+2025-06-12 08:52:18.546 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - null null
+2025-06-12 08:52:18.563 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:18 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 08:52:18.564 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:18 AM'.
+2025-06-12 08:52:18.565 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Admin)
+2025-06-12 08:52:18.565 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 08:52:18.565 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - 401 0 null 18.6561ms
+2025-06-12 08:52:37.111 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 59
+2025-06-12 08:52:37.115 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:37 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 08:52:37.116 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:37 AM'.
+2025-06-12 08:52:37.121 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:52:37.122 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:52:37.123 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 08:52:37.136 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 08:52:37.219 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 08:52:37.711 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-06-12 08:52:37.711 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 575.2728ms
+2025-06-12 08:52:37.711 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 08:52:37.711 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 401 null text/plain; charset=utf-8 600.4752ms
+2025-06-12 08:52:44.358 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 60
+2025-06-12 08:52:44.359 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:44 AM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-06-12 08:52:44.360 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '6/10/2025 1:52:33 PM', Current time (UTC): '6/12/2025 3:22:44 AM'.
+2025-06-12 08:52:44.360 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:52:44.360 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:52:44.360 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 08:52:44.361 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 08:52:44.401 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 08:52:44.843 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 08:52:44.848 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 08:52:44.849 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 487.7802ms
+2025-06-12 08:52:44.849 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 08:52:44.849 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 491.0874ms
+2025-06-12 08:52:56.108 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - null null
+2025-06-12 08:52:56.121 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:52:56.121 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:52:56.121 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 08:52:56.123 +05:30 [INF] Route matched with {action = "DeletePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePollAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 08:52:56.138 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:52:56.141 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:52:56.157 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Polls" SET "IsDeleted" = @p0
+WHERE "Id" = @p1;
+2025-06-12 08:52:56.178 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 08:52:56.186 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 08:52:56.187 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:52:56.189 +05:30 [INF] Executed action TrueVote.Controllers.PollController.DeletePollAsync (TrueVote) in 65.3182ms
+2025-06-12 08:52:56.189 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 08:52:56.190 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[TrueVote.Models.DTOs.PollResponseDto,TrueVote.Service.PollService+<GetPollByIdAsync>d__11]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, NullabilityInfoContext nullabilityCtx, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, NullabilityInfoContext nullabilityCtx, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo, NullabilityInfoContext nullabilityCtx)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at System.Text.Json.WriteStackFrame.InitializePolymorphicReEntry(Type runtimeType, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.JsonConverter.ResolvePolymorphicConverter(Object value, JsonTypeInfo jsonTypeInfo, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at System.Text.Json.Serialization.Metadata.JsonTypeInfo`1.SerializeAsync(PipeWriter pipeWriter, T rootValue, Int32 flushThreshold, CancellationToken cancellationToken, Object rootValueBoxed)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at AspNetCoreRateLimit.RateLimitMiddleware`1.Invoke(HttpContext context) in C:\Users\User\Documents\Github\AspNetCoreRateLimit\src\AspNetCoreRateLimit\Middleware\RateLimitMiddleware.cs:line 124
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-06-12 08:52:56.204 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/019757c4-7dba-7e4f-b3ec-8880e30942e4 - 500 null text/plain; charset=utf-8 96.7027ms
+2025-06-12 08:53:58.914 +05:30 [INF] Application is shutting down...
+2025-06-12 08:54:03.336 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 08:54:03.403 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 08:54:03.404 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 08:54:03.404 +05:30 [INF] Hosting environment: Development
+2025-06-12 08:54:03.404 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 08:54:21.582 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/01975d02-571c-7f5e-b340-977d63f24a18 - null null
+2025-06-12 08:54:21.675 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:54:21.675 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:54:21.676 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 08:54:21.682 +05:30 [INF] Route matched with {action = "DeletePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePollAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 08:54:22.412 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:54:22.452 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:54:22.489 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Polls" SET "IsDeleted" = @p0
+WHERE "Id" = @p1;
+2025-06-12 08:54:22.514 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 08:54:22.519 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:54:22.523 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 08:54:22.537 +05:30 [INF] Executed action TrueVote.Controllers.PollController.DeletePollAsync (TrueVote) in 853.193ms
+2025-06-12 08:54:22.539 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 08:54:22.543 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/01975d02-571c-7f5e-b340-977d63f24a18 - 400 null application/json; charset=utf-8 961.8306ms
+2025-06-12 08:57:18.723 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - multipart/form-data; boundary=----WebKitFormBoundaryjCI53qBnocSiVhIQ 755
+2025-06-12 08:57:18.737 +05:30 [INF] CORS policy execution failed.
+2025-06-12 08:57:18.738 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 08:57:18.738 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 08:57:18.749 +05:30 [INF] Route matched with {action = "UpdatePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePollAsync(System.Guid, TrueVote.Models.DTOs.UpdatePollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 08:57:18.780 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 08:57:18.782 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 08:57:18.783 +05:30 [INF] Executed action TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote) in 33.2552ms
+2025-06-12 08:57:18.783 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 08:57:18.784 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - 400 null application/json; charset=utf-8 61.3821ms
+2025-06-12 09:00:45.234 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 09:00:45.311 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 09:00:45.312 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 09:00:45.312 +05:30 [INF] Hosting environment: Development
+2025-06-12 09:00:45.312 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 09:00:55.370 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - multipart/form-data; boundary=----WebKitFormBoundaryPtEkCuKzgKA4c9kH 756
+2025-06-12 09:00:55.465 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:00:55.465 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:00:55.466 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:00:55.475 +05:30 [INF] Route matched with {action = "UpdatePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePollAsync(System.Guid, TrueVote.Models.DTOs.UpdatePollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 09:00:56.106 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:00:56.147 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:00:56.159 +05:30 [INF] Executed action TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote) in 683.0152ms
+2025-06-12 09:00:56.162 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:00:56.167 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - 400 null application/json; charset=utf-8 798.3958ms
+2025-06-12 09:01:07.156 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - multipart/form-data; boundary=----WebKitFormBoundaryn5FuQudad0DwSEC3 756
+2025-06-12 09:01:07.171 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:01:07.172 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:01:07.172 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:07.172 +05:30 [INF] Route matched with {action = "UpdatePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePollAsync(System.Guid, TrueVote.Models.DTOs.UpdatePollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 09:01:07.185 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:07.186 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:01:07.186 +05:30 [INF] Executed action TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote) in 13.3982ms
+2025-06-12 09:01:07.186 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:07.186 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - 400 null application/json; charset=utf-8 30.5788ms
+2025-06-12 09:01:11.901 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - multipart/form-data; boundary=----WebKitFormBoundaryjBN4i0Fw8rnohPlA 860
+2025-06-12 09:01:11.907 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:01:11.907 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:01:11.907 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:11.908 +05:30 [INF] Route matched with {action = "UpdatePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePollAsync(System.Guid, TrueVote.Models.DTOs.UpdatePollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 09:01:11.948 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:11.958 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-12 09:01:11.982 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:12.041 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p6='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Date), @p3='?' (DbType = Boolean), @p4='?' (DbType = Date), @p5='?'], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "PollOptions"
+WHERE "Id" = @p0;
+UPDATE "Polls" SET "Description" = @p1, "EndDate" = @p2, "IsDeleted" = @p3, "StartDate" = @p4, "Title" = @p5
+WHERE "Id" = @p6;
+2025-06-12 09:01:12.053 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:12.055 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "PollOptions"
+WHERE "Id" = @p0;
+2025-06-12 09:01:12.055 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:12.056 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "PollOptions"
+WHERE "Id" = @p0;
+2025-06-12 09:01:12.066 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:01:12.072 +05:30 [ERR] Failed executing DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:01:12.082 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'TrueVote.Contexts.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_PollOptions_PollId_OptionText"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_PollOptions_PollId_OptionText"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: PollOptions
+    ConstraintName: IX_PollOptions_PollId_OptionText
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicate key value violates unique constraint "IX_PollOptions_PollId_OptionText"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23505
+    MessageText: duplicate key value violates unique constraint "IX_PollOptions_PollId_OptionText"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: PollOptions
+    ConstraintName: IX_PollOptions_PollId_OptionText
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2025-06-12 09:01:12.084 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:01:12.084 +05:30 [INF] Executed action TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote) in 176.2442ms
+2025-06-12 09:01:12.084 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:12.084 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - 400 null application/json; charset=utf-8 183.5446ms
+2025-06-12 09:01:31.892 +05:30 [INF] Request starting HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - multipart/form-data; boundary=----WebKitFormBoundaryqyNqTUE7PQbSyqEg 866
+2025-06-12 09:01:31.903 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:01:31.903 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:01:31.904 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:31.904 +05:30 [INF] Route matched with {action = "UpdatePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdatePollAsync(System.Guid, TrueVote.Models.DTOs.UpdatePollRequestDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 09:01:31.913 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:31.917 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-12 09:01:31.920 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:31.922 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "PollOptions"
+WHERE "Id" = @p0;
+2025-06-12 09:01:31.924 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:01:31.925 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Boolean), @p2='?', @p3='?' (DbType = Guid), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "PollOptions" ("Id", "IsDeleted", "OptionText", "PollId", "VoteCount")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:01:31.950 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 09:01:31.958 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:31.960 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Poll, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-12 09:01:31.974 +05:30 [INF] Executed action TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote) in 69.7634ms
+2025-06-12 09:01:31.974 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.UpdatePollAsync (TrueVote)'
+2025-06-12 09:01:31.974 +05:30 [INF] Request finished HTTP/1.1 PUT http://localhost:5100/api/v1/Poll/update/01975d02-571c-7f5e-b340-977d63f24a18 - 200 null application/json; charset=utf-8 82.4322ms
+2025-06-12 09:01:37.655 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/01975d02-571c-7f5e-b340-977d63f24a18 - null null
+2025-06-12 09:01:37.657 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:01:37.657 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:01:37.657 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 09:01:37.664 +05:30 [INF] Route matched with {action = "DeletePoll", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeletePollAsync(System.Guid) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-12 09:01:37.668 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:37.670 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:01:37.671 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Polls" SET "IsDeleted" = @p0
+WHERE "Id" = @p1;
+2025-06-12 09:01:37.673 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?' (DbType = Guid), @p5='?' (DbType = DateTime), @p6='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "AuditLogs" ("AuditId", "CreatedAt", "CreatedBy", "Description", "EntityId", "UpdatedAt", "UpdatedBy")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-06-12 09:01:37.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Object, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:01:37.673 +05:30 [INF] Executed action TrueVote.Controllers.PollController.DeletePollAsync (TrueVote) in 8.4687ms
+2025-06-12 09:01:37.673 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.DeletePollAsync (TrueVote)'
+2025-06-12 09:01:37.673 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5100/api/v1/Poll/01975d02-571c-7f5e-b340-977d63f24a18 - 200 null application/json; charset=utf-8 17.9092ms
+2025-06-12 09:02:04.168 +05:30 [INF] Application is shutting down...
+2025-06-12 09:07:00.881 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 09:07:00.954 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 09:07:00.956 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 09:07:00.956 +05:30 [INF] Hosting environment: Development
+2025-06-12 09:07:00.956 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 09:07:01.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-12 09:07:01.715 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 65.02ms
+2025-06-12 09:07:01.834 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-12 09:07:01.882 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/index.html - null null
+2025-06-12 09:07:01.883 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/index.html - 200 null text/html;charset=utf-8 0.809ms
+2025-06-12 09:07:01.923 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.8792ms
+2025-06-12 09:07:01.923 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - null null
+2025-06-12 09:07:01.929 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 6.3425ms
+2025-06-12 09:07:15.166 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-12 09:07:15.214 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:07:15.214 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:07:15.216 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:07:15.225 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:07:15.835 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:07:16.407 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:07:16.414 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:07:16.420 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 1192.5303ms
+2025-06-12 09:07:16.420 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:07:16.423 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 1257.3694ms
+2025-06-12 09:07:37.619 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/refresh - application/json 112
+2025-06-12 09:07:37.622 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:07:37.622 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:07:37.623 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote)'
+2025-06-12 09:07:37.625 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] RefreshToken(TrueVote.Models.DTOs.TokenRefreshRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:07:37.655 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE NOT (r."IsRevoked")
+2025-06-12 09:07:37.661 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:07:37.667 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE r."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:07:37.672 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:07:37.673 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:07:37.673 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote) in 48.2565ms
+2025-06-12 09:07:37.673 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote)'
+2025-06-12 09:07:37.674 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/refresh - 200 null application/json; charset=utf-8 54.9389ms
+2025-06-12 09:08:13.012 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - application/json 112
+2025-06-12 09:08:13.026 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-06-12 09:08:13.028 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-06-12 09:08:13.028 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - 401 0 null 16.9164ms
+2025-06-12 09:08:32.798 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - application/json 112
+2025-06-12 09:08:32.832 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:08:32.832 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:08:32.832 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.Logout (TrueVote)'
+2025-06-12 09:08:32.835 +05:30 [INF] Route matched with {action = "Logout", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(TrueVote.Models.DTOs.TokenRefreshRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:08:32.877 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE NOT (r."IsRevoked")
+2025-06-12 09:08:32.879 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE r."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:08:32.886 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "RefreshTokens" SET "IsRevoked" = @p0
+WHERE "Id" = @p1;
+2025-06-12 09:08:32.887 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:08:32.889 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.Logout (TrueVote) in 53.9531ms
+2025-06-12 09:08:32.889 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.Logout (TrueVote)'
+2025-06-12 09:08:32.889 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - 200 null application/json; charset=utf-8 91.7884ms
+2025-06-12 09:08:43.878 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-12 09:08:43.884 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:08:43.884 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:08:43.884 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:08:43.886 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:08:43.891 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:08:44.285 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:08:44.285 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:08:44.285 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 398.7875ms
+2025-06-12 09:08:44.285 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:08:44.285 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 407.0142ms
+2025-06-12 09:08:46.800 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-12 09:08:46.801 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:08:46.801 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:08:46.801 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:08:46.802 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:08:46.804 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:08:47.129 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:08:47.130 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:08:47.130 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 328.036ms
+2025-06-12 09:08:47.130 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:08:47.130 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 329.7151ms
+2025-06-12 09:08:54.758 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - null null
+2025-06-12 09:08:54.761 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:08:54.764 +05:30 [INF] Route matched with {action = "GetCurrentUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentUser() on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:08:54.771 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:08:54.771 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:08:54.773 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote) in 8.7613ms
+2025-06-12 09:08:54.773 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:08:54.774 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - 200 null application/json; charset=utf-8 15.8536ms
+2025-06-12 09:10:45.989 +05:30 [INF] Application is shutting down...
+2025-06-12 09:11:09.541 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-12 09:11:09.610 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-12 09:11:09.611 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-12 09:11:09.611 +05:30 [INF] Hosting environment: Development
+2025-06-12 09:11:09.611 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-12 09:11:13.880 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - application/json 63
+2025-06-12 09:11:13.966 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:11:13.966 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:11:13.967 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:11:13.973 +05:30 [INF] Route matched with {action = "UserLogin", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] UserLogin(TrueVote.Models.DTOs.UserLoginRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:11:14.544 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:11:15.112 +05:30 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:11:15.119 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:11:15.126 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote) in 1151.0591ms
+2025-06-12 09:11:15.128 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.UserLogin (TrueVote)'
+2025-06-12 09:11:15.132 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication - 200 null application/json; charset=utf-8 1253.2255ms
+2025-06-12 09:11:56.314 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/refresh - application/json 112
+2025-06-12 09:11:56.321 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:11:56.321 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:11:56.321 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote)'
+2025-06-12 09:11:56.326 +05:30 [INF] Route matched with {action = "RefreshToken", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.UserLoginResponse]] RefreshToken(TrueVote.Models.DTOs.TokenRefreshRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:11:56.357 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE NOT (r."IsRevoked")
+2025-06-12 09:11:56.364 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:11:56.372 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE r."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:11:56.382 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "RefreshTokens" SET "IsRevoked" = @p0
+WHERE "Id" = @p1;
+2025-06-12 09:11:56.385 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Boolean), @p3='?', @p4='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "RefreshTokens" ("Id", "ExpiresAt", "IsRevoked", "Token", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+2025-06-12 09:11:56.386 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.UserLoginResponse'.
+2025-06-12 09:11:56.386 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote) in 60.2481ms
+2025-06-12 09:11:56.386 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.RefreshToken (TrueVote)'
+2025-06-12 09:11:56.387 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/refresh - 200 null application/json; charset=utf-8 72.8255ms
+2025-06-12 09:12:32.887 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - null null
+2025-06-12 09:12:32.903 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:12:32.905 +05:30 [INF] Route matched with {action = "GetCurrentUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentUser() on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:12:32.946 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:12:32.947 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:12:32.951 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote) in 46.0782ms
+2025-06-12 09:12:32.951 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:12:32.951 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - 200 null application/json; charset=utf-8 63.7877ms
+2025-06-12 09:13:16.934 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - application/json 112
+2025-06-12 09:13:16.938 +05:30 [INF] CORS policy execution failed.
+2025-06-12 09:13:16.939 +05:30 [INF] Request origin http://localhost:5100 does not have permission to access the resource.
+2025-06-12 09:13:16.940 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.Logout (TrueVote)'
+2025-06-12 09:13:16.942 +05:30 [INF] Route matched with {action = "Logout", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Logout(TrueVote.Models.DTOs.TokenRefreshRequest) on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:13:16.945 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE NOT (r."IsRevoked")
+2025-06-12 09:13:16.948 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT r."Id", r."ExpiresAt", r."IsRevoked", r."Token", r."Username"
+FROM "RefreshTokens" AS r
+WHERE r."Id" = @__key_0
+LIMIT 2
+2025-06-12 09:13:16.950 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "RefreshTokens" SET "IsRevoked" = @p0
+WHERE "Id" = @p1;
+2025-06-12 09:13:16.951 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:13:16.952 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.Logout (TrueVote) in 10.0471ms
+2025-06-12 09:13:16.952 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.Logout (TrueVote)'
+2025-06-12 09:13:16.952 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/Authentication/logout - 200 null application/json; charset=utf-8 18.7836ms
+2025-06-12 09:13:25.662 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - null null
+2025-06-12 09:13:25.665 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:13:25.665 +05:30 [INF] Route matched with {action = "GetCurrentUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentUser() on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:13:25.668 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:13:25.668 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:13:25.669 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote) in 3.417ms
+2025-06-12 09:13:25.669 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:13:25.671 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - 200 null application/json; charset=utf-8 8.0661ms
+2025-06-12 09:13:41.501 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - null null
+2025-06-12 09:13:41.503 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:13:41.509 +05:30 [INF] Route matched with {action = "GetCurrentUser", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCurrentUser() on controller TrueVote.Controllers.AuthenticationController (TrueVote).
+2025-06-12 09:13:41.515 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+WHERE u."Username" = @__key_0
+LIMIT 2
+2025-06-12 09:13:41.516 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`3[[System.Guid, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-12 09:13:41.516 +05:30 [INF] Executed action TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote) in 6.4663ms
+2025-06-12 09:13:41.516 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.AuthenticationController.GetCurrentUser (TrueVote)'
+2025-06-12 09:13:41.516 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Authentication/me - 200 null application/json; charset=utf-8 14.5837ms
+2025-06-12 09:13:45.442 +05:30 [INF] Application is shutting down...

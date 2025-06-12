@@ -18,19 +18,22 @@ namespace TrueVote.Service
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
+        private readonly IAuditService _auditService;
         private readonly IPollMapper _pollMapper;
 
         public PollService(IRepository<Guid, Poll> pollRepository,
                            IRepository<Guid, PollOption> pollOptionRepository,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
-                           AppDbContext appDbContext)
+                           AppDbContext appDbContext,
+                           IAuditService auditService)
         {
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
             _httpContextAccessor = httpContextAccessor;
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
+            _auditService = auditService;
             _pollMapper = new PollMapper();
         }
 
@@ -39,7 +42,7 @@ namespace TrueVote.Service
         public async Task<Poll> UpdatePoll(Guid pollId, UpdatePollRequestDto updateDto)
         {
             var poll = await _pollRepository.Get(pollId);
-            if (poll == null || poll.IsDeleted)
+            if (poll == null)
                 throw new Exception("Poll not found");
             var loggedInUserEmail = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(loggedInUserEmail))
@@ -69,6 +72,12 @@ namespace TrueVote.Service
 
             if (updateDto.IsDeleted.HasValue)
                 poll.IsDeleted = updateDto.IsDeleted.Value;
+
+            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (loggedInUser == null)
+            {
+                throw new Exception("You must be logged in to create a poll");
+            }
 
             if (updateDto.PollFile != null)
             {
@@ -103,6 +112,13 @@ namespace TrueVote.Service
                     await _pollOptionRepository.Add(pollOption);
                 }
             }
+
+            await _auditService.LogAsync(
+                description: $"Poll updated: {poll.Title}",
+                entityId: poll.Id,
+                updatedBy: loggedInUser
+            );
+            _auditLogger.LogAction(loggedInUser, $"Updated poll with ID: {poll.Id}", true);
 
             return await _pollRepository.Update(poll.Id, poll);
         }
@@ -168,12 +184,36 @@ namespace TrueVote.Service
                 Poll = newPoll,
                 PollOptions = pollOptions
             };
+
+            await _auditService.LogAsync(
+                description: $"Poll created: {newPoll.Title}",
+                entityId: newPoll.Id,
+                createdBy: loggedInUser
+            );
+
             _auditLogger.LogAction(loggedInUser, $"Added a new poll with ID: {newPoll.Id}", true);
 
             return newPoll;
         }
 
+        public async Task<bool> DeletePollAsync(Guid pollId)
+        {
+            var poll = await _pollRepository.Get(pollId);
+            if (poll == null)
+                throw new Exception("Poll not found");
 
+            poll.IsDeleted = true;
+            await _pollRepository.Update(poll.Id, poll);
+
+            await _auditService.LogAsync(
+                description: $"Poll deleted: {poll.Title}",
+                entityId: poll.Id,
+                updatedBy: _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value
+            );
+            _auditLogger.LogAction("System", $"Deleted poll with ID: {poll.Id}", true);
+
+            return true;
+        }
         public async Task<PollResponseDto> GetPollByIdAsync(Guid pollId)
         {
             var poll = await _pollRepository.Get(pollId);
@@ -192,9 +232,9 @@ namespace TrueVote.Service
                 PollImageType = poll.PoleFile?.FileType
             };
         }
-        
 
-        
+
+
         public async Task<PagedResponseDto<PollResponseDto>> QueryPollsPaged(PollQueryDto query)
         {
             var polls = (await _pollRepository.GetAll()).ToList();
@@ -277,7 +317,7 @@ namespace TrueVote.Service
         private List<Poll> SortPolls(List<Poll> polls, PollQueryDto query)
         {
             if (string.IsNullOrEmpty(query.SortBy))
-                return polls.OrderByDescending(p => p.StartDate).ToList(); 
+                return polls.OrderByDescending(p => p.StartDate).ToList();
 
             return query.SortBy.ToLower() switch
             {

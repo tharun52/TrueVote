@@ -64,6 +64,24 @@ namespace TrueVote.Controllers
             }
         }
 
+        [HttpDelete("{pollId}")]
+        [Authorize(Roles = "Moderator,Admin")]
+        public async Task<IActionResult> DeletePollAsync(Guid pollId)
+        {
+            try
+            {
+                var result = await _pollService.DeletePollAsync(pollId);
+                if (result)
+                    return Ok(ApiResponseHelper.Success<object?>(null, "Poll deleted successfully"));
+                else
+                    return NotFound(ApiResponseHelper.Failure<object>("Poll not found"));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ApiResponseHelper.Failure<object>(ex.Message));
+            }
+        }
+
         [HttpGet("query")]
         public async Task<IActionResult> QueryPollsAsync([FromQuery] PollQueryDto query)
         {

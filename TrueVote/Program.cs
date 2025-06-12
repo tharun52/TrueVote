@@ -96,6 +96,7 @@ builder.Services.AddTransient<IRepository<Guid, Poll>, PollRepository>();
 builder.Services.AddTransient<IRepository<Guid, PollOption>, PollOptionRepository>();
 builder.Services.AddTransient<IRepository<Guid, VoterCheck>, VoterCheckRepository>();
 builder.Services.AddTransient<IRepository<Guid, PollVote>, PollVoteRepository>();
+builder.Services.AddTransient<IRepository<Guid, AuditLog>, AuditRepository>();
 #endregion
 
 #region Services
@@ -107,6 +108,7 @@ builder.Services.AddTransient<ITokenService, TokenService>();
 builder.Services.AddTransient<IAuthenticationService, AuthenticationService>();
 builder.Services.AddTransient<IPollService, PollService>();
 builder.Services.AddTransient<IVoteService, VoteService>();
+builder.Services.AddTransient<IAuditService, AuditService>();
 #endregion
 
 #region AuthenticationFilter
@@ -185,9 +187,6 @@ app.UseClientRateLimiting();
 
 app.UseCors();
 app.MapControllers();
-app.MapHub<NotificationHub>("/notificationhub");
 app.MapHub<PollHub>("/pollhub");
-// app.MapHub<ModeratorHub>("/moderatorhub");
-
 app.Run();
 

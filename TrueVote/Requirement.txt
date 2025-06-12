@@ -125,9 +125,7 @@ CopyEdit
 
 
 audit table
-get by id
-logout 
-get Authentication
+
 profile picture
 unit testing 
 Integration testing

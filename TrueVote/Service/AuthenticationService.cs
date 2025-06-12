@@ -63,16 +63,13 @@ namespace TrueVote.Service
                 .FirstOrDefault(r => r.Token == refreshToken && !r.IsRevoked && r.ExpiresAt > DateTime.UtcNow);
 
             if (existingToken == null)
-            {
                 throw new UnauthorizedAccessException("Invalid or expired refresh token.");
-            }
 
             var user = await _userRepository.Get(existingToken.Username);
             if (user == null)
-            {
                 throw new UnauthorizedAccessException("User not found.");
-            }
 
+            existingToken.IsRevoked = true;
             await _refreshTokenRepository.Update(existingToken.Id, existingToken);
 
             var (accessToken, newRefreshToken) = await _tokenService.GenerateTokensAsync(user);
@@ -85,6 +82,28 @@ namespace TrueVote.Service
                 Role = user.Role
             };
         }
-        
+
+
+
+        public async Task<bool> LogoutAsync(string refreshToken)
+        {
+            var token = (await _refreshTokenRepository.GetAll())
+                .FirstOrDefault(r => r.Token == refreshToken && !r.IsRevoked);
+
+            if (token == null)
+                return false;
+
+            token.IsRevoked = true;
+            await _refreshTokenRepository.Update(token.Id, token);
+            return true;
+        }
+
+        public async Task<User?> GetCurrentUserAsync(string username)
+        {
+            if (string.IsNullOrEmpty(username))
+                return null;
+            return await _userRepository.Get(username);
+        }
+
     }
 }

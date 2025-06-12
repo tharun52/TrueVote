@@ -19,6 +19,7 @@ namespace TrueVote.Contexts
         public DbSet<Voter> Voters { get; set; }
         public DbSet<VoterCheck> VoterChecks { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User
@@ -52,7 +53,7 @@ namespace TrueVote.Contexts
                 .WithOne()
                 .HasForeignKey(po => po.PollId)
                 .OnDelete(DeleteBehavior.Cascade);
-                
+
             // PollOption
             modelBuilder.Entity<PollOption>()
                 .HasIndex(po => new { po.PollId, po.OptionText })
@@ -91,20 +92,20 @@ namespace TrueVote.Contexts
             modelBuilder.Entity<PollFile>()
                 .Property(pf => pf.Content)
                 .IsRequired();
-            
+
             modelBuilder.Entity<Poll>()
                 .HasOne(p => p.PoleFile)
                 .WithOne()
                 .HasForeignKey<Poll>(p => p.Id)
                 .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired(false);;
-            
+                .IsRequired(false); ;
+
             modelBuilder.Entity<PollFile>()
                 .HasOne(pf => pf.Poll)
                 .WithOne(p => p.PoleFile)
                 .HasForeignKey<PollFile>(pf => pf.PollId)
-                .OnDelete(DeleteBehavior.Restrict); 
-                            
+                .OnDelete(DeleteBehavior.Restrict);
+
             // RefreshToken
             modelBuilder.Entity<RefreshToken>()
                 .HasIndex(rt => rt.Token)

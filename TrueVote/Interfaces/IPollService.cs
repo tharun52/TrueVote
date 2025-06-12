@@ -9,5 +9,6 @@ namespace TrueVote.Interfaces
         public Task<PagedResponseDto<PollResponseDto>> QueryPollsPaged(PollQueryDto query);
         public Task<Poll> UpdatePoll(Guid pollId, UpdatePollRequestDto updateDto);
         public Task<PollResponseDto> GetPollByIdAsync(Guid pollId);
+        public Task<bool> DeletePollAsync(Guid pollId);
     }
 }
