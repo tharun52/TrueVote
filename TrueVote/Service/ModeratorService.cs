@@ -252,6 +252,7 @@ namespace TrueVote.Service
             if (query.IsDeleted.HasValue)
                 moderators = moderators.Where(m => m.IsDeleted == query.IsDeleted.Value).ToList();
 
+            moderators = moderators.Where(m => !m.IsDeleted).ToList();
             return moderators;
         }
 
