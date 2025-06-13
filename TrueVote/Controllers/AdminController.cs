@@ -86,7 +86,7 @@ namespace TrueVote.Controllers
             }
         }
 
-        [HttpDelete("{adminId}")]
+        [HttpDelete("delete/{adminId}")]
         public async Task<IActionResult> DeleteAdminAsync(Guid adminId)
         {
             try

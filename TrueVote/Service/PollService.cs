@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using TrueVote.Contexts;
 using TrueVote.Interfaces;
 using TrueVote.Mappers;
-using TrueVote.Misc;
 using TrueVote.Models;
 using TrueVote.Models.DTOs;
 

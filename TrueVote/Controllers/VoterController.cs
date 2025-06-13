@@ -26,7 +26,7 @@ namespace TrueVote.Controllers
             return Ok(ApiResponseHelper.Success(voters, "Voters fetched successfully"));
         }
 
-        [HttpPost]  
+        [HttpPost("add")]  
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> AddVoterAsync([FromBody] AddVoterRequestDto voterDto)
         {

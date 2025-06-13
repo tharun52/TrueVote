@@ -4,3 +4,17 @@
 2025-06-12 08:54:22.515 +05:30 [INF] User: System, Action: Deleted poll with ID: 01975d02-571c-7f5e-b340-977d63f24a18
 2025-06-12 09:01:31.951 +05:30 [INF] User: mano@gmail.com, Action: Updated poll with ID: 01975d02-571c-7f5e-b340-977d63f24a18
 2025-06-12 09:01:37.673 +05:30 [INF] User: System, Action: Deleted poll with ID: 01975d02-571c-7f5e-b340-977d63f24a18
+2025-06-12 13:13:49.922 +05:30 [INF] User: admin@gmail.com, Action: New Admin with Email : admin@gmail.com was created
+2025-06-12 13:17:16.034 +05:30 [INF] User: admin@gmail.com, Action: Updated admin: Admin User : 01976318-5a7d-7538-8238-9ac61985cb4d
+2025-06-12 13:34:16.159 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: Moderator test : 0197632b-106d-77ac-bb66-d7b479fb2c3c
+2025-06-12 14:38:02.304 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: Moderator test : 01976365-725d-7c1b-a4f8-1be50e4be1cd
+2025-06-12 14:54:19.472 +05:30 [INF] User: moderatortest@gmail.com, Action: Updated moderator: Test Moderator : 01976365-725d-7c1b-a4f8-1be50e4be1cd
+2025-06-12 14:55:06.222 +05:30 [INF] User: moderatortest@gmail.com, Action: Updated moderator: Test Moderator : 01976365-725d-7c1b-a4f8-1be50e4be1cd
+2025-06-12 14:56:26.876 +05:30 [INF] User: moderatortest@gmail.com, Action: Soft Deleted moderator: Test Moderator : 01976365-725d-7c1b-a4f8-1be50e4be1cd
+2025-06-12 14:57:22.333 +05:30 [INF] User: moderatortest@gmail.com, Action: Soft Deleted moderator: Test Moderator : 01976365-725d-7c1b-a4f8-1be50e4be1cd
+2025-06-12 15:25:13.236 +05:30 [INF] User: moderatortest@gmail.com, Action: Added a new poll with ID: 01976390-a467-7e0f-8f8d-468c03ccedd4
+2025-06-12 15:39:12.834 +05:30 [INF] User: moderatortest@gmail.com, Action: Added a new poll with ID: 0197639d-7454-71c7-9948-f7119ae68a75
+2025-06-12 15:46:08.607 +05:30 [INF] User: moderatortest@gmail.com, Action: Updated poll with ID: 0197639d-7454-71c7-9948-f7119ae68a75
+2025-06-12 16:43:06.480 +05:30 [INF] User: System, Action: Deleted poll with ID: 0197639d-3c4f-738c-b5e4-06a4b4769678
+2025-06-12 22:16:51.650 +05:30 [INF] User: voter1@gmail.com, Action: Updated Voter: Test Voter : 019764f5-a7c4-7a28-ab42-6500dfcfc25f
+2025-06-12 22:21:12.914 +05:30 [INF] User: moderatortest@gmail.com, Action: Soft Deleted Voter : 019764f5-a7c4-7a28-ab42-6500dfcfc25f : 019764f5-a7c4-7a28-ab42-6500dfcfc25f

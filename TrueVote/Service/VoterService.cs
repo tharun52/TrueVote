@@ -3,7 +3,6 @@ using TrueVote.Interfaces;
 using TrueVote.Mappers;
 using TrueVote.Models;
 using TrueVote.Models.DTOs;
-using TrueVote.Repositories;
 
 namespace TrueVote.Service
 {

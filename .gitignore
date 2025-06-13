@@ -1,0 +1,67 @@
+## Ignore Visual Studio temporary files, build results, and
+## user-specific files
+
+.env 
+
+testing/
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# VS Code settings
+.vscode/
+
+# Rider IDE
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotCover
+*.dotCover
+
+# Recycle Bin used by VS
+$RECYCLE.BIN/
+
+# NuGet Packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+!**/packages/repositories.config
+**/.nuget/
+*.snupkg
+
+# Visual Studio cache files
+.vs/
+
+# Backup & Report Files
+*.bak
+*.log
+*.tlog
+
+# Others
+*.dbmdl
+*.pdb
+*.cache
+*.orig
+*.tmp
+
+# Publish artifacts
+publish/
+
+# Local history for JetBrains Rider
+.idea/.idea.LocalHistory/

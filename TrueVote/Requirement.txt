@@ -1,3 +1,12 @@
+Case Study 18: Voting and Polling App
+Roles: Moderator, Voter
+Features:
+Create polls
+Vote anonymously
+SignalR for real-time poll results
+
+
+
 Requirements for the project
 API Technical Specification Document
 1. Overview
@@ -127,7 +136,18 @@ CopyEdit
 audit table
 
 profile picture
-unit testing 
-Integration testing
 APM
 structured logging
+
+
+question
+models
+excel
+Postman
+run it
+response format
+SignalR
+Rate Limiting
+logging
+audit table
+tests

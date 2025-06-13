@@ -271,7 +271,7 @@ namespace TrueVote.Service
         private static List<Moderator> SortModerators(List<Moderator> moderators, ModeratorQueryDto query)
         {
             if (string.IsNullOrEmpty(query.SortBy))
-                return moderators.OrderBy(m => m.Name).ToList(); // Default sort
+                return moderators.OrderBy(m => m.Name).ToList();
 
             return query.SortBy.ToLower() switch
             {

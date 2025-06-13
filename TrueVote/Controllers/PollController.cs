@@ -19,7 +19,7 @@ namespace TrueVote.Controllers
         }
 
         [Authorize(Roles = "Admin, Moderator")]
-        [HttpPost]
+        [HttpPost("add")]
         public async Task<IActionResult> AddPollAsync([FromForm] AddPollRequestDto pollRequestDto)
         {
             if (pollRequestDto == null)

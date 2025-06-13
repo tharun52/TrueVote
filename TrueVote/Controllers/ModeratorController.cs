@@ -18,7 +18,7 @@ namespace TrueVote.Controllers
             _moderatorService = moderatorService;
         }
 
-        [HttpPost]
+        [HttpPost("add")]
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddModeratorAsync([FromBody] AddModeratorRequestDto moderatorDto)
         {
