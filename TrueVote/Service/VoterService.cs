@@ -49,27 +49,30 @@ namespace TrueVote.Service
             {
                 throw new Exception("No User Logged in");
             }
-
-            if (!string.IsNullOrEmpty(dto.PrevPassword))
+            if (loggedInUser != voter.Email)
             {
-                if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
-                    throw new UnauthorizedAccessException("Previous password does not match");
-
-                if (!string.IsNullOrWhiteSpace(dto.NewPassword))
-                {
-                    var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
-                    {
-                        Data = dto.NewPassword
-                    });
-
-                    if (encryptedNew == null || encryptedNew.EncryptedText == null || encryptedNew.HashKey == null)
-                        throw new InvalidOperationException("Encryption failed for new password");
-
-                    user.PasswordHash = encryptedNew.EncryptedText;
-                    user.HashKey = encryptedNew.HashKey;
-                    await _userRepository.Update(user.Username, user);
-                }
+                throw new Exception("You can only update your own voter details");
             }
+            if (!string.IsNullOrEmpty(dto.PrevPassword))
+                {
+                    if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
+                        throw new UnauthorizedAccessException("Previous password does not match");
+
+                    if (!string.IsNullOrWhiteSpace(dto.NewPassword))
+                    {
+                        var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
+                        {
+                            Data = dto.NewPassword
+                        });
+
+                        if (encryptedNew == null || encryptedNew.EncryptedText == null || encryptedNew.HashKey == null)
+                            throw new InvalidOperationException("Encryption failed for new password");
+
+                        user.PasswordHash = encryptedNew.EncryptedText;
+                        user.HashKey = encryptedNew.HashKey;
+                        await _userRepository.Update(user.Username, user);
+                    }
+                }
 
             if (!string.IsNullOrWhiteSpace(dto.Name))
                 voter.Name = dto.Name;

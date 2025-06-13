@@ -77,6 +77,10 @@ namespace TrueVote.Service
             {
                 throw new Exception("You must be logged in to create a poll");
             }
+            if (poll.CreatedByEmail != loggedInUser)
+            {
+                throw new Exception("You can only update your polls");
+            }
 
             if (updateDto.PollFile != null)
             {
@@ -189,7 +193,6 @@ namespace TrueVote.Service
                 entityId: newPoll.Id,
                 createdBy: loggedInUser
             );
-
             _auditLogger.LogAction(loggedInUser, $"Added a new poll with ID: {newPoll.Id}", true);
 
             return newPoll;
@@ -201,6 +204,16 @@ namespace TrueVote.Service
             if (poll == null)
                 throw new Exception("Poll not found");
 
+            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (loggedInUser == null)
+            {
+                throw new Exception("You must be logged in to create a poll");
+            }
+            if (poll.CreatedByEmail != loggedInUser)
+            {
+                throw new Exception("You can only delete your polls");
+            }
+
             poll.IsDeleted = true;
             await _pollRepository.Update(poll.Id, poll);
 
@@ -209,8 +222,14 @@ namespace TrueVote.Service
                 entityId: poll.Id,
                 updatedBy: _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value
             );
-            _auditLogger.LogAction("System", $"Deleted poll with ID: {poll.Id}", true);
 
+            await _auditService.LogAsync(
+                description: $"Deleted Poll updated: {poll.Title}",
+                entityId: poll.Id,
+                updatedBy: loggedInUser
+            );
+
+            _auditLogger.LogAction(loggedInUser, $"Deleted poll with ID: {poll.Id}", true);
             return true;
         }
         public async Task<PollResponseDto> GetPollByIdAsync(Guid pollId)
