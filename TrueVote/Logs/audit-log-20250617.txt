@@ -1,0 +1,2 @@
+2025-06-17 17:06:36.691 +05:30 [INF] User: a@gmail.com, Action: New Admin with Email : a@gmail.com was created
+2025-06-17 17:08:19.552 +05:30 [INF] User: moderatortest@gmail.com, Action: Added a new poll with ID: 01977dae-d5e8-70ce-82e1-c68028a98124
