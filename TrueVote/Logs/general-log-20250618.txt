@@ -1,0 +1,95 @@
+2025-06-18 08:30:01.786 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-18 08:30:01.862 +05:30 [INF] Now listening on: http://localhost:5100
+2025-06-18 08:30:01.863 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-18 08:30:01.863 +05:30 [INF] Hosting environment: Development
+2025-06-18 08:30:01.863 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-06-18 08:30:03.955 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null null
+2025-06-18 08:30:04.003 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:04.007 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 204 null null 52.2609ms
+2025-06-18 08:30:04.010 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - null 0
+2025-06-18 08:30:04.015 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:04.017 +05:30 [INF] Executing endpoint '/pollhub/negotiate'
+2025-06-18 08:30:04.022 +05:30 [INF] Executed endpoint '/pollhub/negotiate'
+2025-06-18 08:30:04.023 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/pollhub/negotiate?negotiateVersion=1 - 200 316 application/json 13.5077ms
+2025-06-18 08:30:04.026 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/pollhub?id=64Ws5EODalfQcE4HBCfh-w - null null
+2025-06-18 08:30:04.031 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:04.031 +05:30 [INF] Executing endpoint '/pollhub'
+2025-06-18 08:30:04.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/query?page=1&pageSize=100 - null null
+2025-06-18 08:30:04.050 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-18 08:30:04.053 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:04.053 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:04.053 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-18 08:30:04.053 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote)'
+2025-06-18 08:30:04.064 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-18 08:30:04.064 +05:30 [INF] Route matched with {action = "QueryModerators", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryModeratorsAsync(TrueVote.Models.DTOs.ModeratorQueryDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-06-18 08:30:04.626 +05:30 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-06-18 08:30:04.629 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:30:04.671 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-06-18 08:30:04.688 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 08:30:04.689 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:30:04.699 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 08:30:04.710 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote) in 643.4176ms
+2025-06-18 08:30:04.710 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote)'
+2025-06-18 08:30:04.714 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 663.8768ms
+2025-06-18 08:30:04.716 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 651.2633ms
+2025-06-18 08:30:04.716 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-18 08:30:04.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 665.9278ms
+2025-06-18 08:30:10.110 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:30:10.113 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:30:11.377 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:30:11.381 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:30:13.824 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:30:13.827 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:30:18.624 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - null null
+2025-06-18 08:30:18.627 +05:30 [INF] CORS policy execution successful.
+2025-06-18 08:30:18.628 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-18 08:30:18.628 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-06-18 08:30:18.633 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:30:18.635 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:30:18.646 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-06-18 08:30:18.670 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 41.4537ms
+2025-06-18 08:30:18.670 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-06-18 08:30:18.671 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?page=1&pageSize=100 - 200 null application/json; charset=utf-8 46.9752ms
+2025-06-18 08:31:46.798 +05:30 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."StartDate", p."Title", p0."Id", p0."Content", p0."FileType", p0."Filename", p0."IsDeleted", p0."PollId", p0."UploadedAt", p0."UploadedByUsername"
+FROM "Polls" AS p
+LEFT JOIN "PollFiles" AS p0 ON p."Id" = p0."PollId"
+2025-06-18 08:31:46.804 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-06-18 08:32:09.440 +05:30 [INF] Application is shutting down...
+2025-06-18 08:32:09.443 +05:30 [INF] Connection id "0HNDE2GSJRBAP", Request id "0HNDE2GSJRBAP:00000001": the application aborted the connection.
+2025-06-18 08:32:09.451 +05:30 [INF] Executed endpoint '/pollhub'
+2025-06-18 08:32:09.451 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/pollhub?id=64Ws5EODalfQcE4HBCfh-w - 101 null null 125426.1313ms

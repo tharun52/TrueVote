@@ -89,7 +89,7 @@
                         pollsById = {};
                         pollArray.forEach(pollResp => {
                             const poll = pollResp.poll;
-                            const options = pollResp.pollOptions || [];
+                            const options = pollResp.pollOptions?.$values || pollResp.pollOptions || [];
                             pollsById[poll.id] = {
                                 poll,
                                 pollOptions: options,
