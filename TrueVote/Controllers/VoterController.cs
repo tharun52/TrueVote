@@ -22,7 +22,7 @@ namespace TrueVote.Controllers
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> GetAllVotersAsync()
         {
-            var voters = await _voterService.GetAllVotersAsync();
+            var voters = await _voterService.GetAllVoters();
             return Ok(ApiResponseHelper.Success(voters, "Voters fetched successfully"));
         }
 
@@ -38,7 +38,7 @@ namespace TrueVote.Controllers
 
             try
             {
-                var newVoter = await _voterService.AddVoterAsync(voterDto);
+                var newVoter = await _voterService.AddVoter(voterDto);
                 return Created($"/api/moderator/{newVoter.Name}", ApiResponseHelper.Success(newVoter, "Voter added successfully"));
             }
             catch (ArgumentException ex)
@@ -54,8 +54,9 @@ namespace TrueVote.Controllers
             }
         }
 
-        [HttpPut("update/{email}")]
-        public async Task<IActionResult> UpdateVoterAsync(string email, [FromBody] UpdateVoterDto dto)
+        [HttpPut("updateasadmin/{voterId}")]
+        [Authorize(Roles = "Admin, Moderator")]
+        public async Task<IActionResult> UpdateVoterAsAdminAsync(Guid voterId, [FromBody] UpdateVoterAsAdminDto dto)
         {
             if (dto == null)
             {
@@ -67,7 +68,39 @@ namespace TrueVote.Controllers
 
             try
             {
-                var updatedVoter = await _voterService.UpdateVoterAsync(email, dto);
+                var updatedVoter = await _voterService.UpdateVoterAsAdmin(voterId, dto);
+                return Ok(ApiResponseHelper.Success(updatedVoter, "Voter updated successfully"));
+            }
+            catch (UnauthorizedAccessException ex)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "password", new List<string> { ex.Message } }
+                };
+                return Unauthorized(ApiResponseHelper.Failure<object>("Password verification failed", error));
+            }
+            catch (Exception ex)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "exception", new List<string> { ex.Message } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Voter update failed", error));
+            }
+        }
+
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateVoterAsync([FromBody] UpdateVoterDto dto)
+        {
+            if (dto == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "updateVoterDto", new List<string> { "Voter update data cannot be null" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
+            }
+
+            try
+            {
+                var updatedVoter = await _voterService.UpdateVoter(dto);
                 return Ok(ApiResponseHelper.Success(updatedVoter, "Voter updated successfully"));
             }
             catch (UnauthorizedAccessException ex)
@@ -90,7 +123,7 @@ namespace TrueVote.Controllers
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> DeleteVoterAsync(Guid voterId)
         {
-            var deletedVoter = await _voterService.DeleteVoterAsync(voterId);
+            var deletedVoter = await _voterService.DeleteVoter(voterId);
             if (deletedVoter == null)
             {
                 var error = new Dictionary<string, List<string>> {

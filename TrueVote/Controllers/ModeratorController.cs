@@ -85,9 +85,9 @@ namespace TrueVote.Controllers
             }
         }
 
-        [HttpPut("update/{username}")]
+        [HttpPut("update")]
         [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> UpdateModeratorAsync(string username, [FromBody] UpdateModeratorDto moderatorDto)
+        public async Task<IActionResult> UpdateModeratorAsync([FromBody] UpdateModeratorDto moderatorDto)
         {
             if (moderatorDto == null)
             {
@@ -99,7 +99,7 @@ namespace TrueVote.Controllers
 
             try
             {
-                var updatedModerator = await _moderatorService.UpdateModerator(username, moderatorDto);
+                var updatedModerator = await _moderatorService.UpdateModerator(moderatorDto);
                 return Ok(ApiResponseHelper.Success(updatedModerator, "Moderator updated successfully"));
             }
             catch (UnauthorizedAccessException ex)
@@ -118,6 +118,31 @@ namespace TrueVote.Controllers
             }
         }
 
+        [HttpPut("updateasadmin/{moderatorId}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateModeratorAsync(Guid moderatorId, [FromBody] UpdateModeratorasAdminDto moderatorDto)
+        {
+            if (moderatorDto == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                        { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
+                    };
+                return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
+            }
+
+            try
+            {
+                var updatedModerator = await _moderatorService.UpdateModeratorAsAdmin(moderatorId, moderatorDto);
+                return Ok(ApiResponseHelper.Success(updatedModerator, "Moderator updated successfully"));
+            }
+            catch (Exception ex)
+            {
+                var error = new Dictionary<string, List<string>> {
+                        { "exception", new List<string> { ex.Message } }
+                    };
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator updation failed", error));
+            }
+        }
 
         [HttpDelete("delete/{moderatorId}")]
         [Authorize(Roles = "Admin, Moderator")]

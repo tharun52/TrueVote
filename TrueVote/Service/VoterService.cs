@@ -12,6 +12,7 @@ namespace TrueVote.Service
         private readonly IRepository<string, User> _userRepository;
         private readonly IEncryptionService _encryptionService;
         private IHttpContextAccessor _httpContextAccessor;
+        private readonly IAuditService _auditService;
         private readonly IAuditLogger _auditLogger;
         private readonly VoterMapper _voterMapper;
 
@@ -19,76 +20,132 @@ namespace TrueVote.Service
                             IRepository<string, User> userRepository,
                             IEncryptionService encryptionService,
                             IHttpContextAccessor httpContextAccessor,
+                            IAuditService auditService,
                             IAuditLogger auditLogger)
         {
             _voterRepository = voterRepository;
             _userRepository = userRepository;
             _encryptionService = encryptionService;
             _httpContextAccessor = httpContextAccessor;
+            _auditService = auditService;
             _auditLogger = auditLogger;
             _voterMapper = new VoterMapper();
         }
 
-        public async Task<IEnumerable<Voter>> GetAllVotersAsync()
+        public async Task<IEnumerable<Voter>> GetAllVoters()
         {
             var voters = await _voterRepository.GetAll();
             return voters.Where(v => v.IsDeleted == false);
         }
-        public async Task<Voter> UpdateVoterAsync(string email, UpdateVoterDto dto)
-        {
-            var user = await _userRepository.Get(email);
-            if (user == null)
-                throw new Exception("User not found");
 
-            var voter = (await _voterRepository.GetAll()).FirstOrDefault(v => v.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
+        public async Task<Voter> UpdateVoterAsAdmin(Guid voterId, UpdateVoterAsAdminDto dto)
+        {
+            // 1. Get the voter by ID
+            var voter = await _voterRepository.Get(voterId);
             if (voter == null)
                 throw new Exception("Voter not found");
 
+            // 2. Update fields only if provided
+            if (!string.IsNullOrWhiteSpace(dto.Name))
+                voter.Name = dto.Name;
+
+            if (dto.Age.HasValue)
+            {
+                if (dto.Age.Value < 18)
+                    throw new Exception("Voter Must be atleast 18 years old");
+                voter.Age = dto.Age.Value;
+            }
+
+            if (dto.IsDeleted.HasValue)
+                voter.IsDeleted = dto.IsDeleted.Value;
+
+            // 3. Get admin's user ID from JWT (for logging)
+            var adminId = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (adminId == null)
+            {
+                throw new Exception("No User Logged in");
+            }
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (loggedInUser == null)
             {
                 throw new Exception("No User Logged in");
             }
-            if (loggedInUser != voter.Email)
+
+            // 4. Log admin update action
+            await _auditService.LogAsync(
+                description: $"Voter deleted: {voter.Email}",
+                entityId: voter.Id,
+                updatedBy: loggedInUser
+            );
+            _auditLogger.LogAction(adminId, $"Admin updated voter: {voter.Name} : {voter.Id}", true);
+
+            // 5. Save changes
+            return await _voterRepository.Update(voter.Id, voter);
+        }
+
+        public async Task<Voter> UpdateVoter(UpdateVoterDto dto)
+        {
+            // 1. Get Voter ID from JWT (UserId claim)
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (string.IsNullOrWhiteSpace(userIdClaim) || !Guid.TryParse(userIdClaim, out Guid voterId))
             {
-                throw new Exception("You can only update your own voter details");
+                throw new UnauthorizedAccessException("You must be logged in to update Voter");
             }
-            if (!string.IsNullOrEmpty(dto.PrevPassword))
+
+            // 2. Fetch Voter by ID
+            var voter = await _voterRepository.Get(voterId);
+            if (voter == null)
+                throw new Exception("Voter not found");
+
+            // 3. Fetch associated User by voter's email
+            var user = await _userRepository.Get(voter.Email);
+            if (user == null)
+                throw new Exception("User account not found");
+
+            // 4. Optional password update
+            if (!string.IsNullOrWhiteSpace(dto.NewPassword))
+            {
+                if (string.IsNullOrWhiteSpace(dto.PrevPassword))
+                    throw new UnauthorizedAccessException("Previous password is required to change password");
+
+                if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
+                    throw new UnauthorizedAccessException("Previous password does not match");
+
+                var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
                 {
-                    if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
-                        throw new UnauthorizedAccessException("Previous password does not match");
+                    Data = dto.NewPassword
+                });
 
-                    if (!string.IsNullOrWhiteSpace(dto.NewPassword))
-                    {
-                        var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
-                        {
-                            Data = dto.NewPassword
-                        });
+                if (encryptedNew == null || string.IsNullOrWhiteSpace(encryptedNew.EncryptedText) || string.IsNullOrWhiteSpace(encryptedNew.HashKey))
+                    throw new InvalidOperationException("Encryption failed for new password");
 
-                        if (encryptedNew == null || encryptedNew.EncryptedText == null || encryptedNew.HashKey == null)
-                            throw new InvalidOperationException("Encryption failed for new password");
+                user.PasswordHash = encryptedNew.EncryptedText;
+                user.HashKey = encryptedNew.HashKey;
 
-                        user.PasswordHash = encryptedNew.EncryptedText;
-                        user.HashKey = encryptedNew.HashKey;
-                        await _userRepository.Update(user.Username, user);
-                    }
-                }
+                await _userRepository.Update(user.Username, user);
+            }
 
+            // 5. Update voter fields if present
             if (!string.IsNullOrWhiteSpace(dto.Name))
                 voter.Name = dto.Name;
 
             if (dto.Age.HasValue)
+            {
+                if (dto.Age.Value < 18)
+                    throw new Exception("Voter Must be atleast 18 years old");
                 voter.Age = dto.Age.Value;
+            }
 
             if (dto.IsDeleted.HasValue)
                 voter.IsDeleted = dto.IsDeleted.Value;
 
-            _auditLogger.LogAction(loggedInUser, $"Updated Voter: {voter.Name} : {voter.Id}", true);
+            // 6. Log audit
+            _auditLogger.LogAction(userIdClaim, $"Updated Voter: {voter.Name} : {voter.Id}", true);
 
             return await _voterRepository.Update(voter.Id, voter);
         }
 
-        public async Task<Voter> DeleteVoterAsync(Guid voterId)
+        public async Task<Voter> DeleteVoter(Guid voterId)
         {
             var voter = await _voterRepository.Get(voterId);
             if (voter == null)
@@ -107,7 +164,7 @@ namespace TrueVote.Service
             return await _voterRepository.Update(voter.Id, voter);
         }
 
-        public async Task<Voter> AddVoterAsync(AddVoterRequestDto voterDto)
+        public async Task<Voter> AddVoter(AddVoterRequestDto voterDto)
         {
             if (voterDto == null)
             {

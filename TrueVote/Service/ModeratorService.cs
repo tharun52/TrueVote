@@ -60,73 +60,93 @@ namespace TrueVote.Service
         }
 
 
-        
-        public async Task<Moderator> UpdateModerator(string username, UpdateModeratorDto dto)
+        public async Task<Moderator> UpdateModeratorAsAdmin(Guid moderatorId, UpdateModeratorasAdminDto dto)
         {
-            var user = await _userRepository.Get(username);
-            if (user == null)
-            {
-                throw new Exception("User not found");
-            }
-
-            var allModerators = await _moderatorRepository.GetAll();
-            var moderator = allModerators.FirstOrDefault(m => m.Email.Equals(user.Username, StringComparison.OrdinalIgnoreCase));
+            var moderator = await _moderatorRepository.Get(moderatorId);
 
             if (moderator == null)
             {
                 throw new Exception("Moderator not found");
             }
 
-            var encryptedPrev = await _encryptionService.EncryptData(new EncryptModel
-            {
-                Data = dto.PrevPassword
-            });
-
-            if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
-            {
-                throw new UnauthorizedAccessException("Previous password does not match");
-            }
-
-            var updatedModerator = await _moderatorRepository.Update(moderator.Id, moderator);
-
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (loggedInUser == null)
             {
                 throw new Exception("No User Logged in");
             }
+            moderator.Name = dto.Name;
+            moderator.IsDeleted = dto.IsDeleted;
+            var updatedModerator = await _moderatorRepository.Update(moderator.Id, moderator);
+
+            await _auditService.LogAsync(
+                description: $"Moderator updated: {updatedModerator.Email} by Admin : ${loggedInUser}",
+                entityId: updatedModerator.Id,
+                updatedBy: loggedInUser
+            );
+            _auditLogger.LogAction(loggedInUser, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
+            return updatedModerator;
+        }
+
+        public async Task<Moderator> UpdateModerator(UpdateModeratorDto dto)
+        {
+            var userIdClaim = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdClaim) || !Guid.TryParse(userIdClaim, out Guid moderatorId))
+            {
+                throw new UnauthorizedAccessException("Invalid or missing UserId in token");
+            }
+
+            var moderator = await _moderatorRepository.Get(moderatorId);
+            if (moderator == null)
+            {
+                throw new Exception("Moderator not found");
+            }
+
+            var user = await _userRepository.Get(moderator.Email);
+            if (user == null)
+            {
+                throw new Exception("User account not found");
+            }
 
             moderator.Name = dto.Name;
             moderator.IsDeleted = dto.IsDeleted;
 
+            var updatedModerator = await _moderatorRepository.Update(moderator.Id, moderator);
+
+            // Update password only if NewPassword is provided
             if (!string.IsNullOrWhiteSpace(dto.NewPassword))
             {
+               if (string.IsNullOrWhiteSpace(dto.PrevPassword))
+                {
+                    throw new UnauthorizedAccessException("Previous password is required to set a new password");
+                }
+
+                if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
+                {
+                    throw new UnauthorizedAccessException("Previous password does not match");
+                }
+
                 var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
                 {
                     Data = dto.NewPassword
                 });
 
-                if (encryptedNew == null || encryptedNew.EncryptedText == null || encryptedNew.HashKey == null)
+                if (encryptedNew == null || string.IsNullOrEmpty(encryptedNew.EncryptedText) || string.IsNullOrEmpty(encryptedNew.HashKey))
                 {
-                    throw new InvalidOperationException("Encryption failed for new password");
+                    throw new InvalidOperationException("Failed to encrypt the new password");
                 }
 
-                if (encryptedNew.EncryptedText != user.PasswordHash)
-                {
-                    user.PasswordHash = encryptedNew.EncryptedText;
-                    user.HashKey = encryptedNew.HashKey;
-
-                    await _userRepository.Update(user.Username, user);
-                }
+                user.PasswordHash = encryptedNew.EncryptedText;
+                user.HashKey = encryptedNew.HashKey;
+                await _userRepository.Update(user.Username, user);
             }
-
 
             await _auditService.LogAsync(
                 description: $"Moderator updated: {updatedModerator.Email}",
                 entityId: updatedModerator.Id,
-                updatedBy: loggedInUser
+                updatedBy: userIdClaim
             );
-            _auditLogger.LogAction(loggedInUser, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
 
+            _auditLogger.LogAction(userIdClaim, $"Updated moderator: {moderator.Name} : {moderator.Id}", true);
 
             return updatedModerator;
         }
@@ -250,11 +270,17 @@ namespace TrueVote.Service
                 moderators = moderators.Where(m => m.Email.Equals(query.Email, StringComparison.OrdinalIgnoreCase)).ToList();
 
             if (query.IsDeleted.HasValue)
+            {
                 moderators = moderators.Where(m => m.IsDeleted == query.IsDeleted.Value).ToList();
+            }
+            else
+            {
+                moderators = moderators.Where(m => !m.IsDeleted).ToList();
+            }
 
-            moderators = moderators.Where(m => !m.IsDeleted).ToList();
             return moderators;
         }
+
 
         private static List<Moderator> SearchModerators(List<Moderator> moderators, ModeratorQueryDto query)
         {

@@ -1,0 +1,12 @@
+2025-06-20 14:56:57.756 +05:30 [INF] User: admin@gmail.com, Action: Added new moderator: moderator : 01978ca9-a5b7-7709-b3fb-b2b3192c2099
+2025-06-20 15:05:38.339 +05:30 [INF] User: admin@gmail.com, Action: Updated moderator: Moderatorr : 01978ca9-a5b7-7709-b3fb-b2b3192c2099
+2025-06-20 15:06:41.718 +05:30 [INF] User: admin@gmail.com, Action: Updated moderator: Moderatorr : 01978ca9-a5b7-7709-b3fb-b2b3192c2099
+2025-06-20 15:31:32.634 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Updated moderator: moderator : 01978ca9-a5b7-7709-b3fb-b2b3192c2099
+2025-06-20 15:31:41.767 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Updated moderator: moderatorr : 01978ca9-a5b7-7709-b3fb-b2b3192c2099
+2025-06-20 16:00:10.041 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Admin updated voter: Test Voter : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:02:27.827 +05:30 [INF] User: 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d, Action: Updated Voter: Voter Test : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:04:29.791 +05:30 [INF] User: 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d, Action: Updated Voter: Voter Test : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:04:52.192 +05:30 [INF] User: 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d, Action: Updated Voter: Voter Test : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:52:11.882 +05:30 [INF] User: moderator@gmail.com, Action: Soft Deleted Voter : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:52:39.432 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Admin updated voter: Test Voter : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d
+2025-06-20 16:58:59.686 +05:30 [INF] User: moderator@gmail.com, Action: Soft Deleted Voter : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d : 01978ce2-1e3f-7a6b-a0db-10a5384ffe4d

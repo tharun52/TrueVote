@@ -25,24 +25,24 @@ namespace TrueVote.Service
             _voterRepository = voterRepository;
         }
 
-        public async Task<PollVote> DeleteVoteAsync(Guid voteId)
-        {
-            var vote = await _pollVoteRepository.Get(voteId);
-            if (vote == null)
-            {
-                throw new Exception("No vote with the given vote Id");
-            }
-            var pollOption = await _pollOptionRepository.Get(vote.PollOptionId);
-            if (pollOption == null)
-            {
-                throw new Exception("No Poll Option found with that vote");
-            }
-            if (pollOption.VoteCount > 0)
-                pollOption.VoteCount -= 1;
-            await _pollOptionRepository.Update(pollOption.Id, pollOption);
-            return await _pollVoteRepository.Delete(vote.Id);
-        }
-        
+        // public async Task<PollVote> DeleteVoteAsync(Guid voteId)
+        // {
+        //     var vote = await _pollVoteRepository.Get(voteId);
+        //     if (vote == null)
+        //     {
+        //         throw new Exception("No vote with the given vote Id");
+        //     }
+        //     var pollOption = await _pollOptionRepository.Get(vote.PollOptionId);
+        //     if (pollOption == null)
+        //     {
+        //         throw new Exception("No Poll Option found with that vote");
+        //     }
+        //     if (pollOption.VoteCount > 0)
+        //         pollOption.VoteCount -= 1;
+        //     await _pollOptionRepository.Update(pollOption.Id, pollOption);
+        //     return await _pollVoteRepository.Delete(vote.Id);
+        // }
+     
         public async Task<PollVote> AddVoteAsync(Guid pollOptionId)
         {
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
