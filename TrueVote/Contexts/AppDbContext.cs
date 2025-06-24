@@ -6,7 +6,7 @@ namespace TrueVote.Contexts
     public class AppDbContext : DbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        { 
+        {
         }
 
         public DbSet<Admin> Admins { get; set; }
@@ -20,6 +20,7 @@ namespace TrueVote.Contexts
         public DbSet<VoterCheck> VoterChecks { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<VoterEmail> VoterEmails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User
@@ -71,6 +72,14 @@ namespace TrueVote.Contexts
                 .HasIndex(v => v.Email)
                 .IsUnique();
 
+            modelBuilder.Entity<Voter>(entity => {
+            entity.HasOne<Moderator>()           
+                    .WithMany()                     
+                    .HasForeignKey(v => v.ModeratorId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
             // VoterCheck
             modelBuilder.Entity<VoterCheck>()
                 .HasIndex(vp => new { vp.VoterId, vp.PollId })
@@ -110,6 +119,15 @@ namespace TrueVote.Contexts
             modelBuilder.Entity<RefreshToken>()
                 .HasIndex(rt => rt.Token)
                 .IsUnique();
+
+            // VoterEmails
+            modelBuilder.Entity<VoterEmail>(entity =>
+            {
+                entity.HasOne<Moderator>()
+                    .WithMany()
+                    .HasForeignKey(e => e.ModeratorId)
+                    .OnDelete(DeleteBehavior.Restrict);
+            });
         }
     }
 }

@@ -26,8 +26,29 @@ namespace TrueVote.Controllers
             return Ok(ApiResponseHelper.Success(voters, "Voters fetched successfully"));
         }
 
-        [HttpPost("add")]  
-        [Authorize(Roles = "Admin, Moderator")]
+        [HttpGet("moderator/emails")]
+        [Authorize(Roles = "Moderator")]
+        public async Task<IActionResult> GetWhiteListedEmailsByModeratorAsync()
+        {
+            var moderatorId = User?.FindFirst("UserId")?.Value;
+
+            if (string.IsNullOrEmpty(moderatorId) || !Guid.TryParse(moderatorId, out Guid moderatorGuid))
+            {
+                return Unauthorized(ApiResponseHelper.Failure<object>("Invalid or missing moderator ID"));
+            }
+
+            try
+            {
+                var voters = await _voterService.GetWhiteListedEmailsByModerator(moderatorGuid);
+                return Ok(ApiResponseHelper.Success(voters, "Voters fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"Error: {ex.Message}"));
+            }
+        }
+
+        [HttpPost("add")]
         public async Task<IActionResult> AddVoterAsync([FromBody] AddVoterRequestDto voterDto)
         {
             if (voterDto == null)
@@ -54,9 +75,51 @@ namespace TrueVote.Controllers
             }
         }
 
+        [HttpGet("moderator/voters")]
+        [Authorize(Roles = "Moderator")]
+        public async Task<IActionResult> GetVotersByModeratorAsync()
+        {
+            var moderatorId = User?.FindFirst("UserId")?.Value;
+
+            if (string.IsNullOrEmpty(moderatorId) || !Guid.TryParse(moderatorId, out Guid moderatorGuid))
+            {
+                return Unauthorized(ApiResponseHelper.Failure<object>("Invalid or missing moderator ID"));
+            }
+
+            try
+            {
+                var voters = await _voterService.GetVotersByModeratorId(moderatorGuid);
+                return Ok(ApiResponseHelper.Success(voters, "Voters fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"Error: {ex.Message}"));
+            }
+        }
+
+        [HttpGet("{email}")]
+        [Authorize(Roles = "Moderator, Voter")]
+        public async Task<IActionResult> GetVoterByEmail(string email)
+        {
+            if (string.IsNullOrEmpty(email))
+            {
+                return Unauthorized(ApiResponseHelper.Failure<object>("Missing Email"));
+            }
+
+            try
+            {
+                var voters = await _voterService.GetVoterByEmail(email);
+                return Ok(ApiResponseHelper.Success(voters, "Voter fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"Error: {ex.Message}"));
+            }
+        }
+
         [HttpPut("updateasadmin/{voterId}")]
         [Authorize(Roles = "Admin, Moderator")]
-        public async Task<IActionResult> UpdateVoterAsAdminAsync(Guid voterId, [FromBody] UpdateVoterAsAdminDto dto)
+        public async Task<IActionResult> UpdateVoterAsModeratorAsync(Guid voterId, [FromBody] UpdateVoterAsModeratorDto dto)
         {
             if (dto == null)
             {
@@ -68,7 +131,7 @@ namespace TrueVote.Controllers
 
             try
             {
-                var updatedVoter = await _voterService.UpdateVoterAsAdmin(voterId, dto);
+                var updatedVoter = await _voterService.UpdateVoterAsModerator(voterId, dto);
                 return Ok(ApiResponseHelper.Success(updatedVoter, "Voter updated successfully"));
             }
             catch (UnauthorizedAccessException ex)
@@ -118,6 +181,29 @@ namespace TrueVote.Controllers
                 return BadRequest(ApiResponseHelper.Failure<object>("Voter update failed", error));
             }
         }
+
+        [HttpPost("whitelist")]
+        [Authorize(Roles = "Moderator")]
+        public async Task<IActionResult> WhitelistVoterEmailsAsync([FromBody] WhitelistVoterEmailDto dto)
+        {
+            if (dto == null || dto.Emails == null || dto.Emails.Count == 0)
+            {
+                return BadRequest(ApiResponseHelper.Failure<object>("No valid emails provided"));
+            }
+
+            try
+            {
+                var result = await _voterService.WhitelistVoterEmails(dto);
+                return Ok(ApiResponseHelper.Success(result, $"{result.Count} email(s) successfully whitelisted"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"Error: {ex.Message}"));
+            }
+        }
+
+
+    
 
         [HttpDelete("delete/{voterId}")]
         [Authorize(Roles = "Admin, Moderator")]

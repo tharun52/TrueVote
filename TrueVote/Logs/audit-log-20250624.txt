@@ -1,0 +1,11 @@
+2025-06-24 10:37:15.893 +05:30 [INF] User: 0197a03c-6739-791f-ac51-e55496077758, Action: Updated Voter: oscar : 0197a03c-6739-791f-ac51-e55496077758
+2025-06-24 10:54:25.116 +05:30 [INF] User: 0197a063-eeed-7820-a9bc-460f31073deb, Action: Updated Voter: Dwight : 0197a063-eeed-7820-a9bc-460f31073deb
+2025-06-24 11:35:19.384 +05:30 [INF] User: 0197a063-eeed-7820-a9bc-460f31073deb, Action: Updated Voter: Dwight Shrute : 0197a063-eeed-7820-a9bc-460f31073deb
+2025-06-24 12:04:22.082 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 01979abc-9dba-7853-808e-d908baac4d7b
+2025-06-24 12:16:27.522 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 01979c96-da35-70b7-b41d-15292746259b
+2025-06-24 12:26:06.070 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 0197a063-eeed-7820-a9bc-460f31073deb
+2025-06-24 12:26:11.347 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: Dwight Shrute : 0197a063-eeed-7820-a9bc-460f31073deb
+2025-06-24 12:27:51.698 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 0197a0b9-d2b6-7e60-a9c6-c9781c7dd64d
+2025-06-24 12:28:16.352 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: Kevin : 0197a0b9-d2b6-7e60-a9c6-c9781c7dd64d
+2025-06-24 12:32:38.044 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 0197a0be-ccb1-7a3b-a2df-6bc189ac957d
+2025-06-24 12:32:44.422 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: Kely : 0197a0be-ccb1-7a3b-a2df-6bc189ac957d

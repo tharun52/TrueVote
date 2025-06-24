@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using TrueVote.Interfaces;
 using TrueVote.Mappers;
@@ -10,6 +11,7 @@ namespace TrueVote.Service
     {
         private readonly IRepository<Guid, Voter> _voterRepository;
         private readonly IRepository<string, User> _userRepository;
+        private readonly IRepository<string, VoterEmail> _voterEmailRepository;
         private readonly IEncryptionService _encryptionService;
         private IHttpContextAccessor _httpContextAccessor;
         private readonly IAuditService _auditService;
@@ -18,6 +20,7 @@ namespace TrueVote.Service
 
         public VoterService(IRepository<Guid, Voter> voterRepository,
                             IRepository<string, User> userRepository,
+                            IRepository<string, VoterEmail> voterEmailRepository,
                             IEncryptionService encryptionService,
                             IHttpContextAccessor httpContextAccessor,
                             IAuditService auditService,
@@ -25,6 +28,7 @@ namespace TrueVote.Service
         {
             _voterRepository = voterRepository;
             _userRepository = userRepository;
+            _voterEmailRepository = voterEmailRepository;
             _encryptionService = encryptionService;
             _httpContextAccessor = httpContextAccessor;
             _auditService = auditService;
@@ -38,50 +42,89 @@ namespace TrueVote.Service
             return voters.Where(v => v.IsDeleted == false);
         }
 
-        public async Task<Voter> UpdateVoterAsAdmin(Guid voterId, UpdateVoterAsAdminDto dto)
+        public async Task<IEnumerable<Voter>> GetVotersByModeratorId(Guid moderatorId)
+        {
+            var voters = await _voterRepository.GetAll();
+            return voters.Where(v => v.ModeratorId == moderatorId && !v.IsDeleted);
+        }
+
+        public async Task<IEnumerable<VoterEmail>> GetWhiteListedEmailsByModerator(Guid moderatorId)
+        {
+            var whitelistedEmails = await _voterEmailRepository.GetAll();
+            if (whitelistedEmails == null)
+            {
+                throw new Exception("No emails found");
+            }
+            whitelistedEmails = whitelistedEmails
+                .Where(we => we.ModeratorId == moderatorId)
+                .OrderByDescending(we => we.IsUsed);
+            if (whitelistedEmails == null)
+            {
+                throw new Exception("This moderator has not created any emails");
+            }
+            return whitelistedEmails;
+        }
+
+        public async Task<Voter> GetVoterByEmail(string voterEmail)
+        {
+            var voters = await _voterRepository.GetAll();
+            if (voters == null)
+            {
+                throw new Exception($"No Voters found");
+            }
+            var voter = voters.FirstOrDefault(v => v.Email == voterEmail);
+            if (voter == null)
+            {
+                throw new Exception($"No Voter found by the Email : ${voterEmail}");
+            }
+            return voter;
+        }
+        public async Task<Voter> UpdateVoterAsModerator(Guid voterId, UpdateVoterAsModeratorDto dto)
         {
             // 1. Get the voter by ID
             var voter = await _voterRepository.Get(voterId);
             if (voter == null)
                 throw new Exception("Voter not found");
 
-            // 2. Update fields only if provided
+            // 2. Get moderator's user ID from JWT
+            var moderatorIdStr = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (moderatorIdStr == null || !Guid.TryParse(moderatorIdStr, out Guid moderatorId))
+            {
+                throw new Exception("No User Logged in");
+            }
+
+            // 3. Check if the logged-in moderator created this voter
+            if (voter.ModeratorId != moderatorId)
+            {
+                throw new UnauthorizedAccessException("You are not authorized to update this voter");
+            }
+
+            // 4. Update fields if provided
             if (!string.IsNullOrWhiteSpace(dto.Name))
                 voter.Name = dto.Name;
 
             if (dto.Age.HasValue)
             {
                 if (dto.Age.Value < 18)
-                    throw new Exception("Voter Must be atleast 18 years old");
+                    throw new Exception("Voter must be at least 18 years old");
                 voter.Age = dto.Age.Value;
             }
 
             if (dto.IsDeleted.HasValue)
                 voter.IsDeleted = dto.IsDeleted.Value;
 
-            // 3. Get admin's user ID from JWT (for logging)
-            var adminId = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
-            if (adminId == null)
-            {
-                throw new Exception("No User Logged in");
-            }
-            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (loggedInUser == null)
-            {
-                throw new Exception("No User Logged in");
-            }
-
-            // 4. Log admin update action
+            // 5. Log moderator update action
+            _auditLogger.LogAction(moderatorIdStr, $"Moderator updated voter: {voter.Name} : {voter.Id}", true);
             await _auditService.LogAsync(
-                description: $"Voter deleted: {voter.Email}",
+                description: $"Voter updated by moderator: {voter.Email}",
                 entityId: voter.Id,
-                updatedBy: loggedInUser
+                updatedBy: moderatorIdStr
             );
-            _auditLogger.LogAction(adminId, $"Admin updated voter: {voter.Name} : {voter.Id}", true);
 
-            // 5. Save changes
+            // 6. Save and return
             return await _voterRepository.Update(voter.Id, voter);
         }
+
 
         public async Task<Voter> UpdateVoter(UpdateVoterDto dto)
         {
@@ -102,15 +145,9 @@ namespace TrueVote.Service
             if (user == null)
                 throw new Exception("User account not found");
 
-            // 4. Optional password update
+            // 4. Optional password update (no need for previous password)
             if (!string.IsNullOrWhiteSpace(dto.NewPassword))
             {
-                if (string.IsNullOrWhiteSpace(dto.PrevPassword))
-                    throw new UnauthorizedAccessException("Previous password is required to change password");
-
-                if (!BCrypt.Net.BCrypt.Verify(dto.PrevPassword, user.PasswordHash))
-                    throw new UnauthorizedAccessException("Previous password does not match");
-
                 var encryptedNew = await _encryptionService.EncryptData(new EncryptModel
                 {
                     Data = dto.NewPassword
@@ -132,7 +169,7 @@ namespace TrueVote.Service
             if (dto.Age.HasValue)
             {
                 if (dto.Age.Value < 18)
-                    throw new Exception("Voter Must be atleast 18 years old");
+                    throw new Exception("Voter must be at least 18 years old");
                 voter.Age = dto.Age.Value;
             }
 
@@ -152,17 +189,64 @@ namespace TrueVote.Service
             {
                 throw new Exception("Voter not found for deletion");
             }
-            voter.IsDeleted = true;
 
-            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (loggedInUser == null)
+            // Get Moderator ID from token (UserId)
+            var userIdStr = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdStr) || !Guid.TryParse(userIdStr, out Guid loggedInModeratorId))
             {
-                throw new Exception("No User Logged in");
+                throw new UnauthorizedAccessException("No valid user is logged in");
             }
-            _auditLogger.LogAction(loggedInUser, $"Soft Deleted Voter : {voter.Id} : {voter.Id}", true);
+
+            // Allow only if this moderator created the voter
+            if (voter.ModeratorId != loggedInModeratorId)
+            {
+                throw new UnauthorizedAccessException("You are not authorized to delete this voter");
+            }
+
+            // Soft delete
+            voter.IsDeleted = true;
+            
+            _auditLogger.LogAction(userIdStr, $"Soft Deleted Voter : {voter.Id}", true);
 
             return await _voterRepository.Update(voter.Id, voter);
         }
+
+
+        public async Task<List<VoterEmail>> WhitelistVoterEmails(WhitelistVoterEmailDto dto)
+        {
+            if (dto.Emails == null || dto.Emails.Count == 0)
+                throw new ArgumentException("Email list cannot be empty.");
+
+            var moderatorIdStr = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (moderatorIdStr == null || !Guid.TryParse(moderatorIdStr, out Guid moderatorId))
+                throw new UnauthorizedAccessException("Invalid moderator login.");
+
+            var addedEmails = new List<VoterEmail>();
+
+            foreach (var email in dto.Emails)
+            {
+                if (string.IsNullOrWhiteSpace(email) || !new EmailAddressAttribute().IsValid(email))
+                    continue;
+
+                var exists = await _voterEmailRepository.Get(email);
+                if (exists != null)
+                    throw new Exception($"{email} already exists");
+
+                var voterEmail = new VoterEmail
+                {
+                    Email = email,
+                    ModeratorId = moderatorId,
+                    CreatedAt = DateTime.UtcNow
+                };
+
+                var result = await _voterEmailRepository.Add(voterEmail);
+                addedEmails.Add(result);
+            }
+
+            return addedEmails;
+        }
+
+
 
         public async Task<Voter> AddVoter(AddVoterRequestDto voterDto)
         {
@@ -174,7 +258,17 @@ namespace TrueVote.Service
             {
                 throw new ArgumentException("Email and Password cannot be null or empty.");
             }
+
+            var whitelisted = await _voterEmailRepository.Get(voterDto.Email);
+            if (whitelisted == null)
+            {
+                throw new UnauthorizedAccessException("You are not authorized to sign up. Please contact your moderator.");
+            }
+
+
             var newVoter = _voterMapper.MapAddVoterRequestDtoToVoter(voterDto);
+            newVoter.ModeratorId = whitelisted.ModeratorId;
+
             if (newVoter.Age < 18)
             {
                 throw new ArgumentException("Voter must be at least 18 years old.");
@@ -193,6 +287,10 @@ namespace TrueVote.Service
             {
                 throw new InvalidOperationException($"A user with this email{voterDto.Email} already exists.");
             }
+
+            //set isUsed
+            whitelisted.IsUsed = true;
+            await _voterEmailRepository.Update(whitelisted.Email, whitelisted);
 
             var user = new User
             {

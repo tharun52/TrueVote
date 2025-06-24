@@ -49,6 +49,8 @@ namespace TrueVote.Service
                     if (moderator?.IsDeleted == true)
                         throw new Exception("Moderator account is deleted");
                     break;
+                case "admin":
+                    break;
                 default:
                     throw new Exception("Unknown user role");
             }

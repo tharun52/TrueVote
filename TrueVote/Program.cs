@@ -97,6 +97,7 @@ builder.Services.AddTransient<IRepository<Guid, PollOption>, PollOptionRepositor
 builder.Services.AddTransient<IRepository<Guid, VoterCheck>, VoterCheckRepository>();
 builder.Services.AddTransient<IRepository<Guid, PollVote>, PollVoteRepository>();
 builder.Services.AddTransient<IRepository<Guid, AuditLog>, AuditRepository>();
+builder.Services.AddTransient<IRepository<string, VoterEmail>, VoterEmailRepository>();
 #endregion
 
 #region Services
@@ -157,16 +158,28 @@ builder.Services.AddTransient<IRateLimitConfiguration, RateLimitConfiguration>()
 #endregion
 
 
+// builder.Services.AddCors(options =>
+// {
+//     options.AddDefaultPolicy(policy =>
+//     {
+//         policy.WithOrigins("http://127.0.0.1:5500")
+//               .AllowAnyHeader()
+//               .AllowAnyMethod()
+//               .AllowCredentials();
+//     });
+// });
+
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(policy =>
+    options.AddPolicy("AllowAngularClient", policy =>
     {
-        policy.WithOrigins("http://127.0.0.1:5500")
+        policy.WithOrigins("http://localhost:4200")  
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials();
+              .AllowCredentials(); 
     });
 });
+
 builder.Services.AddSignalR();
 
 
@@ -180,12 +193,13 @@ if (app.Environment.IsDevelopment())
 }
 
 
+app.UseCors();
+app.UseCors("AllowAngularClient");
 
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseClientRateLimiting();
 
-app.UseCors();
 app.MapControllers();
 app.MapHub<PollHub>("/pollhub");
 app.Run();

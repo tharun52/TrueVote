@@ -46,7 +46,6 @@ namespace TrueVote.Controllers
         }
 
         [HttpPost("logout")]
-        [Authorize]
         public async Task<IActionResult> Logout([FromBody] TokenRefreshRequest dto)
         {
             if (string.IsNullOrWhiteSpace(dto.RefreshToken))

@@ -17,7 +17,9 @@ namespace TrueVote.Models
         public int Age { get; set; } = 0;
 
         [Required]
-        public bool IsDeleted{ get; set; } = false;
+        public bool IsDeleted { get; set; } = false;
 
+        [Required]
+        public Guid ModeratorId { get; set; }
     }
 }

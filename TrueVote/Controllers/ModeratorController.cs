@@ -18,30 +18,6 @@ namespace TrueVote.Controllers
             _moderatorService = moderatorService;
         }
 
-        [HttpPost("add")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> AddModeratorAsync([FromBody] AddModeratorRequestDto moderatorDto)
-        {
-            if (moderatorDto == null)
-            {
-                var error = new Dictionary<string, List<string>> {
-                    { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
-                };
-                return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
-            }
-
-            var newModerator = await _moderatorService.AddModerator(moderatorDto);
-
-            if (newModerator == null)
-            {
-                var error = new Dictionary<string, List<string>> {
-                    { "moderator", new List<string> { "Failed to add moderator" } }
-                };
-                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
-            }
-
-            return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator added successfully"));
-        }
 
         [HttpGet("query")]
         public async Task<IActionResult> QueryModeratorsAsync([FromQuery] ModeratorQueryDto query)
@@ -83,6 +59,31 @@ namespace TrueVote.Controllers
             {
                 return NotFound(ApiResponseHelper.Failure<object>(ex.Message));
             }
+        }
+
+        [HttpPost("add")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> AddModeratorAsync([FromBody] AddModeratorRequestDto moderatorDto)
+        {
+            if (moderatorDto == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "moderatorDto", new List<string> { "Moderator data cannot be null" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body", error));
+            }
+
+            var newModerator = await _moderatorService.AddModerator(moderatorDto);
+
+            if (newModerator == null)
+            {
+                var error = new Dictionary<string, List<string>> {
+                    { "moderator", new List<string> { "Failed to add moderator" } }
+                };
+                return BadRequest(ApiResponseHelper.Failure<object>("Moderator creation failed", error));
+            }
+
+            return Created($"/api/moderator/{newModerator.Id}", ApiResponseHelper.Success(newModerator, "Moderator added successfully"));
         }
 
         [HttpPut("update")]
