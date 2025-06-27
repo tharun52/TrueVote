@@ -9,3 +9,8 @@
 2025-06-24 12:28:16.352 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: Kevin : 0197a0b9-d2b6-7e60-a9c6-c9781c7dd64d
 2025-06-24 12:32:38.044 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 0197a0be-ccb1-7a3b-a2df-6bc189ac957d
 2025-06-24 12:32:44.422 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: Kely : 0197a0be-ccb1-7a3b-a2df-6bc189ac957d
+2025-06-24 15:42:16.657 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0197a16c-91f5-7de4-895d-ecc6e94b4223
+2025-06-24 17:04:22.208 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0197a1b7-ba8a-797b-b4ff-a76fe7ea0076
+2025-06-24 17:05:53.848 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197a1b7-ba8a-797b-b4ff-a76fe7ea0076
+2025-06-24 17:15:49.868 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197a1b7-ba8a-797b-b4ff-a76fe7ea0076
+2025-06-24 17:19:08.683 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197a1b7-ba8a-797b-b4ff-a76fe7ea0076

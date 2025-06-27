@@ -17,19 +17,20 @@ namespace TrueVote.Mappers
                 EndDate = pollDto.EndDate
             };
         }
-        public PollFile MapPollRequestDtoToPollFile(AddPollRequestDto pollDto)
+        public PollFile MapPollRequestDtoToPollFile(AddPollRequestDto dto)
         {
+            if (dto.PollFile == null)
+                throw new ArgumentNullException(nameof(dto.PollFile));
+
             using var memoryStream = new MemoryStream();
-            if (pollDto.PollFile == null)
-            {
-                throw new ArgumentNullException(nameof(pollDto.PollFile), "PollFile cannot be null.");
-            }
-            pollDto.PollFile.CopyToAsync(memoryStream);
+            dto.PollFile.CopyTo(memoryStream);
+
             return new PollFile
             {
-                Filename = pollDto.PollFile.FileName,
-                FileType = Path.GetExtension(pollDto.PollFile.FileName),
-                Content = memoryStream.ToArray()
+                Id = Guid.NewGuid(),
+                Filename = dto.PollFile.FileName,
+                FileType = dto.PollFile.ContentType,
+                Content = memoryStream.ToArray(),
             };
         }
 
@@ -42,23 +43,25 @@ namespace TrueVote.Mappers
                 IsDeleted = false
             };
         }
-        public PollFile MapPollUpdateDtoToPollFile(UpdatePollRequestDto dto, Guid pollId)
-        {
-            if (dto.PollFile == null) return null!;
+        // public async Task<PollFile?> MapPollUpdateDtoToPollFileAsync(UpdatePollRequestDto dto, string uploadedByUsername)
+        // {
+        //     if (dto.PollFile == null)
+        //         return null;
 
-            using var ms = new MemoryStream();
-            dto.PollFile.CopyTo(ms);
-            return new PollFile
-            {
-                Id = Guid.NewGuid(),
-                Filename = dto.PollFile.FileName,
-                FileType = dto.PollFile.ContentType,
-                Content = ms.ToArray(),
-                UploadedByUsername = "",
-                PollId = pollId,
-                UploadedAt = DateTime.UtcNow,
-                IsDeleted = false
-            };
-        }
+        //     using var ms = new MemoryStream();
+        //     await dto.PollFile.CopyToAsync(ms);
+
+        //     return new PollFile
+        //     {
+        //         Id = Guid.NewGuid(),
+        //         Filename = dto.PollFile.FileName,
+        //         FileType = dto.PollFile.ContentType,
+        //         Content = ms.ToArray(),
+        //         UploadedByUsername = uploadedByUsername,
+        //         UploadedAt = DateTime.UtcNow,
+        //         IsDeleted = false
+        //     };
+        // }
+
     }
 }

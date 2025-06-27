@@ -55,6 +55,12 @@ namespace TrueVote.Contexts
                 .HasForeignKey(po => po.PollId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Poll>()
+                .HasOne<PollFile>() 
+                .WithMany()         
+                .HasForeignKey(p => p.PoleFileId)
+                .OnDelete(DeleteBehavior.SetNull); 
+
             // PollOption
             modelBuilder.Entity<PollOption>()
                 .HasIndex(po => new { po.PollId, po.OptionText })
@@ -101,19 +107,6 @@ namespace TrueVote.Contexts
             modelBuilder.Entity<PollFile>()
                 .Property(pf => pf.Content)
                 .IsRequired();
-
-            modelBuilder.Entity<Poll>()
-                .HasOne(p => p.PoleFile)
-                .WithOne()
-                .HasForeignKey<Poll>(p => p.Id)
-                .OnDelete(DeleteBehavior.Restrict)
-                .IsRequired(false); ;
-
-            modelBuilder.Entity<PollFile>()
-                .HasOne(pf => pf.Poll)
-                .WithOne(p => p.PoleFile)
-                .HasForeignKey<PollFile>(pf => pf.PollId)
-                .OnDelete(DeleteBehavior.Restrict);
 
             // RefreshToken
             modelBuilder.Entity<RefreshToken>()

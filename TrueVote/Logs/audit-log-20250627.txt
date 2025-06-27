@@ -1,0 +1,15 @@
+2025-06-27 12:45:42.873 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0197b03e-0069-77b9-88f9-3aafb71b3f7e
+2025-06-27 15:10:19.442 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 0197b0c2-6537-7e07-8abe-699bad9cbef9
+2025-06-27 15:14:50.145 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 0197b0c6-86cb-7d84-a27e-a1a616dc43f4
+2025-06-27 15:33:50.577 +05:30 [INF] User: 0197b0a8-1a51-7a11-b41c-dfa787334a27, Action: Updated Voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 15:35:23.908 +05:30 [INF] User: 0197b0a8-1a51-7a11-b41c-dfa787334a27, Action: Updated Voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 15:35:32.527 +05:30 [INF] User: 0197b0a8-1a51-7a11-b41c-dfa787334a27, Action: Updated Voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 15:35:35.672 +05:30 [INF] User: 0197b0a8-1a51-7a11-b41c-dfa787334a27, Action: Updated Voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 15:35:55.221 +05:30 [INF] User: 0197b0a8-1a51-7a11-b41c-dfa787334a27, Action: Updated Voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 15:52:46.424 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 0197b0e9-428e-710c-9505-36f4d2823c1d
+2025-06-27 16:46:18.461 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Soft Deleted Voter : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 16:46:24.321 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Moderator updated voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 16:46:30.993 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Soft Deleted Voter : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 16:46:37.537 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Moderator updated voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 16:47:48.279 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Soft Deleted Voter : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 16:47:51.165 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Moderator updated voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27

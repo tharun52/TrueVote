@@ -11,7 +11,6 @@ namespace TrueVote.Repositories
         public override async Task<Poll> Get(Guid key)
         {
             return await _appDbContext.Polls
-                    .Include(p => p.PoleFile)
                     .SingleOrDefaultAsync(p => p.Id == key)
                     ?? new Poll();
         }
@@ -19,7 +18,6 @@ namespace TrueVote.Repositories
         public override async Task<IEnumerable<Poll>> GetAll()
         {
             return await _appDbContext.Polls
-                            .Include(p => p.PoleFile)
                             .ToListAsync();
         }
     }

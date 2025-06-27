@@ -9,9 +9,7 @@ namespace TrueVote.Repositories
     public class ModeratorRepository : Repository<Guid, Moderator>
     {
         public ModeratorRepository(AppDbContext appDbContext) : base(appDbContext)
-        {
-
-        }
+        {}
 
         public override async Task<Moderator> Get(Guid key)
         {

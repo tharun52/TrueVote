@@ -13,7 +13,7 @@ namespace TrueVote.Service
     {
         private readonly IRepository<Guid, Poll> _pollRepository;
         private readonly IRepository<Guid, PollOption> _pollOptionRepository;
-
+        private readonly IRepository<Guid, PollFile> _pollFileRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
@@ -22,6 +22,7 @@ namespace TrueVote.Service
 
         public PollService(IRepository<Guid, Poll> pollRepository,
                            IRepository<Guid, PollOption> pollOptionRepository,
+                           IRepository<Guid, PollFile> pollFileRepository,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
                            AppDbContext appDbContext,
@@ -29,6 +30,7 @@ namespace TrueVote.Service
         {
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
+            _pollFileRepository = pollFileRepository;
             _httpContextAccessor = httpContextAccessor;
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
@@ -40,60 +42,67 @@ namespace TrueVote.Service
 
         public async Task<Poll> UpdatePoll(Guid pollId, UpdatePollRequestDto updateDto)
         {
-            var poll = await _pollRepository.Get(pollId);
-            if (poll == null)
-                throw new Exception("Poll not found");
+            var poll = await _pollRepository.Get(pollId)
+                ?? throw new Exception("Poll not found");
+
             var loggedInUserEmail = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (string.IsNullOrEmpty(loggedInUserEmail))
                 throw new UnauthorizedAccessException("No user is logged in.");
+
             if (!poll.CreatedByEmail.Equals(loggedInUserEmail, StringComparison.OrdinalIgnoreCase))
                 throw new UnauthorizedAccessException("Only the creator of the poll can update it.");
+
+            // Title
             if (!string.IsNullOrWhiteSpace(updateDto.Title))
                 poll.Title = updateDto.Title;
             else if (updateDto.Title != null)
                 throw new ArgumentException("Title cannot be empty");
+
+            // Description
             if (updateDto.Description != null)
                 poll.Description = updateDto.Description;
+
+            // Dates
             if (updateDto.StartDate.HasValue)
                 poll.StartDate = updateDto.StartDate.Value;
+
             if (updateDto.EndDate.HasValue)
             {
                 var today = DateOnly.FromDateTime(DateTime.Today);
                 if (updateDto.EndDate <= today)
                     throw new ArgumentException("Poll end date must be greater than today");
+
                 poll.EndDate = updateDto.EndDate.Value;
             }
-            if (updateDto.StartDate.HasValue && updateDto.EndDate.HasValue)
-            {
-                if (updateDto.StartDate > updateDto.EndDate)
-                    throw new ArgumentException("Start date cannot be after end date");
-            }
 
+            if (updateDto.StartDate.HasValue && updateDto.EndDate.HasValue &&
+                updateDto.StartDate > updateDto.EndDate)
+                throw new ArgumentException("Start date cannot be after end date");
+
+            // IsDeleted
             if (updateDto.IsDeleted.HasValue)
                 poll.IsDeleted = updateDto.IsDeleted.Value;
 
-            var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            if (loggedInUser == null)
-            {
-                throw new Exception("You must be logged in to create a poll");
-            }
-            if (poll.CreatedByEmail != loggedInUser)
-            {
-                throw new Exception("You can only update your polls");
-            }
-
+            // Upload Poll File
             if (updateDto.PollFile != null)
             {
-                var newPollFile = _pollMapper.MapPollUpdateDtoToPollFile(updateDto, poll.Id);
-                newPollFile.UploadedByUsername = loggedInUserEmail;
-                newPollFile.PollId = poll.Id;
+                using var memoryStream = new MemoryStream();
+                await updateDto.PollFile.CopyToAsync(memoryStream);
 
-                _appDbContext.Entry(poll).State = EntityState.Unchanged;
-                _appDbContext.PollFiles.Add(newPollFile);
+                var newPollFile = new PollFile
+                {
+                    Id = Guid.NewGuid(),
+                    Filename = updateDto.PollFile.FileName,
+                    FileType = updateDto.PollFile.ContentType,
+                    Content = memoryStream.ToArray(),
+                    UploadedByUsername = loggedInUserEmail,
+                };
 
-                poll.PoleFile = newPollFile;
+                await _pollFileRepository.Add(newPollFile);
+                poll.PoleFileId = newPollFile.Id; // Only store the ID
             }
 
+            // Update Poll Options
             if (updateDto.OptionTexts != null)
             {
                 if (updateDto.OptionTexts.Count < 2)
@@ -119,9 +128,10 @@ namespace TrueVote.Service
             await _auditService.LogAsync(
                 description: $"Poll updated: {poll.Title}",
                 entityId: poll.Id,
-                updatedBy: loggedInUser
+                updatedBy: loggedInUserEmail
             );
-            _auditLogger.LogAction(loggedInUser, $"Updated poll with ID: {poll.Id}", true);
+
+            _auditLogger.LogAction(loggedInUserEmail, $"Updated poll with ID: {poll.Id}", true);
 
             return await _pollRepository.Update(poll.Id, poll);
         }
@@ -165,8 +175,19 @@ namespace TrueVote.Service
 
             if (pollRequestDto.PollFile != null)
             {
-                newPoll.PoleFile = _pollMapper.MapPollRequestDtoToPollFile(pollRequestDto);
-                newPoll.PoleFile.UploadedByUsername = loggedInUser;
+                using var memoryStream = new MemoryStream();
+                await pollRequestDto.PollFile.CopyToAsync(memoryStream);
+
+                var pollFile = new PollFile
+                {
+                    Filename = pollRequestDto.PollFile.FileName,
+                    FileType = pollRequestDto.PollFile.ContentType,
+                    Content = memoryStream.ToArray(),
+                    UploadedByUsername = loggedInUser,
+                };
+
+                await _pollFileRepository.Add(pollFile);
+                newPoll.PoleFileId = pollFile.Id;
             }
 
             newPoll = await _pollRepository.Add(newPoll);
@@ -246,10 +267,9 @@ namespace TrueVote.Service
             {
                 Poll = poll,
                 PollOptions = pollOptions,
-                PollImageBase64 = poll.PoleFile != null ? Convert.ToBase64String(poll.PoleFile.Content) : null,
-                PollImageType = poll.PoleFile?.FileType
             };
         }
+
 
 
 
@@ -280,13 +300,11 @@ namespace TrueVote.Service
                     var optionsForPoll = pollOptions
                         .Where(opt => opt.PollId == poll.Id)
                         .ToList();
-
+                    
                     response.Add(new PollResponseDto
                     {
                         Poll = poll,
                         PollOptions = optionsForPoll,
-                        PollImageBase64 = poll.PoleFile != null ? Convert.ToBase64String(poll.PoleFile.Content) : null,
-                        PollImageType = poll.PoleFile?.FileType
                     });
                 }
             }

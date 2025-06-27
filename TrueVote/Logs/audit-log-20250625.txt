@@ -1,0 +1,1 @@
+2025-06-25 16:54:00.254 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 0197a6d4-991c-755e-bd96-5722ede064ea

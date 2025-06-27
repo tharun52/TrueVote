@@ -9,6 +9,6 @@ namespace TrueVote.Interfaces
         public Poll MapPollRequestDtoToPoll(AddPollRequestDto pollDto);
         public PollFile MapPollRequestDtoToPollFile(AddPollRequestDto pollDto);
         public PollOption MapPollOptionRequestDtoToPollOption(string Option);
-        public PollFile MapPollUpdateDtoToPollFile(UpdatePollRequestDto dto, Guid pollId);
+        // public Task<PollFile?> MapPollUpdateDtoToPollFileAsync(UpdatePollRequestDto dto, string uploadedByUsername);
     }
 }

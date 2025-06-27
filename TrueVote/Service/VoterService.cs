@@ -54,7 +54,7 @@ namespace TrueVote.Service
             if (whitelistedEmails == null)
             {
                 throw new Exception("No emails found");
-            }
+            } 
             whitelistedEmails = whitelistedEmails
                 .Where(we => we.ModeratorId == moderatorId)
                 .OrderByDescending(we => we.IsUsed);
@@ -228,7 +228,7 @@ namespace TrueVote.Service
                 if (string.IsNullOrWhiteSpace(email) || !new EmailAddressAttribute().IsValid(email))
                     continue;
 
-                var exists = await _voterEmailRepository.Get(email);
+                var exists = await _userRepository.Get(email);
                 if (exists != null)
                     throw new Exception($"{email} already exists");
 
