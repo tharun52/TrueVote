@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TrueVote.Interfaces;
 using TrueVote.Misc;
 using TrueVote.Models;
+using TrueVote.Models.DTOs;
 
 namespace TrueVote.Controllers
 {
@@ -20,15 +21,14 @@ namespace TrueVote.Controllers
 
         [HttpPost]
         [Authorize(Roles = "Voter")]
-        public async Task<IActionResult> AddVoteAsync([FromForm] Guid? pollOptionId)
+        public async Task<IActionResult> AddVoteAsync([FromBody] VoteRequestDto request)
         {
-            if (pollOptionId == null)
-            {
+            if (request.PollOptionId == null)
                 return BadRequest(ApiResponseHelper.Failure<object>("Invalid request body"));
-            }
+
             try
             {
-                var newVote = await _voteService.AddVoteAsync((Guid)pollOptionId);
+                var newVote = await _voteService.AddVoteAsync((Guid)request.PollOptionId);
                 return Created($"/api/vote/{newVote.Id}", ApiResponseHelper.Success(newVote, "Voter added successfully"));
             }
             catch (ArgumentException ex)

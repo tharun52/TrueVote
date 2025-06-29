@@ -1,4 +1,5 @@
 using System.Security.Claims;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using TrueVote.Contexts;
@@ -14,6 +15,7 @@ namespace TrueVote.Service
         private readonly IRepository<Guid, Poll> _pollRepository;
         private readonly IRepository<Guid, PollOption> _pollOptionRepository;
         private readonly IRepository<Guid, PollFile> _pollFileRepository;
+        private IRepository<Guid, VoterCheck> _voterCheckRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
@@ -23,6 +25,7 @@ namespace TrueVote.Service
         public PollService(IRepository<Guid, Poll> pollRepository,
                            IRepository<Guid, PollOption> pollOptionRepository,
                            IRepository<Guid, PollFile> pollFileRepository,
+                           IRepository<Guid, VoterCheck> voterCheckRepository,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
                            AppDbContext appDbContext,
@@ -31,6 +34,7 @@ namespace TrueVote.Service
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
             _pollFileRepository = pollFileRepository;
+            _voterCheckRepository = voterCheckRepository;
             _httpContextAccessor = httpContextAccessor;
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
@@ -278,7 +282,15 @@ namespace TrueVote.Service
             var polls = (await _pollRepository.GetAll()).ToList();
             var pollOptions = await _pollOptionRepository.GetAll();
 
-            polls = FilterPolls(polls, query);
+            List<VoterCheck>? voterChecks = null;
+            if (query.VoterId.HasValue)
+            {
+                voterChecks = (await _voterCheckRepository.GetAll())
+                    .Where(vc => vc.VoterId == query.VoterId.Value)
+                    .ToList();
+            }
+            
+            polls = await FilterPolls(polls, query);
 
             polls = SearchPolls(polls, query);
 
@@ -300,15 +312,22 @@ namespace TrueVote.Service
                     var optionsForPoll = pollOptions
                         .Where(opt => opt.PollId == poll.Id)
                         .ToList();
-                    
+
+                    DateTime? voteTime = null;
+                    if (voterChecks != null)
+                    {
+                        var voterCheck = voterChecks.FirstOrDefault(vc => vc.PollId == poll.Id);
+                        voteTime = voterCheck?.VotedAt;
+                    }
+
                     response.Add(new PollResponseDto
                     {
                         Poll = poll,
                         PollOptions = optionsForPoll,
+                        VoteTime = voteTime
                     });
                 }
             }
-
             return new PagedResponseDto<PollResponseDto>
             {
                 Data = response,
@@ -323,7 +342,7 @@ namespace TrueVote.Service
         }
 
 
-        private List<Poll> FilterPolls(List<Poll> polls, PollQueryDto query)
+        private async Task<List<Poll>> FilterPolls(List<Poll> polls, PollQueryDto query)
         {
             if (!string.IsNullOrEmpty(query.CreatedByEmail))
                 polls = polls.Where(p => p.CreatedByEmail == query.CreatedByEmail).ToList();
@@ -334,8 +353,30 @@ namespace TrueVote.Service
             if (query.StartDateTo.HasValue)
                 polls = polls.Where(p => p.StartDate <= query.StartDateTo.Value).ToList();
 
+            if (query.VoterId.HasValue)
+            {
+                var voterChecks = await _voterCheckRepository.GetAll();
+                var votedPollIds = voterChecks
+                    .Where(vc => vc.VoterId == query.VoterId.Value)
+                    .Select(vc => vc.PollId)
+                    .Distinct()
+                    .ToHashSet();
+
+                if (query.ForVoting == false)
+                {
+                    // if Voter has voted return those polls
+                    polls = polls.Where(p => votedPollIds.Contains(p.Id)).ToList();
+                }
+                else
+                {
+                    // if Voter hasn't voted  exclude those polls
+                    polls = polls.Where(p => !votedPollIds.Contains(p.Id)).ToList();
+                }
+            }
+
             return polls;
         }
+
 
         private List<Poll> SearchPolls(List<Poll> polls, PollQueryDto query)
         {

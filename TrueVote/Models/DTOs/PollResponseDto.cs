@@ -4,5 +4,6 @@ namespace TrueVote.Models.DTOs
     {
         public Poll? Poll { get; set; }
         public List<PollOption>? PollOptions { get; set; }
+        public DateTime? VoteTime { get; set; }
     }
 }

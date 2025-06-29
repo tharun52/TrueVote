@@ -13,3 +13,4 @@
 2025-06-27 16:46:37.537 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Moderator updated voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
 2025-06-27 16:47:48.279 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Soft Deleted Voter : 0197b0a8-1a51-7a11-b41c-dfa787334a27
 2025-06-27 16:47:51.165 +05:30 [INF] User: 01978ca9-a5b7-7709-b3fb-b2b3192c2099, Action: Moderator updated voter: voter5 : 0197b0a8-1a51-7a11-b41c-dfa787334a27
+2025-06-27 22:43:09.133 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 0197b260-f8e0-7c44-817b-0e1428845e03
