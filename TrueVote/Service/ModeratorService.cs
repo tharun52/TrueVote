@@ -11,6 +11,9 @@ namespace TrueVote.Service
     {
         private readonly IRepository<Guid, Moderator> _moderatorRepository;
         private readonly IRepository<string, User> _userRepository;
+        private readonly IRepository<Guid, Poll> _pollRepository;
+        private readonly IRepository<string, VoterEmail> _voterEmailRepository;
+        private readonly IRepository<Guid, VoterCheck> _voterCheckRepository;
         private readonly ModeratorMapper _moderatorMapper;
         private readonly IAuditLogger _auditLogger;
         private readonly IAuditService _auditService;
@@ -19,6 +22,9 @@ namespace TrueVote.Service
 
         public ModeratorService(IRepository<Guid, Moderator> moderatorRepository,
                                 IRepository<string, User> userRepository,
+                                IRepository<Guid, Poll> pollRepository,
+                                IRepository<string, VoterEmail> voterEmailRepository,
+                                IRepository<Guid, VoterCheck> voterCheckRepository,
                                 IEncryptionService encryptionService,
                                 IHttpContextAccessor httpContextAccessor,
                                 IAuditLogger auditLogger,
@@ -26,11 +32,52 @@ namespace TrueVote.Service
         {
             _moderatorRepository = moderatorRepository;
             _userRepository = userRepository;
+            _pollRepository = pollRepository;
+            _voterEmailRepository = voterEmailRepository;
+            _voterCheckRepository = voterCheckRepository;
             _encryptionService = encryptionService;
             _moderatorMapper = new ModeratorMapper();
             _httpContextAccessor = httpContextAccessor;
             _auditLogger = auditLogger;
             _auditService = auditService;
+        }
+
+        public async Task<ModeratorStatsDto> GetModeratorStats(Guid moderatorId)
+        {
+            var moderator = await _moderatorRepository.Get(moderatorId);
+            if (moderator == null)
+            {
+                throw new Exception("No moderator found by the id");
+            }
+            var moderatorEmail = moderator.Email;
+            var polls = await _pollRepository.GetAll();
+
+            
+            var moderatorPolls = polls.Where(p => p.CreatedByEmail == moderatorEmail);
+            int totalCreated = moderatorPolls.Count();
+
+            var moderatorPollIds = moderatorPolls.Select(p => p.Id).ToList();
+
+            // Step 3: Count total votes (HasVoted == true) for those polls
+            var voterChecks = await _voterCheckRepository.GetAll();
+
+
+            var voterEmails = await _voterEmailRepository.GetAll();
+
+            var voterEmailsCount = voterEmails.Where(ve => ve.ModeratorId == moderatorId).Count();
+            var createdVoters = voterEmails.Where(ve => ve.IsUsed && ve.ModeratorId == moderatorId).Count();
+            
+            var totalVotes = voterChecks
+                .Where(vc => moderatorPollIds.Contains(vc.PollId) && vc.HasVoted)
+                .Count();
+
+            return new ModeratorStatsDto
+            {
+                TotalPollsCreated = totalCreated,
+                TotalVoterEmailsCreated = voterEmailsCount,
+                TotalVoterEmailsUsed = createdVoters,
+                TotalVotesReceived = totalVotes
+            };
         }
 
         public async Task<Moderator> DeleteModerator(Guid moderatorId)
@@ -115,7 +162,7 @@ namespace TrueVote.Service
             // Update password only if NewPassword is provided
             if (!string.IsNullOrWhiteSpace(dto.NewPassword))
             {
-               if (string.IsNullOrWhiteSpace(dto.PrevPassword))
+                if (string.IsNullOrWhiteSpace(dto.PrevPassword))
                 {
                     throw new UnauthorizedAccessException("Previous password is required to set a new password");
                 }
@@ -223,7 +270,7 @@ namespace TrueVote.Service
 
             var allModerators = await _moderatorRepository.GetAll();
             var moderator = allModerators.FirstOrDefault(m => m.Email.Equals(email, StringComparison.OrdinalIgnoreCase));
-            if (moderator == null || moderator.IsDeleted)
+            if (moderator == null)
                 throw new Exception("Moderator not found");
 
             return moderator;
@@ -263,7 +310,6 @@ namespace TrueVote.Service
                 }
             };
         }
-
         private static List<Moderator> FilterModerators(List<Moderator> moderators, ModeratorQueryDto query)
         {
             if (!string.IsNullOrEmpty(query.Email))
@@ -271,7 +317,12 @@ namespace TrueVote.Service
 
             if (query.IsDeleted.HasValue)
             {
-                moderators = moderators.Where(m => m.IsDeleted == query.IsDeleted.Value).ToList();
+                if (query.IsDeleted.Value)
+                {}
+                else
+                {
+                    moderators = moderators.Where(m => !m.IsDeleted).ToList();
+                }
             }
             else
             {
@@ -280,6 +331,7 @@ namespace TrueVote.Service
 
             return moderators;
         }
+
 
 
         private static List<Moderator> SearchModerators(List<Moderator> moderators, ModeratorQueryDto query)
@@ -298,14 +350,26 @@ namespace TrueVote.Service
         private static List<Moderator> SortModerators(List<Moderator> moderators, ModeratorQueryDto query)
         {
             if (string.IsNullOrEmpty(query.SortBy))
-                return moderators.OrderBy(m => m.Name).ToList();
+            {
+                return moderators
+                    .OrderBy(m => m.IsDeleted) 
+                    .ThenBy(m => m.Name)
+                    .ToList();
+            }
 
             return query.SortBy.ToLower() switch
             {
-                "name" => query.SortDesc ? moderators.OrderByDescending(m => m.Name).ToList() : moderators.OrderBy(m => m.Name).ToList(),
-                "email" => query.SortDesc ? moderators.OrderByDescending(m => m.Email).ToList() : moderators.OrderBy(m => m.Email).ToList(),
-                _ => moderators
+                "name" => query.SortDesc
+                    ? moderators.OrderBy(m => m.IsDeleted).ThenByDescending(m => m.Name).ToList()
+                    : moderators.OrderBy(m => m.IsDeleted).ThenBy(m => m.Name).ToList(),
+
+                "email" => query.SortDesc
+                    ? moderators.OrderBy(m => m.IsDeleted).ThenByDescending(m => m.Email).ToList()
+                    : moderators.OrderBy(m => m.IsDeleted).ThenBy(m => m.Email).ToList(),
+
+                _ => moderators.OrderBy(m => m.IsDeleted).ToList()
             };
         }
+
     }
 }

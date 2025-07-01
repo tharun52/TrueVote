@@ -18,6 +18,19 @@ namespace TrueVote.Controllers
             _voterService = voterService;
         }
 
+        [HttpGet("check-email")]
+        public async Task<IActionResult> CheckEmail([FromQuery] string email)
+        {
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                return BadRequest(new { message = "Email is required." });
+            }
+
+            var exists = await _voterService.CheckEmail(email);
+
+            return Ok(exists);
+        }
+
         [HttpGet]
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> GetAllVotersAsync()
@@ -181,6 +194,25 @@ namespace TrueVote.Controllers
                 return BadRequest(ApiResponseHelper.Failure<object>("Voter update failed", error));
             }
         }
+        [HttpDelete("delete/whitelist/{email}")]
+        [Authorize(Roles = "Moderator")]
+        public async Task<IActionResult> DeleteWhitelistEmailAsync(string email)
+        {
+            if (email == null)
+            {
+                return BadRequest(ApiResponseHelper.Failure<object>("Invalid Email"));
+            }
+
+            try
+            {
+                var result = await _voterService.DeleteWhitelistEmail(email);
+                return Ok(ApiResponseHelper.Success(result, $"{email} deleted successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"Error: {ex.Message}"));
+            }
+        }
 
         [HttpPost("whitelist")]
         [Authorize(Roles = "Moderator")]
@@ -203,7 +235,7 @@ namespace TrueVote.Controllers
         }
 
 
-    
+
 
         [HttpDelete("delete/{voterId}")]
         [Authorize(Roles = "Admin, Moderator")]

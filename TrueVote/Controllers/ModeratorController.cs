@@ -18,6 +18,23 @@ namespace TrueVote.Controllers
             _moderatorService = moderatorService;
         }
 
+        [HttpGet("stats/{moderatorId}")]
+        public async Task<ActionResult<ModeratorStatsDto>> GetModeratorStats(Guid moderatorId)
+        {
+            if (moderatorId == Guid.Empty)
+            {
+                return BadRequest("Invalid moderator ID.");
+            }
+
+            var stats = await _moderatorService.GetModeratorStats(moderatorId);
+
+            if (stats == null)
+            {
+                return NotFound("Moderator not found or no stats available.");
+            }
+
+            return Ok(stats);
+        }
 
         [HttpGet("query")]
         public async Task<IActionResult> QueryModeratorsAsync([FromQuery] ModeratorQueryDto query)

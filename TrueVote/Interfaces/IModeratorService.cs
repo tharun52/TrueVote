@@ -12,5 +12,6 @@ namespace TrueVote.Interfaces
         public Task<PagedResponseDto<Moderator>> QueryModeratorsPaged(ModeratorQueryDto query);
         public Task<Moderator> GetModeratorByIdAsync(Guid moderatorId);
         public Task<Moderator> GetModeratorByEmailAsync(string email);
+        public Task<ModeratorStatsDto> GetModeratorStats(Guid moderatorId);
     }
 }

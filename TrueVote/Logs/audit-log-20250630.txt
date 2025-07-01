@@ -1,0 +1,14 @@
+2025-06-30 09:10:46.390 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: md : 019755b9-d7c7-758f-8589-f3337fc6178e
+2025-06-30 13:05:41.495 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: md : 019755b9-d7c7-758f-8589-f3337fc6178e
+2025-06-30 13:05:50.378 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: md : 019755b9-d7c7-758f-8589-f3337fc6178e
+2025-06-30 13:11:15.580 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-30 13:13:50.229 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-30 13:13:56.792 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-30 13:14:32.088 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-06-30 14:37:19.027 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: md : 019755b9-d7c7-758f-8589-f3337fc6178e
+2025-06-30 14:40:11.082 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: micheal : 01979ab9-49fc-7aa8-b752-5742074736fc
+2025-06-30 14:40:16.405 +05:30 [INF] User: tharun@gmail.com, Action: Updated moderator: micheal : 01979ab9-49fc-7aa8-b752-5742074736fc
+2025-06-30 14:53:48.272 +05:30 [INF] User: tharun@gmail.com, Action: Added new moderator: Ned Stark : 0197c026-598c-7922-8da6-3d6241fcd4da
+2025-06-30 15:09:09.151 +05:30 [INF] User: nedstark@gmail.com, Action: Added a new poll with ID: 0197c034-66a8-773c-bd12-9a384359e0c3
+2025-06-30 16:49:27.082 +05:30 [INF] User: voter2@gmail.com, Action: New Admin with Email : voter2@gmail.com was created
+2025-06-30 16:51:19.899 +05:30 [INF] User: voter3@gmail.com, Action: New Admin with Email : voter3@gmail.com was created

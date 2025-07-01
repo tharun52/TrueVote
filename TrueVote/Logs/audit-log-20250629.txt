@@ -1,1 +1,9 @@
 2025-06-29 15:36:03.874 +05:30 [INF] User: moderator@gmail.com, Action: Updated poll with ID: 0197b0e9-428e-710c-9505-36f4d2823c1d
+2025-06-29 22:16:22.233 +05:30 [INF] User: 0197a0b9-d2b6-7e60-a9c6-c9781c7dd64d, Action: Updated Voter: Kevin : 0197a0b9-d2b6-7e60-a9c6-c9781c7dd64d
+2025-06-29 22:55:09.281 +05:30 [INF] User: 0197bcb8-45f5-7f9d-a552-0820d3b53d46, Action: Updated Voter: voter7 : 0197bcb8-45f5-7f9d-a552-0820d3b53d46
+2025-06-29 22:57:05.046 +05:30 [INF] User: 0197bcb8-45f5-7f9d-a552-0820d3b53d46, Action: Updated Voter: voter7 : 0197bcb8-45f5-7f9d-a552-0820d3b53d46
+2025-06-29 22:59:13.469 +05:30 [INF] User: 0197bcb8-45f5-7f9d-a552-0820d3b53d46, Action: Updated Voter: voter7 : 0197bcb8-45f5-7f9d-a552-0820d3b53d46
+2025-06-29 23:03:24.740 +05:30 [INF] User: 0197bcbf-e16f-7012-97a2-fe1f4b92e29b, Action: Updated Voter: voter8 : 0197bcbf-e16f-7012-97a2-fe1f4b92e29b
+2025-06-29 23:04:21.640 +05:30 [INF] User: 0197bcbf-e16f-7012-97a2-fe1f4b92e29b, Action: Updated Voter: voter8 : 0197bcbf-e16f-7012-97a2-fe1f4b92e29b
+2025-06-29 23:04:28.392 +05:30 [INF] User: 0197bcbf-e16f-7012-97a2-fe1f4b92e29b, Action: Updated Voter: voter8 : 0197bcbf-e16f-7012-97a2-fe1f4b92e29b
+2025-06-29 23:04:42.402 +05:30 [INF] User: 0197bcbf-e16f-7012-97a2-fe1f4b92e29b, Action: Updated Voter: voter8 : 0197bcbf-e16f-7012-97a2-fe1f4b92e29b

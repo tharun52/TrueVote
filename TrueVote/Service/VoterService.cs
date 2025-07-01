@@ -35,6 +35,19 @@ namespace TrueVote.Service
             _auditLogger = auditLogger;
             _voterMapper = new VoterMapper();
         }
+        public async Task<bool> CheckEmail(string email)
+        {
+            var user = await _userRepository.Get(email);
+            if (user != null)
+                return true;
+
+            var whitelist = await _voterEmailRepository.Get(email);
+            if (whitelist != null)
+                return true;
+
+            return false;
+        }
+
 
         public async Task<IEnumerable<Voter>> GetAllVoters()
         {
@@ -211,7 +224,28 @@ namespace TrueVote.Service
             return await _voterRepository.Update(voter.Id, voter);
         }
 
-
+        public async Task<VoterEmail> DeleteWhitelistEmail(string email)
+        {
+            var voterEmail = await _voterEmailRepository.Get(email);
+            if (voterEmail == null)
+            {
+                throw new Exception($"No Whitelist Email found by {email}");
+            }
+            if (voterEmail.IsUsed)
+            {
+                throw new Exception($"{email} is in use, cannot delete");
+            }
+            var userIdStr = _httpContextAccessor.HttpContext?.User?.FindFirst("UserId")?.Value;
+            if (string.IsNullOrEmpty(userIdStr) || !Guid.TryParse(userIdStr, out Guid loggedInModeratorId))
+            {
+                throw new UnauthorizedAccessException("No valid user is logged in");
+            }
+            if (voterEmail.ModeratorId != loggedInModeratorId)
+            {
+                throw new Exception("You can only delete your own whitlisted email");
+            }
+            return await _voterEmailRepository.Delete(email);
+        }
         public async Task<List<VoterEmail>> WhitelistVoterEmails(WhitelistVoterEmailDto dto)
         {
             if (dto.Emails == null || dto.Emails.Count == 0)
@@ -228,8 +262,14 @@ namespace TrueVote.Service
                 if (string.IsNullOrWhiteSpace(email) || !new EmailAddressAttribute().IsValid(email))
                     continue;
 
+
                 var exists = await _userRepository.Get(email);
                 if (exists != null)
+                    throw new Exception($"{email} already exists");
+
+                var voterEmails = await _voterEmailRepository.GetAll();
+                var exists_email = voterEmails.SingleOrDefault(ve => ve.Email == email);
+                if (exists_email != null)
                     throw new Exception($"{email} already exists");
 
                 var voterEmail = new VoterEmail
