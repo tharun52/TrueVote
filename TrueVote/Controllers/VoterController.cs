@@ -31,6 +31,24 @@ namespace TrueVote.Controllers
             return Ok(exists);
         }
 
+        [HttpGet("stats/{voterId}")]
+        public async Task<ActionResult<VoterStatsDto>> GetVoterStats(Guid voterId)
+        {
+            if (voterId == Guid.Empty)
+            {
+                return BadRequest("Invalid voter ID.");
+            }
+
+            var stats = await _voterService.GetVoterStats(voterId);
+
+            if (stats == null)
+            {
+                return NotFound("Voter not found or no stats available.");
+            }
+
+            return Ok(stats);
+        }
+
         [HttpGet]
         [Authorize(Roles = "Admin, Moderator")]
         public async Task<IActionResult> GetAllVotersAsync()

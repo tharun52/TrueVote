@@ -8,6 +8,10 @@ namespace TrueVote.Service
     {
         private readonly IRepository<Guid, Admin> _adminRepository;
         private readonly IRepository<string, User> _userRepository;
+        private readonly IRepository<Guid, VoterCheck> _voterCheckRepository;
+        private readonly IRepository<Guid, Voter> _voterRepository;
+        private readonly IRepository<Guid, Poll> _pollRepository;
+        private readonly IRepository<Guid, Moderator> _moderatorRepository;
         private readonly IEncryptionService _encryptionService;
         private readonly IConfiguration _configuration;
         private readonly IAuditLogger _auditLogger;
@@ -15,6 +19,10 @@ namespace TrueVote.Service
 
         public AdminService(IRepository<Guid, Admin> adminRepository,
                             IRepository<string, User> userRepository,
+                            IRepository<Guid, VoterCheck> voterCheckRepository,
+                            IRepository<Guid, Voter> voterRepository,
+                            IRepository<Guid, Poll> pollRepository,
+                            IRepository<Guid, Moderator> moderatorRepository,                    
                             IEncryptionService encryptionService,
                             IConfiguration configuration,
                             IAuditLogger auditLogger,
@@ -22,12 +30,31 @@ namespace TrueVote.Service
         {
             _adminRepository = adminRepository;
             _userRepository = userRepository;
+            _voterCheckRepository = voterCheckRepository;
+            _voterRepository = voterRepository;
+            _pollRepository = pollRepository;
+            _moderatorRepository = moderatorRepository;
             _encryptionService = encryptionService;
             _configuration = configuration;
             _auditLogger = auditLogger;
             _auditService = auditService;
         }
 
+        public async Task<AdminStatsDto> GetAdminStats()
+        {
+            var votes = await _voterCheckRepository.GetAll();
+            var voters = await _voterRepository.GetAll();
+            var moderators = await _moderatorRepository.GetAll();
+            var polls = await _pollRepository.GetAll();
+
+            return new AdminStatsDto
+            {
+                TotalModeratorRegistered = moderators.Count(),
+                TotalPollsCreated = polls.Count(),
+                TotalVotersREgistered = voters.Count(),
+                TotalVotesVoted = votes.Count()
+            };
+        }
         public async Task<Admin> AddAdmin(AddAdminRequestDto adminDto)
         {
             if (adminDto == null)

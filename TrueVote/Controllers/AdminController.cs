@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TrueVote.Interfaces;
 using TrueVote.Misc;
+using TrueVote.Models;
 using TrueVote.Models.DTOs;
 
 namespace TrueVote.Controllers
@@ -11,10 +13,38 @@ namespace TrueVote.Controllers
     public class AdminController : ControllerBase
     {
         private readonly IAdminService _adminService;
+        private readonly IAuditService _auditService;
 
-        public AdminController(IAdminService adminService)
+        public AdminController(IAdminService adminService, IAuditService auditService)
         {
             _adminService = adminService;
+            _auditService = auditService;
+        }
+        [HttpGet("auditLogs")]
+        public async Task<IActionResult> QueryAuditLogsAsync([FromQuery] AuditLogQueryDto query)
+        {
+            try
+            {
+                var pagedResult = await _auditService.GetAuditLogsPaged(query);
+                return Ok(ApiResponseHelper.Success(pagedResult, "Audit logs fetched successfully"));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponseHelper.Failure<object>($"An unexpected error occurred: {ex.Message}"));
+            }
+        }
+        [HttpGet("stats")]
+        public async Task<ActionResult<ModeratorStatsDto>> GetModeratorStats()
+        {
+
+            var stats = await _adminService.GetAdminStats();
+
+            if (stats == null)
+            {
+                return NotFound("Moderator not found or no stats available.");
+            }
+
+            return Ok(stats);
         }
 
         [HttpPost("add")]

@@ -1,5 +1,6 @@
 using TrueVote.Interfaces;
 using TrueVote.Models;
+using TrueVote.Models.DTOs;
 
 namespace TrueVote.Service
 {
@@ -11,6 +12,33 @@ namespace TrueVote.Service
         {
             _auditRepository = auditRepository;
         }
+
+        public async Task<PagedResponseDto<AuditLog>> GetAuditLogsPaged(AuditLogQueryDto query)
+        {
+            var auditLogs = (await _auditRepository.GetAll()).ToList();
+
+            // Pagination
+            int totalRecords = auditLogs.Count;
+            int page = query.Page;
+            int pageSize = query.PageSize;
+            int totalPages = (int)Math.Ceiling(totalRecords / (double)pageSize);
+
+            int skip = (page - 1) * pageSize;
+            auditLogs = auditLogs.Skip(skip).Take(pageSize).ToList();
+
+            return new PagedResponseDto<AuditLog>
+            {
+                Data = auditLogs,
+                Pagination = new PaginationDto
+                {
+                    TotalRecords = totalRecords,
+                    Page = page,
+                    PageSize = pageSize,
+                    TotalPages = totalPages
+                }
+            };
+        }
+
 
         public async Task LogAsync(string description, Guid entityId, string? createdBy = null, string? updatedBy = null)
         {

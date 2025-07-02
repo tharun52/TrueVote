@@ -12,6 +12,8 @@ namespace TrueVote.Service
         private readonly IRepository<Guid, Voter> _voterRepository;
         private readonly IRepository<string, User> _userRepository;
         private readonly IRepository<string, VoterEmail> _voterEmailRepository;
+        private readonly IRepository<Guid, VoterCheck> _voterCheckRepository;
+        private readonly IRepository<Guid, Poll> _pollRepository;
         private readonly IEncryptionService _encryptionService;
         private IHttpContextAccessor _httpContextAccessor;
         private readonly IAuditService _auditService;
@@ -21,6 +23,8 @@ namespace TrueVote.Service
         public VoterService(IRepository<Guid, Voter> voterRepository,
                             IRepository<string, User> userRepository,
                             IRepository<string, VoterEmail> voterEmailRepository,
+                            IRepository<Guid, VoterCheck> voterCheckRepository,
+                            IRepository<Guid, Poll> pollRepository,
                             IEncryptionService encryptionService,
                             IHttpContextAccessor httpContextAccessor,
                             IAuditService auditService,
@@ -29,6 +33,8 @@ namespace TrueVote.Service
             _voterRepository = voterRepository;
             _userRepository = userRepository;
             _voterEmailRepository = voterEmailRepository;
+            _voterCheckRepository = voterCheckRepository;
+            _pollRepository = pollRepository;
             _encryptionService = encryptionService;
             _httpContextAccessor = httpContextAccessor;
             _auditService = auditService;
@@ -48,6 +54,20 @@ namespace TrueVote.Service
             return false;
         }
 
+        public async Task<VoterStatsDto> GetVoterStats(Guid voterId)
+        {
+            var voterChecks = await _voterCheckRepository.GetAll();
+            var totatPollsVoted = voterChecks.Where(vc => vc.VoterId == voterId).Count();
+
+            var polls = await _pollRepository.GetAll();
+            var totalOnGoingPolls = polls.Count();
+
+            return new VoterStatsDto
+            {
+                TotalOnGoingPolls = totalOnGoingPolls,
+                TotalPollsVoted = totatPollsVoted
+            };
+        }
 
         public async Task<IEnumerable<Voter>> GetAllVoters()
         {
