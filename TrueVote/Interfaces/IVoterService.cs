@@ -6,7 +6,7 @@ namespace TrueVote.Interfaces
 {
     public interface IVoterService
     {
-        public Task<bool> CheckEmail(string email);
+        public Task<bool> CheckEmail(string email, bool isVoter);
         public Task<VoterStatsDto> GetVoterStats(Guid voterId);
         public Task<IEnumerable<Voter>> GetAllVoters();
         public Task<IEnumerable<Voter>> GetVotersByModeratorId(Guid moderatorId);

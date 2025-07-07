@@ -73,6 +73,33 @@ namespace TrueVote.Migrations
                     b.ToTable("AuditLogs");
                 });
 
+            modelBuilder.Entity("TrueVote.Models.Message", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("From")
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Msg")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<Guid?>("PollId")
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid?>("To")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Messages");
+                });
+
             modelBuilder.Entity("TrueVote.Models.Moderator", b =>
                 {
                     b.Property<Guid>("Id")
@@ -268,6 +295,29 @@ namespace TrueVote.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("TrueVote.Models.UserMessage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<Guid>("MessageId")
+                        .HasColumnType("uuid");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MessageId", "UserId")
+                        .IsUnique();
+
+                    b.ToTable("UserMessages");
+                });
+
             modelBuilder.Entity("TrueVote.Models.Voter", b =>
                 {
                     b.Property<Guid>("Id")
@@ -359,12 +409,10 @@ namespace TrueVote.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.HasOne("TrueVote.Models.PollFile", "PoleFile")
+                    b.HasOne("TrueVote.Models.PollFile", null)
                         .WithMany()
                         .HasForeignKey("PoleFileId")
                         .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("PoleFile");
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollOption", b =>
@@ -382,6 +430,15 @@ namespace TrueVote.Migrations
                         .WithMany()
                         .HasForeignKey("PollOptionId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("TrueVote.Models.UserMessage", b =>
+                {
+                    b.HasOne("TrueVote.Models.Message", null)
+                        .WithMany()
+                        .HasForeignKey("MessageId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

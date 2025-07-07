@@ -21,6 +21,9 @@ namespace TrueVote.Contexts
         public DbSet<RefreshToken> RefreshTokens { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<VoterEmail> VoterEmails { get; set; }
+        
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<UserMessage> UserMessages { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User
@@ -56,10 +59,10 @@ namespace TrueVote.Contexts
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Poll>()
-                .HasOne<PollFile>() 
-                .WithMany()         
+                .HasOne<PollFile>()
+                .WithMany()
                 .HasForeignKey(p => p.PoleFileId)
-                .OnDelete(DeleteBehavior.SetNull); 
+                .OnDelete(DeleteBehavior.SetNull);
 
             // PollOption
             modelBuilder.Entity<PollOption>()
@@ -78,18 +81,19 @@ namespace TrueVote.Contexts
                 .HasIndex(v => v.Email)
                 .IsUnique();
 
-            modelBuilder.Entity<Voter>(entity => {
-            entity.HasOne<Moderator>()           
-                    .WithMany()                     
-                    .HasForeignKey(v => v.ModeratorId)
-                    .OnDelete(DeleteBehavior.Restrict);
+            modelBuilder.Entity<Voter>(entity =>
+            {
+                entity.HasOne<Moderator>()
+                        .WithMany()
+                        .HasForeignKey(v => v.ModeratorId)
+                        .OnDelete(DeleteBehavior.Restrict);
             });
 
 
             // VoterCheck
             modelBuilder.Entity<VoterCheck>()
                 .HasIndex(vp => new { vp.VoterId, vp.PollId })
-                .IsUnique(); // Prevents duplicate votes
+                .IsUnique();
 
             modelBuilder.Entity<VoterCheck>()
                 .HasOne<Voter>()
@@ -121,6 +125,21 @@ namespace TrueVote.Contexts
                     .HasForeignKey(e => e.ModeratorId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
+            
+            // UserMessage
+            modelBuilder.Entity<UserMessage>()
+                .HasIndex(um => new { um.MessageId, um.UserId })
+                .IsUnique(); 
+           
+            modelBuilder.Entity<UserMessage>(entity =>
+            {
+                entity.HasOne<Message>()
+                        .WithMany()
+                        .HasForeignKey(um => um.MessageId)
+                        .OnDelete(DeleteBehavior.Restrict);
+            });
+
+
         }
     }
 }

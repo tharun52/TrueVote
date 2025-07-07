@@ -99,6 +99,9 @@ builder.Services.AddTransient<IRepository<Guid, PollVote>, PollVoteRepository>()
 builder.Services.AddTransient<IRepository<Guid, AuditLog>, AuditRepository>();
 builder.Services.AddTransient<IRepository<string, VoterEmail>, VoterEmailRepository>();
 builder.Services.AddTransient<IRepository<Guid, PollFile>, PollFileRepository>();
+builder.Services.AddTransient<IRepository<Guid, Message>, MesssageRepository>();
+builder.Services.AddTransient<IRepository<Guid, UserMessage>, UserMesssageRepository>();
+
 #endregion
 
 #region Services
@@ -112,6 +115,8 @@ builder.Services.AddTransient<IPollService, PollService>();
 builder.Services.AddTransient<IPollFileService, PollFileService>();
 builder.Services.AddTransient<IVoteService, VoteService>();
 builder.Services.AddTransient<IAuditService, AuditService>();
+builder.Services.AddTransient<IMessageService, MessageService>();
+builder.Services.AddTransient<IUserService, UserService>();
 #endregion
 
 #region AuthenticationFilter
@@ -205,4 +210,3 @@ app.UseClientRateLimiting();
 app.MapControllers();
 // app.MapHub<PollHub>("/pollhub");
 app.Run();
-

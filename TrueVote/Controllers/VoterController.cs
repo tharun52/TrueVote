@@ -19,14 +19,14 @@ namespace TrueVote.Controllers
         }
 
         [HttpGet("check-email")]
-        public async Task<IActionResult> CheckEmail([FromQuery] string email)
+        public async Task<IActionResult> CheckEmail([FromQuery] string email, [FromQuery] bool isVoter)
         {
             if (string.IsNullOrWhiteSpace(email))
             {
                 return BadRequest(new { message = "Email is required." });
             }
 
-            var exists = await _voterService.CheckEmail(email);
+            var exists = await _voterService.CheckEmail(email, isVoter);
 
             return Ok(exists);
         }

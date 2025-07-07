@@ -41,15 +41,18 @@ namespace TrueVote.Service
             _auditLogger = auditLogger;
             _voterMapper = new VoterMapper();
         }
-        public async Task<bool> CheckEmail(string email)
+        public async Task<bool> CheckEmail(string email, bool isVoter)
         {
             var user = await _userRepository.Get(email);
             if (user != null)
                 return true;
 
-            var whitelist = await _voterEmailRepository.Get(email);
-            if (whitelist != null)
-                return true;
+            if (isVoter)
+            {              
+                var whitelist = await _voterEmailRepository.Get(email);
+                if (whitelist != null)
+                    return true;
+            }
 
             return false;
         }
