@@ -17,6 +17,7 @@ namespace TrueVote.Service
         private readonly IRepository<Guid, PollFile> _pollFileRepository;
         private IRepository<Guid, VoterCheck> _voterCheckRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IMessageService _messageService;
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
         private readonly IAuditService _auditService;
@@ -26,6 +27,7 @@ namespace TrueVote.Service
                            IRepository<Guid, PollOption> pollOptionRepository,
                            IRepository<Guid, PollFile> pollFileRepository,
                            IRepository<Guid, VoterCheck> voterCheckRepository,
+                           IMessageService messageService,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
                            AppDbContext appDbContext,
@@ -36,6 +38,7 @@ namespace TrueVote.Service
             _pollFileRepository = pollFileRepository;
             _voterCheckRepository = voterCheckRepository;
             _httpContextAccessor = httpContextAccessor;
+            _messageService = messageService;
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
             _auditService = auditService;
@@ -112,6 +115,15 @@ namespace TrueVote.Service
                 if (updateDto.OptionTexts.Count < 2)
                     throw new ArgumentException("At least two poll options are required");
 
+                var distinctOptions = updateDto.OptionTexts
+                    .Select(o => o.Trim().ToLowerInvariant())
+                    .ToHashSet();
+
+                if (distinctOptions.Count != updateDto.OptionTexts.Count)
+                {
+                    throw new ArgumentException("Poll options must be unique");
+                }
+                
                 var existingOptions = (await _pollOptionRepository.GetAll())
                     .Where(o => o.PollId == poll.Id)
                     .ToList();
@@ -154,6 +166,16 @@ namespace TrueVote.Service
             if (pollRequestDto.OptionTexts == null || pollRequestDto.OptionTexts.Count < 2)
             {
                 throw new ArgumentException("At least two poll options are required");
+            }
+
+            // Check for duplicate options (case-insensitive, trimmed)
+            var distinctOptions = pollRequestDto.OptionTexts
+                .Select(o => o.Trim().ToLowerInvariant())
+                .ToHashSet();
+
+            if (distinctOptions.Count != pollRequestDto.OptionTexts.Count)
+            {
+                throw new ArgumentException("Poll options must be unique");
             }
 
             if (pollRequestDto.EndDate <= DateOnly.FromDateTime(DateTime.Today))
@@ -212,12 +234,26 @@ namespace TrueVote.Service
                 Poll = newPoll,
                 PollOptions = pollOptions
             };
+        
+            if (pollRequestDto.ForPublishing)
+            {
+                var msg = $"{loggedInUser} has created a new poll: {newPoll.Title}";
+
+                var messageDto = new MessageRequestDto
+                {
+                    Msg = msg,
+                    PollId = newPoll.Id,
+                    To = null 
+                };
+
+                await _messageService.AddMessage(messageDto);
+            }
 
             await _auditService.LogAsync(
-                description: $"Poll created: {newPoll.Title}",
-                entityId: newPoll.Id,
-                createdBy: loggedInUser
-            );
+                    description: $"Poll created: {newPoll.Title}",
+                    entityId: newPoll.Id,
+                    createdBy: loggedInUser
+                );
             _auditLogger.LogAction(loggedInUser, $"Added a new poll with ID: {newPoll.Id}", true);
 
             return newPoll;

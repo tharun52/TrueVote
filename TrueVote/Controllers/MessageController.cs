@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using TrueVote.Hubs;
 using TrueVote.Interfaces;
 using TrueVote.Misc;
 using TrueVote.Models.DTOs;
@@ -12,10 +14,12 @@ namespace TrueVote.Controllers
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _messageService;
+        private readonly IHubContext<MessageHub> _hubContext;
 
-        public MessageController(IMessageService messageService)
+        public MessageController(IMessageService messageService, IHubContext<MessageHub> hubContext)
         {
             _messageService = messageService;
+            _hubContext = hubContext;
         }
 
         [Authorize(Roles = "Moderator, Voter")]
@@ -33,6 +37,12 @@ namespace TrueVote.Controllers
             try
             {
                 var message = await _messageService.AddMessage(messageDto);
+
+                if (message.To == null)
+                    await _hubContext.Clients.All.SendAsync("ReceiveMessage", message);
+                else
+                    await _hubContext.Clients.User(message.To.Value.ToString()).SendAsync("ReceiveMessage", message);
+
                 return Created($"/api/message/{message.Id}", ApiResponseHelper.Success(message, "Message sent successfully"));
             }
             catch (Exception ex)
@@ -47,7 +57,10 @@ namespace TrueVote.Controllers
         {
             try
             {
-                await _messageService.DeleteMessage(messageId);
+                var deletedMessage = await _messageService.DeleteMessage(messageId);
+
+                await _hubContext.Clients.All.SendAsync("DeleteMessage", deletedMessage.Id);
+
                 return Ok(ApiResponseHelper.Success<object?>(null, "Message deleted successfully"));
             }
             catch (Exception ex)
@@ -55,6 +68,7 @@ namespace TrueVote.Controllers
                 return BadRequest(ApiResponseHelper.Failure<object>(ex.Message));
             }
         }
+
 
         [Authorize(Roles = "Moderator, Voter")]
         [HttpDelete("clear/{messageId}")]
@@ -101,7 +115,7 @@ namespace TrueVote.Controllers
             }
         }
 
-        [Authorize(Roles = "Moderator")]
+        [Authorize(Roles = "Moderator, Voter")]
         [HttpGet("sent")]
         public async Task<IActionResult> GetSentMessages()
         {

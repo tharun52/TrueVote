@@ -201,10 +201,6 @@ namespace TrueVote.Service
             var user = users.SingleOrDefault(u => u.Username == email);
             if (user == null) throw new Exception("User not found");
 
-            if (user.Role != "Moderator")
-            {
-                throw new Exception("Only moderators can access this endpoint");
-            }
 
             var allMessages = await _messageRepository.GetAll();
             var messages = allMessages

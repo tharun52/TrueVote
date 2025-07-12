@@ -41,7 +41,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Admins");
+                    b.ToTable("Admins", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.AuditLog", b =>
@@ -70,7 +70,7 @@ namespace TrueVote.Migrations
 
                     b.HasKey("AuditId");
 
-                    b.ToTable("AuditLogs");
+                    b.ToTable("AuditLogs", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.Message", b =>
@@ -97,7 +97,7 @@ namespace TrueVote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Messages");
+                    b.ToTable("Messages", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.Moderator", b =>
@@ -122,7 +122,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("Email")
                         .IsUnique();
 
-                    b.ToTable("Moderators");
+                    b.ToTable("Moderators", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.Poll", b =>
@@ -160,7 +160,7 @@ namespace TrueVote.Migrations
 
                     b.HasIndex("PoleFileId");
 
-                    b.ToTable("Polls");
+                    b.ToTable("Polls", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollFile", b =>
@@ -193,7 +193,7 @@ namespace TrueVote.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("PollFiles");
+                    b.ToTable("PollFiles", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollOption", b =>
@@ -220,7 +220,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("PollId", "OptionText")
                         .IsUnique();
 
-                    b.ToTable("PollOptions");
+                    b.ToTable("PollOptions", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.PollVote", b =>
@@ -239,7 +239,7 @@ namespace TrueVote.Migrations
 
                     b.HasIndex("PollOptionId");
 
-                    b.ToTable("PollVotes");
+                    b.ToTable("PollVotes", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.RefreshToken", b =>
@@ -267,7 +267,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("Token")
                         .IsUnique();
 
-                    b.ToTable("RefreshTokens");
+                    b.ToTable("RefreshTokens", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.User", b =>
@@ -292,7 +292,7 @@ namespace TrueVote.Migrations
 
                     b.HasKey("Username");
 
-                    b.ToTable("Users");
+                    b.ToTable("Users", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.UserMessage", b =>
@@ -315,7 +315,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("MessageId", "UserId")
                         .IsUnique();
 
-                    b.ToTable("UserMessages");
+                    b.ToTable("UserMessages", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.Voter", b =>
@@ -348,7 +348,7 @@ namespace TrueVote.Migrations
 
                     b.HasIndex("ModeratorId");
 
-                    b.ToTable("Voters");
+                    b.ToTable("Voters", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.VoterCheck", b =>
@@ -376,7 +376,7 @@ namespace TrueVote.Migrations
                     b.HasIndex("VoterId", "PollId")
                         .IsUnique();
 
-                    b.ToTable("VoterChecks");
+                    b.ToTable("VoterChecks", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.VoterEmail", b =>
@@ -397,7 +397,7 @@ namespace TrueVote.Migrations
 
                     b.HasIndex("ModeratorId");
 
-                    b.ToTable("VoterEmails");
+                    b.ToTable("VoterEmails", (string)null);
                 });
 
             modelBuilder.Entity("TrueVote.Models.Poll", b =>

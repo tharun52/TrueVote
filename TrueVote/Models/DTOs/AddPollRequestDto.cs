@@ -13,5 +13,7 @@ namespace TrueVote.Models.DTOs
         public List<string> OptionTexts { get; set; } = new List<string>();
 
         public IFormFile? PollFile { get; set; }
+
+        public bool ForPublishing = false;
     }
 }

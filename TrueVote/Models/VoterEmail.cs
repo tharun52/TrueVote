@@ -15,6 +15,6 @@ namespace TrueVote.Models
         public Boolean IsUsed { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        
+
     }
 }

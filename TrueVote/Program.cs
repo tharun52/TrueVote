@@ -14,6 +14,7 @@ using Serilog;
 using Serilog.Filters;
 using TrueVote.Misc;
 using AspNetCoreRateLimit;
+using TrueVote.Hubs;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -186,6 +187,16 @@ builder.Services.AddCors(options =>
               .AllowCredentials(); 
     });
 });
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy("AllowAngularClient", policy =>
+//     {
+//         policy.WithOrigins("https://tharunstorageaccount.z13.web.core.windows.net'")  
+//               .AllowAnyHeader()
+//               .AllowAnyMethod()
+//               .AllowCredentials(); 
+//     });
+// });
 
 builder.Services.AddSignalR();
 
@@ -208,5 +219,6 @@ app.UseAuthorization();
 app.UseClientRateLimiting();
 
 app.MapControllers();
-// app.MapHub<PollHub>("/pollhub");
+app.MapHub<MessageHub>("/messageHub");
+
 app.Run();
