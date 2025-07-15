@@ -12,18 +12,15 @@ namespace TrueVote.Controllers
     public class PollController : ControllerBase
     {
         private readonly IPollService _pollService;
-        private readonly ILogger<PollController> _logger;
-        public PollController(IPollService pollService, ILogger<PollController> logger)
+        public PollController(IPollService pollService)
         {
             _pollService = pollService;
-            _logger = logger;
         }
 
         [Authorize(Roles = "Admin, Moderator")]
         [HttpPost("add")]
         public async Task<IActionResult> AddPollAsync([FromForm] AddPollRequestDto pollRequestDto)
         {
-           _logger.LogInformation("ForPublishing: {ForPublishing}", pollRequestDto.ForPublishing);
 
             if (pollRequestDto == null)
             {

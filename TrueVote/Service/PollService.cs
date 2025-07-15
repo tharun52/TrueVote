@@ -1,5 +1,6 @@
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Azure.Storage.Blobs;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using TrueVote.Contexts;
@@ -15,9 +16,11 @@ namespace TrueVote.Service
         private readonly IRepository<Guid, Poll> _pollRepository;
         private readonly IRepository<Guid, PollOption> _pollOptionRepository;
         private readonly IRepository<Guid, PollFile> _pollFileRepository;
+        private readonly IRepository<Guid, Message> _messageRepository;
         private IRepository<Guid, VoterCheck> _voterCheckRepository;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMessageService _messageService;
+        private readonly IKeyVaultService _keyVaultService;
         private readonly IAuditLogger _auditLogger;
         private readonly AppDbContext _appDbContext;
         private readonly IAuditService _auditService;
@@ -27,7 +30,9 @@ namespace TrueVote.Service
                            IRepository<Guid, PollOption> pollOptionRepository,
                            IRepository<Guid, PollFile> pollFileRepository,
                            IRepository<Guid, VoterCheck> voterCheckRepository,
+                           IRepository<Guid, Message> messssageRepository,
                            IMessageService messageService,
+                           IKeyVaultService keyVaultService,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
                            AppDbContext appDbContext,
@@ -36,9 +41,11 @@ namespace TrueVote.Service
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
             _pollFileRepository = pollFileRepository;
+            _messageRepository = messssageRepository;
             _voterCheckRepository = voterCheckRepository;
             _httpContextAccessor = httpContextAccessor;
             _messageService = messageService;
+            _keyVaultService = keyVaultService;
             _auditLogger = auditLogger;
             _appDbContext = appDbContext;
             _auditService = auditService;
@@ -95,7 +102,52 @@ namespace TrueVote.Service
             {
                 using var memoryStream = new MemoryStream();
                 await updateDto.PollFile.CopyToAsync(memoryStream);
+                memoryStream.Position = 0;
 
+                string? blobUrl = null;
+
+                try
+                {
+                    // Get the SAS URL from Key Vault
+                    string sasUrl = await _keyVaultService.GetSasUrlAsync("FileContainerSas");
+
+                    // Upload to blob storage
+                    var blobClient = new BlobContainerClient(new Uri(sasUrl));
+                    var blobName = Guid.NewGuid().ToString() + "_" + updateDto.PollFile.FileName;
+                    var blob = blobClient.GetBlobClient(blobName);
+                    await blob.UploadAsync(memoryStream, overwrite: true);
+
+                    blobUrl = blob.Uri.ToString();
+                }
+                catch
+                {
+                    // Swallow blob upload exceptions silently
+                    // Optional: log the error
+                }
+
+                // ✅ Delete the old file from blob (if exists)
+                if (poll.PoleFileId.HasValue)
+                {
+                    var existingPollFile = await _pollFileRepository.Get(poll.PoleFileId.Value);
+                    if (!string.IsNullOrWhiteSpace(existingPollFile?.BlobUrl))
+                    {
+                        try
+                        {
+                            var oldBlobClient = new BlobClient(new Uri(existingPollFile.BlobUrl));
+                            await oldBlobClient.DeleteIfExistsAsync();
+                        }
+                        catch
+                        {
+                            // Silently ignore deletion failure
+                            // Optional: log error
+                        }
+                    }
+
+                    // Optional: delete old PollFile record
+                    await _pollFileRepository.Delete(poll.PoleFileId.Value);
+                }
+
+                // ✅ Add new file
                 var newPollFile = new PollFile
                 {
                     Id = Guid.NewGuid(),
@@ -103,11 +155,14 @@ namespace TrueVote.Service
                     FileType = updateDto.PollFile.ContentType,
                     Content = memoryStream.ToArray(),
                     UploadedByUsername = loggedInUserEmail,
+                    BlobUrl = blobUrl
                 };
 
                 await _pollFileRepository.Add(newPollFile);
-                poll.PoleFileId = newPollFile.Id; // Only store the ID
+                poll.PoleFileId = newPollFile.Id;
             }
+
+
 
             // Update Poll Options
             if (updateDto.OptionTexts != null)
@@ -123,7 +178,7 @@ namespace TrueVote.Service
                 {
                     throw new ArgumentException("Poll options must be unique");
                 }
-                
+
                 var existingOptions = (await _pollOptionRepository.GetAll())
                     .Where(o => o.PollId == poll.Id)
                     .ToList();
@@ -203,6 +258,27 @@ namespace TrueVote.Service
             {
                 using var memoryStream = new MemoryStream();
                 await pollRequestDto.PollFile.CopyToAsync(memoryStream);
+                memoryStream.Position = 0;
+
+                string? blobUrl = null;
+
+                try
+                {
+                    // Get the SAS URL from Key Vault
+                    string sasUrl = await _keyVaultService.GetSasUrlAsync("FileContainerSas");
+
+                    // Upload to blob storage using SAS URL
+                    var blobClient = new BlobContainerClient(new Uri(sasUrl));
+                    var blobName = Guid.NewGuid().ToString() + "_" + pollRequestDto.PollFile.FileName;
+                    var blob = blobClient.GetBlobClient(blobName);
+                    await blob.UploadAsync(memoryStream, overwrite: true);
+
+                    blobUrl = blob.Uri.ToString();
+                }
+                catch
+                {
+
+                }
 
                 var pollFile = new PollFile
                 {
@@ -210,11 +286,13 @@ namespace TrueVote.Service
                     FileType = pollRequestDto.PollFile.ContentType,
                     Content = memoryStream.ToArray(),
                     UploadedByUsername = loggedInUser,
+                    BlobUrl = blobUrl
                 };
 
                 await _pollFileRepository.Add(pollFile);
                 newPoll.PoleFileId = pollFile.Id;
             }
+
 
             newPoll = await _pollRepository.Add(newPoll);
 
@@ -234,7 +312,7 @@ namespace TrueVote.Service
                 Poll = newPoll,
                 PollOptions = pollOptions
             };
-        
+
             if (pollRequestDto.ForPublishing)
             {
                 var msg = $"{loggedInUser} has created a new poll: {newPoll.Title}";
@@ -243,7 +321,7 @@ namespace TrueVote.Service
                 {
                     Msg = msg,
                     PollId = newPoll.Id,
-                    To = null 
+                    To = null
                 };
 
                 await _messageService.AddMessage(messageDto);
@@ -267,21 +345,55 @@ namespace TrueVote.Service
 
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (loggedInUser == null)
-            {
-                throw new Exception("You must be logged in to create a poll");
-            }
+                throw new Exception("You must be logged in to delete a poll");
+
             if (poll.CreatedByEmail != loggedInUser)
-            {
                 throw new Exception("You can only delete your polls");
+
+            // ✅ Delete all messages related to the poll
+            var allMessages = await _messageRepository.GetAll();
+            var messagesToDelete = allMessages.Where(m => m.PollId == pollId).ToList();
+
+            foreach (var message in messagesToDelete)
+            {
+                try
+                {
+                    await _messageService.DeleteMessage(message.Id); // use your service to delete
+                }
+                catch
+                {
+                    // Optional: log message deletion failure, but continue deleting the rest
+                }
             }
 
-            poll.IsDeleted = true;
-            await _pollRepository.Update(poll.Id, poll);
+            // ✅ Delete associated blob file if it exists
+            if (poll.PoleFileId.HasValue)
+            {
+                var pollFile = await _pollFileRepository.Get(poll.PoleFileId.Value);
+                if (pollFile?.BlobUrl != null)
+                {
+                    try
+                    {
+                        var blobClient = new BlobClient(new Uri(pollFile.BlobUrl));
+                        await blobClient.DeleteIfExistsAsync();
+                    }
+                    catch
+                    {
+                        // Swallow blob deletion exceptions
+                    }
+                }
 
+                await _pollFileRepository.Delete(poll.PoleFileId.Value);
+            }
+
+            // ✅ Delete the poll
+            await _pollRepository.Delete(poll.Id);
+
+            // ✅ Audit logs
             await _auditService.LogAsync(
                 description: $"Poll deleted: {poll.Title}",
                 entityId: poll.Id,
-                updatedBy: _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value
+                updatedBy: loggedInUser
             );
 
             await _auditService.LogAsync(
@@ -325,7 +437,7 @@ namespace TrueVote.Service
                     .Where(vc => vc.VoterId == query.VoterId.Value)
                     .ToList();
             }
-            
+
             polls = await FilterPolls(polls, query);
 
             polls = SearchPolls(polls, query);

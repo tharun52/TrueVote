@@ -15,6 +15,8 @@ using Serilog.Filters;
 using TrueVote.Misc;
 using AspNetCoreRateLimit;
 using TrueVote.Hubs;
+using Azure.Security.KeyVault.Secrets;
+using Azure.Identity;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -79,6 +81,17 @@ builder.Services.AddVersionedApiExplorer(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
+var vaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
+var secretClient = new SecretClient(new Uri(vaultUrl), new DefaultAzureCredential());
+
+
+KeyVaultSecret dbSecret = await secretClient.GetSecretAsync("DefaultConnection");
+KeyVaultSecret adminSecret = await secretClient.GetSecretAsync("SecretAdminKey");
+KeyVaultSecret jwtSecret = await secretClient.GetSecretAsync("JwtTokenKey");
+
+builder.Configuration["ConnectionStrings:DefaultConnection"] = dbSecret.Value;
+builder.Configuration["AdminSettings:SecretAdminKey"] = adminSecret.Value;
+builder.Configuration["Keys:JwtTokenKey"] = jwtSecret.Value;
 
 builder.Services.AddDbContext<AppDbContext>(opts =>
 {
@@ -118,6 +131,7 @@ builder.Services.AddTransient<IVoteService, VoteService>();
 builder.Services.AddTransient<IAuditService, AuditService>();
 builder.Services.AddTransient<IMessageService, MessageService>();
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IKeyVaultService, KeyVaultService>();
 #endregion
 
 #region AuthenticationFilter

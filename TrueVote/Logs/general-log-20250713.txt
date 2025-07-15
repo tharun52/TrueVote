@@ -1,0 +1,565 @@
+2025-07-13 18:41:21.823 +05:30 [INF] User profile is available. Using '/Users/tharun52/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-07-13 18:41:21.927 +05:30 [INF] Now listening on: http://localhost:5100
+2025-07-13 18:41:21.928 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-13 18:41:21.928 +05:30 [INF] Hosting environment: Development
+2025-07-13 18:41:21.928 +05:30 [INF] Content root path: /Users/tharun52/Documents/programming/TrueVote/TrueVote
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.156 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.244 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.246 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.246 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.246 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.246 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.246 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.247 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.247 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.247 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.247 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.247 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.247 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.248 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.41ms
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.3955ms
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.3601ms
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.3839ms
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.398ms
+2025-07-13 18:54:20.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 101.407ms
+2025-07-13 18:54:20.268 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:54:20.272 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:54:20.272 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:54:20.272 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:54:20.272 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.371ms
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.221 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.226 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.227 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.226 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.226 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.226 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.227 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.227 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.227 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.227 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.227 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.226 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.2019ms
+2025-07-13 18:59:18.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.1782ms
+2025-07-13 18:59:18.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.564ms
+2025-07-13 18:59:18.228 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.231 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.2043ms
+2025-07-13 18:59:18.231 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 11.6459ms
+2025-07-13 18:59:18.228 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.4054ms
+2025-07-13 18:59:18.235 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 18:59:18.235 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 18:59:18.235 +05:30 [INF] CORS policy execution failed.
+2025-07-13 18:59:18.235 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 18:59:18.236 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.0005ms
+2025-07-13 19:00:50.533 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.533 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.533 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.533 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.534 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.535 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.535 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.535 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.535 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.535 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.536 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.535 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.536 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.536 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.7541ms
+2025-07-13 19:00:50.536 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.536 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.536 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.535 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.536 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.537 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.8097ms
+2025-07-13 19:00:50.537 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.947ms
+2025-07-13 19:00:50.537 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.537 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.540 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.537 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.541 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 7.7855ms
+2025-07-13 19:00:50.540 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 5.4867ms
+2025-07-13 19:00:50.541 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:00:50.541 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.542 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.542 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:00:50.542 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 5.8049ms
+2025-07-13 19:00:50.542 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:00:50.543 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:00:50.543 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.2724ms
+2025-07-13 19:02:28.461 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.462 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.462 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.463 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.463 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.463 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.463 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.463 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.463 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.463 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.464 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.3687ms
+2025-07-13 19:02:28.463 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.463 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.464 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.464 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.464 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.4303ms
+2025-07-13 19:02:28.464 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.464 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.465 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.464 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.465 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.465 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.465 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.463 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.5092ms
+2025-07-13 19:02:28.464 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.465 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.465 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.465 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.3065ms
+2025-07-13 19:02:28.465 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.0808ms
+2025-07-13 19:02:28.465 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.8603ms
+2025-07-13 19:02:28.470 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:28.470 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:28.470 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:28.470 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:28.471 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6777ms
+2025-07-13 19:02:54.660 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.660 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.660 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.661 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.661 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.661 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.661 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.661 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.662 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.662 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.662 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.661 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.661 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.662 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.662 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.662 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.663 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.663 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.662 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.663 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.3205ms
+2025-07-13 19:02:54.662 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.8725ms
+2025-07-13 19:02:54.662 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.7122ms
+2025-07-13 19:02:54.663 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 5.1612ms
+2025-07-13 19:02:54.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.402ms
+2025-07-13 19:02:54.664 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.664 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.7065ms
+2025-07-13 19:02:54.666 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:02:54.667 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:02:54.667 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:02:54.667 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:02:54.667 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.0357ms
+2025-07-13 19:03:53.837 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.837 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.837 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.838 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.839 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.840 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.840 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.841 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.840 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.840 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.841 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.842 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.8445ms
+2025-07-13 19:03:53.841 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.4241ms
+2025-07-13 19:03:53.841 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.8383ms
+2025-07-13 19:03:53.841 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.5733ms
+2025-07-13 19:03:53.841 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.5188ms
+2025-07-13 19:03:53.842 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.554ms
+2025-07-13 19:03:53.846 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:03:53.847 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:03:53.847 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:03:53.847 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:03:53.847 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6057ms
+2025-07-13 19:04:45.841 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.841 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.842 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.842 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.843 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.843 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.844 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.844 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.4854ms
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.845 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.844 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.4022ms
+2025-07-13 19:04:45.844 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.845 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.845 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.845 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.2279ms
+2025-07-13 19:04:45.845 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.846 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.5945ms
+2025-07-13 19:04:45.845 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.4136ms
+2025-07-13 19:04:45.846 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:04:45.846 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.6179ms
+2025-07-13 19:04:45.847 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:04:45.848 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:04:45.848 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:04:45.848 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.2165ms
+2025-07-13 19:05:37.098 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.098 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.098 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.099 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.100 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.100 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.100 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.100 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.100 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.101 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.101 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.1577ms
+2025-07-13 19:05:37.100 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.100 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.101 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.101 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.101 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.101 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.6598ms
+2025-07-13 19:05:37.101 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.102 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.949ms
+2025-07-13 19:05:37.101 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.9883ms
+2025-07-13 19:05:37.101 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.102 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.102 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.102 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.103 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.603ms
+2025-07-13 19:05:37.103 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.103 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.103 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.103 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.104 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.8957ms
+2025-07-13 19:05:37.129 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:05:37.129 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:05:37.130 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:05:37.130 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:05:37.130 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.5864ms
+2025-07-13 19:06:50.210 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.210 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.211 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.214 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.214 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.214 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.215 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.215 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.216 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.216 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.215 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.216 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.216 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.215 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.219 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.216 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.219 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.967ms
+2025-07-13 19:06:50.219 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.1962ms
+2025-07-13 19:06:50.219 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 7.4684ms
+2025-07-13 19:06:50.219 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 8.821ms
+2025-07-13 19:06:50.220 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.222 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.222 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.222 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.222 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.222 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:06:50.222 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.223 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.4031ms
+2025-07-13 19:06:50.223 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:06:50.223 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.224 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:06:50.224 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.224 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:06:50.224 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.9074ms
+2025-07-13 19:06:50.224 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.9076ms
+2025-07-13 19:07:08.603 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.606 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.612 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.613 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.613 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.613 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.613 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.614 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.613 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.614 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.614 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.614 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.614 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.614 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.615 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.616 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 9.3061ms
+2025-07-13 19:07:08.615 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.616 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.278ms
+2025-07-13 19:07:08.616 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.616 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 12.9867ms
+2025-07-13 19:07:08.619 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.619 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:07:08.619 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 6.5952ms
+2025-07-13 19:07:08.620 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.618 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.621 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:07:08.621 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.621 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.622 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.622 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.622 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:07:08.622 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.575ms
+2025-07-13 19:07:08.622 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 7.3787ms
+2025-07-13 19:07:08.622 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:07:08.623 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.6385ms
+2025-07-13 19:08:09.250 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.250 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.251 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.253 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.251 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.253 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.253 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.253 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.253 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.253 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.253 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.254 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.253 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.254 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.253 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.254 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.254 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.254 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.253 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.254 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.254 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.4702ms
+2025-07-13 19:08:09.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.6869ms
+2025-07-13 19:08:09.254 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.873ms
+2025-07-13 19:08:09.254 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.255 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.6918ms
+2025-07-13 19:08:09.255 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.3167ms
+2025-07-13 19:08:09.256 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.256 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:08:09.256 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.256 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:08:09.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.9386ms
+2025-07-13 19:08:09.256 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:08:09.257 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:08:09.257 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.811ms
+2025-07-13 19:09:09.725 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.725 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.726 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.726 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.726 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.726 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.726 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.727 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.727 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.727 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.727 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.727 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.727 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.4799ms
+2025-07-13 19:09:09.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.7485ms
+2025-07-13 19:09:09.727 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.727 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.9022ms
+2025-07-13 19:09:09.728 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.728 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.728 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.1194ms
+2025-07-13 19:09:09.731 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.731 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.731 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.731 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.731 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.731 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.731 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.731 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.731 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.5885ms
+2025-07-13 19:09:09.731 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6185ms
+2025-07-13 19:09:09.756 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:09:09.756 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:09:09.756 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:09:09.756 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:09:09.756 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.5078ms
+2025-07-13 19:10:00.726 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.726 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.728 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.728 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.728 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.728 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.729 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.729 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.729 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.8841ms
+2025-07-13 19:10:00.729 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.729 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.730 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.729 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.730 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.730 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.7373ms
+2025-07-13 19:10:00.731 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.731 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.731 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.731 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.731 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6905ms
+2025-07-13 19:10:00.730 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.730 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.732 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.733 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.867ms
+2025-07-13 19:10:00.733 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.3293ms
+2025-07-13 19:10:00.734 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.734 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.734 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.734 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.734 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6718ms
+2025-07-13 19:10:00.760 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:10:00.760 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:10:00.760 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:10:00.761 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:10:00.762 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.1765ms
+2025-07-13 19:11:38.921 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.921 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.922 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.923 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.923 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.923 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.923 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.923 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.923 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.923 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.923 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.923 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.0425ms
+2025-07-13 19:11:38.923 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.923 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.0937ms
+2025-07-13 19:11:38.924 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.3088ms
+2025-07-13 19:11:38.927 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.927 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.927 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.927 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.927 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.927 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.927 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.927 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.927 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.5932ms
+2025-07-13 19:11:38.927 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6639ms
+2025-07-13 19:11:38.947 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.948 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.948 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.948 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.948 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.4528ms
+2025-07-13 19:11:38.949 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:11:38.951 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:11:38.951 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:11:38.951 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:11:38.951 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.9126ms
+2025-07-13 19:13:49.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.253 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.254 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.252 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.255 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.255 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.255 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.255 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.256 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.255 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.255 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.256 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.256 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.256 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 2.638ms
+2025-07-13 19:13:49.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.2482ms
+2025-07-13 19:13:49.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.9278ms
+2025-07-13 19:13:49.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 4.2507ms
+2025-07-13 19:13:49.256 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.256 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.9912ms
+2025-07-13 19:13:49.258 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:49.258 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.891ms
+2025-07-13 19:13:49.260 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:49.261 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:49.261 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:49.261 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.1478ms
+2025-07-13 19:13:59.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.662 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.663 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.663 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.663 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.663 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.663 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.663 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.2627ms
+2025-07-13 19:13:59.663 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.9179ms
+2025-07-13 19:13:59.665 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.665 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.665 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.665 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.665 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.52ms
+2025-07-13 19:13:59.687 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.687 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.687 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.687 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.688 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.3571ms
+2025-07-13 19:13:59.688 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.689 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.689 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.689 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.689 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.305ms
+2025-07-13 19:13:59.690 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.690 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.690 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.690 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.690 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.7059ms
+2025-07-13 19:13:59.692 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - null null
+2025-07-13 19:13:59.693 +05:30 [INF] No CORS policy found for the specified request.
+2025-07-13 19:13:59.694 +05:30 [INF] CORS policy execution failed.
+2025-07-13 19:13:59.694 +05:30 [INF] Request origin http://localhost:9876 does not have permission to access the resource.
+2025-07-13 19:13:59.694 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.7437ms

@@ -1,0 +1,5 @@
+2025-07-12 09:29:56.650 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0197fcca-28b4-7dd4-ae04-1af205009a2c
+2025-07-12 09:30:12.192 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 0197fcca-28b4-7dd4-ae04-1af205009a2c
+2025-07-12 09:31:54.748 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-07-12 23:01:22.546 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-07-12 23:01:34.158 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b

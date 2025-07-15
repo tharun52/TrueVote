@@ -22,5 +22,7 @@ namespace TrueVote.Models
         public DateTime UploadedAt { get; set; } = DateTime.UtcNow;
 
         public bool IsDeleted { get; set; } = false;
+
+        public string? BlobUrl { get; set; }
     }
 }

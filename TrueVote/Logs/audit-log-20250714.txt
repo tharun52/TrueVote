@@ -1,0 +1,14 @@
+2025-07-14 12:30:27.042 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019807bc-2299-70f2-a6cb-91fc4506fc9a
+2025-07-14 12:30:29.746 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019807bc-2d98-7f84-9408-ec68de27b5c9
+2025-07-14 12:32:53.189 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 019807bc-2299-70f2-a6cb-91fc4506fc9a
+2025-07-14 12:33:10.856 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 019807bc-2d98-7f84-9408-ec68de27b5c9
+2025-07-14 12:52:30.982 +05:30 [INF] User: ari1@gmail.com, Action: New Admin with Email : ari1@gmail.com was created
+2025-07-14 13:00:03.410 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-07-14 13:09:10.177 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-07-14 13:12:54.185 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019807e3-0085-7c61-8306-7c23a7a92d31
+2025-07-14 13:14:52.673 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 019807e3-0085-7c61-8306-7c23a7a92d31
+2025-07-14 13:17:08.900 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 019807e3-0085-7c61-8306-7c23a7a92d31
+2025-07-14 13:17:54.979 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019807e7-97b2-7822-81fc-927efaa2f620
+2025-07-14 13:18:25.264 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 019807e7-97b2-7822-81fc-927efaa2f620
+2025-07-14 13:22:59.714 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019807ec-3c6f-7747-ac92-260149cbf103
+2025-07-14 13:23:26.660 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 019807ec-3c6f-7747-ac92-260149cbf103

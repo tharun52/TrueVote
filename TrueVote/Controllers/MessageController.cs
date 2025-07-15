@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.SignalR;
 using TrueVote.Hubs;
 using TrueVote.Interfaces;
 using TrueVote.Misc;
+using TrueVote.Models;
 using TrueVote.Models.DTOs;
 
 namespace TrueVote.Controllers
@@ -14,11 +15,13 @@ namespace TrueVote.Controllers
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _messageService;
+        private readonly IUserService _userService;
         private readonly IHubContext<MessageHub> _hubContext;
 
-        public MessageController(IMessageService messageService, IHubContext<MessageHub> hubContext)
+        public MessageController(IMessageService messageService,IUserService userService, IHubContext<MessageHub> hubContext)
         {
             _messageService = messageService;
+            _userService = userService;
             _hubContext = hubContext;
         }
 
@@ -39,9 +42,22 @@ namespace TrueVote.Controllers
                 var message = await _messageService.AddMessage(messageDto);
 
                 if (message.To == null)
+                {
                     await _hubContext.Clients.All.SendAsync("ReceiveMessage", message);
+                }
                 else
-                    await _hubContext.Clients.User(message.To.Value.ToString()).SendAsync("ReceiveMessage", message);
+                {
+                    var userObject = await _userService.GetUserDetailsByIdAsync(message.To.Value.ToString());
+
+                    string toEmail = userObject switch
+                    {
+                        Voter voter => voter.Email,
+                        Moderator moderator => moderator.Email,
+                        _ => throw new InvalidOperationException("Unknown user type")
+                    };
+
+                    await _hubContext.Clients.User(toEmail).SendAsync("ReceiveMessage", message);
+                }
 
                 return Created($"/api/message/{message.Id}", ApiResponseHelper.Success(message, "Message sent successfully"));
             }

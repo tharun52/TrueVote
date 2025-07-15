@@ -14,6 +14,6 @@ namespace TrueVote.Models.DTOs
 
         public IFormFile? PollFile { get; set; }
 
-        public bool ForPublishing = false;
+        public bool ForPublishing { get; set; } = false;
     }
 }
