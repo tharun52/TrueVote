@@ -81,17 +81,17 @@ builder.Services.AddVersionedApiExplorer(options =>
     options.SubstituteApiVersionInUrl = true;
 });
 
-var vaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
-var secretClient = new SecretClient(new Uri(vaultUrl), new DefaultAzureCredential());
+// var vaultUrl = builder.Configuration["AzureKeyVault:VaultUrl"];
+// var secretClient = new SecretClient(new Uri(vaultUrl), new DefaultAzureCredential());
 
 
-KeyVaultSecret dbSecret = await secretClient.GetSecretAsync("DefaultConnection");
-KeyVaultSecret adminSecret = await secretClient.GetSecretAsync("SecretAdminKey");
-KeyVaultSecret jwtSecret = await secretClient.GetSecretAsync("JwtTokenKey");
+// KeyVaultSecret dbSecret = await secretClient.GetSecretAsync("DefaultConnection");
+// KeyVaultSecret adminSecret = await secretClient.GetSecretAsync("SecretAdminKey");
+// KeyVaultSecret jwtSecret = await secretClient.GetSecretAsync("JwtTokenKey");
 
-builder.Configuration["ConnectionStrings:DefaultConnection"] = dbSecret.Value;
-builder.Configuration["AdminSettings:SecretAdminKey"] = adminSecret.Value;
-builder.Configuration["Keys:JwtTokenKey"] = jwtSecret.Value;
+// builder.Configuration["ConnectionStrings:DefaultConnection"] = dbSecret.Value;
+// builder.Configuration["AdminSettings:SecretAdminKey"] = adminSecret.Value;
+// builder.Configuration["Keys:JwtTokenKey"] = jwtSecret.Value;
 
 builder.Services.AddDbContext<AppDbContext>(opts =>
 {
