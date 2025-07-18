@@ -53,7 +53,6 @@ namespace TrueVote.Service
                 if (whitelist != null)
                     return true;
             }
-
             return false;
         }
 

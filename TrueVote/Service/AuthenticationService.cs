@@ -41,13 +41,13 @@ namespace TrueVote.Service
                 case "voter":
                     var voter = await _voterRepository.Get(dbUser.UserId);
                     if (voter?.IsDeleted == true)
-                        throw new Exception("Voter account is deleted");
+                        throw new Exception("Voter account is diabled");
                     break;
 
                 case "moderator":
                     var moderator = await _moderatorRepository.Get(dbUser.UserId);
                     if (moderator?.IsDeleted == true)
-                        throw new Exception("Moderator account is deleted");
+                        throw new Exception("Moderator account is diabled");
                     break;
                 case "admin":
                     break;

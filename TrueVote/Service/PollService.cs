@@ -97,6 +97,7 @@ namespace TrueVote.Service
             if (updateDto.IsDeleted.HasValue)
                 poll.IsDeleted = updateDto.IsDeleted.Value;
 
+
             // Upload Poll File
             if (updateDto.PollFile != null)
             {
@@ -294,7 +295,6 @@ namespace TrueVote.Service
                 await _pollFileRepository.Add(pollFile);
                 newPoll.PoleFileId = pollFile.Id;
             }
-
 
             newPoll = await _pollRepository.Add(newPoll);
 

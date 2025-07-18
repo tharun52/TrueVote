@@ -15,5 +15,7 @@ namespace TrueVote.Models.DTOs
         public IFormFile? PollFile { get; set; }
 
         public bool ForPublishing { get; set; } = false;
+        public bool IsVoteCountVisible { get; set; } = false;
+
     }
 }

@@ -1,0 +1,5 @@
+2025-07-17 14:44:26.968 +05:30 [INF] User: tharun@gmail.com, Action: Soft Deleted moderator: srikanth : 01980c59-0b45-7b89-a056-bcb3a3ad0745
+2025-07-17 14:49:23.648 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-07-17 14:49:53.752 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 01980c5c-a54b-7ef4-80af-8215225d9cb6
+2025-07-17 14:52:35.226 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019817b1-5835-7e89-b814-3c6fd5d6e735
+2025-07-17 15:08:01.221 +05:30 [INF] User: ponmalar@gmail.com, Action: New Admin with Email : ponmalar@gmail.com was created
