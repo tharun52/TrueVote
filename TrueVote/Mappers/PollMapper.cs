@@ -14,7 +14,7 @@ namespace TrueVote.Mappers
                 Title = pollDto.Title,
                 Description = pollDto.Description,
                 StartDate = pollDto.StartDate,
-                EndDate = pollDto.EndDate
+                EndDate = pollDto.EndDate,
             };
         }
         public PollFile MapPollRequestDtoToPollFile(AddPollRequestDto dto)

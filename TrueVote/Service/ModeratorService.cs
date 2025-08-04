@@ -58,7 +58,6 @@ namespace TrueVote.Service
 
             var moderatorPollIds = moderatorPolls.Select(p => p.Id).ToList();
 
-            // Step 3: Count total votes (HasVoted == true) for those polls
             var voterChecks = await _voterCheckRepository.GetAll();
 
 

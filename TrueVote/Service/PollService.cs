@@ -80,6 +80,8 @@ namespace TrueVote.Service
             if (updateDto.StartDate.HasValue)
                 poll.StartDate = updateDto.StartDate.Value;
 
+
+        
             if (updateDto.EndDate.HasValue)
             {
                 var today = DateOnly.FromDateTime(DateTime.Today);

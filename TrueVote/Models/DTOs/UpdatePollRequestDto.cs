@@ -9,6 +9,5 @@ namespace TrueVote.Models.DTOs
         public List<string>? OptionTexts { get; set; }
         public IFormFile? PollFile { get; set; }
         public bool? IsDeleted { get; set; }
-        public bool? IsVoteCountVisible { get; set; } 
     }
 }

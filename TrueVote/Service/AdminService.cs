@@ -166,7 +166,6 @@ namespace TrueVote.Service
             if (admin == null)
                 throw new Exception("Admin not found");
 
-            // Remove associated user if exists
             var user = (await _userRepository.GetAll()).FirstOrDefault(u => u.UserId == adminId);
             if (user != null)
             {

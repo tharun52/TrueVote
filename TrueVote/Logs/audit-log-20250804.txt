@@ -1,0 +1,12 @@
+2025-08-04 12:45:10.893 +05:30 [INF] User: thetharun52@gmail.com, Action: New Admin with Email : thetharun52@gmail.com was created
+2025-08-04 12:45:42.411 +05:30 [INF] User: thetharun52@gmail.com, Action: Added new moderator: AriKaran : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 12:51:52.983 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: Ari Karan : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 12:53:23.133 +05:30 [INF] User: 019873ef-a67e-791e-a430-3c1b611f438c, Action: Updated moderator: Ari Karann : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 12:53:34.972 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: Ari Karan : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 13:32:01.778 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: Ari Kara : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 13:32:05.947 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: Ari Karan : 019873ef-a67e-791e-a430-3c1b611f438c
+2025-08-04 16:41:42.282 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-04 16:41:52.676 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197c63c-6e86-7149-a0d5-9b2c025a7a1d
+2025-08-04 16:42:57.347 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-04 16:43:04.735 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-04 16:43:10.561 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b

@@ -27,7 +27,7 @@ builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
 {
-    opt.SwaggerDoc("v1", new OpenApiInfo { Title = "Clinic API", Version = "v1" });
+    opt.SwaggerDoc("v1", new OpenApiInfo { Title = "TrueVote API", Version = "v1" });
     opt.EnableAnnotations();
     opt.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
@@ -233,6 +233,6 @@ app.UseAuthorization();
 app.UseClientRateLimiting();
 
 app.MapControllers();
-app.MapHub<MessageHub>("/messageHub");
+app.MapHub<MessageHub>("/api/v1/messageHub");
 
 app.Run();
