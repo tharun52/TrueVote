@@ -1,3 +1,8 @@
+using System.Net;
+using System.Net.Mail;
+using System.Security.Cryptography;
+using System.Text;
+using Microsoft.AspNetCore.WebUtilities;
 using TrueVote.Interfaces;
 using TrueVote.Models;
 using TrueVote.Models.DTOs;
@@ -12,13 +17,19 @@ namespace TrueVote.Service
         private readonly IRepository<Guid, RefreshToken> _refreshTokenRepository;
         private readonly IRepository<Guid, Moderator> _moderatorRepository;
         private readonly IRepository<Guid, Voter> _voterRepository;
+        private readonly IRepository<Guid, MagicLoginToken> _magicTokenRepository;
+        private readonly IConfiguration _config;
+        private readonly SmtpClient _smtpClient;
+
 
         public AuthenticationService(ITokenService tokenService,
                                     IEncryptionService encryptionService,
                                     IRepository<string, User> userRepository,
                                     IRepository<Guid, Moderator> moderatorRepository,
                                     IRepository<Guid, Voter> voterRepository,
-                                    IRepository<Guid, RefreshToken> refreshTokenRepository)
+                                    IRepository<Guid, RefreshToken> refreshTokenRepository,
+                                    IRepository<Guid, MagicLoginToken> magicTokenRepository,
+                                    IConfiguration config)
         {
             _tokenService = tokenService;
             _encryptionService = encryptionService;
@@ -26,7 +37,80 @@ namespace TrueVote.Service
             _refreshTokenRepository = refreshTokenRepository;
             _moderatorRepository = moderatorRepository;
             _voterRepository = voterRepository;
+            _magicTokenRepository = magicTokenRepository;
+            _config = config;
+            var sender = _config["EmailSettings:Sender"];
+            var password = _config["EmailSettings:Password"];
+            var host = _config["EmailSettings:SmtpHost"];
+
+            _smtpClient = new SmtpClient(host)
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(sender, password),
+                EnableSsl = true
+            };
         }
+
+        public async Task<UserLoginResponse> VerifyMagicLinkAsync(MagicLinkVerifyRequest request)
+        {
+            var token = await _magicTokenRepository
+                .GetAll()
+                .ContinueWith(t => t.Result.FirstOrDefault(x =>
+                    x.Email == request.Email &&
+                    x.Token == request.Token &&
+                    !x.IsUsed &&
+                    x.ExpiresAt > DateTime.UtcNow));
+
+            if (token == null)
+                throw new UnauthorizedAccessException("Invalid or expired token.");
+
+            token.IsUsed = true;
+            await _magicTokenRepository.Update(token.Id, token);
+
+            var user = await _userRepository.Get(request.Email);
+            if (user == null)
+                throw new UnauthorizedAccessException("User not found.");
+
+            var (accessToken, refreshToken) = await _tokenService.GenerateTokensAsync(user);
+            return new UserLoginResponse
+            {
+                UserId = user.UserId,
+                Username = user.Username,
+                Token = accessToken,
+                RefreshToken = refreshToken,
+                Role = user.Role
+            };
+        }
+
+        public async Task SendMagicLinkAsync(MagicLinkRequest request)
+        {
+            var user = await _userRepository.Get(request.Email);
+            if (user == null)
+                return;
+
+            var rawToken = Convert.ToBase64String(RandomNumberGenerator.GetBytes(48));
+            var token = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(rawToken));
+
+            var expires = DateTime.UtcNow.AddMinutes(15);
+            var magicToken = new MagicLoginToken
+            {
+                Email = user.Username,
+                Token = token,
+                ExpiresAt = expires
+            };
+
+            await _magicTokenRepository.Add(magicToken);
+
+            var link = $"{request.ClientURI}?email={user.Username}&token={token}";
+            var subject = "Magic Login Link";
+            var body = $"<p>Click to log in:</p><a href='{link}'>Login</a>";
+
+            var message = new MailMessage("your_email@gmail.com", user.Username, subject, body);
+            message.IsBodyHtml = true;
+
+            await _smtpClient.SendMailAsync(message);
+        }
+
         public async Task<UserLoginResponse> Login(UserLoginRequest user)
         {
             var dbUser = await _userRepository.Get(user.Username);

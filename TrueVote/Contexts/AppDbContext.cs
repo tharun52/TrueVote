@@ -24,6 +24,7 @@ namespace TrueVote.Contexts
         
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserMessage> UserMessages { get; set; }
+        public DbSet<MagicLoginToken> MagicLoginTokens { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // User
@@ -125,12 +126,12 @@ namespace TrueVote.Contexts
                     .HasForeignKey(e => e.ModeratorId)
                     .OnDelete(DeleteBehavior.Restrict);
             });
-            
+
             // UserMessage
             modelBuilder.Entity<UserMessage>()
                 .HasIndex(um => new { um.MessageId, um.UserId })
-                .IsUnique(); 
-           
+                .IsUnique();
+
             modelBuilder.Entity<UserMessage>(entity =>
             {
                 entity.HasOne<Message>()

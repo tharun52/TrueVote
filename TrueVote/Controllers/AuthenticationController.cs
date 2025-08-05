@@ -18,6 +18,27 @@ namespace TrueVote.Controllers
             _authenticationService = authenticationService;
 
         }
+        [HttpPost("send-magic-link")]
+        public async Task<IActionResult> SendMagicLink([FromBody] MagicLinkRequest request)
+        {
+            await _authenticationService.SendMagicLinkAsync(request);
+            return Ok(new { message = "If registered, a login link has been sent." });
+        }
+
+        [HttpPost("verify-magic-link")]
+        public async Task<IActionResult> VerifyMagicLink([FromBody] MagicLinkVerifyRequest request)
+        {
+            try
+            {
+                var result = await _authenticationService.VerifyMagicLinkAsync(request);
+                return Ok(result);
+            }
+            catch (Exception e)
+            {
+                return Unauthorized(e.Message);
+            }
+        }
+
         [HttpPost]
         public async Task<ActionResult<UserLoginResponse>> UserLogin(UserLoginRequest loginRequest)
         {

@@ -73,6 +73,31 @@ namespace TrueVote.Migrations
                     b.ToTable("AuditLogs");
                 });
 
+            modelBuilder.Entity("TrueVote.Models.MagicLoginToken", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("ExpiresAt")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<bool>("IsUsed")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Token")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MagicLoginTokens");
+                });
+
             modelBuilder.Entity("TrueVote.Models.Message", b =>
                 {
                     b.Property<Guid>("Id")

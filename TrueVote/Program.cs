@@ -115,6 +115,7 @@ builder.Services.AddTransient<IRepository<string, VoterEmail>, VoterEmailReposit
 builder.Services.AddTransient<IRepository<Guid, PollFile>, PollFileRepository>();
 builder.Services.AddTransient<IRepository<Guid, Message>, MesssageRepository>();
 builder.Services.AddTransient<IRepository<Guid, UserMessage>, UserMesssageRepository>();
+builder.Services.AddTransient<IRepository<Guid, MagicLoginToken>, MagicLoginTokenRepository>();
 
 #endregion
 

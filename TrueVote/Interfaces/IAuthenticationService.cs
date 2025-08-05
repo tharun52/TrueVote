@@ -9,5 +9,8 @@ namespace TrueVote.Interfaces
         public Task<UserLoginResponse> RefreshLogin(string refreshToken);
         public Task<bool> LogoutAsync(string refreshToken);
         public Task<User?> GetCurrentUserAsync(string username);
+        public Task SendMagicLinkAsync(MagicLinkRequest request);
+        public Task<UserLoginResponse> VerifyMagicLinkAsync(MagicLinkVerifyRequest request);
+
     }
 }
