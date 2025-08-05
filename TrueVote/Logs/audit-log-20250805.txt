@@ -1,0 +1,46 @@
+2025-08-05 11:27:56.577 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-05 11:34:17.357 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197f872-c53a-7b8c-a788-f19883476e54
+2025-08-05 11:35:37.859 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 0197f872-c53a-7b8c-a788-f19883476e54
+2025-08-05 11:42:08.075 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197c63c-6e86-7149-a0d5-9b2c025a7a1d
+2025-08-05 11:42:22.347 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-05 11:43:14.687 +05:30 [INF] User: micheal@gmail.com, Action: Updated poll with ID: 0197f037-1275-7e56-aae9-99e2b96abf61
+2025-08-05 11:43:53.464 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 0197fccb-f603-7de3-bf9d-8d82322a846b
+2025-08-05 11:44:02.254 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 0197c63c-6e86-7149-a0d5-9b2c025a7a1d
+2025-08-05 11:44:09.211 +05:30 [INF] User: micheal@gmail.com, Action: Deleted poll with ID: 0197f037-1275-7e56-aae9-99e2b96abf61
+2025-08-05 11:45:10.888 +05:30 [INF] User: nedstark@gmail.com, Action: Deleted poll with ID: 0197c034-66a8-773c-bd12-9a384359e0c3
+2025-08-05 11:49:57.490 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 0197b0e9-428e-710c-9505-36f4d2823c1d
+2025-08-05 11:50:15.670 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 0197b260-f8e0-7c44-817b-0e1428845e03
+2025-08-05 11:56:37.486 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878e9-12fb-77d6-8109-ed0322f03a96
+2025-08-05 11:58:24.232 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-b414-7677-96a3-379a350127a7
+2025-08-05 11:58:24.287 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-b45b-7f6d-9076-6c972eed8cdb
+2025-08-05 11:58:24.300 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-b463-7970-b951-107bd0bc4646
+2025-08-05 11:58:28.771 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-c5d8-77ae-868c-f8f1b1961d3b
+2025-08-05 11:58:28.790 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-c5ef-707d-aa54-8e491ab8f23d
+2025-08-05 11:58:28.803 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ea-c5fd-711e-9178-21a2bc87452c
+2025-08-05 11:58:55.109 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878eb-2cbc-794a-8088-f421b195acd1
+2025-08-05 11:58:55.224 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878eb-2d33-790d-87e0-add83420c1d4
+2025-08-05 11:58:55.341 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878eb-2daa-7e5e-84e8-41925e4aba0c
+2025-08-05 11:59:12.711 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878eb-717f-7bcf-add6-5e57d117937e
+2025-08-05 11:59:32.739 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-b45b-7f6d-9076-6c972eed8cdb
+2025-08-05 11:59:40.715 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-b414-7677-96a3-379a350127a7
+2025-08-05 11:59:47.534 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-b463-7970-b951-107bd0bc4646
+2025-08-05 11:59:58.641 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-c5d8-77ae-868c-f8f1b1961d3b
+2025-08-05 12:00:01.637 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-c5ef-707d-aa54-8e491ab8f23d
+2025-08-05 12:00:04.514 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878ea-c5fd-711e-9178-21a2bc87452c
+2025-08-05 12:00:07.746 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878eb-2cbc-794a-8088-f421b195acd1
+2025-08-05 12:00:10.448 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878eb-2d33-790d-87e0-add83420c1d4
+2025-08-05 12:00:13.282 +05:30 [INF] User: moderator@gmail.com, Action: Deleted poll with ID: 019878eb-2daa-7e5e-84e8-41925e4aba0c
+2025-08-05 12:00:31.581 +05:30 [INF] User: moderator@gmail.com, Action: Updated poll with ID: 019878e9-12fb-77d6-8109-ed0322f03a96
+2025-08-05 12:01:29.640 +05:30 [INF] User: moderator@gmail.com, Action: Added a new poll with ID: 019878ed-8859-7a90-b3a9-d508435cd47d
+2025-08-05 12:29:38.431 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 01987907-4d1f-7f34-9f8a-6507eabb2a06
+2025-08-05 12:32:28.561 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 01987909-e5c0-73d5-a61e-feff985ae8e9
+2025-08-05 12:33:50.847 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 0198790b-2714-70d5-81e5-2a90ce297fa1
+2025-08-05 12:40:37.146 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 019874ba-08d4-7d01-ac3b-8e398cb70262
+2025-08-05 12:40:42.764 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: bruce wayne : 019874ba-08d4-7d01-ac3b-8e398cb70262
+2025-08-05 12:46:47.280 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-08-05 12:46:50.567 +05:30 [INF] User: thetharun52@gmail.com, Action: Soft Deleted moderator: madesh : 01975d01-3c51-7396-9a20-f91ce5ab72f3
+2025-08-05 12:47:39.569 +05:30 [INF] User: thetharun52@gmail.com, Action: Added new moderator: Steven Smith : 01987917-cc62-7dfa-9749-dc23c99148ec
+2025-08-05 12:52:18.856 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Soft Deleted Voter : 019874ba-08d4-7d01-ac3b-8e398cb70262
+2025-08-05 12:52:23.250 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: bruce wayne : 019874ba-08d4-7d01-ac3b-8e398cb70262
+2025-08-05 15:38:32.928 +05:30 [INF] User: thetharun52@gmail.com, Action: Soft Deleted moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-08-05 15:38:38.259 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef

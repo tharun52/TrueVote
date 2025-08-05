@@ -547,7 +547,8 @@ namespace TrueVote.Service
         private List<Poll> SortPolls(List<Poll> polls, PollQueryDto query)
         {
             if (string.IsNullOrEmpty(query.SortBy))
-                return polls.OrderByDescending(p => p.StartDate).ToList();
+                return polls.OrderByDescending(p => p.EndDate).ToList();
+
 
             return query.SortBy.ToLower() switch
             {
