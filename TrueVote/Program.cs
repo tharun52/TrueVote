@@ -196,12 +196,16 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularClient", policy =>
     {
-        policy.WithOrigins("http://localhost:4200")  
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials(); 
+        policy.WithOrigins(
+            "http://localhost:4200", 
+            "https://true-vote-fe.azurestaticapps.net"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials(); 
     });
 });
+
 // builder.Services.AddCors(options =>
 // {
 //     options.AddPolicy("AllowAngularClient", policy =>

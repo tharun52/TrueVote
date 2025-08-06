@@ -22,8 +22,8 @@ namespace TrueVote.Service
         private readonly IMessageService _messageService;
         private readonly IKeyVaultService _keyVaultService;
         private readonly IAuditLogger _auditLogger;
-        private readonly AppDbContext _appDbContext;
         private readonly IAuditService _auditService;
+        private readonly IConfiguration _config;
         private readonly IPollMapper _pollMapper;
 
         public PollService(IRepository<Guid, Poll> pollRepository,
@@ -35,8 +35,8 @@ namespace TrueVote.Service
                            IKeyVaultService keyVaultService,
                            IHttpContextAccessor httpContextAccessor,
                            IAuditLogger auditLogger,
-                           AppDbContext appDbContext,
-                           IAuditService auditService)
+                           IAuditService auditService,
+                           IConfiguration config)
         {
             _pollRepository = pollRepository;
             _pollOptionRepository = pollOptionRepository;
@@ -47,8 +47,8 @@ namespace TrueVote.Service
             _messageService = messageService;
             _keyVaultService = keyVaultService;
             _auditLogger = auditLogger;
-            _appDbContext = appDbContext;
             _auditService = auditService;
+            _config = config;
             _pollMapper = new PollMapper();
         }
 
@@ -109,44 +109,44 @@ namespace TrueVote.Service
 
 
                 //AZURE
-                // string? blobUrl = null;
-                // try
-                // {
-                //     // Get the SAS URL from Key Vault
-                //     string sasUrl = await _keyVaultService.GetSasUrlAsync("FileContainerSas");
+                string? blobUrl = null;
+                try
+                {
+                    // Get the SAS URL from Key Vault
+                    string sasUrl = _config["AzureKeys:FileContainerSas"];
 
-                //     // Upload to blob storage
-                //     var blobClient = new BlobContainerClient(new Uri(sasUrl));
-                //     var blobName = Guid.NewGuid().ToString() + "_" + updateDto.PollFile.FileName;
-                //     var blob = blobClient.GetBlobClient(blobName);
-                //     await blob.UploadAsync(memoryStream, overwrite: true);
+                    // Upload to blob storage
+                    var blobClient = new BlobContainerClient(new Uri(sasUrl));
+                    var blobName = Guid.NewGuid().ToString() + "_" + updateDto.PollFile.FileName;
+                    var blob = blobClient.GetBlobClient(blobName);
+                    await blob.UploadAsync(memoryStream, overwrite: true);
 
-                //     blobUrl = blob.Uri.ToString();
-                // }
-                // catch
-                // {
-                //     // Swallow blob upload exceptions silently
-                //     // Optional: log the error
-                // }
+                    blobUrl = blob.Uri.ToString();
+                }
+                catch
+                {
+                    // Swallow blob upload exceptions silently
+                    // Optional: log the error
+                }
 
                 // ✅ Delete the old file from blob (if exists)
                 if (poll.PoleFileId.HasValue)
                 {
                     var existingPollFile = await _pollFileRepository.Get(poll.PoleFileId.Value);
                     // AZURE
-                    // if (!string.IsNullOrWhiteSpace(existingPollFile?.BlobUrl))
-                    // {
-                    //     try
-                    //     {   
-                    //         var oldBlobClient = new BlobClient(new Uri(existingPollFile.BlobUrl));
-                    //         await oldBlobClient.DeleteIfExistsAsync();
-                    //     }
-                    //     catch
-                    //     {
-                    //         // Silently ignore deletion failure
-                    //         // Optional: log error
-                    //     }
-                    // }
+                    if (!string.IsNullOrWhiteSpace(existingPollFile?.BlobUrl))
+                    {
+                        try
+                        {   
+                            var oldBlobClient = new BlobClient(new Uri(existingPollFile.BlobUrl));
+                            await oldBlobClient.DeleteIfExistsAsync();
+                        }
+                        catch
+                        {
+                            // Silently ignore deletion failure
+                            // Optional: log error
+                        }
+                    }
 
                     // Optional: delete old PollFile record
                     await _pollFileRepository.Delete(poll.PoleFileId.Value);
@@ -266,24 +266,25 @@ namespace TrueVote.Service
                 memoryStream.Position = 0;
 
                 // AZURE
-                // string? blobUrl = null;
-                // try
-                // {
-                //     // Get the SAS URL from Key Vault
-                //     string sasUrl = await _keyVaultService.GetSasUrlAsync("FileContainerSas");
+                string? blobUrl = null;
+                try
+                {
+                    // Get the SAS URL from Key Vault
+                    // string sasUrl = await _keyVaultService.GetSasUrlAsync("FileContainerSas");
+                    string sasUrl =  _config["AzureKeys:FileContainerSas"];
+                
+                    // Upload to blob storage using SAS URL
+                    var blobClient = new BlobContainerClient(new Uri(sasUrl));
+                    var blobName = Guid.NewGuid().ToString() + "_" + pollRequestDto.PollFile.FileName;
+                    var blob = blobClient.GetBlobClient(blobName);
+                    await blob.UploadAsync(memoryStream, overwrite: true);
 
-                //     // Upload to blob storage using SAS URL
-                //     var blobClient = new BlobContainerClient(new Uri(sasUrl));
-                //     var blobName = Guid.NewGuid().ToString() + "_" + pollRequestDto.PollFile.FileName;
-                //     var blob = blobClient.GetBlobClient(blobName);
-                //     await blob.UploadAsync(memoryStream, overwrite: true);
+                    blobUrl = blob.Uri.ToString();
+                }
+                catch
+                {
 
-                //     blobUrl = blob.Uri.ToString();
-                // }
-                // catch
-                // {
-
-                // }
+                }
 
                 var pollFile = new PollFile
                 {
@@ -362,7 +363,7 @@ namespace TrueVote.Service
             {
                 try
                 {
-                    await _messageService.DeleteMessage(message.Id); // use your service to delete
+                    await _messageService.DeleteMessage(message.Id);
                 }
                 catch
                 {
@@ -374,19 +375,19 @@ namespace TrueVote.Service
             if (poll.PoleFileId.HasValue)
             {
                 // AZURE
-                // var pollFile = await _pollFileRepository.Get(poll.PoleFileId.Value);
-                // if (pollFile?.BlobUrl != null)
-                // {
-                //     try
-                //     {
-                //         var blobClient = new BlobClient(new Uri(pollFile.BlobUrl));
-                //         await blobClient.DeleteIfExistsAsync();
-                //     }
-                //     catch
-                //     {
-                //         // Swallow blob deletion exceptions
-                //     }
-                // }
+                var pollFile = await _pollFileRepository.Get(poll.PoleFileId.Value);
+                if (pollFile?.BlobUrl != null)
+                {
+                    try
+                    {
+                        var blobClient = new BlobClient(new Uri(pollFile.BlobUrl));
+                        await blobClient.DeleteIfExistsAsync();
+                    }
+                    catch
+                    {
+                        // Swallow blob deletion exceptions
+                    }
+                }
 
                 await _pollFileRepository.Delete(poll.PoleFileId.Value);
             }

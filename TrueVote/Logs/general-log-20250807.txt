@@ -1,0 +1,1516 @@
+2025-08-07 22:44:44.699 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-07 22:44:44.726 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=VD3K_ETbuGAwp_I91HjYlg&_=1754414057425 - 499 null null 33259.7149ms
+2025-08-07 22:44:44.840 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:44:44.842 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.843 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.843 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 3.3824ms
+2025-08-07 22:44:44.844 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-07 22:44:44.845 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.847 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.848 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 3.6907ms
+2025-08-07 22:44:44.849 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/email/micheal@gmail.com - null null
+2025-08-07 22:44:44.850 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:44:44.850 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.850 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.850 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/email/micheal@gmail.com - 204 null null 1.1483ms
+2025-08-07 22:44:44.850 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.851 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.856 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-07 22:44:44.856 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.856 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.857 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/email/micheal@gmail.com - null null
+2025-08-07 22:44:44.858 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.858 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.878 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:44.878 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:44.878 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:44.906 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+2025-08-07 22:44:44.906 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+2025-08-07 22:44:44.906 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+2025-08-07 22:44:44.907 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-07 22:44:44.907 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.GetModeratorByEmailAsync (TrueVote)'
+2025-08-07 22:44:44.907 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:44:44.907 +05:30 [INF] Route matched with {action = "GetModeratorByEmail", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetModeratorByEmailAsync(System.String) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-08-07 22:44:44.908 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:44.908 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:44.908 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 401 0 null 52.587ms
+2025-08-07 22:44:44.908 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 58.4465ms
+2025-08-07 22:44:44.913 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:44:44.914 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.914 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.914 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:44.915 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+2025-08-07 22:44:44.915 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:44:44.916 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:44.916 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 2.6065ms
+2025-08-07 22:44:44.917 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:44:44.918 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:44.918 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:44.918 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:44.918 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:44 PM'.
+2025-08-07 22:44:44.918 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:44:44.918 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:44.919 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.0271ms
+2025-08-07 22:44:45.091 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-07 22:44:45.099 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-07 22:44:45.099 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-07 22:44:45.099 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.GetModeratorByEmailAsync (TrueVote) in 191.9043ms
+2025-08-07 22:44:45.099 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.GetModeratorByEmailAsync (TrueVote)'
+2025-08-07 22:44:45.100 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/email/micheal@gmail.com - 200 null application/json; charset=utf-8 242.3741ms
+2025-08-07 22:44:45.103 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/stats/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-07 22:44:45.103 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.103 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.103 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/stats/01979ab9-49fc-7aa8-b752-5742074736fc - 204 null null 0.2129ms
+2025-08-07 22:44:45.104 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/stats/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-07 22:44:45.104 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.104 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.105 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.106 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.106 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.GetModeratorStats (TrueVote)'
+2025-08-07 22:44:45.106 +05:30 [INF] Route matched with {action = "GetModeratorStats", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.ModeratorStatsDto]] GetModeratorStats(System.Guid) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-08-07 22:44:45.109 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT m0."Id", m0."Email", m0."IsDeleted", m0."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM (
+    SELECT m."Id", m."Email", m."IsDeleted", m."Name"
+    FROM "Moderators" AS m
+    WHERE m."Id" = @__key_0
+    LIMIT 1
+) AS m0
+LEFT JOIN "Polls" AS p ON m0."Email" = p."CreatedByEmail"
+ORDER BY m0."Id"
+2025-08-07 22:44:45.110 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-07 22:44:45.112 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-07 22:44:45.129 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Email", v."CreatedAt", v."IsUsed", v."ModeratorId"
+FROM "VoterEmails" AS v
+2025-08-07 22:44:45.130 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ModeratorStatsDto'.
+2025-08-07 22:44:45.131 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.GetModeratorStats (TrueVote) in 24.7685ms
+2025-08-07 22:44:45.131 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.GetModeratorStats (TrueVote)'
+2025-08-07 22:44:45.131 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/stats/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 26.7842ms
+2025-08-07 22:44:45.136 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/moderator/emails - null null
+2025-08-07 22:44:45.136 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-07 22:44:45.136 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.136 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.136 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.136 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.136 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/moderator/emails - 204 null null 0.5257ms
+2025-08-07 22:44:45.136 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&ForVoting=false&Page=1&PageSize=4 - 204 null null 0.5075ms
+2025-08-07 22:44:45.139 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - null null
+2025-08-07 22:44:45.139 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-07 22:44:45.139 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.139 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.139 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.139 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.140 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.140 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.141 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.142 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.142 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:44:45.142 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-08-07 22:44:45.142 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator)
+2025-08-07 22:44:45.142 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:45.143 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - 401 0 null 3.7971ms
+2025-08-07 22:44:45.147 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-07 22:44:45.149 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-08-07 22:44:45.150 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-07 22:44:45.150 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 7.7873ms
+2025-08-07 22:44:45.150 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:44:45.151 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&ForVoting=false&Page=1&PageSize=4 - 200 null application/json; charset=utf-8 11.7443ms
+2025-08-07 22:44:45.161 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - null null
+2025-08-07 22:44:45.161 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.161 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.161 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-07 22:44:45.161 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.161 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.161 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.163 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.161 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 204 null null 0.2087ms
+2025-08-07 22:44:45.164 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator)
+2025-08-07 22:44:45.164 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:45.164 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-07 22:44:45.164 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - 401 0 null 3.7902ms
+2025-08-07 22:44:45.164 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - null null
+2025-08-07 22:44:45.165 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.165 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.165 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.165 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-07 22:44:45.165 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.168 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.168 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 204 null null 3.0635ms
+2025-08-07 22:44:45.165 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.165 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.171 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-07 22:44:45.171 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.171 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - 204 null null 6.745ms
+2025-08-07 22:44:45.171 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.171 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.171 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.171 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:45.172 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - null null
+2025-08-07 22:44:45.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - null null
+2025-08-07 22:44:45.179 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.179 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.178 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.179 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.179 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:45.179 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.178 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:45.179 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.179 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:45.179 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator)
+2025-08-07 22:44:45.179 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:44:45.180 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/moderator/emails - 401 0 null 2.3347ms
+2025-08-07 22:44:45.180 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:45.180 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:45 PM'.
+2025-08-07 22:44:45.181 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.181 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:45.244 +05:30 [INF] Executed DbCommand (65ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:45.244 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-07 22:44:45.244 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 72.7512ms
+2025-08-07 22:44:45.248 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.248 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 84.1868ms
+2025-08-07 22:44:45.259 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-07 22:44:45.266 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.266 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:45.269 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:45.270 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-07 22:44:45.270 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 2.1561ms
+2025-08-07 22:44:45.270 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.270 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 10.6962ms
+2025-08-07 22:44:45.277 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:45.278 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-07 22:44:45.278 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 98.7894ms
+2025-08-07 22:44:45.278 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.278 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 107.1917ms
+2025-08-07 22:44:45.278 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:45.278 +05:30 [INF] Executing FileContentResult, sending file with download name 'Untitled.sql' ...
+2025-08-07 22:44:45.279 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 94.4701ms
+2025-08-07 22:44:45.279 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.279 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - 200 75 application/octet-stream 101.6772ms
+2025-08-07 22:44:45.281 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-07 22:44:45.281 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.281 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:45.282 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:45.283 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-07 22:44:45.283 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 2.0291ms
+2025-08-07 22:44:45.283 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:45.283 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 2.6447ms
+2025-08-07 22:44:47.352 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&CreatedByEmail=micheal@gmail.com&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-07 22:44:47.357 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:47.357 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:47.358 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&CreatedByEmail=micheal@gmail.com&ForVoting=false&Page=1&PageSize=4 - 204 null null 5.654ms
+2025-08-07 22:44:47.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&CreatedByEmail=micheal@gmail.com&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-07 22:44:47.363 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:47.364 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:47.367 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:47.371 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+2025-08-07 22:44:47.371 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:44:47.371 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-08-07 22:44:47.381 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-07 22:44:47.383 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-08-07 22:44:47.384 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-07 22:44:47.384 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 13.0661ms
+2025-08-07 22:44:47.384 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:44:47.385 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&CreatedByEmail=micheal@gmail.com&ForVoting=false&Page=1&PageSize=4 - 200 null application/json; charset=utf-8 22.7373ms
+2025-08-07 22:44:47.397 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-07 22:44:47.397 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-07 22:44:47.397 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:47.397 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:47.397 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:47.397 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:47.397 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - null null
+2025-08-07 22:44:47.397 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:47.397 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:44:47.397 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:47.398 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+2025-08-07 22:44:47.398 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+2025-08-07 22:44:47.398 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:44:47.399 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.399 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.399 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:47.399 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:47.399 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:44:47.399 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:56:18 PM', Current time (UTC): '8/7/2025 5:14:47 PM'.
+2025-08-07 22:44:47.399 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.399 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:47.431 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:47.431 +05:30 [INF] Executed DbCommand (31ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:47.431 +05:30 [INF] Executing FileContentResult, sending file with download name 'Untitled.sql' ...
+2025-08-07 22:44:47.431 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-07 22:44:47.431 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 31.4878ms
+2025-08-07 22:44:47.431 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 32.1749ms
+2025-08-07 22:44:47.431 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.431 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.431 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 34.4957ms
+2025-08-07 22:44:47.431 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - 200 75 application/octet-stream 34.4116ms
+2025-08-07 22:44:47.432 +05:30 [INF] Executed DbCommand (32ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:47.432 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-07 22:44:47.433 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 33.8046ms
+2025-08-07 22:44:47.433 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.433 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 36.0213ms
+2025-08-07 22:44:47.435 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-07 22:44:47.435 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.436 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:47.436 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-07 22:44:47.437 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.437 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:44:47.439 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:47.439 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:44:47.439 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-07 22:44:47.439 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 3.603ms
+2025-08-07 22:44:47.439 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-07 22:44:47.439 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.440 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 4.6471ms
+2025-08-07 22:44:47.440 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 2.9684ms
+2025-08-07 22:44:47.440 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:44:47.440 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 3.8276ms
+2025-08-07 22:45:15.757 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=2&PageSize=4 - null null
+2025-08-07 22:45:15.759 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:15.759 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:15.759 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=2&PageSize=4 - 204 null null 2.8914ms
+2025-08-07 22:45:15.767 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=2&PageSize=4 - null null
+2025-08-07 22:45:15.768 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:15.768 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:15.770 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:15 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:15.772 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:15 PM'.
+2025-08-07 22:45:15.772 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:45:15.772 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-08-07 22:45:15.777 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-07 22:45:15.779 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-08-07 22:45:15.782 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-07 22:45:15.783 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-07 22:45:15.783 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-07 22:45:15.783 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 10.7159ms
+2025-08-07 22:45:15.783 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-07 22:45:15.784 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=2&PageSize=4 - 200 null application/json; charset=utf-8 16.2485ms
+2025-08-07 22:45:15.787 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - null null
+2025-08-07 22:45:15.787 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:15.787 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:15.787 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - 204 null null 0.5213ms
+2025-08-07 22:45:15.788 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - null null
+2025-08-07 22:45:15.789 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:15.789 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:15.789 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:15 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:15.789 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:15 PM'.
+2025-08-07 22:45:15.790 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:45:15.790 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:45:15.795 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:45:15.795 +05:30 [INF] Executing FileContentResult, sending file with download name '360_F_265268314_LmykO3vrtzmh3TQbBdnxj9vUczqqJXCU.jpg' ...
+2025-08-07 22:45:15.795 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 4.9149ms
+2025-08-07 22:45:15.795 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:45:15.796 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - 200 96467 image/jpeg 7.2925ms
+2025-08-07 22:45:15.800 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - null null
+2025-08-07 22:45:15.800 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:45:15.800 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-07 22:45:15.802 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-07 22:45:15.802 +05:30 [INF] Executing FileContentResult, sending file with download name '360_F_265268314_LmykO3vrtzmh3TQbBdnxj9vUczqqJXCU.jpg' ...
+2025-08-07 22:45:15.802 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 1.999ms
+2025-08-07 22:45:15.803 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-07 22:45:15.803 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/1bbe58b9-acbb-4b32-af7a-cb0d148506a7 - 200 96467 image/jpeg 3.2336ms
+2025-08-07 22:45:19.619 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:19.619 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.619 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.619 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - 204 null null 0.5529ms
+2025-08-07 22:45:19.621 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:19.622 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:19.622 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.622 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.622 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.622 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.622 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 0.8228ms
+2025-08-07 22:45:19.623 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.623 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.623 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:19.624 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.624 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.624 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.624 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 2.0106ms
+2025-08-07 22:45:19.624 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.625 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.627 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.627 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.627 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:19.628 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.628 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.627 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.628 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 4.896ms
+2025-08-07 22:45:19.628 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.629 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.629 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.630 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.630 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 2.3027ms
+2025-08-07 22:45:19.631 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:19.631 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.631 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.631 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.632 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:19.632 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.632 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.632 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.632 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.632 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.632 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.8607ms
+2025-08-07 22:45:19.633 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.634 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.634 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.634 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.634 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 2.4364ms
+2025-08-07 22:45:19.635 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:19.635 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:19.635 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:19.636 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:19.637 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:19 PM'.
+2025-08-07 22:45:19.637 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:19.638 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:19.638 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 2.7ms
+2025-08-07 22:45:21.751 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-07 22:45:21.751 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=nJAimfCNID1EzTuWTGPTrw&_=1754414057031 - 499 null null 70683.0822ms
+2025-08-07 22:45:21.826 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.826 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.826 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.827 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.827 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.828 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.828 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.828 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 2.0311ms
+2025-08-07 22:45:21.829 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-07 22:45:21.829 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.829 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.829 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.4686ms
+2025-08-07 22:45:21.831 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:21.831 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.832 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.832 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.834 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.834 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.834 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-07 22:45:21.834 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.834 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.835 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.836 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.836 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.835 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.835 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.836 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.836 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.836 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 5.681ms
+2025-08-07 22:45:21.836 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.836 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 5.1648ms
+2025-08-07 22:45:21.837 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.838 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-07 22:45:21.838 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.838 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 401 0 null 3.8167ms
+2025-08-07 22:45:21.839 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.840 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.841 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.841 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:21.841 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.841 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.841 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.841 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.842 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.842 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.842 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.842 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.842 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 3.2035ms
+2025-08-07 22:45:21.842 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.842 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.842 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 1.3734ms
+2025-08-07 22:45:21.843 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.843 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.843 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.844 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.844 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:21.844 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.845 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.845 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.845 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.845 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.845 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.845 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.9544ms
+2025-08-07 22:45:21.845 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.845 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.846 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.846 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 1.8568ms
+2025-08-07 22:45:21.846 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.846 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.846 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.846 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.847 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.847 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.847 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.847 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.2557ms
+2025-08-07 22:45:21.848 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:21.848 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:21.848 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:21.848 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:21.849 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:21 PM'.
+2025-08-07 22:45:21.849 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:21.849 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:21.849 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.5ms
+2025-08-07 22:45:34.029 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.030 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.030 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-07 22:45:34.030 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.031 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.031 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.031 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 1.6431ms
+2025-08-07 22:45:34.031 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6514ms
+2025-08-07 22:45:34.035 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:34.036 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.036 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.036 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.036 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.038 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.039 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 2.883ms
+2025-08-07 22:45:34.039 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - 204 null null 3.2945ms
+2025-08-07 22:45:34.040 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.040 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.040 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.041 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:34.041 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-07 22:45:34.041 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.041 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.041 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.041 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.042 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.042 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.042 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.043 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.043 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.043 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.044 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-07 22:45:34.044 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.044 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 401 0 null 2.8575ms
+2025-08-07 22:45:34.044 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.045 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.044 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.045 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.045 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 4.001ms
+2025-08-07 22:45:34.047 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 5.0748ms
+2025-08-07 22:45:34.049 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.050 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.050 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.050 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.050 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.051 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.051 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.051 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 1.508ms
+2025-08-07 22:45:34.063 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.063 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.063 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.063 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:34.064 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.064 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.065 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.065 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.065 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.065 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.066 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.066 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.066 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.066 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 3.0948ms
+2025-08-07 22:45:34.067 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.067 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 3.6267ms
+2025-08-07 22:45:34.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.068 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.068 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.068 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.068 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-07 22:45:34.068 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.068 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.068 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.068 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.068 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.069 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 0.9043ms
+2025-08-07 22:45:34.069 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.069 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.069 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.070 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.070 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.070 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.070 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.071 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 401 0 null 2.3506ms
+2025-08-07 22:45:34.071 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.072 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.072 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.072 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.072 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 2.8914ms
+2025-08-07 22:45:34.073 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-07 22:45:34.073 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-07 22:45:34.073 +05:30 [INF] CORS policy execution successful.
+2025-08-07 22:45:34.073 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-08-07 22:45:34.073 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '8/6/2025 4:59:24 PM', Current time (UTC): '8/7/2025 5:15:34 PM'.
+2025-08-07 22:45:34.073 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Moderator|Voter)
+2025-08-07 22:45:34.073 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-07 22:45:34.073 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 401 0 null 0.7332ms
+2025-08-05 22:45:45.535 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-05 22:45:45.536 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.536 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.537 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 1.9962ms
+2025-08-05 22:45:45.536 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-05 22:45:45.537 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.537 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.537 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 1.1353ms
+2025-08-05 22:45:45.538 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-05 22:45:45.537 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-05 22:45:45.538 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.538 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.538 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.538 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.538 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Message/inbox - 204 null null 0.5853ms
+2025-08-05 22:45:45.538 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-05 22:45:45.538 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/jamie@gmail.com - 204 null null 0.8027ms
+2025-08-05 22:45:45.539 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.539 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.539 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.539 +05:30 [INF] Route matched with {action = "GetInbox", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInbox() on controller TrueVote.Controllers.MessageController (TrueVote).
+2025-08-05 22:45:45.540 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - null null
+2025-08-05 22:45:45.540 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-05 22:45:45.541 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.541 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.541 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.542 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.542 +05:30 [INF] Executing endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.542 +05:30 [INF] Executed endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.542 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.VoterController.GetVoterByEmail (TrueVote)'
+2025-08-05 22:45:45.543 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 200 316 application/json 2.822ms
+2025-08-05 22:45:45.544 +05:30 [INF] Route matched with {action = "GetVoterByEmail", controller = "Voter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetVoterByEmail(System.String) on controller TrueVote.Controllers.VoterController (TrueVote).
+2025-08-05 22:45:45.546 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=ZchNzYyLYSbWgIu5_q4Vfg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIwMTk3YzZlOS03MmZlLTc0MzItODFmYy0yYjRmNDhlZTE4MWEiLCJuYW1laWQiOiJqYW1pZUBnbWFpbC5jb20iLCJyb2xlIjoiVm90ZXIiLCJuYmYiOjE3NTQ0MTMxNjQsImV4cCI6MTc1NDQ5OTU2NCwiaWF0IjoxNzU0NDEzMTY0fQ.kzJnmiG36a_S11nxrFC4x2tcqUkRcZ0kkpJiqVpZq34 - null null
+2025-08-05 22:45:45.546 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.546 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.546 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-05 22:45:45.546 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-05 22:45:45.546 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=ZchNzYyLYSbWgIu5_q4Vfg&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIwMTk3YzZlOS03MmZlLTc0MzItODFmYy0yYjRmNDhlZTE4MWEiLCJuYW1laWQiOiJqYW1pZUBnbWFpbC5jb20iLCJyb2xlIjoiVm90ZXIiLCJuYmYiOjE3NTQ0MTMxNjQsImV4cCI6MTc1NDQ5OTU2NCwiaWF0IjoxNzU0NDEzMTY0fQ.kzJnmiG36a_S11nxrFC4x2tcqUkRcZ0kkpJiqVpZq34 - 401 0 null 0.4907ms
+2025-08-05 22:45:45.549 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."Age", v."Email", v."IsDeleted", v."ModeratorId", v."Name"
+FROM "Voters" AS v
+2025-08-05 22:45:45.549 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."MessageId", u."UserId"
+FROM "UserMessages" AS u
+2025-08-05 22:45:45.550 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.Voter, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-05 22:45:45.550 +05:30 [INF] Executed action TrueVote.Controllers.VoterController.GetVoterByEmail (TrueVote) in 6.1961ms
+2025-08-05 22:45:45.550 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.VoterController.GetVoterByEmail (TrueVote)'
+2025-08-05 22:45:45.550 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/jamie@gmail.com - 200 null application/json; charset=utf-8 10.7251ms
+2025-08-05 22:45:45.551 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-05 22:45:45.551 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.552 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.552 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.6937ms
+2025-08-05 22:45:45.553 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."From", m."Msg", m."PollId", m."SentAt", m."To"
+FROM "Messages" AS m
+2025-08-05 22:45:45.553 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-05 22:45:45.553 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/stats/0197c6e9-72fe-7432-81fc-2b4f48ee181a - null null
+2025-08-05 22:45:45.553 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.553 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.553 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.553 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.553 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.Message, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-05 22:45:45.553 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Voter/stats/0197c6e9-72fe-7432-81fc-2b4f48ee181a - 204 null null 0.4552ms
+2025-08-05 22:45:45.554 +05:30 [INF] Executing endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.554 +05:30 [INF] Executed action TrueVote.Controllers.MessageController.GetInbox (TrueVote) in 14.3216ms
+2025-08-05 22:45:45.554 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.554 +05:30 [INF] Executed endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.554 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 200 null application/json; charset=utf-8 15.603ms
+2025-08-05 22:45:45.554 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 200 316 application/json 1.1076ms
+2025-08-05 22:45:45.554 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-05 22:45:45.555 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.555 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.555 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Voter/stats/0197c6e9-72fe-7432-81fc-2b4f48ee181a - null null
+2025-08-05 22:45:45.555 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.555 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.555 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.555 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.VoterController.GetVoterStats (TrueVote)'
+2025-08-05 22:45:45.555 +05:30 [INF] Route matched with {action = "GetInbox", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInbox() on controller TrueVote.Controllers.MessageController (TrueVote).
+2025-08-05 22:45:45.555 +05:30 [INF] Route matched with {action = "GetVoterStats", controller = "Voter"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[TrueVote.Models.DTOs.VoterStatsDto]] GetVoterStats(System.Guid) on controller TrueVote.Controllers.VoterController (TrueVote).
+2025-08-05 22:45:45.557 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=lHT2KBcJZZ8OBDUlOg0NSQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIwMTk3YzZlOS03MmZlLTc0MzItODFmYy0yYjRmNDhlZTE4MWEiLCJuYW1laWQiOiJqYW1pZUBnbWFpbC5jb20iLCJyb2xlIjoiVm90ZXIiLCJuYmYiOjE3NTQ0MTMxNjQsImV4cCI6MTc1NDQ5OTU2NCwiaWF0IjoxNzU0NDEzMTY0fQ.kzJnmiG36a_S11nxrFC4x2tcqUkRcZ0kkpJiqVpZq34 - null null
+2025-08-05 22:45:45.557 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.557 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.557 +05:30 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-08-05 22:45:45.557 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2025-08-05 22:45:45.557 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=lHT2KBcJZZ8OBDUlOg0NSQ&access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VySWQiOiIwMTk3YzZlOS03MmZlLTc0MzItODFmYy0yYjRmNDhlZTE4MWEiLCJuYW1laWQiOiJqYW1pZUBnbWFpbC5jb20iLCJyb2xlIjoiVm90ZXIiLCJuYmYiOjE3NTQ0MTMxNjQsImV4cCI6MTc1NDQ5OTU2NCwiaWF0IjoxNzU0NDEzMTY0fQ.kzJnmiG36a_S11nxrFC4x2tcqUkRcZ0kkpJiqVpZq34 - 401 0 null 0.6545ms
+2025-08-05 22:45:45.558 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-05 22:45:45.558 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."MessageId", u."UserId"
+FROM "UserMessages" AS u
+2025-08-05 22:45:45.559 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-05 22:45:45.559 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null null
+2025-08-05 22:45:45.559 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.VoterStatsDto'.
+2025-08-05 22:45:45.559 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.559 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.559 +05:30 [INF] Executed action TrueVote.Controllers.VoterController.GetVoterStats (TrueVote) in 3.4598ms
+2025-08-05 22:45:45.559 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 204 null null 0.1712ms
+2025-08-05 22:45:45.559 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.VoterController.GetVoterStats (TrueVote)'
+2025-08-05 22:45:45.559 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."From", m."Msg", m."PollId", m."SentAt", m."To"
+FROM "Messages" AS m
+2025-08-05 22:45:45.559 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Voter/stats/0197c6e9-72fe-7432-81fc-2b4f48ee181a - 200 null application/json; charset=utf-8 4.0452ms
+2025-08-05 22:45:45.560 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.Message, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-05 22:45:45.560 +05:30 [INF] Executed action TrueVote.Controllers.MessageController.GetInbox (TrueVote) in 4.0767ms
+2025-08-05 22:45:45.560 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.560 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 200 null application/json; charset=utf-8 5.4695ms
+2025-08-05 22:45:45.560 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - null 0
+2025-08-05 22:45:45.560 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.560 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.560 +05:30 [INF] Executing endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.560 +05:30 [INF] Executed endpoint '/api/v1/messageHub/negotiate'
+2025-08-05 22:45:45.560 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub/negotiate?negotiateVersion=1 - 200 316 application/json 0.5373ms
+2025-08-05 22:45:45.564 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=true&Page=1&PageSize=4 - null null
+2025-08-05 22:45:45.564 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-05 22:45:45.565 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.565 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.564 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/query?SortDesc=false&Page=1&PageSize=9&IsDeleted=false - null null
+2025-08-05 22:45:45.565 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.565 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.565 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.565 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.565 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=1&PageSize=4 - 204 null null 0.5835ms
+2025-08-05 22:45:45.565 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=true&Page=1&PageSize=4 - 204 null null 0.5607ms
+2025-08-05 22:45:45.565 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/Moderator/query?SortDesc=false&Page=1&PageSize=9&IsDeleted=false - 204 null null 0.5621ms
+2025-08-05 22:45:45.567 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=true&Page=1&PageSize=4 - null null
+2025-08-05 22:45:45.567 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=1&PageSize=4 - null null
+2025-08-05 22:45:45.568 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.568 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145565 - null null
+2025-08-05 22:45:45.568 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/query?SortDesc=false&Page=1&PageSize=9&IsDeleted=false - null null
+2025-08-05 22:45:45.568 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.568 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - null null
+2025-08-05 22:45:45.568 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.568 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.568 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.568 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.568 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145565 - 204 null null 0.4783ms
+2025-08-05 22:45:45.568 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.568 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.568 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-05 22:45:45.568 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.568 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.568 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-05 22:45:45.569 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote)'
+2025-08-05 22:45:45.569 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.569 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-08-05 22:45:45.569 +05:30 [INF] Route matched with {action = "QueryPolls", controller = "Poll"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryPollsAsync(TrueVote.Models.DTOs.PollQueryDto) on controller TrueVote.Controllers.PollController (TrueVote).
+2025-08-05 22:45:45.569 +05:30 [INF] Route matched with {action = "QueryModerators", controller = "Moderator"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] QueryModeratorsAsync(TrueVote.Models.DTOs.ModeratorQueryDto) on controller TrueVote.Controllers.ModeratorController (TrueVote).
+2025-08-05 22:45:45.569 +05:30 [INF] Route matched with {action = "GetInbox", controller = "Message"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetInbox() on controller TrueVote.Controllers.MessageController (TrueVote).
+2025-08-05 22:45:45.569 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145565 - null null
+2025-08-05 22:45:45.570 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.570 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.570 +05:30 [INF] Executing endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.571 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.571 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145565 - 200 0 application/octet-stream 2.0985ms
+2025-08-05 22:45:45.571 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."MessageId", u."UserId"
+FROM "UserMessages" AS u
+2025-08-05 22:45:45.572 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-05 22:45:45.572 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Polls" AS p
+2025-08-05 22:45:45.572 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-08-05 22:45:45.573 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."From", m."Msg", m."PollId", m."SentAt", m."To"
+FROM "Messages" AS m
+2025-08-05 22:45:45.573 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[System.Collections.Generic.List`1[[TrueVote.Models.Message, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-08-05 22:45:45.573 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-05 22:45:45.573 +05:30 [INF] Executed action TrueVote.Controllers.MessageController.GetInbox (TrueVote) in 3.5287ms
+2025-08-05 22:45:45.573 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.MessageController.GetInbox (TrueVote)'
+2025-08-05 22:45:45.573 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Message/inbox - 200 null application/json; charset=utf-8 5.3738ms
+2025-08-05 22:45:45.574 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."IsDeleted", p."OptionText", p."PollId", p."VoteCount"
+FROM "PollOptions" AS p
+2025-08-05 22:45:45.575 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-05 22:45:45.575 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-05 22:45:45.576 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 6.3219ms
+2025-08-05 22:45:45.576 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-05 22:45:45.576 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=false&Page=1&PageSize=4 - 200 null application/json; charset=utf-8 8.2704ms
+2025-08-05 22:45:45.576 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-05 22:45:45.580 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT v."Id", v."HasVoted", v."PollId", v."VotedAt", v."VoterId"
+FROM "VoterChecks" AS v
+2025-08-05 22:45:45.582 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.DTOs.PollResponseDto, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-05 22:45:45.583 +05:30 [INF] Executed action TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote) in 13.8189ms
+2025-08-05 22:45:45.583 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.PollController.QueryPollsAsync (TrueVote)'
+2025-08-05 22:45:45.583 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Poll/query?SortDesc=false&VoterId=0197c6e9-72fe-7432-81fc-2b4f48ee181a&ForVoting=true&Page=1&PageSize=4 - 200 null application/json; charset=utf-8 16.102ms
+2025-08-05 22:45:45.584 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145583 - null null
+2025-08-05 22:45:45.584 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.584 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.584 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145583 - 204 null null 0.2961ms
+2025-08-05 22:45:45.584 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw - null null
+2025-08-05 22:45:45.585 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.585 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.585 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw - 204 null null 0.2545ms
+2025-08-05 22:45:45.585 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145583 - null null
+2025-08-05 22:45:45.585 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.585 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.586 +05:30 [INF] Executing endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.586 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.586 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.586 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.586 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 204 null null 0.2363ms
+2025-08-05 22:45:45.587 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw - text/plain;charset=UTF-8 32
+2025-08-05 22:45:45.587 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.587 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-05 22:45:45.587 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.587 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.587 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.587 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 204 null null 0.6502ms
+2025-08-05 22:45:45.588 +05:30 [INF] Executing endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.588 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019878ed-86ba-750d-bda7-7ee3f0ee60bc - null null
+2025-08-05 22:45:45.588 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.588 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.588 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.588 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019878ed-86ba-750d-bda7-7ee3f0ee60bc - 204 null null 0.1705ms
+2025-08-05 22:45:45.588 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.588 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw - 200 0 text/plain 1.7009ms
+2025-08-05 22:45:45.589 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.589 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.589 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.589 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.589 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145583 - 200 3 application/octet-stream 4.5148ms
+2025-08-05 22:45:45.590 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.591 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/019878ed-86ba-750d-bda7-7ee3f0ee60bc - null null
+2025-08-05 22:45:45.591 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-05 22:45:45.591 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.591 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.593 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.592 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.593 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.593 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.593 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.593 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.597 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.597 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.597 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - null null
+2025-08-05 22:45:45.597 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.598 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.598 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - 204 null null 1.008ms
+2025-08-05 22:45:45.599 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-05 22:45:45.600 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-05 22:45:45.601 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.601 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.601 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 7.5492ms
+2025-08-05 22:45:45.601 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 204 null null 1.7759ms
+2025-08-05 22:45:45.601 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145598 - null null
+2025-08-05 22:45:45.601 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.603 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.603 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.603 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 11.8372ms
+2025-08-05 22:45:45.603 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.603 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145598 - 204 null null 1.8865ms
+2025-08-05 22:45:45.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - null null
+2025-08-05 22:45:45.604 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-05 22:45:45.605 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.605 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.605 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.605 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.605 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.605 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.606 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145598 - null null
+2025-08-05 22:45:45.606 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.606 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.606 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.606 +05:30 [INF] Executing endpoint '/api/v1/messageHub'
+2025-08-05 22:45:45.606 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.608 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.608 +05:30 [INF] Executing FileContentResult, sending file with download name 'Untitled.sql' ...
+2025-08-05 22:45:45.608 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 2.591ms
+2025-08-05 22:45:45.608 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.608 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/019879e4-b0ca-73a8-a89e-f536b87e87cd - 200 75 application/octet-stream 4.167ms
+2025-08-05 22:45:45.615 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.618 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.618 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.DTOs.ApiResponse`1[[TrueVote.Models.DTOs.PagedResponseDto`1[[TrueVote.Models.Moderator, TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], TrueVote, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-08-05 22:45:45.619 +05:30 [INF] Executed action TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote) in 49.5143ms
+2025-08-05 22:45:45.619 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.ModeratorController.QueryModeratorsAsync (TrueVote)'
+2025-08-05 22:45:45.619 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/Moderator/query?SortDesc=false&Page=1&PageSize=9&IsDeleted=false - 200 null application/json; charset=utf-8 51.4352ms
+2025-08-05 22:45:45.622 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.623 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-05 22:45:45.623 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.623 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 16.7025ms
+2025-08-05 22:45:45.623 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.623 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.624 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 19.4323ms
+2025-08-05 22:45:45.624 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 34.0182ms
+2025-08-05 22:45:45.624 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.624 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 35.5709ms
+2025-08-05 22:45:45.625 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.625 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.625 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.625 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.626 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.627 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.627 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.629 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.629 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.629 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 3.6437ms
+2025-08-05 22:45:45.629 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.629 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 4.1869ms
+2025-08-05 22:45:45.630 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.630 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.630 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.630 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.630 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.631 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.632 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.633 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.635 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.635 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 4.8535ms
+2025-08-05 22:45:45.635 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.635 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 5.82ms
+2025-08-05 22:45:45.636 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.637 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.637 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.637 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.637 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.639 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.641 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.645 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.645 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.645 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 8.095ms
+2025-08-05 22:45:45.645 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.645 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 9.2878ms
+2025-08-05 22:45:45.651 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.652 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.652 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.652 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.652 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.655 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.656 +05:30 [INF] Executed DbCommand (62ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.656 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.657 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.658 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.658 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 5.5006ms
+2025-08-05 22:45:45.658 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.658 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 6.9077ms
+2025-08-05 22:45:45.659 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.659 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.659 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.659 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.659 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.659 +05:30 [INF] Executing FileContentResult, sending file with download name 'anydesk.dmg' ...
+2025-08-05 22:45:45.660 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.661 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.663 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.663 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.664 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 4.4793ms
+2025-08-05 22:45:45.664 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.664 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 4.9917ms
+2025-08-05 22:45:45.664 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.664 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.665 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.665 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.665 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.667 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.669 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.671 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.672 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.672 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 7.0753ms
+2025-08-05 22:45:45.672 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.672 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 7.6027ms
+2025-08-05 22:45:45.673 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.673 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.673 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.673 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.673 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.674 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.678 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.679 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 85.9296ms
+2025-08-05 22:45:45.679 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.680 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/019878ed-86ba-750d-bda7-7ee3f0ee60bc - 200 15714030 application/x-apple-diskimage 88.8756ms
+2025-08-05 22:45:45.681 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.681 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.682 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 8.4172ms
+2025-08-05 22:45:45.682 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.682 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 8.8962ms
+2025-08-05 22:45:45.682 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.682 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.682 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.683 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.683 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.685 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.685 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.686 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.686 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.686 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 3.1754ms
+2025-08-05 22:45:45.686 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.686 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 4.1221ms
+2025-08-05 22:45:45.686 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.687 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.687 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.687 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.687 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.687 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.688 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.688 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.688 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.689 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.6161ms
+2025-08-05 22:45:45.689 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.689 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.2324ms
+2025-08-05 22:45:45.689 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.689 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.689 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.689 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.690 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.690 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.691 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.691 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.691 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.691 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.5637ms
+2025-08-05 22:45:45.691 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.691 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.4665ms
+2025-08-05 22:45:45.691 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.692 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.692 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.692 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.692 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.692 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.693 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.693 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.693 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.693 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.5984ms
+2025-08-05 22:45:45.693 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.694 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.0539ms
+2025-08-05 22:45:45.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.694 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.694 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.694 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - null null
+2025-08-05 22:45:45.695 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.695 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.695 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.695 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.695 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.695 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.696 +05:30 [INF] Executing FileContentResult, sending file with download name 'images.jpeg' ...
+2025-08-05 22:45:45.696 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 0.8333ms
+2025-08-05 22:45:45.696 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.696 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987909-e5b9-7cca-a28b-c7f996c7ff72 - 200 10719 image/jpeg 1.2729ms
+2025-08-05 22:45:45.696 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.696 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.696 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - null null
+2025-08-05 22:45:45.696 +05:30 [INF] Executing endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.696 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.696 +05:30 [INF] Route matched with {action = "GetPollFile", controller = "File"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetPollFile(System.Guid) on controller TrueVote.Controllers.FileController (TrueVote).
+2025-08-05 22:45:45.697 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.8622ms
+2025-08-05 22:45:45.697 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.697 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.8883ms
+2025-08-05 22:45:45.697 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.697 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.697 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.697 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.697 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.697 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.698 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT p."Id", p."BlobUrl", p."Content", p."FileType", p."Filename", p."IsDeleted", p."UploadedAt", p."UploadedByUsername"
+FROM "PollFiles" AS p
+WHERE p."Id" = @__key_0
+LIMIT 2
+2025-08-05 22:45:45.698 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.701 +05:30 [INF] Executing FileContentResult, sending file with download name 'office.jpeg' ...
+2025-08-05 22:45:45.701 +05:30 [INF] Executed action TrueVote.Controllers.FileController.GetPollFile (TrueVote) in 4.9232ms
+2025-08-05 22:45:45.702 +05:30 [INF] Executed endpoint 'TrueVote.Controllers.FileController.GetPollFile (TrueVote)'
+2025-08-05 22:45:45.703 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/File/01987907-4d09-7489-9291-9a3ea9e0f32b - 200 102273 image/jpeg 6.0312ms
+2025-08-05 22:45:45.703 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.703 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.703 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 5.9028ms
+2025-08-05 22:45:45.703 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.703 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 6.4203ms
+2025-08-05 22:45:45.703 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.704 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.704 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.704 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.704 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.705 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.705 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.706 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.706 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.706 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.7707ms
+2025-08-05 22:45:45.706 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.706 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.5069ms
+2025-08-05 22:45:45.706 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - null null
+2025-08-05 22:45:45.706 +05:30 [INF] No CORS policy found for the specified request.
+2025-08-05 22:45:45.707 +05:30 [INF] CORS policy execution successful.
+2025-08-05 22:45:45.707 +05:30 [INF] Executing endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.707 +05:30 [INF] Route matched with {action = "GetUserDetails", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserDetails(System.String) on controller UserController (TrueVote).
+2025-08-05 22:45:45.708 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Username", u."HashKey", u."PasswordHash", u."Role", u."UserId"
+FROM "Users" AS u
+2025-08-05 22:45:45.708 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Moderators" AS m)
+2025-08-05 22:45:45.709 +05:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT m."Id", m."Email", m."IsDeleted", m."Name", p."Id", p."CreatedByEmail", p."Description", p."EndDate", p."IsDeleted", p."PoleFileId", p."StartDate", p."Title"
+FROM "Moderators" AS m
+LEFT JOIN "Polls" AS p ON m."Email" = p."CreatedByEmail"
+ORDER BY m."Id"
+2025-08-05 22:45:45.709 +05:30 [INF] Executing OkObjectResult, writing value of type 'TrueVote.Models.Moderator'.
+2025-08-05 22:45:45.709 +05:30 [INF] Executed action UserController.GetUserDetails (TrueVote) in 1.8744ms
+2025-08-05 22:45:45.709 +05:30 [INF] Executed endpoint 'UserController.GetUserDetails (TrueVote)'
+2025-08-05 22:45:45.716 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/User/01979ab9-49fc-7aa8-b752-5742074736fc - 200 null application/json; charset=utf-8 2.712ms
+2025-08-05 22:45:50.517 +05:30 [INF] Executed endpoint '/api/v1/messageHub'
+2025-08-05 22:45:50.517 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/api/v1/messageHub?id=C7zxx8PpJF0vQjf2namCtw&_=1754414145598 - 499 null null 4910.7578ms

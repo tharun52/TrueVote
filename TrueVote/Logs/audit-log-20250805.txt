@@ -44,3 +44,4 @@
 2025-08-05 12:52:23.250 +05:30 [INF] User: 01979ab9-49fc-7aa8-b752-5742074736fc, Action: Moderator updated voter: bruce wayne : 019874ba-08d4-7d01-ac3b-8e398cb70262
 2025-08-05 15:38:32.928 +05:30 [INF] User: thetharun52@gmail.com, Action: Soft Deleted moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef
 2025-08-05 15:38:38.259 +05:30 [INF] User: thetharun52@gmail.com, Action: Updated moderator: mano : 01975cff-9819-754d-8efd-cc0505af90ef
+2025-08-05 16:31:27.459 +05:30 [INF] User: micheal@gmail.com, Action: Added a new poll with ID: 019879e4-b0f1-7696-a260-11a39ff5ebd0
