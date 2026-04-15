@@ -77,12 +77,18 @@ namespace TrueVote.Tests
         {
             var modRepo = new ModeratorRepository(db);
             var userRepo = new UserRepository(db);
+            var pollRepo = new Mock<IRepository<Guid, Poll>>();
+            var voterEmailRepo = new Mock<IRepository<string, VoterEmail>>();
+            var voterCheckRepo = new Mock<IRepository<Guid, VoterCheck>>();
             var auditLogger = new Mock<IAuditLogger>();
             var auditService = new Mock<IAuditService>();
             var encryptionService = encryptionServiceMock ?? new Mock<IEncryptionService>();
             return new ModeratorService(
                 modRepo,
                 userRepo,
+                pollRepo.Object,
+                voterEmailRepo.Object,
+                voterCheckRepo.Object,
                 encryptionService.Object,
                 accessor,
                 auditLogger.Object,

@@ -4,8 +4,11 @@ using TrueVote.Models.DTOs;
 
 namespace TrueVote.Interfaces
 {
-    public interface IVoterService
-    {
+public interface IVoterService
+{
+    Task<IEnumerable<Voter>> GetAllVotersAsync();
+    Task<Voter> AddVoterAsync(TrueVote.Models.DTOs.AddVoterRequestDto dto);
+    Task<Voter> DeleteVoterAsync(Guid id);
         public Task<bool> CheckEmail(string email, bool isVoter);
         public Task<VoterStatsDto> GetVoterStats(Guid voterId);
         public Task<IEnumerable<Voter>> GetAllVoters();

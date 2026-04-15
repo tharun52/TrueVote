@@ -6,7 +6,7 @@ using TrueVote.Models;
 using TrueVote.Service;
 using TrueVote.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Versioning;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -21,9 +21,6 @@ using Azure.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddOpenApi();
-
-builder.Services.AddOpenApi();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(opt =>
 {
@@ -43,13 +40,14 @@ builder.Services.AddSwaggerGen(opt =>
         {
             new OpenApiSecurityScheme
             {
+                UnresolvedReference = true,
                 Reference = new OpenApiReference
                 {
-                    Type=ReferenceType.SecurityScheme,
-                    Id="Bearer"
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
                 }
             },
-            new string[]{}
+            Array.Empty<string>()
         }
     });
 });
@@ -73,11 +71,9 @@ builder.Services.AddApiVersioning(options =>
     options.ReportApiVersions = true;
 
     options.ApiVersionReader = new UrlSegmentApiVersionReader();
-});
-
-builder.Services.AddVersionedApiExplorer(options =>
+}).AddApiExplorer(options =>
 {
-    options.GroupNameFormat = "'v'VVV"; 
+    options.GroupNameFormat = "'v'VVV";
     options.SubstituteApiVersionInUrl = true;
 });
 
@@ -197,12 +193,12 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularClient", policy =>
     {
         policy.WithOrigins(
-            "http://localhost:4200", 
+            "http://localhost:4200",
             "https://true-vote-fe.azurestaticapps.net"
         )
         .AllowAnyHeader()
         .AllowAnyMethod()
-        .AllowCredentials(); 
+        .AllowCredentials();
     });
 });
 
@@ -210,10 +206,10 @@ builder.Services.AddCors(options =>
 // {
 //     options.AddPolicy("AllowAngularClient", policy =>
 //     {
-//         policy.WithOrigins("https://tharunstorageaccount.z13.web.core.windows.net'")  
+//         policy.WithOrigins("https://tharunstorageaccount.z13.web.core.windows.net'")
 //               .AllowAnyHeader()
 //               .AllowAnyMethod()
-//               .AllowCredentials(); 
+//               .AllowCredentials();
 //     });
 // });
 

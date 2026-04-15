@@ -17,24 +17,36 @@ namespace TrueVote.Tests
     {
         private readonly Mock<IRepository<Guid, Voter>> _mockVoterRepo;
         private readonly Mock<IRepository<string, User>> _mockUserRepo;
+        private readonly Mock<IRepository<string, VoterEmail>> _mockVoterEmailRepo;
+        private readonly Mock<IRepository<Guid, VoterCheck>> _mockVoterCheckRepo;
+        private readonly Mock<IRepository<Guid, Poll>> _mockPollRepo;
         private readonly Mock<IEncryptionService> _mockEncryptionService;
         private readonly Mock<IHttpContextAccessor> _mockHttpContextAccessor;
+        private readonly Mock<IAuditService> _mockAuditService;
         private readonly Mock<IAuditLogger> _mockAuditLogger;
-        private readonly VoterService _voterService;
+        private readonly IVoterService _voterService;
 
         public VoterServiceTests()
         {
             _mockVoterRepo = new Mock<IRepository<Guid, Voter>>();
             _mockUserRepo = new Mock<IRepository<string, User>>();
+            _mockVoterEmailRepo = new Mock<IRepository<string, VoterEmail>>();
+            _mockVoterCheckRepo = new Mock<IRepository<Guid, VoterCheck>>();
+            _mockPollRepo = new Mock<IRepository<Guid, Poll>>();
             _mockEncryptionService = new Mock<IEncryptionService>();
             _mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
+            _mockAuditService = new Mock<IAuditService>();
             _mockAuditLogger = new Mock<IAuditLogger>();
 
             _voterService = new VoterService(
                 _mockVoterRepo.Object,
                 _mockUserRepo.Object,
+                _mockVoterEmailRepo.Object,
+                _mockVoterCheckRepo.Object,
+                _mockPollRepo.Object,
                 _mockEncryptionService.Object,
                 _mockHttpContextAccessor.Object,
+                _mockAuditService.Object,
                 _mockAuditLogger.Object
             );
         }

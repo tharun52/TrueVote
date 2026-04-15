@@ -42,8 +42,26 @@ namespace TrueVote.Service
         //     await _pollOptionRepository.Update(pollOption.Id, pollOption);
         //     return await _pollVoteRepository.Delete(vote.Id);
         // }
-     
-        public async Task<PollVote> AddVoteAsync(Guid pollOptionId)
+
+    public async Task<PollVote> DeleteVoteAsync(Guid voteId)
+    {
+        var vote = await _pollVoteRepository.Get(voteId);
+        if (vote == null)
+            throw new Exception("Vote not found.");
+
+        var pollOption = await _pollOptionRepository.Get(vote.PollOptionId);
+        if (pollOption == null)
+            throw new Exception("Poll option not found.");
+
+        pollOption.VoteCount = Math.Max(0, pollOption.VoteCount - 1);
+        await _pollOptionRepository.Update(pollOption.Id, pollOption);
+
+        await _pollVoteRepository.Delete(voteId);
+
+        return vote;
+    }
+
+    public async Task<PollVote> AddVoteAsync(Guid pollOptionId)
         {
             var loggedInUser = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             if (loggedInUser == null)

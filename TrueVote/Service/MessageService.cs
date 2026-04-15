@@ -1,7 +1,7 @@
 using System.Security.Claims;
 using TrueVote.Interfaces;
 using TrueVote.Mappers;
-using TrueVote.Migrations;
+
 using TrueVote.Models;
 using TrueVote.Models.DTOs;
 
@@ -191,7 +191,7 @@ namespace TrueVote.Service
 
             return messages;
         }
-        
+
         public async Task<List<Message>> GetMessagesForModerator()
         {
             var email = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;

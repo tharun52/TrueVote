@@ -13,12 +13,14 @@ namespace TrueVote.Tests.Controllers
     public class AdminControllerTests
     {
         private readonly Mock<IAdminService> _mockAdminService;
+        private readonly Mock<IAuditService> _mockAuditService;
         private readonly AdminController _controller;
 
         public AdminControllerTests()
         {
             _mockAdminService = new Mock<IAdminService>();
-            _controller = new AdminController(_mockAdminService.Object);
+            _mockAuditService = new Mock<IAuditService>();
+            _controller = new AdminController(_mockAdminService.Object, _mockAuditService.Object);
         }
 
         [Fact]

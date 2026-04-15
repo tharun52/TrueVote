@@ -95,13 +95,13 @@ public class ModeratorControllerTests
     [Fact]
     public async Task UpdateModeratorAsync_ValidRequest_ReturnsOk()
     {
-        var username = "mod@example.com";
-        var updateDto = new UpdateModeratorDto();
-        var updated = new Moderator { Email = username };
+        var id = Guid.NewGuid();
+        var updateDto = new UpdateModeratorasAdminDto();
+        var updated = new Moderator { Email = "mod@example.com" };
 
-        _mockService.Setup(s => s.UpdateModerator(username, updateDto)).ReturnsAsync(updated);
+        _mockService.Setup(s => s.UpdateModerator(It.IsAny<UpdateModeratorDto>())).ReturnsAsync(updated);
 
-        var result = await _controller.UpdateModeratorAsync(username, updateDto);
+        var result = await _controller.UpdateModeratorAsync(id, updateDto);
         var okResult = Assert.IsType<OkObjectResult>(result);
         Assert.Equal(200, okResult.StatusCode);
     }
@@ -109,7 +109,7 @@ public class ModeratorControllerTests
     [Fact]
     public async Task UpdateModeratorAsync_NullDto_ReturnsBadRequest()
     {
-        var result = await _controller.UpdateModeratorAsync("mod", null);
+        var result = await _controller.UpdateModeratorAsync(Guid.NewGuid(), null);
         var badRequest = Assert.IsType<BadRequestObjectResult>(result);
         Assert.Equal(400, badRequest.StatusCode);
     }
@@ -117,11 +117,11 @@ public class ModeratorControllerTests
     [Fact]
     public async Task UpdateModeratorAsync_Unauthorized_ReturnsUnauthorized()
     {
-        var dto = new UpdateModeratorDto();
-        _mockService.Setup(s => s.UpdateModerator("mod", dto))
+        var dto = new UpdateModeratorasAdminDto();
+        _mockService.Setup(s => s.UpdateModerator(It.IsAny<UpdateModeratorDto>()))
             .ThrowsAsync(new UnauthorizedAccessException("Invalid password"));
 
-        var result = await _controller.UpdateModeratorAsync("mod", dto);
+        var result = await _controller.UpdateModeratorAsync(Guid.NewGuid(), dto);
         var unauthorized = Assert.IsType<UnauthorizedObjectResult>(result);
         Assert.Equal(401, unauthorized.StatusCode);
     }
@@ -129,11 +129,11 @@ public class ModeratorControllerTests
     [Fact]
     public async Task UpdateModeratorAsync_OtherException_ReturnsBadRequest()
     {
-        var dto = new UpdateModeratorDto();
-        _mockService.Setup(s => s.UpdateModerator("mod", dto))
+        var dto = new UpdateModeratorasAdminDto();
+        _mockService.Setup(s => s.UpdateModerator(It.IsAny<UpdateModeratorDto>()))
             .ThrowsAsync(new Exception("Database error"));
 
-        var result = await _controller.UpdateModeratorAsync("mod", dto);
+        var result = await _controller.UpdateModeratorAsync(Guid.NewGuid(), dto);
         var badRequest = Assert.IsType<BadRequestObjectResult>(result);
         Assert.Equal(400, badRequest.StatusCode);
     }

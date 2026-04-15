@@ -1,15 +1,15 @@
-using AspNetCoreRateLimit;
+﻿using AspNetCoreRateLimit;
 
 namespace TrueVote.Misc
 {
     public class CustomClientResolveContributor : IClientResolveContributor
     {
-        public Task<string> ResolveClientAsync(HttpContext httpContext)
+        public Task<string?> ResolveClientAsync(HttpContext httpContext)
         {
             var userId = httpContext.User?.Claims
                 .FirstOrDefault(c => c.Type == "UserId")?.Value;
 
-            return Task.FromResult(userId ?? "anonymous");
+            return Task.FromResult<string?>(userId ?? "anonymous");
         }
     }
 }

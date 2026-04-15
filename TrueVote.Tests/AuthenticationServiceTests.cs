@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using TrueVote.Contexts;
 using TrueVote.Interfaces;
@@ -53,11 +54,19 @@ namespace TrueVote.Tests
         {
             var userRepo = new UserRepository(db);
             var refreshRepo = new RefreshTokenRepository(db);
+            var moderatorRepoMock = new Mock<IRepository<Guid, Moderator>>();
+            var voterRepoMock = new Mock<IRepository<Guid, Voter>>();
+            var magicLoginTokenRepoMock = new Mock<IRepository<Guid, MagicLoginToken>>();
+            var configurationMock = new Mock<IConfiguration>();
             return new AuthenticationService(
                 tokenServiceMock.Object,
                 encryptionServiceMock.Object,
                 userRepo,
-                refreshRepo
+                moderatorRepoMock.Object,
+                voterRepoMock.Object,
+                refreshRepo,
+                magicLoginTokenRepoMock.Object,
+                configurationMock.Object
             );
         }
 

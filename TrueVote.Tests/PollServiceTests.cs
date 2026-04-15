@@ -5,6 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using TrueVote.Contexts;
 using TrueVote.Interfaces;
@@ -44,15 +45,26 @@ namespace TrueVote.Tests
         {
             var pollRepo = new PollRepository(db);
             var optionRepo = new PollOptionRepository(db);
+            var fileRepo = new Mock<IRepository<Guid, PollFile>>();
+            var voterCheckRepo = new Mock<IRepository<Guid, VoterCheck>>();
+            var messageRepo = new Mock<IRepository<Guid, Message>>();
+            var messageService = new Mock<IMessageService>();
+            var keyVaultService = new Mock<IKeyVaultService>();
+            var configuration = new Mock<IConfiguration>();
             var auditLogger = new Mock<IAuditLogger>();
             var auditSvc    = auditService ?? new Mock<IAuditService>();
             return new PollService(
                 pollRepo,
                 optionRepo,
+                fileRepo.Object,
+                voterCheckRepo.Object,
+                messageRepo.Object,
+                messageService.Object,
+                keyVaultService.Object,
                 accessor,
                 auditLogger.Object,
-                db,
-                auditSvc.Object
+                auditSvc.Object,
+                configuration.Object
             );
         }
 
@@ -142,7 +154,7 @@ namespace TrueVote.Tests
             var dto = new AddPollRequestDto {
                 Title       = "Past EndDate?",
                 OptionTexts = new List<string> { "A", "B" },
-                EndDate     = DateOnly.FromDateTime(DateTime.Today) 
+                EndDate     = DateOnly.FromDateTime(DateTime.Today)
             };
 
             await Assert.ThrowsAsync<ArgumentException>(() => service.AddPoll(dto));

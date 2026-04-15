@@ -48,7 +48,7 @@ namespace TrueVote.Service
                 return true;
 
             if (isVoter)
-            {              
+            {
                 var whitelist = await _voterEmailRepository.Get(email);
                 if (whitelist != null)
                     return true;
@@ -71,6 +71,12 @@ namespace TrueVote.Service
             };
         }
 
+        public async Task<IEnumerable<Voter>> GetAllVotersAsync()
+        {
+            var voters = await _voterRepository.GetAll();
+            return voters.Where(v => v.IsDeleted == false);
+        }
+
         public async Task<IEnumerable<Voter>> GetAllVoters()
         {
             var voters = await _voterRepository.GetAll();
@@ -89,7 +95,7 @@ namespace TrueVote.Service
             if (whitelistedEmails == null)
             {
                 throw new Exception("No emails found");
-            } 
+            }
             whitelistedEmails = whitelistedEmails
                 .Where(we => we.ModeratorId == moderatorId)
                 .OrderByDescending(we => we.IsUsed);
@@ -240,7 +246,7 @@ namespace TrueVote.Service
 
             // Soft delete
             voter.IsDeleted = true;
-            
+
             _auditLogger.LogAction(userIdStr, $"Soft Deleted Voter : {voter.Id}", true);
 
             return await _voterRepository.Update(voter.Id, voter);
@@ -309,6 +315,16 @@ namespace TrueVote.Service
         }
 
 
+
+        public async Task<Voter> DeleteVoterAsync(Guid voterId)
+        {
+            return await DeleteVoter(voterId);
+        }
+
+        public async Task<Voter> AddVoterAsync(AddVoterRequestDto voterDto)
+        {
+            return await AddVoter(voterDto);
+        }
 
         public async Task<Voter> AddVoter(AddVoterRequestDto voterDto)
         {

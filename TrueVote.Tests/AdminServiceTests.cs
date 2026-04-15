@@ -13,6 +13,10 @@ public class AdminServiceTests
 {
     private readonly Mock<IRepository<Guid, Admin>> _adminRepoMock = new();
     private readonly Mock<IRepository<string, User>> _userRepoMock = new();
+    private readonly Mock<IRepository<Guid, VoterCheck>> _voterCheckRepoMock = new();
+    private readonly Mock<IRepository<Guid, Voter>> _voterRepoMock = new();
+    private readonly Mock<IRepository<Guid, Poll>> _pollRepoMock = new();
+    private readonly Mock<IRepository<Guid, Moderator>> _moderatorRepoMock = new();
     private readonly Mock<IEncryptionService> _encryptionServiceMock = new();
     private readonly Mock<IConfiguration> _configMock = new();
     private readonly Mock<IAuditLogger> _auditLoggerMock = new();
@@ -26,6 +30,10 @@ public class AdminServiceTests
         _adminService = new AdminService(
             _adminRepoMock.Object,
             _userRepoMock.Object,
+            _voterCheckRepoMock.Object,
+            _voterRepoMock.Object,
+            _pollRepoMock.Object,
+            _moderatorRepoMock.Object,
             _encryptionServiceMock.Object,
             _configMock.Object,
             _auditLoggerMock.Object,
